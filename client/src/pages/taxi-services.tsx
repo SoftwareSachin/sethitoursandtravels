@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
-import heroImage from "@assets/image_1752345572318.png";
+import heroImage from "@assets/image_1752346718122.png";
 
 const taxiServices = [
   {
@@ -50,56 +50,68 @@ export default function TaxiServices() {
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-pink-50">
       <Navigation />
       
-      {/* Hero Section with Background Image */}
-      <div className="relative bg-gradient-to-r from-orange-600/90 to-pink-600/90 text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src={heroImage} 
-            alt="Taxi Services Across India" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-orange-600/80 to-pink-600/80"></div>
-        </div>
+      {/* Hero Section with Hawa Mahal Background */}
+      <div className="relative min-h-[80vh] flex items-center justify-center text-white overflow-hidden">
+        <img 
+          src={heroImage}
+          alt="Premium Taxi Services with Hawa Mahal"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        {/* Subtle gradient overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div>
         
-        <div className="relative z-10 max-w-6xl mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
+          {/* Main Heading */}
+          <div className="mb-8">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 text-white drop-shadow-2xl">
               Premium Taxi Services
             </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-95 drop-shadow-md">
-              Reliable & Comfortable Travel Across India
+            <p className="text-xl md:text-3xl mb-8 text-white/95 drop-shadow-lg font-light">
+              Travel Across India with Comfort & Style
             </p>
-            <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base mb-8">
-              <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">
-                <Star className="w-5 h-5 text-yellow-400" />
+          </div>
+
+          {/* Trust Indicators */}
+          <div className="flex flex-wrap justify-center gap-6 mb-12">
+            <div className="bg-white/90 backdrop-blur-sm text-gray-800 px-6 py-3 rounded-full shadow-lg">
+              <div className="flex items-center gap-2">
+                <Star className="w-5 h-5 text-yellow-500" />
                 <span className="font-semibold">4.9/5 Rating</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">
-                <Users className="w-5 h-5" />
+            </div>
+            <div className="bg-white/90 backdrop-blur-sm text-gray-800 px-6 py-3 rounded-full shadow-lg">
+              <div className="flex items-center gap-2">
+                <Users className="w-5 h-5 text-blue-600" />
                 <span className="font-semibold">15,000+ Happy Customers</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">
-                <Clock className="w-5 h-5" />
+            </div>
+            <div className="bg-white/90 backdrop-blur-sm text-gray-800 px-6 py-3 rounded-full shadow-lg">
+              <div className="flex items-center gap-2">
+                <Clock className="w-5 h-5 text-green-600" />
                 <span className="font-semibold">24/7 Service</span>
               </div>
             </div>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button 
-                size="lg" 
-                className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-3 text-lg font-semibold shadow-lg"
-                onClick={() => window.open(`https://wa.me/917727021780?text=नमस्कार! मुझे टैक्सी सेवा की जानकारी चाहिए।`, '_blank')}
-              >
-                Book Now
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 text-lg font-semibold"
-                onClick={() => window.open(`tel:+919772021780`, '_blank')}
-              >
-                Call Now
-              </Button>
-            </div>
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex flex-wrap justify-center gap-6">
+            <Button 
+              size="lg" 
+              className="bg-orange-600 hover:bg-orange-700 text-white px-10 py-4 text-xl font-semibold shadow-2xl border-2 border-orange-600 hover:border-orange-700 transition-all duration-300"
+              onClick={() => window.open(`https://wa.me/917727021780?text=नमस्कार! मुझे टैक्सी सेवा की जानकारी चाहिए।`, '_blank')}
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Book Now
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="bg-white/90 backdrop-blur-sm text-gray-800 hover:bg-white border-2 border-white px-10 py-4 text-xl font-semibold shadow-2xl transition-all duration-300"
+              onClick={() => window.open(`tel:+919772021780`, '_blank')}
+            >
+              <Car className="w-5 h-5 mr-2" />
+              Call Now
+            </Button>
           </div>
         </div>
       </div>
@@ -141,47 +153,58 @@ export default function TaxiServices() {
       </div>
 
       {/* Services Grid */}
-      <div className="max-w-6xl mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Choose Your Destination
-          </h2>
-          <p className="text-lg text-gray-600">
-            Select from our wide range of taxi services across different states
-          </p>
-        </div>
+      <div className="bg-gray-50 py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-orange-100 text-orange-800 border-orange-200">
+              Our Destinations
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Explore India with Us
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Choose from our premium taxi services across different states and discover the incredible beauty of India with professional drivers and comfortable vehicles.
+            </p>
+          </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {taxiServices.map((service, index) => (
-            <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-0 shadow-md">
-              <CardHeader className="pb-3">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 bg-gradient-to-r from-orange-500 to-pink-500 rounded-lg text-white">
-                    {service.icon}
-                  </div>
-                  <CardTitle className="text-lg text-gray-800">{service.name}</CardTitle>
-                </div>
-                <CardDescription className="text-gray-600">
-                  {service.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="pt-0">
-                <div className="space-y-2 mb-4">
-                  {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                      <div className="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
-                      <span>{feature}</span>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {taxiServices.map((service, index) => (
+              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg hover:-translate-y-2 bg-white">
+                <CardHeader className="pb-4">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="p-3 bg-gradient-to-br from-orange-500 to-pink-600 rounded-xl text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      {service.icon}
                     </div>
-                  ))}
-                </div>
-                <Link href={service.path}>
-                  <Button className="w-full bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white">
-                    View Services
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-          ))}
+                    <Badge variant="secondary" className="bg-green-100 text-green-800">
+                      Available
+                    </Badge>
+                  </div>
+                  <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors duration-300">
+                    {service.name}
+                  </CardTitle>
+                  <CardDescription className="text-gray-600 text-base leading-relaxed">
+                    {service.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <div className="space-y-3 mb-6">
+                    {service.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center gap-3 text-sm text-gray-700">
+                        <div className="w-2 h-2 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full"></div>
+                        <span className="font-medium">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Link href={service.path}>
+                    <Button className="w-full bg-gradient-to-r from-orange-500 to-pink-600 hover:from-orange-600 hover:to-pink-700 text-white font-semibold py-3 shadow-lg hover:shadow-xl transition-all duration-300">
+                      <MapPin className="w-4 h-4 mr-2" />
+                      Explore Services
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
 
