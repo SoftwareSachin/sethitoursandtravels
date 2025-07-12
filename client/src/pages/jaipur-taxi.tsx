@@ -329,8 +329,7 @@ export default function JaipurTaxi() {
               </Button>
               <Button 
                 size="lg" 
-                variant="outline" 
-                className="border-2 border-white text-white hover:bg-white hover:text-purple-900 px-10 py-5 text-lg font-semibold shadow-2xl transform hover:scale-105 transition-all duration-300 glow-effect"
+                className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-10 py-5 text-lg font-semibold shadow-2xl transform hover:scale-105 transition-all duration-300 border-0"
                 onClick={() => phone()}
               >
                 <Phone className="mr-3 h-6 w-6" />
