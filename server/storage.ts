@@ -45,7 +45,7 @@ export class MemStorage implements IStorage {
       {
         name: "Golden Triangle Tour - Delhi • Agra • Jaipur",
         description: "Classic India tour covering UNESCO World Heritage sites: Red Fort, Taj Mahal, Amber Fort, and Hawa Mahal. Perfect introduction to India's rich Mughal and Rajput heritage.",
-        image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "/attached_assets/image_1752355162127.png",
         destination: "Delhi-Agra-Jaipur",
         price: 18000,
         duration: "6 Days / 5 Nights",
@@ -55,7 +55,7 @@ export class MemStorage implements IStorage {
       {
         name: "Royal Rajasthan Heritage Tour",
         description: "Experience the Land of Kings! Explore magnificent palaces of Jaipur & Udaipur, golden dunes of Jaisalmer, and blue city Jodhpur. Includes camel safari and cultural performances.",
-        image: "https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "/attached_assets/image_1752355178625.png",
         destination: "Rajasthan Circuit",
         price: 28000,
         duration: "10 Days / 9 Nights",
@@ -75,7 +75,7 @@ export class MemStorage implements IStorage {
       {
         name: "Jaisalmer Desert Safari Package",
         description: "Authentic desert experience in the Thar Desert! Camel safari, sand dunes, traditional Rajasthani dinner, folk music & dance under starlit sky. Stay in luxury desert camps.",
-        image: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "/attached_assets/image_1752355204306.png",
         destination: "Jaisalmer, Rajasthan",
         price: 12000,
         duration: "3 Days / 2 Nights",
@@ -85,7 +85,7 @@ export class MemStorage implements IStorage {
       {
         name: "Udaipur Lake City Romance Tour",
         description: "Experience the Venice of East! Boat rides on Lake Pichola, City Palace complex, Jag Mandir island, sunset at Sajjangarh Palace. Perfect for couples and photographers.",
-        image: "https://images.unsplash.com/photo-1599661046827-dacde645fe26?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "/attached_assets/image_1752355235261.png",
         destination: "Udaipur, Rajasthan",
         price: 15000,
         duration: "4 Days / 3 Nights",
@@ -95,7 +95,7 @@ export class MemStorage implements IStorage {
       {
         name: "Jaipur Pink City Exploration",
         description: "Discover the Pink City's royal heritage! Amber Fort elephant ride, Hawa Mahal photography, City Palace museum, local bazaars for textiles, jewelry and handicrafts.",
-        image: "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "/attached_assets/image_1752355253209.png",
         destination: "Jaipur, Rajasthan",
         price: 9500,
         duration: "2 Days / 1 Night",
@@ -105,7 +105,7 @@ export class MemStorage implements IStorage {
       {
         name: "Ranthambore Wildlife Safari",
         description: "Tiger safari in India's famous national park! Morning and evening game drives, wildlife photography, ancient Ranthambore Fort. Best chance to spot Royal Bengal Tigers.",
-        image: "https://images.unsplash.com/photo-1425082661705-1834bfd09dca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "/attached_assets/image_1752355272251.png",
         destination: "Ranthambore, Rajasthan",
         price: 14000,
         duration: "3 Days / 2 Nights",
@@ -115,7 +115,7 @@ export class MemStorage implements IStorage {
       {
         name: "Jodhpur Blue City Adventure",
         description: "Explore the Blue City's majestic Mehrangarh Fort, Jaswant Thada memorial, vibrant blue houses, spice markets, and authentic Rajasthani cuisine experiences.",
-        image: "https://images.unsplash.com/photo-1608321672966-0dbb87c832c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "/attached_assets/image_1752355302261.png",
         destination: "Jodhpur, Rajasthan",
         price: 11000,
         duration: "3 Days / 2 Nights",
