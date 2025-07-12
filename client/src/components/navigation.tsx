@@ -17,99 +17,68 @@ export default function Navigation() {
   };
 
   const navItems = [
-    { id: "home", label: "HOME", icon: Home },
-    { id: "packages", label: "DISCOVER" },
-    { id: "services", label: "EXPERIENCE" },
-    { id: "destinations", label: "PLAN" },
-    { id: "gallery", label: "GALLERY" },
-    { id: "contact", label: "CONTACT" },
+    { id: "fleet", label: "Fleet" },
+    { id: "services", label: "Services" },
+    { id: "packages", label: "Tour Packages" },
+    { id: "destinations", label: "Destinations" },
+    { id: "gallery", label: "Gallery" },
+    { id: "testimonials", label: "Reviews" },
+    { id: "contact", label: "Contact" },
   ];
 
-  const rightNavItems = [
-    { id: "about", label: "ABOUT US" },
-    { id: "testimonials", label: "REVIEWS" },
-    { href: "/jaipur-taxi", label: "TAXI SERVICES" }
+  const specialNavItems = [
+    { href: "/jaipur-taxi", label: "Jaipur Taxi" }
   ];
 
   return (
     <nav className="bg-white shadow-lg fixed w-full top-0 z-50">
-      {/* Top Utility Bar */}
-      <div className="bg-pink-600 text-white py-2 text-sm">
-        <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
-          <div className="hidden sm:flex items-center space-x-6">
-            <span className="text-xs">SKIP TO MAIN CONTENT</span>
-            <span className="text-xs">SCREEN READER</span>
-            <div className="flex items-center space-x-2">
-              <span className="text-xs">A-</span>
-              <span className="text-xs">A</span>
-              <span className="text-xs">A+</span>
-            </div>
-          </div>
-          <div className="flex items-center space-x-4 text-xs">
-            <span>हिन्दी</span>
-            <div className="flex space-x-2">
-              <div className="w-4 h-4 bg-gray-300"></div>
-              <div className="w-4 h-4 bg-black"></div>
-              <div className="w-4 h-4 bg-green-600"></div>
-              <div className="w-4 h-4 bg-yellow-400"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main Navigation */}
       <div className="bg-gradient-to-b from-yellow-50 to-orange-50 border-b-2 border-pink-600">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-between items-center h-20">
-            {/* Left Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+          <div className="flex justify-between items-center h-16 sm:h-20">
+            <div className="flex items-center min-w-0 flex-1">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full overflow-hidden mr-2 sm:mr-3 bg-white shadow-lg border-2 border-orange-200 p-1 flex-shrink-0">
+                <img 
+                  src={rajasthanLogo} 
+                  alt="Sethi Tour & Travels Logo" 
+                  className="w-full h-full object-contain rounded-md"
+                />
+              </div>
+              <div className="min-w-0 flex-1">
+                <h1 className="text-sm sm:text-base md:text-xl font-bold text-pink-600 truncate">Sethi Tour & Travels</h1>
+                <p className="text-xs sm:text-xs md:text-sm text-gray-600 truncate">Authentic India Tours</p>
+              </div>
+            </div>
+            
+            <div className="hidden md:flex items-center space-x-8">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-gray-700 hover:text-pink-600 transition-colors font-medium text-sm tracking-wide"
+                  className="text-gray-700 hover:text-pink-600 transition-colors"
                 >
                   {item.label}
                 </button>
               ))}
-            </div>
-
-            {/* Central Logo */}
-            <div className="flex justify-center items-center">
-              <div className="bg-white rounded-full p-2 shadow-lg border-2 border-orange-200">
-                <img 
-                  src={rajasthanLogo} 
-                  alt="Rajasthan - The Incredible State of India" 
-                  className="h-16 w-auto"
-                />
-              </div>
-            </div>
-
-            {/* Right Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
-              {rightNavItems.map((item) => (
-                item.href ? (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="text-gray-700 hover:text-pink-600 transition-colors font-medium text-sm tracking-wide"
-                  >
-                    {item.label}
-                  </Link>
-                ) : (
-                  <button
-                    key={item.id}
-                    onClick={() => scrollToSection(item.id)}
-                    className="text-gray-700 hover:text-pink-600 transition-colors font-medium text-sm tracking-wide"
-                  >
-                    {item.label}
-                  </button>
-                )
+              {specialNavItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-gray-700 hover:text-pink-600 transition-colors"
+                >
+                  {item.label}
+                </Link>
               ))}
             </div>
 
-            {/* Mobile Menu */}
-            <div className="lg:hidden flex items-center space-x-4">
+            <div className="hidden md:flex items-center space-x-4">
+              <a href="tel:9772021780" className="text-pink-600 font-semibold flex items-center hover:text-pink-500 transition-colors">
+                <Phone className="w-4 h-4 mr-1" />
+                <span className="text-sm lg:text-base">97720 21780</span>
+              </a>
+            </div>
+
+            <div className="md:hidden flex items-center space-x-4">
               <a href="tel:9772021780" className="text-pink-600 font-semibold flex items-center">
                 <Phone className="w-4 h-4 mr-1" />
                 <span className="text-sm">Call</span>
@@ -146,25 +115,15 @@ export default function Navigation() {
                       {item.label}
                     </button>
                   ))}
-                  {rightNavItems.map((item) => (
-                    item.href ? (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="text-left text-gray-700 hover:text-pink-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50 text-base font-medium"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {item.label}
-                      </Link>
-                    ) : (
-                      <button
-                        key={item.id}
-                        onClick={() => scrollToSection(item.id)}
-                        className="text-left text-gray-700 hover:text-pink-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50 text-base font-medium"
-                      >
-                        {item.label}
-                      </button>
-                    )
+                  {specialNavItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="text-left text-gray-700 hover:text-pink-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50 text-base font-medium"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
                   ))}
                 </div>
                 <div className="pt-4 border-t border-gray-200">
