@@ -28,7 +28,10 @@ export default function JaipurTaxi() {
   
   const backgroundImages = [
     "/attached_assets/image_1752330488177.png",
-    "/attached_assets/image_1752330504538.png"
+    "/attached_assets/image_1752330504538.png",
+    "/attached_assets/image_1752331548623.png", // Amber Fort at Night
+    "/attached_assets/image_1752331554106.png", // City Palace Jaipur
+    "/attached_assets/image_1752331571103.png"  // Albert Hall Museum
   ];
   
   useEffect(() => {
@@ -180,10 +183,10 @@ export default function JaipurTaxi() {
               <span className="text-sm font-medium">Rajasthan's #1 Rated Taxi Service</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-300 bg-clip-text text-transparent animate-gradient">
               Jaipur Taxi Service
             </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-yellow-200">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-yellow-200 animate-slide-in">
               खम्मा गणी सा! Welcome to Pink City
             </h2>
             <p className="text-xl md:text-2xl mb-10 max-w-4xl mx-auto leading-relaxed">
@@ -216,7 +219,7 @@ export default function JaipurTaxi() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-10 py-5 text-lg font-semibold shadow-2xl transform hover:scale-105 transition-all duration-300"
+                className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-10 py-5 text-lg font-semibold shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse-glow"
                 onClick={() => whatsapp("खम्मा गणी सा! मुझे जयपुर टैक्सी सर्विस चाहिए।")}
               >
                 <FaWhatsapp className="mr-3 h-6 w-6" />
@@ -225,7 +228,7 @@ export default function JaipurTaxi() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-white text-white hover:bg-white hover:text-purple-900 px-10 py-5 text-lg font-semibold shadow-2xl transform hover:scale-105 transition-all duration-300"
+                className="border-2 border-white text-white hover:bg-white hover:text-purple-900 px-10 py-5 text-lg font-semibold shadow-2xl transform hover:scale-105 transition-all duration-300 glow-effect"
                 onClick={() => phone()}
               >
                 <Phone className="mr-3 h-6 w-6" />
@@ -502,39 +505,193 @@ export default function JaipurTaxi() {
         </div>
       </section>
 
-      {/* Amber Fort Section */}
-      <section className="py-16 bg-white">
+      {/* Destinations Showcase */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Visit Amber Fort with Our Taxi Service</h2>
-              <p className="text-lg text-gray-600 mb-6">
-                Amber Fort, nestled in the rugged hills just outside Jaipur, is a timeless masterpiece of Rajputana architecture. 
-                Built in 1592 by Raja Man Singh I, this majestic fortress stands as a symbol of royal grandeur and historical significance.
-              </p>
-              <p className="text-lg text-gray-600 mb-6">
-                Crafted from red sandstone and white marble, Amber Fort glows like a jewel in the sunlight, overlooking the serene Maota Lake below. 
-                The fort is adorned with intricate carvings, majestic courtyards, and breathtaking palaces like the Sheesh Mahal.
-              </p>
-              <Button 
-                size="lg"
-                className="bg-green-600 hover:bg-green-700"
-                onClick={() => whatsapp("नमस्ते! मुझे आमेर फोर्ट जाने के लिए टैक्सी चाहिए।")}
-              >
-                <FaWhatsapp className="mr-2 h-5 w-5" />
-                Book Amber Fort Tour
-              </Button>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Explore Jaipur's Magnificent Heritage</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover the timeless beauty and royal grandeur of Jaipur's iconic landmarks with our premium taxi services
+            </p>
+          </div>
+          
+          {/* Featured Destinations Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {/* Amber Fort */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 shimmer-effect">
+              <div className="relative h-80">
+                <img 
+                  src="/attached_assets/image_1752331548623.png" 
+                  alt="Amber Fort Jaipur at Night"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 right-6 text-white">
+                  <h3 className="text-2xl font-bold mb-2">Amber Fort</h3>
+                  <p className="text-sm opacity-90 mb-4">Majestic hilltop fortress with stunning architecture and panoramic views</p>
+                  <Button 
+                    size="sm"
+                    variant="outline"
+                    className="border-white text-white hover:bg-white hover:text-gray-900 transition-colors"
+                    onClick={() => whatsapp("नमस्ते! मुझे आमेर फोर्ट जाने के लिए टैक्सी चाहिए।")}
+                  >
+                    <Car className="mr-2 h-4 w-4" />
+                    Book Now
+                  </Button>
+                </div>
+              </div>
             </div>
-            <div className="bg-gradient-to-r from-orange-100 to-red-100 p-8 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">Popular Jaipur Attractions</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-600 mr-2" /> City Palace</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-600 mr-2" /> Hawa Mahal</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-600 mr-2" /> Amber Fort</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-600 mr-2" /> Jantar Mantar</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-600 mr-2" /> Nahargarh Fort</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-600 mr-2" /> Jaigarh Fort</li>
-              </ul>
+
+            {/* City Palace */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 shimmer-effect">
+              <div className="relative h-80">
+                <img 
+                  src="/attached_assets/image_1752331554106.png" 
+                  alt="City Palace Jaipur"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 right-6 text-white">
+                  <h3 className="text-2xl font-bold mb-2">City Palace</h3>
+                  <p className="text-sm opacity-90 mb-4">Pink City's crown jewel with royal museums and breathtaking courtyards</p>
+                  <Button 
+                    size="sm"
+                    variant="outline"
+                    className="border-white text-white hover:bg-white hover:text-gray-900 transition-colors"
+                    onClick={() => whatsapp("नमस्ते! मुझे सिटी पैलेस जाने के लिए टैक्सी चाहिए।")}
+                  >
+                    <Car className="mr-2 h-4 w-4" />
+                    Book Now
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Jantar Mantar */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 shimmer-effect">
+              <div className="relative h-80">
+                <img 
+                  src="/attached_assets/image_1752331562660.png" 
+                  alt="Jantar Mantar Jaipur"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 right-6 text-white">
+                  <h3 className="text-2xl font-bold mb-2">Jantar Mantar</h3>
+                  <p className="text-sm opacity-90 mb-4">UNESCO World Heritage astronomical observatory with ancient instruments</p>
+                  <Button 
+                    size="sm"
+                    variant="outline"
+                    className="border-white text-white hover:bg-white hover:text-gray-900 transition-colors"
+                    onClick={() => whatsapp("नमस्ते! मुझे जंतर मंतर जाने के लिए टैक्सी चाहिए।")}
+                  >
+                    <Car className="mr-2 h-4 w-4" />
+                    Book Now
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Albert Hall Museum */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 shimmer-effect">
+              <div className="relative h-80">
+                <img 
+                  src="/attached_assets/image_1752331571103.png" 
+                  alt="Albert Hall Museum Jaipur"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 right-6 text-white">
+                  <h3 className="text-2xl font-bold mb-2">Albert Hall Museum</h3>
+                  <p className="text-sm opacity-90 mb-4">Stunning Indo-Saracenic architecture with rare artifacts and collections</p>
+                  <Button 
+                    size="sm"
+                    variant="outline"
+                    className="border-white text-white hover:bg-white hover:text-gray-900 transition-colors"
+                    onClick={() => whatsapp("नमस्ते! मुझे अल्बर्ट हॉल संग्रहालय जाने के लिए टैक्सी चाहिए।")}
+                  >
+                    <Car className="mr-2 h-4 w-4" />
+                    Book Now
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Jaigarh Fort */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 shimmer-effect">
+              <div className="relative h-80">
+                <img 
+                  src="/attached_assets/image_1752331579972.png" 
+                  alt="Jaigarh Fort Jaipur"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 right-6 text-white">
+                  <h3 className="text-2xl font-bold mb-2">Jaigarh Fort</h3>
+                  <p className="text-sm opacity-90 mb-4">Victory Fort with the world's largest cannon and spectacular valley views</p>
+                  <Button 
+                    size="sm"
+                    variant="outline"
+                    className="border-white text-white hover:bg-white hover:text-gray-900 transition-colors"
+                    onClick={() => whatsapp("नमस्ते! मुझे जयगढ़ फोर्ट जाने के लिए टैक्सी चाहिए।")}
+                  >
+                    <Car className="mr-2 h-4 w-4" />
+                    Book Now
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Birla Mandir */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 shimmer-effect">
+              <div className="relative h-80">
+                <img 
+                  src="/attached_assets/image_1752331584537.png" 
+                  alt="Birla Mandir Jaipur"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 right-6 text-white">
+                  <h3 className="text-2xl font-bold mb-2">Birla Mandir</h3>
+                  <p className="text-sm opacity-90 mb-4">Magnificent white marble temple with intricate carvings and peaceful ambiance</p>
+                  <Button 
+                    size="sm"
+                    variant="outline"
+                    className="border-white text-white hover:bg-white hover:text-gray-900 transition-colors"
+                    onClick={() => whatsapp("नमस्ते! मुझे बिड़ला मंदिर जाने के लिए टैक्सी चाहिए।")}
+                  >
+                    <Car className="mr-2 h-4 w-4" />
+                    Book Now
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Premium Features */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div>
+                <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Award className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Expert Local Guides</h3>
+                <p className="text-gray-600">Our drivers are knowledgeable about Jaipur's history and hidden gems</p>
+              </div>
+              <div>
+                <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Shield className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Safe & Comfortable</h3>
+                <p className="text-gray-600">Well-maintained vehicles with professional drivers for your safety</p>
+              </div>
+              <div>
+                <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">24/7 Available</h3>
+                <p className="text-gray-600">Round-the-clock service for all your travel needs in Jaipur</p>
+              </div>
             </div>
           </div>
         </div>
