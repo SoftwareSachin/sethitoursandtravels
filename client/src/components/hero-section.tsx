@@ -27,12 +27,13 @@ export default function HeroSection() {
           From the Pink City of Jaipur to the romantic lakes of Udaipur, experience the Land of Kings like never before.
         </p>
         <div className="mb-8">
-          <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">
             <span className="text-secondary font-semibold">Our Services:</span> 
-            <span className="mx-2">•</span> One Way <span className="mx-2">•</span> Round Trip Taxi 
-            <span className="mx-2">•</span> All India/Rajasthan Tour 
-            <span className="mx-2">•</span> Tour Package <span className="mx-2">•</span> Hotel & Resorts 
-            <span className="mx-2">•</span> All Type Taxi Cars
+            <span className="mx-2">•</span> One Way & Round Trip Taxi 
+            <span className="mx-2">•</span> Complete Rajasthan Tours
+            <span className="mx-2">•</span> Luxury & Budget Packages <span className="mx-2">•</span> Hotel & Resort Bookings 
+            <span className="mx-2">•</span> Airport Transfers <span className="mx-2">•</span> Corporate Travel
+            <span className="mx-2">•</span> Wedding & Event Transportation
           </p>
         </div>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

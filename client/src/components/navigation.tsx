@@ -20,6 +20,7 @@ export default function Navigation() {
     { id: "packages", label: "Tour Packages" },
     { id: "vehicles", label: "Taxi Services" },
     { id: "gallery", label: "Gallery" },
+    { id: "testimonials", label: "Reviews" },
     { id: "contact", label: "Contact" },
   ];
 
