@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -20,10 +20,25 @@ import {
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { useCommunication } from "../components/communication-utils";
+import hawamahalImage from "@assets/image_1752330488177.png";
+import hawamahalImage2 from "@assets/image_1752330504538.png";
 
 export default function JaipurTaxi() {
   const { whatsapp, phone } = useCommunication();
   const [selectedVehicle, setSelectedVehicle] = useState("sedan");
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  const backgroundImages = [hawamahalImage, hawamahalImage2];
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === backgroundImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 4000); // Change image every 4 seconds
+    
+    return () => clearInterval(interval);
+  }, [backgroundImages.length]);
 
   const oneWayRates = [
     { route: "Jaipur to Delhi", sedan: "3,500", suv: "4,500", innova: "6,000" },
@@ -130,13 +145,22 @@ export default function JaipurTaxi() {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-orange-600 via-pink-600 to-purple-800 text-white py-24 overflow-hidden">
-        {/* Background Image */}
+        {/* Sliding Background Images */}
         <div className="absolute inset-0">
-          <img 
-            src="/attached_assets/image_1752329903571.png" 
-            alt="Hawa Mahal Jaipur Palace"
-            className="w-full h-full object-cover opacity-30"
-          />
+          {backgroundImages.map((image, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                index === currentImageIndex ? 'opacity-30' : 'opacity-0'
+              }`}
+            >
+              <img 
+                src={image} 
+                alt={`Hawa Mahal Jaipur Palace ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
           <div className="absolute inset-0 bg-gradient-to-br from-orange-600/80 via-pink-600/80 to-purple-800/80"></div>
         </div>
         
@@ -204,7 +228,7 @@ export default function JaipurTaxi() {
                 onClick={() => phone()}
               >
                 <Phone className="mr-3 h-6 w-6" />
-                Call: +91 7737017755
+                Call: +91 97720 21780
               </Button>
             </div>
           </div>
@@ -217,14 +241,14 @@ export default function JaipurTaxi() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
               <Phone className="h-5 w-5 text-yellow-300" />
-              <span className="font-semibold">📞 +91 7737017755, 7014913953</span>
+              <span className="font-semibold">📞 +91 97720 21780</span>
             </div>
             <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
               <FaWhatsapp className="h-5 w-5 text-green-300" />
-              <span className="font-semibold">💬 WhatsApp: 7737017755</span>
+              <span className="font-semibold">💬 WhatsApp: 77270 21780</span>
             </div>
             <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
-              <span className="font-semibold">📧 mukeshtourandtravelsjaipur@gmail.com</span>
+              <span className="font-semibold">📧 sethitourstravels8888@gmail.com</span>
             </div>
           </div>
         </div>
@@ -239,7 +263,7 @@ export default function JaipurTaxi() {
               <span className="text-sm font-medium">Premium Service Excellence</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent">
-              Why Choose Mukesh Tour and Travels
+              Why Choose Sethi Tour & Travels
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Experience the best taxi service in Jaipur with our professional approach, 
@@ -701,25 +725,25 @@ export default function JaipurTaxi() {
                 <div className="flex items-center">
                   <Phone className="h-5 w-5 mr-3 text-green-400" />
                   <div>
-                    <p className="font-semibold">+91 7737017755</p>
-                    <p>+91 7014913953</p>
+                    <p className="font-semibold">+91 97720 21780</p>
+                    <p>+91 77270 21780</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <FaWhatsapp className="h-5 w-5 mr-3 text-green-400" />
-                  <p>WhatsApp: 7737017755</p>
+                  <p>WhatsApp: 77270 21780</p>
                 </div>
                 <div className="flex items-start">
                   <Mail className="h-5 w-5 mr-3 text-blue-400 mt-0.5" />
-                  <p>mukeshtourandtravelsjaipur@gmail.com</p>
+                  <p>sethitourstravels8888@gmail.com</p>
                 </div>
                 <div className="flex items-start">
                   <MapPin className="h-5 w-5 mr-3 text-red-400 mt-0.5" />
-                  <p>Jaipur, Rajasthan, India</p>
+                  <p>S-147, 4S New Loha Mandi Road, Machada, Jaipur-302013</p>
                 </div>
                 <div className="flex items-start">
                   <Globe className="h-5 w-5 mr-3 text-purple-400 mt-0.5" />
-                  <p>https://mukeshtourandtravels.com/</p>
+                  <p>Contact: Kuldeep Choudhary</p>
                 </div>
               </div>
             </div>
@@ -729,7 +753,7 @@ export default function JaipurTaxi() {
           <div className="border-t border-white/20 mt-12 pt-8 text-center">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-gray-400 mb-4 md:mb-0">
-                © 2025 Mukesh Tour & Travels. Experience the Royal Heritage of Jaipur.
+                © 2025 Sethi Tour & Travels. Experience the Royal Heritage of Jaipur.
               </p>
               <div className="flex items-center space-x-4 text-sm text-gray-400">
                 <span className="flex items-center">
