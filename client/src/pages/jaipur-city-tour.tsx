@@ -30,6 +30,7 @@ import Footer from '@/components/footer';
 import jaipurCityImage from '@assets/image_1752338074515.png';
 import hawamahalImage from '@assets/image_1752338428906.png';
 import newHawamahalImage from '@assets/image_1752341165448.png';
+import heroImage from '@assets/image_1752341547443.png';
 import cityPalaceImage from '@assets/image_1752338463592.png';
 import amberFortImage from '@assets/image_1752338490127.png';
 import jalMahalImage from '@assets/image_1752338516875.png';
@@ -128,41 +129,82 @@ export default function JaipurCityTour() {
       <div 
         className="relative min-h-screen bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(${newHawamahalImage})`
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${heroImage})`
         }}
       >
-        <div className="relative z-10 container mx-auto px-4 py-32 text-center text-white">
-          <div className="max-w-4xl mx-auto bg-black/70 backdrop-blur-sm rounded-2xl p-8 md:p-12">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-400">
-                Discover the Pink City
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20 md:py-32 text-center text-white">
+          <div className="max-w-5xl mx-auto">
+            {/* Rajasthani Greeting */}
+            <div className="mb-6">
+              <p className="text-lg md:text-xl text-orange-300 font-medium">खम्मा गणी सा! Welcome to</p>
+            </div>
+
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-pink-400 to-orange-300">
+                Jaipur City Tour
               </span>
             </h1>
-            <h2 className="text-3xl md:text-4xl font-semibold mb-8">
-              Jaipur City Tour with Sethi Tour & Travels
+            
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-8 text-orange-100">
+              Experience the Royal Heritage of the Pink City
             </h2>
-            <p className="text-xl md:text-2xl mb-8 leading-relaxed">
-              Experience the royal heritage of Jaipur with our comprehensive city tour. 
-              From magnificent palaces to vibrant markets, discover the authentic charm of Rajasthan's capital.
+            
+            <p className="text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto text-gray-100">
+              Discover the magnificent palaces, ancient forts, and vibrant culture of Jaipur with our expert-guided city tour. 
+              From the iconic Hawa Mahal to the majestic Amber Fort, explore the treasures that make Jaipur the jewel of Rajasthan.
             </p>
+
+            {/* Tour Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 max-w-3xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <div className="text-2xl md:text-3xl font-bold text-orange-300">6+</div>
+                <div className="text-sm text-gray-200">Major Attractions</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <div className="text-2xl md:text-3xl font-bold text-pink-300">8</div>
+                <div className="text-sm text-gray-200">Hours Duration</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <div className="text-2xl md:text-3xl font-bold text-orange-300">100%</div>
+                <div className="text-sm text-gray-200">Heritage Sites</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <div className="text-2xl md:text-3xl font-bold text-pink-300">5★</div>
+                <div className="text-sm text-gray-200">Customer Rating</div>
+              </div>
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-orange-600 to-pink-600 hover:from-orange-700 hover:to-pink-700 text-white px-8 py-6 text-lg font-semibold rounded-full shadow-lg transform transition-all duration-300 hover:scale-105"
+                className="bg-gradient-to-r from-orange-600 to-pink-600 hover:from-orange-700 hover:to-pink-700 text-white px-8 py-6 text-lg font-semibold rounded-full shadow-2xl transform transition-all duration-300 hover:scale-105 border-2 border-white/20"
                 onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <Car className="mr-2 h-5 w-5" />
-                Book Your Tour
+                Book Your Tour Now
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-gray-900 px-8 py-6 text-lg font-semibold rounded-full shadow-lg transform transition-all duration-300 hover:scale-105"
+                className="border-2 border-white/60 text-white hover:bg-white hover:text-gray-900 px-8 py-6 text-lg font-semibold rounded-full shadow-2xl transform transition-all duration-300 hover:scale-105 backdrop-blur-sm bg-white/10"
                 onClick={() => document.getElementById('attractions')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <MapPin className="mr-2 h-5 w-5" />
                 Explore Attractions
               </Button>
+            </div>
+
+            {/* Contact Info */}
+            <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-200">
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-orange-300" />
+                <span>+91 97720 21780</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaWhatsapp className="w-4 h-4 text-green-400" />
+                <span>Quick WhatsApp Booking</span>
+              </div>
             </div>
           </div>
         </div>
