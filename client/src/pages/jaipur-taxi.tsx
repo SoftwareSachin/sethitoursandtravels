@@ -20,21 +20,25 @@ import {
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { useCommunication } from "../components/communication-utils";
-import hawamahalImage1 from "@assets/image_1752330488177.png";
-import hawamahalImage2 from "@assets/image_1752330504538.png";
 
 export default function JaipurTaxi() {
   const { whatsapp, phone } = useCommunication();
   const [selectedVehicle, setSelectedVehicle] = useState("sedan");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
-  const backgroundImages = [hawamahalImage1, hawamahalImage2];
+  const backgroundImages = [
+    "/attached_assets/image_1752330488177.png",
+    "/attached_assets/image_1752330504538.png"
+  ];
   
   useEffect(() => {
+    console.log('Background images loaded:', backgroundImages);
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => 
-        prevIndex === backgroundImages.length - 1 ? 0 : prevIndex + 1
-      );
+      setCurrentImageIndex((prevIndex) => {
+        const newIndex = prevIndex === backgroundImages.length - 1 ? 0 : prevIndex + 1;
+        console.log(`Changing background image from ${prevIndex} to ${newIndex}`);
+        return newIndex;
+      });
     }, 4000); // Change image every 4 seconds
     
     return () => clearInterval(interval);
@@ -158,6 +162,8 @@ export default function JaipurTaxi() {
                 src={image} 
                 alt={`Hawa Mahal Jaipur Palace ${index + 1}`}
                 className="w-full h-full object-cover"
+                onLoad={() => console.log(`Image ${index + 1} loaded: ${image}`)}
+                onError={() => console.error(`Failed to load image ${index + 1}: ${image}`)}
               />
             </div>
           ))}
