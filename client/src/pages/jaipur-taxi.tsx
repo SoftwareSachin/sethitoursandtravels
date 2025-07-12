@@ -1221,9 +1221,9 @@ export default function JaipurTaxi() {
         </div>
       </section>
 
-      {/* Royal Call to Action Section */}
+      {/* Premium Call to Action Section */}
       <section className="py-32 bg-gradient-to-br from-amber-800 via-orange-700 to-red-800 text-white relative overflow-hidden">
-        {/* Royal Background Pattern */}
+        {/* Premium Background Pattern */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-r from-yellow-600/30 via-orange-500/30 to-red-600/30"></div>
           <div className="absolute top-0 left-0 w-full h-full" 
@@ -1234,7 +1234,7 @@ export default function JaipurTaxi() {
           </div>
         </div>
 
-        {/* Floating Royal Elements */}
+        {/* Floating Premium Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-16 w-40 h-40 bg-yellow-400 rounded-full mix-blend-soft-light filter blur-2xl opacity-30 animate-pulse"></div>
           <div className="absolute bottom-20 right-16 w-40 h-40 bg-orange-400 rounded-full mix-blend-soft-light filter blur-2xl opacity-30 animate-pulse" style={{ animationDelay: '1s' }}></div>
@@ -1242,20 +1242,20 @@ export default function JaipurTaxi() {
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Royal Badge */}
+          {/* Premium Badge */}
           <div className="inline-flex items-center bg-gradient-to-r from-yellow-600 to-amber-600 rounded-full px-8 py-3 mb-8 shadow-2xl border border-yellow-400/30">
             <Award className="h-5 w-5 text-yellow-200 mr-3" />
             <span className="text-sm font-bold tracking-wide text-yellow-100">RAJASTHAN'S PREMIER LUXURY TAXI SERVICE</span>
           </div>
           
-          {/* Royal Heading */}
+          {/* Premium Heading */}
           <div className="mb-8">
             <h2 className="text-6xl md:text-8xl font-black mb-4 leading-tight">
               <span className="block bg-gradient-to-r from-yellow-200 via-amber-200 to-orange-200 bg-clip-text text-transparent drop-shadow-2xl">
                 Ready to Experience
               </span>
               <span className="block bg-gradient-to-r from-orange-200 via-red-200 to-pink-200 bg-clip-text text-transparent drop-shadow-2xl">
-                Royal Jaipur?
+                Magnificent Jaipur?
               </span>
             </h2>
             <div className="flex justify-center mb-6">
@@ -1263,13 +1263,13 @@ export default function JaipurTaxi() {
             </div>
           </div>
 
-          {/* Royal Welcome Image */}
+          {/* Premium Welcome Image */}
           <div className="mb-12 flex justify-center">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full filter blur-xl opacity-50 scale-110"></div>
               <img 
                 src={rajasthaniWelcomeImage} 
-                alt="Rajasthani Royal Welcome" 
+                alt="Rajasthani Heritage Welcome" 
                 className="relative w-56 h-auto md:w-64 object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500"
                 style={{ 
                   imageRendering: 'auto',
@@ -1279,33 +1279,33 @@ export default function JaipurTaxi() {
             </div>
           </div>
 
-          {/* Royal Description */}
+          {/* Premium Description */}
           <div className="mb-16 max-w-5xl mx-auto">
             <p className="text-2xl md:text-3xl mb-8 leading-relaxed font-light text-yellow-100">
-              Embark on a <span className="font-bold text-yellow-300">majestic journey</span> through the Pink City's royal heritage. 
+              Embark on a <span className="font-bold text-yellow-300">majestic journey</span> through the Pink City's heritage. 
               From the grandeur of <span className="font-semibold text-amber-300">Amber Fort</span> to the elegance of 
-              <span className="font-semibold text-orange-300"> City Palace</span>, discover Jaipur like royalty.
+              <span className="font-semibold text-orange-300"> City Palace</span>, discover Jaipur's timeless beauty.
             </p>
             <p className="text-lg text-amber-200 font-medium">
-              Sethi Tour & Travels - Where every journey becomes a royal expedition
+              Sethi Tour & Travels - Where every journey becomes a premium expedition
             </p>
           </div>
           
-          {/* Royal Features */}
+          {/* Premium Features */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16 max-w-6xl mx-auto">
             <div className="bg-gradient-to-br from-yellow-600/20 to-amber-700/20 backdrop-blur-lg rounded-2xl p-8 border border-yellow-500/30 shadow-2xl hover:transform hover:scale-105 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
                 <Clock className="h-8 w-8 text-amber-900" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-yellow-200">Instant Royal Booking</h3>
-              <p className="text-amber-200 leading-relaxed">Book your royal chariot in seconds via WhatsApp</p>
+              <h3 className="text-xl font-bold mb-3 text-yellow-200">Instant Booking</h3>
+              <p className="text-amber-200 leading-relaxed">Book your premium taxi in seconds via WhatsApp</p>
             </div>
             
             <div className="bg-gradient-to-br from-orange-600/20 to-red-700/20 backdrop-blur-lg rounded-2xl p-8 border border-orange-500/30 shadow-2xl hover:transform hover:scale-105 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
                 <Shield className="h-8 w-8 text-red-900" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-orange-200">Royal Security</h3>
+              <h3 className="text-xl font-bold mb-3 text-orange-200">Premium Security</h3>
               <p className="text-orange-200 leading-relaxed">Licensed chauffeurs & premium insured vehicles</p>
             </div>
             
@@ -1313,28 +1313,28 @@ export default function JaipurTaxi() {
               <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
                 <Star className="h-8 w-8 text-yellow-900" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-amber-200">Royal Pricing</h3>
-              <p className="text-amber-200 leading-relaxed">Transparent royal rates, no hidden charges</p>
+              <h3 className="text-xl font-bold mb-3 text-amber-200">Best Pricing</h3>
+              <p className="text-amber-200 leading-relaxed">Transparent premium rates, no hidden charges</p>
             </div>
             
             <div className="bg-gradient-to-br from-red-600/20 to-pink-700/20 backdrop-blur-lg rounded-2xl p-8 border border-red-500/30 shadow-2xl hover:transform hover:scale-105 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-red-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
                 <Award className="h-8 w-8 text-pink-900" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-red-200">Royal Experience</h3>
+              <h3 className="text-xl font-bold mb-3 text-red-200">Premium Experience</h3>
               <p className="text-red-200 leading-relaxed">5-star heritage tourism experience</p>
             </div>
           </div>
           
-          {/* Royal Booking Buttons */}
+          {/* Premium Booking Buttons */}
           <div className="flex flex-col lg:flex-row gap-8 justify-center items-center mb-16">
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-green-600 via-emerald-600 to-green-700 hover:from-green-700 hover:via-emerald-700 hover:to-green-800 text-white px-16 py-8 text-2xl font-black shadow-2xl transform hover:scale-110 transition-all duration-300 border-2 border-green-400/50 rounded-2xl"
-              onClick={() => whatsapp("नमस्कार! मुझे जयपुर में रॉयल टैक्सी सर्विस चाहिए।")}
+              onClick={() => whatsapp("नमस्कार! मुझे जयपुर में प्रीमियम टैक्सी सर्विस चाहिए।")}
             >
               <FaWhatsapp className="mr-4 h-8 w-8" />
-              Book Royal Ride on WhatsApp
+              Book Premium Ride on WhatsApp
             </Button>
             <Button 
               size="lg" 
@@ -1343,37 +1343,37 @@ export default function JaipurTaxi() {
               onClick={() => phone()}
             >
               <Phone className="mr-4 h-8 w-8" />
-              Call Royal Helpline
+              Call Premium Helpline
             </Button>
           </div>
           
-          {/* Royal Contact Information */}
+          {/* Premium Contact Information */}
           <div className="bg-gradient-to-r from-yellow-600/10 via-amber-600/10 to-orange-600/10 backdrop-blur-lg rounded-3xl p-12 border border-yellow-500/20 shadow-2xl max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-lg">
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Mail className="h-6 w-6 text-amber-900" />
                 </div>
-                <span className="block font-bold text-yellow-300 mb-2">Royal Email Service</span>
+                <span className="block font-bold text-yellow-300 mb-2">Premium Email Service</span>
                 <span className="text-amber-200">sethitourstravels8888@gmail.com</span>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="h-6 w-6 text-red-900" />
                 </div>
-                <span className="block font-bold text-orange-300 mb-2">Royal Contact Person</span>
+                <span className="block font-bold text-orange-300 mb-2">Contact Person</span>
                 <span className="text-orange-200">Kuldeep Choudhary</span>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-red-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <MapPin className="h-6 w-6 text-pink-900" />
                 </div>
-                <span className="block font-bold text-red-300 mb-2">Royal Palace Address</span>
+                <span className="block font-bold text-red-300 mb-2">Office Address</span>
                 <span className="text-red-200">S-147, 4S New Loha Mandi Road, Machada, Jaipur-302013</span>
               </div>
             </div>
             
-            {/* Royal Phone Numbers */}
+            {/* Premium Phone Numbers */}
             <div className="mt-8 pt-8 border-t border-yellow-500/20 text-center">
               <div className="flex flex-col md:flex-row justify-center items-center gap-8">
                 <div className="flex items-center bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-full px-8 py-4 border border-green-500/30">
