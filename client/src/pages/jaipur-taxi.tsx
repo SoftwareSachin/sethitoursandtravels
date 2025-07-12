@@ -32,13 +32,10 @@ export default function JaipurTaxi() {
   ];
   
   useEffect(() => {
-    console.log('Background images loaded:', backgroundImages);
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => {
-        const newIndex = prevIndex === backgroundImages.length - 1 ? 0 : prevIndex + 1;
-        console.log(`Changing background image from ${prevIndex} to ${newIndex}`);
-        return newIndex;
-      });
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === backgroundImages.length - 1 ? 0 : prevIndex + 1
+      );
     }, 4000); // Change image every 4 seconds
     
     return () => clearInterval(interval);
@@ -155,26 +152,24 @@ export default function JaipurTaxi() {
             <div
               key={index}
               className={`absolute inset-0 transition-opacity duration-1000 ${
-                index === currentImageIndex ? 'opacity-30' : 'opacity-0'
+                index === currentImageIndex ? 'opacity-60' : 'opacity-0'
               }`}
             >
               <img 
                 src={image} 
                 alt={`Hawa Mahal Jaipur Palace ${index + 1}`}
                 className="w-full h-full object-cover"
-                onLoad={() => console.log(`Image ${index + 1} loaded: ${image}`)}
-                onError={() => console.error(`Failed to load image ${index + 1}: ${image}`)}
               />
             </div>
           ))}
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-600/80 via-pink-600/80 to-purple-800/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-orange-600/40 via-pink-600/40 to-purple-800/50"></div>
         </div>
         
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-          <div className="absolute bottom-20 left-20 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-2000"></div>
+          <div className="absolute bottom-20 left-20 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-4000"></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
