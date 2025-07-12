@@ -205,12 +205,14 @@ export default function RajasthanTour() {
                 <img
                   src={destination.image}
                   alt={destination.name}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105"
+                  style={{ imageRendering: 'crisp-edges' }}
+                  loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="flex items-center gap-4 text-white">
-                    <div className="p-2 bg-white/20 rounded-full backdrop-blur-sm">
+                    <div className="p-2 bg-white/30 rounded-full backdrop-blur-sm border border-white/20">
                       {destination.icon}
                     </div>
                     <h3 className="text-2xl font-bold drop-shadow-lg">{destination.name}</h3>
