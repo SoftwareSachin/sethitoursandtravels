@@ -114,31 +114,47 @@ export default function HeroSection() {
         </h1>
         
         {/* Elegant Subtitle */}
-        <h2 className="text-3xl md:text-4xl font-italic text-gray-200 mb-8" style={{ fontFamily: 'serif' }}>
-          Incredibly majestic!
+        <h2 className="text-3xl md:text-4xl font-italic text-secondary mb-8" style={{ fontFamily: 'serif' }}>
+          The Land of Kings
         </h2>
         
         {/* Comprehensive Service Description */}
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed text-white">
-          Experience the royal splendor of India with authentic Rajasthan tours! Explore magnificent palaces of Jaipur, 
-          romantic lakes of Udaipur, golden dunes of Jaisalmer, and the blue city Jodhpur. From the iconic Taj Mahal 
-          to Hawa Mahal, Amber Fort to City Palace - discover India's incredible heritage, vibrant culture, 
-          and warm hospitality with our expert local guides and premium travel services.
+          Discover the royal grandeur of India's most magnificent state. Journey through ancient palaces of Jaipur, 
+          serene lakes of Udaipur, golden dunes of Jaisalmer, and the majestic blue city of Jodhpur. From the 
+          world-famous Taj Mahal to the iconic Hawa Mahal, experience India's rich heritage, vibrant traditions, 
+          and legendary hospitality with our expert guides and premium services.
         </p>
         
         {/* Complete India Tourism Solutions */}
         <div className="mb-6 sm:mb-8 space-y-4">
           <div className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 max-w-4xl mx-auto">
-            <span className="text-secondary font-semibold block sm:inline mb-2 sm:mb-0">Complete India Tourism Solutions:</span> 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-1 text-center sm:text-left mt-2 sm:mt-0">
-              <span className="block sm:inline">• Golden Triangle Tours</span>
-              <span className="block sm:inline">• Rajasthan Heritage Tours</span>
-              <span className="block sm:inline">• Taj Mahal & Agra Tours</span>
-              <span className="block sm:inline">• Desert Safari Jaisalmer</span>
-              <span className="block sm:inline">• Palace Tours Udaipur</span>
-              <span className="block sm:inline">• Pink City Jaipur</span>
-              <span className="block sm:inline">• Camel Safari & Camps</span>
-              <span className="block sm:inline">• Cultural Experiences</span>
+            <span className="text-secondary font-semibold block mb-4">Premium India Tourism Experiences</span> 
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-center">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
+                <span className="text-white font-medium">Golden Triangle</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
+                <span className="text-white font-medium">Royal Palaces</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
+                <span className="text-white font-medium">Desert Safari</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
+                <span className="text-white font-medium">Heritage Tours</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
+                <span className="text-white font-medium">Lake City Udaipur</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
+                <span className="text-white font-medium">Pink City Jaipur</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
+                <span className="text-white font-medium">Cultural Immersion</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
+                <span className="text-white font-medium">Luxury Experiences</span>
+              </div>
             </div>
           </div>
         </div>
