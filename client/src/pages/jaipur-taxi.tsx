@@ -581,8 +581,7 @@ export default function JaipurTaxi() {
                   <p className="text-sm opacity-90 mb-4">Majestic hilltop fortress with stunning architecture and panoramic views</p>
                   <Button 
                     size="sm"
-                    variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-gray-900 transition-colors"
+                    className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold border-0 shadow-lg"
                     onClick={() => whatsapp("नमस्ते! मुझे आमेर फोर्ट जाने के लिए टैक्सी चाहिए।")}
                   >
                     <Car className="mr-2 h-4 w-4" />
@@ -606,8 +605,7 @@ export default function JaipurTaxi() {
                   <p className="text-sm opacity-90 mb-4">Pink City's crown jewel with royal museums and breathtaking courtyards</p>
                   <Button 
                     size="sm"
-                    variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-gray-900 transition-colors"
+                    className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold border-0 shadow-lg"
                     onClick={() => whatsapp("नमस्ते! मुझे सिटी पैलेस जाने के लिए टैक्सी चाहिए।")}
                   >
                     <Car className="mr-2 h-4 w-4" />
@@ -631,8 +629,7 @@ export default function JaipurTaxi() {
                   <p className="text-sm opacity-90 mb-4">UNESCO World Heritage astronomical observatory with ancient instruments</p>
                   <Button 
                     size="sm"
-                    variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-gray-900 transition-colors"
+                    className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold border-0 shadow-lg"
                     onClick={() => whatsapp("नमस्ते! मुझे जंतर मंतर जाने के लिए टैक्सी चाहिए।")}
                   >
                     <Car className="mr-2 h-4 w-4" />
@@ -656,8 +653,7 @@ export default function JaipurTaxi() {
                   <p className="text-sm opacity-90 mb-4">Stunning Indo-Saracenic architecture with rare artifacts and collections</p>
                   <Button 
                     size="sm"
-                    variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-gray-900 transition-colors"
+                    className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold border-0 shadow-lg"
                     onClick={() => whatsapp("नमस्ते! मुझे अल्बर्ट हॉल संग्रहालय जाने के लिए टैक्सी चाहिए।")}
                   >
                     <Car className="mr-2 h-4 w-4" />
@@ -681,8 +677,7 @@ export default function JaipurTaxi() {
                   <p className="text-sm opacity-90 mb-4">Victory Fort with the world's largest cannon and spectacular valley views</p>
                   <Button 
                     size="sm"
-                    variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-gray-900 transition-colors"
+                    className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold border-0 shadow-lg"
                     onClick={() => whatsapp("नमस्ते! मुझे जयगढ़ फोर्ट जाने के लिए टैक्सी चाहिए।")}
                   >
                     <Car className="mr-2 h-4 w-4" />
@@ -706,8 +701,7 @@ export default function JaipurTaxi() {
                   <p className="text-sm opacity-90 mb-4">Magnificent white marble temple with intricate carvings and peaceful ambiance</p>
                   <Button 
                     size="sm"
-                    variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-gray-900 transition-colors"
+                    className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold border-0 shadow-lg"
                     onClick={() => whatsapp("नमस्ते! मुझे बिड़ला मंदिर जाने के लिए टैक्सी चाहिए।")}
                   >
                     <Car className="mr-2 h-4 w-4" />
