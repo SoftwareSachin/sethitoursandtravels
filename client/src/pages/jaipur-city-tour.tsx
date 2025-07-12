@@ -132,7 +132,7 @@ export default function JaipurCityTour() {
         }}
       >
         <div className="relative z-10 container mx-auto px-4 py-32 text-center text-white">
-          <div className="max-w-4xl mx-auto bg-black/30 backdrop-blur-sm rounded-2xl p-8 md:p-12">
+          <div className="max-w-4xl mx-auto bg-black/70 backdrop-blur-sm rounded-2xl p-8 md:p-12">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-400">
                 Discover the Pink City
