@@ -60,8 +60,8 @@ export default function TaxiServices() {
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-pink-50">
       <Navigation />
       
-      {/* Hero Section with Hawa Mahal Background - No Overlay */}
-      <div className="relative min-h-[85vh] flex items-center justify-center text-white overflow-hidden">
+      {/* Hero Section with Hawa Mahal Background */}
+      <div className="relative min-h-[80vh] flex items-center justify-center text-white overflow-hidden">
         <div 
           className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
           style={{ 
@@ -69,115 +69,96 @@ export default function TaxiServices() {
             backgroundAttachment: 'fixed'
           }}
         />
+        {/* Subtle gradient overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/25"></div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
-          {/* Premium Badge */}
-          <div className="mb-6">
-            <Badge className="bg-orange-600/90 backdrop-blur-sm text-white border-orange-400 text-lg px-6 py-2">
-              Premium Travel Services
-            </Badge>
-          </div>
-
+        <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
           {/* Main Heading */}
-          <div className="mb-10">
-            <h1 className="text-6xl md:text-8xl font-extrabold mb-6 text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] leading-tight">
-              Rajasthan Taxi
-              <span className="block text-5xl md:text-7xl bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent">
-                Services
-              </span>
+          <div className="mb-8">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 text-white drop-shadow-2xl">
+              Premium Taxi Services
             </h1>
-            <p className="text-2xl md:text-4xl mb-8 text-white/95 drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] font-light">
-              Discover the Royal Heritage with Premium Comfort
+            <p className="text-xl md:text-3xl mb-8 text-white/95 drop-shadow-lg font-light">
+              Travel Across India with Comfort & Style
             </p>
           </div>
 
-          {/* Enhanced Trust Indicators */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <div className="bg-gradient-to-r from-orange-500/95 to-pink-500/95 backdrop-blur-sm text-white px-8 py-4 rounded-full shadow-2xl border border-white/20">
-              <div className="flex items-center gap-3">
-                <Star className="w-6 h-6 text-yellow-300" />
-                <span className="font-bold text-lg">4.9★ Rating</span>
+          {/* Trust Indicators */}
+          <div className="flex flex-wrap justify-center gap-6 mb-12">
+            <div className="bg-white/90 backdrop-blur-sm text-gray-800 px-6 py-3 rounded-full shadow-lg">
+              <div className="flex items-center gap-2">
+                <Star className="w-5 h-5 text-yellow-500" />
+                <span className="font-semibold">4.9/5 Rating</span>
               </div>
             </div>
-            <div className="bg-gradient-to-r from-blue-500/95 to-purple-500/95 backdrop-blur-sm text-white px-8 py-4 rounded-full shadow-2xl border border-white/20">
-              <div className="flex items-center gap-3">
-                <Users className="w-6 h-6" />
-                <span className="font-bold text-lg">15,000+ Customers</span>
+            <div className="bg-white/90 backdrop-blur-sm text-gray-800 px-6 py-3 rounded-full shadow-lg">
+              <div className="flex items-center gap-2">
+                <Users className="w-5 h-5 text-blue-600" />
+                <span className="font-semibold">15,000+ Happy Customers</span>
               </div>
             </div>
-            <div className="bg-gradient-to-r from-green-500/95 to-emerald-500/95 backdrop-blur-sm text-white px-8 py-4 rounded-full shadow-2xl border border-white/20">
-              <div className="flex items-center gap-3">
-                <Clock className="w-6 h-6" />
-                <span className="font-bold text-lg">24/7 Available</span>
+            <div className="bg-white/90 backdrop-blur-sm text-gray-800 px-6 py-3 rounded-full shadow-lg">
+              <div className="flex items-center gap-2">
+                <Clock className="w-5 h-5 text-green-600" />
+                <span className="font-semibold">24/7 Service</span>
               </div>
             </div>
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-wrap justify-center gap-8">
+          <div className="flex flex-wrap justify-center gap-6">
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white px-12 py-5 text-2xl font-bold shadow-2xl border-2 border-orange-500 hover:border-orange-600 transition-all duration-300 rounded-full"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-10 py-4 text-xl font-semibold shadow-2xl border-2 border-orange-600 hover:border-orange-700 transition-all duration-300"
               onClick={() => window.open(`https://wa.me/917727021780?text=नमस्कार! मुझे टैक्सी सेवा की जानकारी चाहिए।`, '_blank')}
             >
-              <Phone className="w-6 h-6 mr-3" />
+              <Phone className="w-5 h-5 mr-2" />
               Book Now
             </Button>
             <Button 
               size="lg" 
-              className="bg-white/95 backdrop-blur-sm text-gray-900 hover:bg-white border-3 border-white px-12 py-5 text-2xl font-bold shadow-2xl transition-all duration-300 rounded-full hover:scale-105"
+              variant="outline" 
+              className="bg-white/90 backdrop-blur-sm text-gray-800 hover:bg-white border-2 border-white px-10 py-4 text-xl font-semibold shadow-2xl transition-all duration-300"
               onClick={() => window.open(`tel:+919772021780`, '_blank')}
             >
-              <Car className="w-6 h-6 mr-3" />
+              <Car className="w-5 h-5 mr-2" />
               Call Now
             </Button>
           </div>
         </div>
       </div>
 
-      {/* Enhanced Trust Indicators Section */}
-      <div className="bg-gradient-to-br from-gray-50 to-white py-20">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Why Choose Sethi Tour & Travels?
-            </h2>
-            <p className="text-xl text-gray-600">
-              Your trusted partner for premium travel experiences across India
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="group text-center hover:transform hover:scale-105 transition-all duration-300">
-              <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg group-hover:shadow-xl">
-                <Shield className="w-10 h-10 text-white" />
+      {/* Trust Indicators */}
+      <div className="bg-white py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full flex items-center justify-center mb-4">
+                <Shield className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-3xl font-extrabold text-gray-900 mb-2">100%</h3>
-              <p className="text-gray-600 font-semibold">Safe & Secure Journey</p>
+              <h3 className="text-2xl font-bold text-gray-800">100%</h3>
+              <p className="text-gray-600">Safe & Secure</p>
             </div>
-            
-            <div className="group text-center hover:transform hover:scale-105 transition-all duration-300">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg group-hover:shadow-xl">
-                <Award className="w-10 h-10 text-white" />
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full flex items-center justify-center mb-4">
+                <Award className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-3xl font-extrabold text-gray-900 mb-2">15+</h3>
-              <p className="text-gray-600 font-semibold">Years of Excellence</p>
+              <h3 className="text-2xl font-bold text-gray-800">15+</h3>
+              <p className="text-gray-600">Years Experience</p>
             </div>
-            
-            <div className="group text-center hover:transform hover:scale-105 transition-all duration-300">
-              <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg group-hover:shadow-xl">
-                <Car className="w-10 h-10 text-white" />
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full flex items-center justify-center mb-4">
+                <Car className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-3xl font-extrabold text-gray-900 mb-2">50+</h3>
-              <p className="text-gray-600 font-semibold">Premium Fleet</p>
+              <h3 className="text-2xl font-bold text-gray-800">50+</h3>
+              <p className="text-gray-600">Premium Vehicles</p>
             </div>
-            
-            <div className="group text-center hover:transform hover:scale-105 transition-all duration-300">
-              <div className="w-20 h-20 bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg group-hover:shadow-xl">
-                <Clock className="w-10 h-10 text-white" />
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full flex items-center justify-center mb-4">
+                <Clock className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-3xl font-extrabold text-gray-900 mb-2">24/7</h3>
-              <p className="text-gray-600 font-semibold">Customer Support</p>
+              <h3 className="text-2xl font-bold text-gray-800">24/7</h3>
+              <p className="text-gray-600">Support Available</p>
             </div>
           </div>
         </div>
@@ -250,59 +231,22 @@ export default function TaxiServices() {
         </div>
       </div>
 
-      {/* Enhanced Contact Section */}
-      <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-20">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <Badge className="mb-6 bg-orange-600 text-white border-orange-400 text-lg px-6 py-2">
-              Get In Touch
-            </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Need Custom Taxi Service?
-            </h2>
-            <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-              Contact us for personalized taxi services tailored to your specific travel requirements. 
-              Our expert team is available 24/7 to assist you.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <a 
-              href="tel:+919772021780" 
-              className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 p-8 rounded-2xl transition-all duration-300 hover:transform hover:scale-105 shadow-2xl"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                  <Phone className="w-8 h-8" />
-                </div>
-                <div className="text-left">
-                  <h3 className="text-xl font-bold mb-2">Call Now</h3>
-                  <p className="text-blue-100 text-lg">+91 97720 21780</p>
-                </div>
-              </div>
+      {/* Contact Section */}
+      <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-6">Need Custom Taxi Service?</h2>
+          <p className="text-lg mb-8 opacity-90">
+            Contact us for personalized taxi services for your specific requirements
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="tel:+919772021780" className="flex items-center gap-2 bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg transition-colors">
+              <Phone className="w-5 h-5" />
+              <span>Call: +91 97720 21780</span>
             </a>
-            
-            <a 
-              href="https://wa.me/917727021780" 
-              className="group bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 p-8 rounded-2xl transition-all duration-300 hover:transform hover:scale-105 shadow-2xl"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                  <Phone className="w-8 h-8" />
-                </div>
-                <div className="text-left">
-                  <h3 className="text-xl font-bold mb-2">WhatsApp</h3>
-                  <p className="text-green-100 text-lg">+91 77270 21780</p>
-                </div>
-              </div>
+            <a href="https://wa.me/917727021780" className="flex items-center gap-2 bg-green-500 hover:bg-green-600 px-6 py-3 rounded-lg transition-colors">
+              <Phone className="w-5 h-5" />
+              <span>WhatsApp: +91 77270 21780</span>
             </a>
-          </div>
-          
-          <div className="text-center mt-12">
-            <p className="text-gray-300 text-lg">
-              <MapPin className="w-5 h-5 inline mr-2" />
-              S-147, 4S New Loha Mandi Road, Machada, Jaipur-302013
-            </p>
           </div>
         </div>
       </div>
