@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { useCommunication } from "../components/communication-utils";
-import hawamahalImage from "@assets/image_1752330488177.png";
+import hawamahalImage1 from "@assets/image_1752330488177.png";
 import hawamahalImage2 from "@assets/image_1752330504538.png";
 
 export default function JaipurTaxi() {
@@ -28,7 +28,7 @@ export default function JaipurTaxi() {
   const [selectedVehicle, setSelectedVehicle] = useState("sedan");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
-  const backgroundImages = [hawamahalImage, hawamahalImage2];
+  const backgroundImages = [hawamahalImage1, hawamahalImage2];
   
   useEffect(() => {
     const interval = setInterval(() => {
