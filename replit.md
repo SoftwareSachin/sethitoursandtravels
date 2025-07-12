@@ -109,7 +109,19 @@ The application follows a monorepo structure with clear separation between clien
 
 ## Recent Changes (January 2025)
 
-### Fleet Showcase & Quick Booking Enhancement (Latest)
+### Jaipur Taxi Services Dedicated Page (Latest)
+- **Comprehensive Jaipur Taxi Page**: Created dedicated `/jaipur-taxi` route with complete service information
+- **Detailed Service Sections**: Added local hire, airport transfers, one-way, outstation, and corporate travel services
+- **One-Way Rate Tables**: Interactive pricing tables for 20+ destinations with Sedan, SUV, and Innova Crysta options
+- **Discount System**: Early bird (10%) and group booking (15%) discounts with special festival packages
+- **Service Inclusions**: Clear breakdown of fuel charges, driver charges, and tolls included in pricing
+- **Amber Fort Tourism**: Added detailed section about Amber Fort with booking integration
+- **24/7 Booking System**: Multiple contact methods with WhatsApp and phone integration
+- **Professional Layout**: Hero section, features showcase, and comprehensive service descriptions
+- **Navigation Integration**: Added "Jaipur Taxi" link to main navigation (desktop and mobile)
+- **Authentic Content**: Used real business information including contact details and pricing structure
+
+### Fleet Showcase & Quick Booking Enhancement
 - **Fleet Showcase Section**: Comprehensive display of vehicle fleet with Dzire, Ertiga, Innova, and Tempo Traveller
 - **Premium Fleet Features**: Detailed vehicle specifications, pricing, capacity, and booking integration
 - **Quick Booking Widget**: Advanced booking form with service selection, date/time picker, and WhatsApp integration

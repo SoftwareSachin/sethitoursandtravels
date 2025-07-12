@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Phone } from "lucide-react";
+import { Link } from "wouter";
 import logoGif from "@assets/fetchpik.com-iconscout-HXNPRTYJxe_1752324682347.gif";
 
 export default function Navigation() {
@@ -23,6 +24,10 @@ export default function Navigation() {
     { id: "gallery", label: "Gallery" },
     { id: "testimonials", label: "Reviews" },
     { id: "contact", label: "Contact" },
+  ];
+
+  const specialNavItems = [
+    { href: "/jaipur-taxi", label: "Jaipur Taxi" }
   ];
 
   return (
@@ -52,6 +57,15 @@ export default function Navigation() {
               >
                 {item.label}
               </button>
+            ))}
+            {specialNavItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-gray-700 hover:text-primary transition-colors"
+              >
+                {item.label}
+              </Link>
             ))}
           </div>
 
@@ -92,6 +106,16 @@ export default function Navigation() {
                     >
                       {item.label}
                     </button>
+                  ))}
+                  {specialNavItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="text-left text-gray-700 hover:text-primary transition-colors py-3 px-4 rounded-lg hover:bg-gray-50 text-base font-medium"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
                   ))}
                 </div>
                 <div className="pt-4 border-t border-gray-200">
