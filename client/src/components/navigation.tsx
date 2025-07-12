@@ -52,8 +52,8 @@ export default function Navigation() {
               ))}
             </div>
 
-            {/* Central Logo */}
-            <div className="flex justify-center items-center">
+            {/* Central Logo - Desktop Only */}
+            <div className="hidden lg:flex justify-center items-center">
               <div className="bg-white rounded-lg p-1 sm:p-2 shadow-lg border border-orange-200">
                 <img 
                   src={companyLogo} 
