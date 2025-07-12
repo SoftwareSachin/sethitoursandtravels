@@ -17,7 +17,7 @@ export default function FleetShowcase() {
       luggage: "2 Large Bags",
       features: ["AC", "Music System", "GPS"],
       pricePerKm: 12,
-      ideal: "City Tours, Airport Transfers",
+      ideal: "Heritage City Tours, Palace Visits",
       rating: 4.8
     },
     {
@@ -28,7 +28,7 @@ export default function FleetShowcase() {
       luggage: "3 Large Bags",
       features: ["AC", "Captain Seats", "Entertainment"],
       pricePerKm: 14,
-      ideal: "Family Tours, Group Travel",
+      ideal: "Royal Family Tours, Cultural Journeys",
       rating: 4.7
     },
     {
@@ -39,7 +39,7 @@ export default function FleetShowcase() {
       luggage: "4 Large Bags",
       features: ["Luxury AC", "Premium Interiors", "Extra Comfort"],
       pricePerKm: 18,
-      ideal: "Long Distance Tours, Premium Travel",
+      ideal: "Golden Triangle Tours, Luxury Heritage",
       rating: 4.9
     },
     {
@@ -50,7 +50,7 @@ export default function FleetShowcase() {
       luggage: "8+ Large Bags",
       features: ["AC", "Reclining Seats", "Ample Space"],
       pricePerKm: 25,
-      ideal: "Large Groups, Corporate Tours",
+      ideal: "Group Heritage Tours, Desert Safari",
       rating: 4.6
     }
   ];
@@ -59,10 +59,10 @@ export default function FleetShowcase() {
     <section id="fleet" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Premium Fleet</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Travel Fleet</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose from our well-maintained, comfortable vehicles for your India tour. 
-            All cars come with experienced drivers and comprehensive insurance coverage.
+            Discover India in comfort with our carefully selected vehicles. From intimate city tours to grand heritage journeys, 
+            each vehicle comes with professional drivers who know every hidden gem and historic tale along the way.
           </p>
         </div>
 
