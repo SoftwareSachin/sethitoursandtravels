@@ -14,7 +14,7 @@ export default function ComprehensivePackages() {
       price: "₹28,999",
       originalPrice: "₹35,999",
       rating: "4.9",
-      image: "/attached_assets/image_1752355178625.png",
+      image: "/attached_assets/image_1752355776665.png",
       category: "Premium",
       highlights: [
         "Desert Safari in Jaisalmer",
@@ -42,7 +42,7 @@ export default function ComprehensivePackages() {
       price: "₹22,999",
       originalPrice: "₹28,999",
       rating: "4.8",
-      image: "/attached_assets/image_1752355162127.png",
+      image: "/attached_assets/image_1752355900853.png",
       category: "Classic",
       highlights: [
         "Taj Mahal Sunrise Visit",
@@ -70,7 +70,7 @@ export default function ComprehensivePackages() {
       price: "₹16,999",
       originalPrice: "₹21,999", 
       rating: "4.7",
-      image: "/attached_assets/image_1752354817723.png",
+      image: "/attached_assets/image_1752355931356.png",
       category: "Spiritual",
       highlights: [
         "Golden Temple Early Morning Visit",
@@ -98,7 +98,7 @@ export default function ComprehensivePackages() {
       price: "₹24,999",
       originalPrice: "₹30,999",
       rating: "4.8",
-      image: "/attached_assets/image_1752354830755.png",
+      image: "/attached_assets/image_1752355954390.png",
       category: "Adventure",
       highlights: [
         "Ganga Aarti at Har Ki Pauri",
@@ -126,7 +126,7 @@ export default function ComprehensivePackages() {
       price: "₹26,999",
       originalPrice: "₹33,999",
       rating: "4.9",
-      image: "/attached_assets/image_1752354841317.png",
+      image: "/attached_assets/image_1752355972172.png",
       category: "Hill Station",
       highlights: [
         "Rohtang Pass Snow Experience",
@@ -154,7 +154,7 @@ export default function ComprehensivePackages() {
       price: "₹55,999",
       originalPrice: "₹69,999",
       rating: "4.8",
-      image: "/attached_assets/image_1752355272251.png",
+      image: "/attached_assets/image_1752356016796.png",
       category: "International",
       highlights: [
         "Grand Palace & Wat Pho",
