@@ -1,8 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Clock, Star, Users, Plane, Car } from "lucide-react";
+import { MapPin, Clock, Star, Users, Plane, Car, Award, Globe, Heart, TrendingUp, Calendar, Shield } from "lucide-react";
+import { useCommunication, CommunicationUtils } from "./communication-utils";
 
 export default function ComprehensivePackages() {
+  const { whatsapp } = useCommunication();
+  
   const allPackages = [
     {
       name: "Rajasthan Heritage Circuit",
@@ -11,7 +14,7 @@ export default function ComprehensivePackages() {
       price: "₹28,999",
       originalPrice: "₹35,999",
       rating: "4.9",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/attached_assets/image_1752355178625.png",
       category: "Premium",
       highlights: [
         "Desert Safari in Jaisalmer",
@@ -39,7 +42,7 @@ export default function ComprehensivePackages() {
       price: "₹22,999",
       originalPrice: "₹28,999",
       rating: "4.8",
-      image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/attached_assets/image_1752355162127.png",
       category: "Classic",
       highlights: [
         "Taj Mahal Sunrise Visit",
@@ -67,7 +70,7 @@ export default function ComprehensivePackages() {
       price: "₹16,999",
       originalPrice: "₹21,999", 
       rating: "4.7",
-      image: "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/attached_assets/image_1752354817723.png",
       category: "Spiritual",
       highlights: [
         "Golden Temple Early Morning Visit",
@@ -95,7 +98,7 @@ export default function ComprehensivePackages() {
       price: "₹24,999",
       originalPrice: "₹30,999",
       rating: "4.8",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/attached_assets/image_1752354830755.png",
       category: "Adventure",
       highlights: [
         "Ganga Aarti at Har Ki Pauri",
@@ -123,7 +126,7 @@ export default function ComprehensivePackages() {
       price: "₹26,999",
       originalPrice: "₹33,999",
       rating: "4.9",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/attached_assets/image_1752354841317.png",
       category: "Hill Station",
       highlights: [
         "Rohtang Pass Snow Experience",
@@ -151,7 +154,7 @@ export default function ComprehensivePackages() {
       price: "₹55,999",
       originalPrice: "₹69,999",
       rating: "4.8",
-      image: "https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/attached_assets/image_1752355272251.png",
       category: "International",
       highlights: [
         "Grand Palace & Wat Pho",
@@ -175,60 +178,114 @@ export default function ComprehensivePackages() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-16 sm:py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Complete Tour Package Collection</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full text-sm font-medium mb-6">
+            <Globe className="h-5 w-5 mr-2" />
+            Complete Tour Package Collection
+          </div>
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            Explore Our Tour Packages
+          </h2>
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Explore our comprehensive range of tour packages designed for every traveler. From spiritual journeys 
             to adventure trips, domestic heritage tours to international experiences - we have something special for everyone.
           </p>
+          <div className="flex flex-wrap justify-center gap-4 mt-8">
+            <div className="flex items-center bg-white rounded-full px-6 py-3 shadow-lg">
+              <Award className="h-5 w-5 text-purple-600 mr-2" />
+              <span className="text-sm font-medium">Premium Experiences</span>
+            </div>
+            <div className="flex items-center bg-white rounded-full px-6 py-3 shadow-lg">
+              <Shield className="h-5 w-5 text-green-600 mr-2" />
+              <span className="text-sm font-medium">Trusted Service</span>
+            </div>
+            <div className="flex items-center bg-white rounded-full px-6 py-3 shadow-lg">
+              <Users className="h-5 w-5 text-blue-600 mr-2" />
+              <span className="text-sm font-medium">Expert Guides</span>
+            </div>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {allPackages.map((pkg, index) => (
-            <Card key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
-              <div className="relative">
+            <Card key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group transform hover:-translate-y-2">
+              <div className="relative overflow-hidden">
                 <img 
                   src={pkg.image}
                   alt={pkg.name}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
                 <div className="absolute top-4 left-4">
-                  <span className="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
                     {pkg.category}
                   </span>
                 </div>
+                
                 <div className="absolute top-4 right-4">
-                  <div className="bg-black/70 text-white px-2 py-1 rounded flex items-center">
-                    <Star className="h-3 w-3 mr-1 text-yellow-500" />
-                    <span className="text-sm">{pkg.rating}</span>
+                  <div className="bg-white/20 backdrop-blur-sm text-white px-3 py-2 rounded-full flex items-center shadow-lg">
+                    <Star className="h-4 w-4 mr-1 text-yellow-400 fill-current" />
+                    <span className="text-sm font-medium">{pkg.rating}</span>
                   </div>
                 </div>
+                
                 <div className="absolute bottom-4 left-4">
-                  <span className="bg-secondary text-white px-3 py-1 rounded-full text-sm flex items-center">
-                    <Clock className="h-3 w-3 mr-1" />
+                  <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm flex items-center shadow-lg">
+                    <Clock className="h-4 w-4 mr-1" />
                     {pkg.duration}
                   </span>
                 </div>
+                
+                <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <button className="bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 transition-colors">
+                    <Heart className="h-4 w-4" />
+                  </button>
+                </div>
+                
+                {index === 0 && (
+                  <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center shadow-lg">
+                      <TrendingUp className="h-3 w-3 mr-1" />
+                      Most Popular
+                    </span>
+                  </div>
+                )}
               </div>
               
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="inline-block bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">
+                    Heritage Experience
+                  </span>
+                  <div className="flex items-center text-yellow-500">
+                    <Star className="h-4 w-4 fill-current" />
+                    <span className="text-sm font-medium text-gray-600 ml-1">{pkg.rating}</span>
+                  </div>
+                </div>
+                
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors line-clamp-2">
                   {pkg.name}
                 </h3>
                 
-                <div className="flex items-center text-sm text-gray-600 mb-3">
-                  <MapPin className="h-4 w-4 mr-1" />
+                <div className="flex items-center text-sm text-gray-600 mb-4">
+                  <MapPin className="h-4 w-4 mr-1 text-purple-600" />
                   <span>{pkg.destinations.join(" → ")}</span>
                 </div>
                 
                 <div className="mb-4">
                   <div className="flex items-baseline">
-                    <span className="text-2xl font-bold text-primary">{pkg.price}</span>
+                    <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">{pkg.price}</span>
                     <span className="text-lg text-gray-500 line-through ml-2">{pkg.originalPrice}</span>
                   </div>
-                  <span className="text-sm text-gray-600">per person</span>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-600">per person</span>
+                    <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">
+                      Save {Math.round(((parseInt(pkg.originalPrice.replace('₹', '').replace(',', '')) - parseInt(pkg.price.replace('₹', '').replace(',', ''))) / parseInt(pkg.originalPrice.replace('₹', '').replace(',', ''))) * 100)}%
+                    </span>
+                  </div>
                 </div>
                 
                 <div className="mb-4">
@@ -265,46 +322,82 @@ export default function ComprehensivePackages() {
                   </ul>
                 </div>
                 
-                <Button 
-                  asChild
-                  className="w-full bg-primary hover:bg-blue-700 text-white group-hover:bg-secondary transition-colors"
-                >
-                  <a href={`https://api.whatsapp.com/send?phone=919772021780&text=Hello%20I%20want%20to%20book%20${encodeURIComponent(pkg.name)}%20package`}>
+                <div className="space-y-3">
+                  <Button 
+                    onClick={() => whatsapp(CommunicationUtils.getBookingMessage(pkg.name))}
+                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+                  >
                     Book This Package
-                  </a>
-                </Button>
+                  </Button>
+                  <div className="flex items-center justify-center space-x-4 text-sm text-gray-500">
+                    <div className="flex items-center">
+                      <Calendar className="h-4 w-4 mr-1" />
+                      <span>Free Cancellation</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Shield className="h-4 w-4 mr-1" />
+                      <span>Secure Booking</span>
+                    </div>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Custom Package Design Service</h3>
-            <p className="text-gray-600 mb-6 text-lg">
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl shadow-2xl p-8 max-w-5xl mx-auto text-white">
+            <div className="flex items-center justify-center mb-6">
+              <div className="bg-white/20 backdrop-blur-sm p-4 rounded-full">
+                <Award className="h-8 w-8 text-white" />
+              </div>
+            </div>
+            <h3 className="text-3xl font-bold mb-6">
+              Custom Package Design Service
+            </h3>
+            <p className="text-purple-100 mb-8 text-lg max-w-3xl mx-auto leading-relaxed">
               Don't see exactly what you're looking for? We specialize in creating personalized tour packages 
               based on your specific interests, budget, time frame, and group size. Our travel experts will 
               design the perfect itinerary just for you.
             </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="text-center">
+                <div className="bg-white/20 backdrop-blur-sm p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                  <Users className="h-8 w-8 text-white" />
+                </div>
+                <h4 className="font-semibold text-white mb-2">Personalized Planning</h4>
+                <p className="text-sm text-purple-100">Tailored to your preferences and budget</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-white/20 backdrop-blur-sm p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                  <Globe className="h-8 w-8 text-white" />
+                </div>
+                <h4 className="font-semibold text-white mb-2">Expert Guidance</h4>
+                <p className="text-sm text-purple-100">Professional travel consultants</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-white/20 backdrop-blur-sm p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                  <Shield className="h-8 w-8 text-white" />
+                </div>
+                <h4 className="font-semibold text-white mb-2">Guaranteed Quality</h4>
+                <p className="text-sm text-purple-100">Premium service with 100% satisfaction</p>
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                asChild
+                onClick={() => whatsapp("Hello, I want a custom tour package designed for my specific requirements and preferences")}
                 size="lg"
-                className="bg-secondary hover:bg-orange-600 text-white"
+                className="bg-white text-purple-600 hover:bg-purple-50 font-medium transform hover:scale-105 transition-all duration-300"
               >
-                <a href="https://api.whatsapp.com/send?phone=919772021780&text=Hello%20I%20want%20a%20custom%20tour%20package%20designed%20for%20my%20requirements">
-                  Design Custom Package
-                </a>
+                Design Custom Package
               </Button>
               <Button 
-                asChild
+                onClick={() => whatsapp("Hello, I want to speak with a travel expert about tour packages")}
                 size="lg"
                 variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-white"
+                className="border-white text-white hover:bg-white hover:text-purple-600 font-medium transform hover:scale-105 transition-all duration-300"
               >
-                <a href="tel:9772021780">
-                  Speak to Travel Expert
-                </a>
+                Speak to Travel Expert
               </Button>
             </div>
           </div>
