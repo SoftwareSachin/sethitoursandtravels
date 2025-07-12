@@ -5,8 +5,8 @@ export const CONTACT_INFO = {
   phone: "9772021780",
   whatsapp: "919772021780",
   email: "sethitourstravels8888@gmail.com",
-  owner: "Kuldeep Choudhary",
-  businessName: "Sethi Tour & Travels",
+  address: "S-147, 4S New Loha Mandi Road, Machada, Jaipur-302013, Rajasthan, India",
+  businessOwner: "Kuldeep Choudhary",
   businessHours: "24/7 Service Available",
   languages: ["Hindi", "English", "Rajasthani"],
   specialties: ["Rajasthan Heritage Tours", "Golden Triangle", "Desert Safaris", "Royal Palace Tours"]
@@ -97,24 +97,31 @@ ${CONTACT_INFO.businessHours}
 ${msgs.farewell}`;
     
     const encodedMessage = encodeURIComponent(finalMessage);
-    const url = `https://wa.me/${CONTACT_INFO.whatsapp}?text=${encodedMessage}`;
+    const whatsappNumber = CONTACT_INFO.whatsapp;
+    const url = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    
+    console.log('WhatsApp URL:', url);
+    console.log('WhatsApp Number:', whatsappNumber);
     
     try {
       window.open(url, '_blank', 'noopener,noreferrer');
     } catch (error) {
       console.error('Error opening WhatsApp:', error);
-      window.location.href = url;
+      // Fallback to a simpler message if the complex one fails
+      const simpleMessage = encodeURIComponent(`राम राम सा! मैं सेठी टूर एंड ट्रेवल्स की सेवाओं के बारे में जानकारी चाहता हूं। संपर्क: +91${CONTACT_INFO.phone}`);
+      const simpleUrl = `https://wa.me/${whatsappNumber}?text=${simpleMessage}`;
+      window.open(simpleUrl, '_blank', 'noopener,noreferrer');
     }
   },
 
   // Phone call function
-  makePhoneCall: () => {
+  makeCall: () => {
     const phoneUrl = `tel:+91${CONTACT_INFO.phone}`;
     try {
-      window.open(phoneUrl, '_self');
+      window.location.href = phoneUrl;
     } catch (error) {
       console.error('Error making phone call:', error);
-      window.location.href = phoneUrl;
+      alert(`Please call: +91${CONTACT_INFO.phone}`);
     }
   },
 
