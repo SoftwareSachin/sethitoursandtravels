@@ -195,7 +195,7 @@ export default function ComprehensivePackages() {
           <div className="flex flex-wrap justify-center gap-4 mt-8">
             <div className="flex items-center bg-white rounded-full px-6 py-3 shadow-lg">
               <Award className="h-5 w-5 text-purple-600 mr-2" />
-              <span className="text-sm font-medium">Premium Experiences</span>
+              <span className="text-sm font-medium">Experiences</span>
             </div>
             <div className="flex items-center bg-white rounded-full px-6 py-3 shadow-lg">
               <Shield className="h-5 w-5 text-green-600 mr-2" />
