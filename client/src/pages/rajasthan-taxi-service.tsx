@@ -66,6 +66,97 @@ const rajasthanTaxiServices = [
     description: "Scenic route from Kota to City of Lakes",
     price: "₹4,200",
     features: ["Lake Pichola", "City Palace", "Romantic getaway", "Wedding destinations"]
+  },
+  {
+    name: "Dausa Taxi Service",
+    path: "/taxi-services/rajasthan/dausa",
+    description: "Local taxi services in Dausa district",
+    price: "₹10/KM",
+    features: ["Chand Baori", "Nilkanth Mahadev", "Local sightseeing", "Religious tours"]
+  },
+  {
+    name: "Pilani Taxi Service",
+    path: "/taxi-services/rajasthan/pilani",
+    description: "Educational hub taxi services",
+    price: "₹11/KM",
+    features: ["BITS Pilani", "Campus visits", "Student transportation", "Local tours"]
+  },
+  {
+    name: "Ajmer Taxi Service",
+    path: "/taxi-services/rajasthan/ajmer",
+    description: "Holy city taxi services and tours",
+    price: "₹12/KM",
+    features: ["Ajmer Sharif", "Pushkar Lake", "Religious tours", "Camel fair"]
+  },
+  {
+    name: "Ajmer to Udaipur Taxi Service",
+    path: "/taxi-services/rajasthan/ajmer-udaipur",
+    description: "Direct taxi service from Ajmer to Udaipur",
+    price: "₹3,800",
+    features: ["Lake City tours", "Palace visits", "Romantic getaway", "Heritage sites"]
+  },
+  {
+    name: "Bhilwara Taxi Service",
+    path: "/taxi-services/rajasthan/bhilwara",
+    description: "Textile city taxi services",
+    price: "₹10/KM",
+    features: ["Industrial tours", "Business travel", "Local sightseeing", "Temple visits"]
+  },
+  {
+    name: "Kota taxi service",
+    path: "/taxi-services/rajasthan/kota",
+    description: "Education city taxi services",
+    price: "₹11/KM",
+    features: ["Coaching institutes", "Student services", "City Palace", "Chambal gardens"]
+  },
+  {
+    name: "Jaipur to Udaipur Taxi Service",
+    path: "/taxi-services/rajasthan/jaipur-udaipur",
+    description: "Pink City to City of Lakes taxi service",
+    price: "₹4,500",
+    features: ["Lake Pichola", "City Palace", "Jagdish Temple", "Saheliyon ki Bari"]
+  },
+  {
+    name: "Churu Taxi Service",
+    path: "/taxi-services/rajasthan/churu",
+    description: "Desert town taxi services",
+    price: "₹9/KM",
+    features: ["Havelis tours", "Desert experience", "Local culture", "Historical sites"]
+  },
+  {
+    name: "Udaipur taxi service",
+    path: "/taxi-services/rajasthan/udaipur",
+    description: "City of Lakes comprehensive taxi services",
+    price: "₹13/KM",
+    features: ["Lake tours", "Palace visits", "Romantic tours", "Heritage walks"]
+  },
+  {
+    name: "Khatu Shyam Taxi Service",
+    path: "/taxi-services/rajasthan/khatu-shyam",
+    description: "Religious pilgrimage taxi services",
+    price: "₹8/KM",
+    features: ["Khatu Shyam Temple", "Religious tours", "Pilgrimage packages", "Festival visits"]
+  },
+  {
+    name: "Jodhpur Taxi Service",
+    path: "/taxi-services/rajasthan/jodhpur",
+    description: "Blue City comprehensive taxi services",
+    price: "₹12/KM",
+    features: ["Mehrangarh Fort", "Umaid Bhawan", "Blue City tours", "Desert safaris"]
+  },
+  {
+    name: "Jaisalmer Taxi Service",
+    path: "/taxi-services/rajasthan/jaisalmer",
+    description: "Golden City desert taxi services",
+    price: "₹14/KM",
+    features: ["Jaisalmer Fort", "Desert safaris", "Camel rides", "Sand dunes"]
+  },
+  {
+    name: "Bikaner Taxi Service",
+    path: "/taxi-services/rajasthan/bikaner",
+    description: "Desert city taxi services and tours",
+    price: "₹11/KM",
+    features: ["Junagarh Fort", "Camel farm", "Desert tours", "Local cuisine"]
   }
 ];
 
