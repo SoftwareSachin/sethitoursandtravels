@@ -127,31 +127,71 @@ export default function JaipurTaxi() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-br from-orange-600 via-pink-600 to-purple-800 text-white py-24 overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+          <div className="absolute bottom-20 left-20 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            {/* Badge */}
+            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
+              <Star className="h-4 w-4 text-yellow-400 mr-2" />
+              <span className="text-sm font-medium">Rajasthan's #1 Rated Taxi Service</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
               Jaipur Taxi Service
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Your Trusted Travel Companion in the Pink City - Reliable, Comfortable, and Affordable
+            <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-yellow-200">
+              खम्मा गणी सा! Welcome to Pink City
+            </h2>
+            <p className="text-xl md:text-2xl mb-10 max-w-4xl mx-auto leading-relaxed">
+              Experience royal comfort with our premium taxi services in Jaipur. 
+              From Amber Fort to City Palace, explore the Pink City's heritage with 
+              <span className="text-yellow-300 font-semibold"> 24/7 availability</span> and 
+              <span className="text-yellow-300 font-semibold"> transparent pricing</span>.
             </p>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10 max-w-3xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <div className="text-2xl font-bold text-yellow-300">5000+</div>
+                <div className="text-sm">Happy Customers</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <div className="text-2xl font-bold text-yellow-300">24/7</div>
+                <div className="text-sm">Service Available</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <div className="text-2xl font-bold text-yellow-300">20+</div>
+                <div className="text-sm">Destinations</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <div className="text-2xl font-bold text-yellow-300">5★</div>
+                <div className="text-sm">Customer Rating</div>
+              </div>
+            </div>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg"
+                className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-10 py-5 text-lg font-semibold shadow-2xl transform hover:scale-105 transition-all duration-300"
                 onClick={() => whatsapp("खम्मा गणी सा! मुझे जयपुर टैक्सी सर्विस चाहिए।")}
               >
-                <FaWhatsapp className="mr-2 h-5 w-5" />
-                Book Now on WhatsApp
+                <FaWhatsapp className="mr-3 h-6 w-6" />
+                Book Instantly on WhatsApp
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg"
+                className="border-2 border-white text-white hover:bg-white hover:text-purple-900 px-10 py-5 text-lg font-semibold shadow-2xl transform hover:scale-105 transition-all duration-300"
                 onClick={() => phone()}
               >
-                <Phone className="mr-2 h-5 w-5" />
+                <Phone className="mr-3 h-6 w-6" />
                 Call: +91 7737017755
               </Button>
             </div>
@@ -160,42 +200,49 @@ export default function JaipurTaxi() {
       </section>
 
       {/* Quick Contact Bar */}
-      <section className="bg-secondary text-white py-4">
+      <section className="bg-gradient-to-r from-orange-500 to-red-500 text-white py-6 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-2">
-              <Phone className="h-5 w-5" />
-              <span>📞 +91 7737017755, 7014913953</span>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
+              <Phone className="h-5 w-5 text-yellow-300" />
+              <span className="font-semibold">📞 +91 7737017755, 7014913953</span>
             </div>
-            <div className="flex items-center gap-2">
-              <FaWhatsapp className="h-5 w-5" />
-              <span>💬 WhatsApp: 7737017755</span>
+            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
+              <FaWhatsapp className="h-5 w-5 text-green-300" />
+              <span className="font-semibold">💬 WhatsApp: 7737017755</span>
             </div>
-            <div className="flex items-center gap-2">
-              <span>📧 mukeshtourandtravelsjaipur@gmail.com</span>
+            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
+              <span className="font-semibold">📧 mukeshtourandtravelsjaipur@gmail.com</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16">
+      <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-gradient-to-r from-orange-500 to-pink-500 text-white rounded-full px-6 py-2 mb-6">
+              <Award className="h-4 w-4 mr-2" />
+              <span className="text-sm font-medium">Premium Service Excellence</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent">
               Why Choose Mukesh Tour and Travels
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the best taxi service in Jaipur with our professional approach and customer-first mindset
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Experience the best taxi service in Jaipur with our professional approach, 
+              customer-first mindset, and commitment to excellence in every journey.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  <feature.icon className="h-12 w-12 text-secondary mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
+              <Card key={index} className="text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0 shadow-lg group">
+                <CardContent className="p-8">
+                  <div className="bg-gradient-to-br from-orange-500 to-pink-500 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">{feature.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -233,30 +280,39 @@ export default function JaipurTaxi() {
           </div>
           
           {/* Vehicle Type Selector */}
-          <div className="flex justify-center mb-8">
-            <div className="bg-white rounded-lg p-1 shadow-md">
+          <div className="flex justify-center mb-12">
+            <div className="bg-white rounded-2xl p-2 shadow-2xl border border-gray-100">
               <button
-                className={`px-6 py-2 rounded-md transition-colors ${
-                  selectedVehicle === "sedan" ? "bg-secondary text-white" : "text-gray-600"
+                className={`px-8 py-4 rounded-xl transition-all duration-300 font-semibold ${
+                  selectedVehicle === "sedan" 
+                    ? "bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-lg transform scale-105" 
+                    : "text-gray-600 hover:bg-gray-50"
                 }`}
                 onClick={() => setSelectedVehicle("sedan")}
               >
+                <Car className="inline h-5 w-5 mr-2" />
                 Sedan (2-4 passengers)
               </button>
               <button
-                className={`px-6 py-2 rounded-md transition-colors ${
-                  selectedVehicle === "suv" ? "bg-secondary text-white" : "text-gray-600"
+                className={`px-8 py-4 rounded-xl transition-all duration-300 font-semibold ${
+                  selectedVehicle === "suv" 
+                    ? "bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-lg transform scale-105" 
+                    : "text-gray-600 hover:bg-gray-50"
                 }`}
                 onClick={() => setSelectedVehicle("suv")}
               >
+                <Users className="inline h-5 w-5 mr-2" />
                 SUV (4-6 passengers)
               </button>
               <button
-                className={`px-6 py-2 rounded-md transition-colors ${
-                  selectedVehicle === "innova" ? "bg-secondary text-white" : "text-gray-600"
+                className={`px-8 py-4 rounded-xl transition-all duration-300 font-semibold ${
+                  selectedVehicle === "innova" 
+                    ? "bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-lg transform scale-105" 
+                    : "text-gray-600 hover:bg-gray-50"
                 }`}
                 onClick={() => setSelectedVehicle("innova")}
               >
+                <Users className="inline h-5 w-5 mr-2" />
                 Innova Crysta (6-7 passengers)
               </button>
             </div>
@@ -265,24 +321,25 @@ export default function JaipurTaxi() {
           {/* Popular Routes */}
           <div className="mb-12">
             <h3 className="text-2xl font-bold text-center mb-8">Popular Routes</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {oneWayRates.map((rate, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
+                <Card key={index} className="hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0 shadow-lg group overflow-hidden">
+                  <div className="bg-gradient-to-r from-orange-500 to-pink-500 h-1"></div>
                   <CardContent className="p-6">
                     <div className="flex justify-between items-center mb-4">
-                      <h4 className="font-semibold text-lg">{rate.route}</h4>
-                      <Badge variant="secondary">One-Way</Badge>
+                      <h4 className="font-bold text-lg text-gray-900">{rate.route}</h4>
+                      <Badge className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0">One-Way</Badge>
                     </div>
-                    <div className="text-2xl font-bold text-secondary mb-4">
+                    <div className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent mb-6">
                       ₹{selectedVehicle === "sedan" ? rate.sedan : 
                          selectedVehicle === "suv" ? rate.suv : rate.innova}
                     </div>
                     <Button 
-                      className="w-full bg-green-600 hover:bg-green-700"
+                      className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold py-3 shadow-lg transform group-hover:scale-105 transition-all duration-300"
                       onClick={() => whatsapp(`नमस्ते! मुझे ${rate.route} के लिए टैक्सी चाहिए।`)}
                     >
-                      <FaWhatsapp className="mr-2 h-4 w-4" />
-                      Book Now
+                      <FaWhatsapp className="mr-2 h-5 w-5" />
+                      Book Instantly
                     </Button>
                   </CardContent>
                 </Card>
@@ -321,28 +378,52 @@ export default function JaipurTaxi() {
       </section>
 
       {/* Discounts & Offers */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Discounts & Special Offers</h2>
-            <p className="text-xl text-gray-600">Save more with our exclusive deals</p>
+      <section className="py-20 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute top-0 left-0 w-40 h-40 bg-green-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-40 h-40 bg-emerald-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse animation-delay-2000"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full px-6 py-2 mb-6">
+              <Star className="h-4 w-4 mr-2" />
+              <span className="text-sm font-medium">Exclusive Savings Available</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+              Discounts & Special Offers
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Save big with our exclusive deals and seasonal offers - more value for your journey!
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {discounts.map((discount, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow border-2 border-green-200">
-                <CardContent className="p-6">
-                  <discount.icon className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold mb-2 text-green-800">{discount.title}</h3>
-                  <p className="text-gray-600">{discount.description}</p>
+              <Card key={index} className="text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-3 bg-gradient-to-br from-green-50 to-emerald-50 border-0 shadow-lg group overflow-hidden">
+                <div className="bg-gradient-to-r from-green-500 to-emerald-500 h-2"></div>
+                <CardContent className="p-8">
+                  <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <discount.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-green-800">{discount.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{discount.description}</p>
+                  <div className="mt-4 text-2xl font-bold text-green-600">
+                    {discount.title.includes("Early") ? "10%" : "15%"} OFF
+                  </div>
                 </CardContent>
               </Card>
             ))}
             {specialPackages.map((pkg, index) => (
-              <Card key={index + 2} className="text-center hover:shadow-lg transition-shadow border-2 border-purple-200">
-                <CardContent className="p-6">
-                  <Star className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold mb-2 text-purple-800">{pkg.title}</h3>
-                  <p className="text-gray-600">{pkg.description}</p>
+              <Card key={index + 2} className="text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-3 bg-gradient-to-br from-purple-50 to-pink-50 border-0 shadow-lg group overflow-hidden">
+                <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2"></div>
+                <CardContent className="p-8">
+                  <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Star className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-purple-800">{pkg.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{pkg.description}</p>
+                  <div className="mt-4 text-lg font-semibold text-purple-600">
+                    Special Rates
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -455,37 +536,84 @@ export default function JaipurTaxi() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-green-600 to-blue-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Book Your Ride Today!</h2>
-          <p className="text-xl mb-8">
-            Planning a trip around Jaipur or beyond? Mukesh Tour and Travels is your go-to for safe, 
-            reliable, and affordable taxi services.
+      <section className="py-24 bg-gradient-to-br from-orange-600 via-pink-600 to-purple-800 text-white relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute bottom-10 right-10 w-32 h-32 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+          <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+        </div>
+        
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-8">
+            <CheckCircle className="h-4 w-4 text-green-300 mr-2" />
+            <span className="text-sm font-medium">Trusted by 5000+ Happy Customers</span>
+          </div>
+          
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+            Ready to Explore Jaipur?
+          </h2>
+          <p className="text-2xl md:text-3xl font-semibold mb-8 text-yellow-200">
+            खम्मा गणी सा! Let's Start Your Journey
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <p className="text-xl mb-12 max-w-4xl mx-auto leading-relaxed">
+            Planning a trip around Jaipur or beyond? Mukesh Tour and Travels is your go-to for safe, 
+            reliable, and affordable taxi services. Book now and experience the Pink City like never before!
+          </p>
+          
+          {/* Features highlight */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <Clock className="h-8 w-8 text-yellow-300 mx-auto mb-3" />
+              <h3 className="font-semibold mb-2">Instant Booking</h3>
+              <p className="text-sm opacity-90">Book in 30 seconds via WhatsApp</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <Shield className="h-8 w-8 text-green-300 mx-auto mb-3" />
+              <h3 className="font-semibold mb-2">Safe & Secure</h3>
+              <p className="text-sm opacity-90">Licensed drivers & insured vehicles</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <Star className="h-8 w-8 text-orange-300 mx-auto mb-3" />
+              <h3 className="font-semibold mb-2">Best Rates</h3>
+              <p className="text-sm opacity-90">Transparent pricing, no hidden charges</p>
+            </div>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button 
               size="lg" 
-              className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 text-lg"
+              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-12 py-6 text-xl font-bold shadow-2xl transform hover:scale-105 transition-all duration-300 border-0"
               onClick={() => whatsapp("नमस्ते! मुझे जयपुर टैक्सी सर्विस बुक करनी है।")}
             >
-              <FaWhatsapp className="mr-2 h-5 w-5" />
-              WhatsApp: 7737017755
+              <FaWhatsapp className="mr-3 h-6 w-6" />
+              Book on WhatsApp Now
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 text-lg"
+              className="border-2 border-white text-white hover:bg-white hover:text-purple-900 px-12 py-6 text-xl font-bold shadow-2xl transform hover:scale-105 transition-all duration-300"
               onClick={() => phone()}
             >
-              <Phone className="mr-2 h-5 w-5" />
+              <Phone className="mr-3 h-6 w-6" />
               Call: +91 7737017755
             </Button>
           </div>
-          <p className="mt-6 text-lg">
-            📧 mukeshtourandtravelsjaipur@gmail.com<br />
-            🌐 https://mukeshtourandtravels.com/<br />
-            📍 Jaipur, Rajasthan
-          </p>
+          
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 text-lg bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+            <div>
+              <span className="block font-semibold text-yellow-300">📧 Email Us</span>
+              <span>mukeshtourandtravelsjaipur@gmail.com</span>
+            </div>
+            <div>
+              <span className="block font-semibold text-green-300">🌐 Website</span>
+              <span>https://mukeshtourandtravels.com/</span>
+            </div>
+            <div>
+              <span className="block font-semibold text-orange-300">📍 Location</span>
+              <span>Jaipur, Rajasthan</span>
+            </div>
+          </div>
         </div>
       </section>
     </div>
