@@ -74,27 +74,141 @@ export default function JaipurTaxi() {
     {
       title: "Local Jaipur Taxi Hire",
       description: "Explore Jaipur's famous attractions like City Palace, Amer Fort, and Hawa Mahal with our full-day taxi hire.",
-      icon: MapPin
+      icon: MapPin,
+      price: "₹1,500-2,500/day",
+      features: ["8-10 hours", "Expert driver", "Fuel included", "All major attractions"]
     },
     {
       title: "Airport Transfers",
       description: "On-time pick-up and drop services to Jaipur Airport.",
-      icon: Navigation
+      icon: Navigation,
+      price: "₹500-800",
+      features: ["24/7 service", "Flight tracking", "Meet & greet", "Luggage assistance"]
     },
     {
       title: "One-Way Taxi Service",
       description: "Convenient one-way rides from Jaipur to cities across Rajasthan and neighboring states.",
-      icon: Car
+      icon: Car,
+      price: "₹8-12/km",
+      features: ["All destinations", "Professional drivers", "Well-maintained cars", "Competitive rates"]
     },
     {
       title: "Outstation Taxi Service",
       description: "Plan your trip to nearby cities with our comfortable outstation taxi service.",
-      icon: MapPin
+      icon: MapPin,
+      price: "₹2,000-4,000/day",
+      features: ["Multi-city tours", "Flexible itinerary", "Overnight stays", "Local guidance"]
     },
     {
       title: "Corporate and Event Travel",
       description: "Reliable transportation for business clients and special events.",
-      icon: Users
+      icon: Users,
+      price: "₹15-20/km",
+      features: ["Corporate billing", "Premium vehicles", "Executive service", "Group bookings"]
+    },
+    {
+      title: "Wedding & Special Events",
+      description: "Luxury vehicles for weddings, parties, and special occasions.",
+      icon: Award,
+      price: "₹3,000-8,000/day",
+      features: ["Decorated cars", "Premium fleet", "Professional chauffeur", "Special packages"]
+    }
+  ];
+
+  const vehicles = [
+    {
+      name: "Maruti Dzire",
+      type: "Sedan",
+      passengers: "4+1",
+      price: "₹8/km",
+      image: "/attached_assets/image_1752331025342.png",
+      features: ["AC", "Music System", "Comfortable Seats", "Spacious"],
+      popular: true
+    },
+    {
+      name: "Maruti Ertiga",
+      type: "SUV",
+      passengers: "6+1",
+      price: "₹12/km",
+      image: "/attached_assets/image_1752331548623.png",
+      features: ["AC", "Music System", "Extra Luggage", "Family Friendly"],
+      popular: false
+    },
+    {
+      name: "Toyota Innova",
+      type: "Premium SUV",
+      passengers: "7+1",
+      price: "₹16/km",
+      image: "/attached_assets/image_1752331554106.png",
+      features: ["Premium AC", "Push-back Seats", "Extra Comfort", "Luxury Travel"],
+      popular: true
+    },
+    {
+      name: "Tempo Traveller",
+      type: "Mini Bus",
+      passengers: "12+1",
+      price: "₹20/km",
+      image: "/attached_assets/image_1752331562660.png",
+      features: ["Group Travel", "AC", "Luggage Space", "Comfortable Journey"],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Priya Sharma",
+      location: "Mumbai",
+      rating: 5,
+      comment: "खम्मा गणी सा! Excellent service from Sethi Tour & Travels. The driver was very courteous and knowledgeable about all the places in Jaipur. Highly recommended!",
+      service: "Local Jaipur Tour"
+    },
+    {
+      name: "Rajesh Kumar",
+      location: "Delhi",
+      rating: 5,
+      comment: "Perfect service for our family trip. Clean vehicle, professional driver, and very reasonable rates. Will definitely book again!",
+      service: "Delhi to Jaipur"
+    },
+    {
+      name: "Anjali Patel",
+      location: "Ahmedabad",
+      rating: 5,
+      comment: "Kuldeep ji provided excellent service. The car was clean and comfortable. Driver was very helpful and showed us the best places to visit.",
+      service: "Jaipur Sightseeing"
+    },
+    {
+      name: "Vikram Singh",
+      location: "Jodhpur",
+      rating: 5,
+      comment: "Great experience with Sethi Tour & Travels. On-time pickup, safe driving, and very affordable rates. Thank you for making our trip memorable!",
+      service: "Jodhpur to Jaipur"
+    }
+  ];
+
+  const tourPackages = [
+    {
+      name: "Golden Triangle Tour",
+      duration: "3 Days",
+      places: ["Delhi", "Agra", "Jaipur"],
+      price: "₹15,000",
+      image: "/attached_assets/image_1752331571103.png",
+      highlights: ["Taj Mahal", "Red Fort", "City Palace", "Hawa Mahal"]
+    },
+    {
+      name: "Rajasthan Heritage Tour",
+      duration: "5 Days",
+      places: ["Jaipur", "Udaipur", "Jodhpur", "Jaisalmer"],
+      price: "₹25,000",
+      image: "/attached_assets/image_1752331579972.png",
+      highlights: ["City Palace", "Lake Pichola", "Mehrangarh Fort", "Desert Safari"]
+    },
+    {
+      name: "Jaipur Day Tour",
+      duration: "1 Day",
+      places: ["Jaipur City"],
+      price: "₹2,500",
+      image: "/attached_assets/image_1752331584537.png",
+      highlights: ["Amber Fort", "City Palace", "Jantar Mantar", "Hawa Mahal"]
     }
   ];
 
