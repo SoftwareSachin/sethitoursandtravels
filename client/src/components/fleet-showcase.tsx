@@ -2,13 +2,17 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Users, Luggage, MapPin, Star } from "lucide-react";
+import dzireImage from "@assets/image_1752328537540.png";
+import ertigaImage from "@assets/image_1752328561242.png";
+import innovaImage from "@assets/image_1752328589553.png";
+import tempoImage from "@assets/image_1752328614332.png";
 
 export default function FleetShowcase() {
   const fleetVehicles = [
     {
       name: "Maruti Suzuki Dzire",
       category: "Sedan",
-      image: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: dzireImage,
       capacity: "4 Passengers",
       luggage: "2 Large Bags",
       features: ["AC", "Music System", "GPS"],
@@ -19,7 +23,7 @@ export default function FleetShowcase() {
     {
       name: "Maruti Suzuki Ertiga",
       category: "MUV",
-      image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: ertigaImage,
       capacity: "6 Passengers",
       luggage: "3 Large Bags",
       features: ["AC", "Captain Seats", "Entertainment"],
@@ -30,7 +34,7 @@ export default function FleetShowcase() {
     {
       name: "Toyota Innova Crysta",
       category: "Premium MUV",
-      image: "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: innovaImage,
       capacity: "7 Passengers",
       luggage: "4 Large Bags",
       features: ["Luxury AC", "Premium Interiors", "Extra Comfort"],
@@ -41,7 +45,7 @@ export default function FleetShowcase() {
     {
       name: "Tempo Traveller",
       category: "Mini Bus",
-      image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: tempoImage,
       capacity: "12-17 Passengers",
       luggage: "8+ Large Bags",
       features: ["AC", "Reclining Seats", "Ample Space"],

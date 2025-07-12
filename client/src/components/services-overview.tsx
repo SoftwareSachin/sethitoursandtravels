@@ -22,7 +22,7 @@ export default function ServicesOverview() {
       description: "Comfortable one-way travel to your destination with professional drivers",
       features: ["Airport Transfers", "Intercity Travel", "Local Sightseeing", "Business Travel"],
       startingPrice: "₹8/km",
-      image: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       whatsappText: "हाय! मुझे वन-वे टैक्सी चाहिए। कृपया रेट बताएं।"
     },
     {
