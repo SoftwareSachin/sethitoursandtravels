@@ -27,6 +27,11 @@ import WhatsAppButton from '@/components/whatsapp-button';
 import rajasthanImage1 from '@assets/image_1752337890653.png';
 import rajasthanImage2 from '@assets/image_1752337943946.png';
 import rajasthanImage3 from '@assets/image_1752337963821.png';
+import jaipurImage from '@assets/image_1752338428906.png';
+import udaipurImage from '@assets/image_1752338463592.png';
+import jodhpurImage from '@assets/image_1752338490127.png';
+import jaisalmerImage from '@assets/image_1752338516875.png';
+import pushkarImage from '@assets/image_1752338545455.png';
 
 export default function RajasthanTour() {
   const [formData, setFormData] = useState({
@@ -68,31 +73,36 @@ export default function RajasthanTour() {
       name: "Jaipur – The Pink City",
       description: "Begin your journey in Jaipur, famous for its stunning palaces and forts. Explore the grand Amber Fort, the beautiful City Palace, and the iconic Hawa Mahal. Stroll through vibrant markets and enjoy the rich cultural heritage of Rajasthan's capital.",
       icon: <Crown className="w-6 h-6" />,
-      highlights: ["Amber Fort", "City Palace", "Hawa Mahal", "Vibrant Markets"]
+      highlights: ["Amber Fort", "City Palace", "Hawa Mahal", "Vibrant Markets"],
+      image: jaipurImage
     },
     {
       name: "Udaipur – The City of Lakes",
       description: "Udaipur enchants with its romantic lakes and opulent palaces. Visit the majestic City Palace, take a serene boat ride on Lake Pichola, and soak in the beauty of Jag Mandir and Saheliyon ki Bari.",
       icon: <Waves className="w-6 h-6" />,
-      highlights: ["City Palace", "Lake Pichola", "Jag Mandir", "Saheliyon ki Bari"]
+      highlights: ["City Palace", "Lake Pichola", "Jag Mandir", "Saheliyon ki Bari"],
+      image: udaipurImage
     },
     {
       name: "Jodhpur – The Blue City",
       description: "Explore the magnificent Mehrangarh Fort, one of India's largest forts, and admire the blue hues of Jodhpur's old city. Visit the beautiful Umaid Bhawan Palace and enjoy the bustling life of Jodhpur's markets.",
       icon: <Building2 className="w-6 h-6" />,
-      highlights: ["Mehrangarh Fort", "Umaid Bhawan Palace", "Blue City", "Local Markets"]
+      highlights: ["Mehrangarh Fort", "Umaid Bhawan Palace", "Blue City", "Local Markets"],
+      image: jodhpurImage
     },
     {
       name: "Jaisalmer – The Golden City",
       description: "Journey into the heart of the Thar Desert to the golden city of Jaisalmer. Visit the stunning Jaisalmer Fort, marvel at the intricate Patwon ki Haveli, and enjoy a camel ride over the shimmering Sam Sand Dunes.",
       icon: <Mountain className="w-6 h-6" />,
-      highlights: ["Jaisalmer Fort", "Patwon ki Haveli", "Sam Sand Dunes", "Camel Ride"]
+      highlights: ["Jaisalmer Fort", "Patwon ki Haveli", "Sam Sand Dunes", "Camel Ride"],
+      image: jaisalmerImage
     },
     {
       name: "Pushkar & Ajmer",
       description: "Visit the holy city of Pushkar, home to the famous Brahma Temple and the sacred Pushkar Lake. In nearby Ajmer, offer your prayers at the revered Ajmer Sharif Dargah.",
       icon: <Palmtree className="w-6 h-6" />,
-      highlights: ["Brahma Temple", "Pushkar Lake", "Ajmer Sharif Dargah", "Spiritual Sites"]
+      highlights: ["Brahma Temple", "Pushkar Lake", "Ajmer Sharif Dargah", "Spiritual Sites"],
+      image: pushkarImage
     }
   ];
 
@@ -191,14 +201,22 @@ export default function RajasthanTour() {
         <div className="grid gap-8 md:gap-12">
           {destinations.map((destination, index) => (
             <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardHeader className="bg-gradient-to-r from-orange-500 to-pink-500 text-white">
-                <div className="flex items-center gap-4">
-                  <div className="p-2 bg-white/20 rounded-full">
-                    {destination.icon}
+              <div className="relative h-64 md:h-80 overflow-hidden">
+                <img
+                  src={destination.image}
+                  alt={destination.name}
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="flex items-center gap-4 text-white">
+                    <div className="p-2 bg-white/20 rounded-full backdrop-blur-sm">
+                      {destination.icon}
+                    </div>
+                    <h3 className="text-2xl font-bold drop-shadow-lg">{destination.name}</h3>
                   </div>
-                  <CardTitle className="text-2xl">{destination.name}</CardTitle>
                 </div>
-              </CardHeader>
+              </div>
               <CardContent className="p-6">
                 <CardDescription className="text-lg mb-6 text-gray-700">
                   {destination.description}
