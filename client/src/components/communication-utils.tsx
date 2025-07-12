@@ -89,7 +89,7 @@ export const CommunicationUtils = {
 ${baseMessage}`;
     
     // Use the standard Indian WhatsApp format
-    const whatsappNumber = "91" + CONTACT_INFO.phone;
+    const whatsappNumber = "91" + CONTACT_INFO.whatsapp;
     const encodedMessage = encodeURIComponent(finalMessage);
     const url = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     

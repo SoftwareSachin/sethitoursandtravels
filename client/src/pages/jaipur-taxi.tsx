@@ -932,7 +932,7 @@ export default function JaipurTaxi() {
                     <Button 
                       variant="outline"
                       className="flex-1 border-2 border-orange-500 text-orange-500 hover:bg-orange-50 font-semibold"
-                      onClick={() => phone(`${service.title} के लिए कॉल करें`)}
+                      onClick={() => phone()}
                     >
                       <Phone className="mr-2 h-4 w-4" />
                       Call
@@ -993,7 +993,7 @@ export default function JaipurTaxi() {
                     <Button 
                       variant="outline"
                       className="flex-1 border-orange-500 text-orange-500 hover:bg-orange-50"
-                      onClick={() => phone(`${vehicle.name} की जानकारी के लिए कॉल करें`)}
+                      onClick={() => phone()}
                     >
                       <Phone className="mr-2 h-4 w-4" />
                       Call
