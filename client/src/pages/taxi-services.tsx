@@ -6,6 +6,11 @@ import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import heroImage from "@assets/image_1752346718122.png";
+import rajasthanImage from "@assets/image_1752347005342.png";
+import punjabImage from "@assets/image_1752347021738.png";
+import upImage from "@assets/image_1752347043356.png";
+import delhiImage from "@assets/image_1752347093543.png";
+import charDhamImage from "@assets/image_1752347107343.png";
 
 const taxiServices = [
   {
@@ -13,35 +18,40 @@ const taxiServices = [
     path: "/taxi-services/rajasthan",
     icon: <Car className="w-5 h-5" />,
     description: "Complete Rajasthan tour taxi services with experienced drivers",
-    features: ["All major cities", "Heritage tours", "Desert safaris"]
+    features: ["All major cities", "Heritage tours", "Desert safaris"],
+    image: rajasthanImage
   },
   {
     name: "Punjab",
     path: "/taxi-services/punjab",
     icon: <Car className="w-5 h-5" />,
     description: "Punjab taxi services for Golden Temple and cultural tours",
-    features: ["Amritsar tours", "Cultural sites", "Religious places"]
+    features: ["Amritsar tours", "Cultural sites", "Religious places"],
+    image: punjabImage
   },
   {
     name: "Uttar pradesh taxi service",
     path: "/taxi-services/uttar-pradesh",
     icon: <Car className="w-5 h-5" />,
     description: "UP taxi services covering Agra, Varanasi, and more",
-    features: ["Taj Mahal tours", "Varanasi trips", "Lucknow visits"]
+    features: ["Taj Mahal tours", "Varanasi trips", "Lucknow visits"],
+    image: upImage
   },
   {
     name: "Delhi Taxi Service",
     path: "/taxi-services/delhi",
     icon: <Car className="w-5 h-5" />,
     description: "Delhi NCR taxi services for city tours and airport transfers",
-    features: ["Airport transfers", "City tours", "Outstation trips"]
+    features: ["Airport transfers", "City tours", "Outstation trips"],
+    image: delhiImage
   },
   {
     name: "Char Dham Taxi Service",
     path: "/taxi-services/char-dham",
     icon: <Car className="w-5 h-5" />,
     description: "Sacred Char Dham yatra taxi services with comfort",
-    features: ["Spiritual tours", "Mountain routes", "Safe journey"]
+    features: ["Spiritual tours", "Mountain routes", "Safe journey"],
+    image: charDhamImage
   }
 ];
 
@@ -52,17 +62,12 @@ export default function TaxiServices() {
       
       {/* Hero Section with Hawa Mahal Background */}
       <div className="relative min-h-[80vh] flex items-center justify-center text-white overflow-hidden">
-        <img 
-          src={heroImage}
-          alt="Premium Taxi Services with Hawa Mahal"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-          style={{
-            imageRendering: 'auto',
-            filter: 'none',
-            transform: 'translateZ(0)'
+        <div 
+          className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+          style={{ 
+            backgroundImage: `url(${heroImage})`,
+            backgroundAttachment: 'fixed'
           }}
-          loading="eager"
-          decoding="sync"
         />
         {/* Subtle gradient overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/25"></div>
@@ -176,23 +181,34 @@ export default function TaxiServices() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {taxiServices.map((service, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg hover:-translate-y-2 bg-white">
+              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg hover:-translate-y-2 bg-white overflow-hidden">
+                {/* Destination Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={service.image}
+                    alt={`${service.name} destination`}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <Badge className="absolute top-4 right-4 bg-green-500 text-white border-0">
+                    Available
+                  </Badge>
+                </div>
+
                 <CardHeader className="pb-4">
-                  <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-3 mb-3">
                     <div className="p-3 bg-gradient-to-br from-orange-500 to-pink-600 rounded-xl text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
                       {service.icon}
                     </div>
-                    <Badge variant="secondary" className="bg-green-100 text-green-800">
-                      Available
-                    </Badge>
+                    <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors duration-300">
+                      {service.name}
+                    </CardTitle>
                   </div>
-                  <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors duration-300">
-                    {service.name}
-                  </CardTitle>
                   <CardDescription className="text-gray-600 text-base leading-relaxed">
                     {service.description}
                   </CardDescription>
                 </CardHeader>
+                
                 <CardContent className="pt-0">
                   <div className="space-y-3 mb-6">
                     {service.features.map((feature, idx) => (
