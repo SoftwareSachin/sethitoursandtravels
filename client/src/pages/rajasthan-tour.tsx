@@ -290,33 +290,44 @@ export default function RajasthanTour() {
               </p>
 
               <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                <a 
+                  href="tel:+919772021780" 
+                  className="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
+                >
+                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center group-hover:bg-orange-200 transition-colors">
                     <Phone className="w-6 h-6 text-orange-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">+91 97720 21780</p>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-orange-600 transition-colors">Phone</h3>
+                    <p className="text-gray-600 group-hover:text-orange-500 transition-colors">+91 97720 21780</p>
                   </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                </a>
+                <a 
+                  href="https://wa.me/917727021780?text=नमस्कार%20सेठी%20टूर%20एंड%20ट्रेवल्स%20में%20आपका%20स्वागत%20है।%20मैं%20राजस्थान%20टूर%20पैकेज%20के%20बारे%20में%20जानकारी%20चाहता%20हूँ।" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
+                >
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center group-hover:bg-green-200 transition-colors">
                     <MessageCircle className="w-6 h-6 text-green-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">WhatsApp</h3>
-                    <p className="text-gray-600">+91 77270 21780</p>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-green-600 transition-colors">WhatsApp</h3>
+                    <p className="text-gray-600 group-hover:text-green-500 transition-colors">+91 77270 21780</p>
                   </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                </a>
+                <a 
+                  href="mailto:sethitourstravels8888@gmail.com?subject=Rajasthan%20Tour%20Package%20Inquiry&body=नमस्कार%20कुलदीप%20जी,%0A%0Aमैं%20राजस्थान%20टूर%20पैकेज%20के%20बारे%20में%20जानकारी%20चाहता%20हूँ।%20कृपया%20मुझे%20विस्तृत%20जानकारी%20भेजें।%0A%0Aधन्यवाद"
+                  className="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
+                >
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-200 transition-colors">
                     <Mail className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">sethitourstravels8888@gmail.com</p>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Email</h3>
+                    <p className="text-gray-600 group-hover:text-blue-500 transition-colors">sethitourstravels8888@gmail.com</p>
                   </div>
-                </div>
+                </a>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-red-600" />
@@ -380,9 +391,20 @@ export default function RajasthanTour() {
                       required
                     />
                   </div>
-                  <Button type="submit" className="w-full bg-gradient-to-r from-orange-600 to-pink-600 hover:from-orange-700 hover:to-pink-700">
-                    Send Inquiry
-                  </Button>
+                  <div className="flex gap-4">
+                    <Button type="submit" className="flex-1 bg-gradient-to-r from-orange-600 to-pink-600 hover:from-orange-700 hover:to-pink-700">
+                      Send Inquiry
+                    </Button>
+                    <Button 
+                      type="button"
+                      variant="outline"
+                      onClick={() => window.open('https://wa.me/917727021780?text=नमस्कार%20सेठी%20टूर%20एंड%20ट्रेवल्स%20में%20आपका%20स्वागत%20है।%20मैं%20राजस्थान%20टूर%20पैकेज%20के%20बारे%20में%20जानकारी%20चाहता%20हूँ।', '_blank')}
+                      className="flex items-center gap-2 border-green-500 text-green-600 hover:bg-green-50"
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                      WhatsApp
+                    </Button>
+                  </div>
                 </form>
               </CardContent>
             </Card>
