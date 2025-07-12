@@ -95,8 +95,8 @@ export default function Navigation() {
                 />
               </div>
               <div className="min-w-0 flex-1">
-                <h1 className="text-sm sm:text-base font-bold text-pink-600 truncate font-serif tracking-wide">𝕾𝖊𝖙𝖍𝖎 𝕿𝖔𝖚𝖗 & 𝕿𝖗𝖆𝖛𝖊𝖑𝖘</h1>
-                <p className="text-xs text-gray-600 truncate font-serif italic tracking-wider">𝒜𝓊𝓉𝒽𝑒𝓃𝓉𝒾𝒸 ℐ𝓃𝒹𝒾𝒶 𝒯𝑜𝓊𝓇𝓈</p>
+                <h1 className="text-sm sm:text-base font-bold text-pink-600 truncate font-serif tracking-wide">SETHI TOUR & TRAVELS</h1>
+                <p className="text-xs text-gray-600 truncate font-serif italic tracking-wider">Authentic India Tours</p>
               </div>
             </div>
 
@@ -126,8 +126,8 @@ export default function Navigation() {
                     />
                   </div>
                   <div>
-                    <h1 className="text-lg font-bold text-pink-600 font-serif tracking-wide">𝕾𝖊𝖙𝖍𝖎 𝕿𝖔𝖚𝖗 & 𝕿𝖗𝖆𝖛𝖊𝖑𝖘</h1>
-                    <p className="text-xs text-gray-600 font-serif italic tracking-wider">𝒜𝓊𝓉𝒽𝑒𝓃𝓉𝒾𝒸 ℐ𝓃𝒹𝒾𝒶 𝒯𝑜𝓊𝓇𝓈</p>
+                    <h1 className="text-lg font-bold text-pink-600 font-serif tracking-wide">SETHI TOUR & TRAVELS</h1>
+                    <p className="text-xs text-gray-600 font-serif italic tracking-wider">Authentic India Tours</p>
                   </div>
                 </div>
                 <div className="flex flex-col space-y-4">
