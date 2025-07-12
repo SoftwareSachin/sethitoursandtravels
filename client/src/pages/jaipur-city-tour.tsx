@@ -31,10 +31,11 @@ import jaipurCityImage from '@assets/image_1752338074515.png';
 import hawamahalImage from '@assets/image_1752338428906.png';
 import newHawamahalImage from '@assets/image_1752341165448.png';
 import heroImage from '@assets/image_1752341547443.png';
-import cityPalaceImage from '@assets/image_1752338463592.png';
-import amberFortImage from '@assets/image_1752338490127.png';
-import jalMahalImage from '@assets/image_1752338516875.png';
-import jantarMantarImage from '@assets/image_1752338545455.png';
+import cityPalaceImage from '@assets/image_1752341782147.png';
+import amberFortImage from '@assets/image_1752341727345.png';
+import jalMahalImage from '@assets/image_1752341827928.png';
+import jantarMantarImage from '@assets/image_1752341803586.png';
+import albertHallImage from '@assets/image_1752341852851.png';
 
 export default function JaipurCityTour() {
   const { toast } = useToast();
@@ -79,7 +80,7 @@ export default function JaipurCityTour() {
     {
       name: "Albert Hall Museum",
       description: "Delve into Jaipur's rich history and culture at the Albert Hall Museum, which houses an impressive collection of artifacts, paintings, and sculptures.",
-      image: jaipurCityImage,
+      image: albertHallImage,
       icon: <Building2 className="w-6 h-6" />,
       highlights: ["Rich History", "Cultural Artifacts", "Paintings & Sculptures", "Impressive Collection"]
     }
