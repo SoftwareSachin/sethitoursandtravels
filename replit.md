@@ -118,7 +118,7 @@ The application follows a monorepo structure with clear separation between clien
 - **Beautiful Feature Cards**: Gradient icon backgrounds, shadow effects, and smooth transitions throughout
 - **Professional Footer**: Complete company information with authentic Jal Mahal background and comprehensive contact details
 - **One-Way Rate Tables**: Interactive pricing tables for 20+ destinations with Sedan, SUV, and Innova Crysta options
-- **Discount System**: Early bird (10%) and group booking (15%) discounts with animated elements and percentage displays
+- **Removed Discount System**: Eliminated the "Discounts & Special Offers" section per user request (January 2025)
 - **Service Inclusions**: Clear breakdown of fuel charges, driver charges, and tolls included in pricing
 - **24/7 Booking System**: Multiple contact methods with WhatsApp and phone integration
 - **Navigation Integration**: Added "Jaipur Taxi" link to main navigation (desktop and mobile)

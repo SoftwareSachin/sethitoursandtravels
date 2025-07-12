@@ -98,29 +98,7 @@ export default function JaipurTaxi() {
     }
   ];
 
-  const discounts = [
-    {
-      title: "Early Bird Discount",
-      description: "Book at least 7 days in advance and receive a 10% discount.",
-      icon: Calendar
-    },
-    {
-      title: "Group Booking",
-      description: "Book for 4 or more passengers and receive a 15% discount on total fare.",
-      icon: Users
-    }
-  ];
 
-  const specialPackages = [
-    {
-      title: "Weekend Getaway",
-      description: "Special rates for round trips on weekends for popular destinations."
-    },
-    {
-      title: "Festival Specials",
-      description: "Discounts during festivals for selected routes."
-    }
-  ];
 
   const features = [
     {
@@ -418,59 +396,7 @@ export default function JaipurTaxi() {
         </div>
       </section>
 
-      {/* Discounts & Offers */}
-      <section className="py-20 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 relative overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute top-0 left-0 w-40 h-40 bg-green-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-40 h-40 bg-emerald-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse animation-delay-2000"></div>
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full px-6 py-2 mb-6">
-              <Star className="h-4 w-4 mr-2" />
-              <span className="text-sm font-medium">Exclusive Savings Available</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
-              Discounts & Special Offers
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Save big with our exclusive deals and seasonal offers - more value for your journey!
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {discounts.map((discount, index) => (
-              <Card key={index} className="text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-3 bg-gradient-to-br from-green-50 to-emerald-50 border-0 shadow-lg group overflow-hidden">
-                <div className="bg-gradient-to-r from-green-500 to-emerald-500 h-2"></div>
-                <CardContent className="p-8">
-                  <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <discount.icon className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-green-800">{discount.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{discount.description}</p>
-                  <div className="mt-4 text-2xl font-bold text-green-600">
-                    {discount.title.includes("Early") ? "10%" : "15%"} OFF
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-            {specialPackages.map((pkg, index) => (
-              <Card key={index + 2} className="text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-3 bg-gradient-to-br from-purple-50 to-pink-50 border-0 shadow-lg group overflow-hidden">
-                <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2"></div>
-                <CardContent className="p-8">
-                  <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Star className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-purple-800">{pkg.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{pkg.description}</p>
-                  <div className="mt-4 text-lg font-semibold text-purple-600">
-                    Special Rates
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* Inclusions */}
       <section className="py-16 bg-gray-50">
