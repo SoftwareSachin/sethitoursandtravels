@@ -16,11 +16,11 @@ export default function Navigation() {
   };
 
   const navItems = [
-    { id: "home", label: "Home" },
-    { id: "packages", label: "India Tours" },
-    { id: "services", label: "Rajasthan Heritage" },
-    { id: "vehicles", label: "Taxi Services" },
-    { id: "gallery", label: "Photo Gallery" },
+    { id: "fleet", label: "Fleet" },
+    { id: "services", label: "Services" },
+    { id: "packages", label: "Tour Packages" },
+    { id: "destinations", label: "Destinations" },
+    { id: "gallery", label: "Gallery" },
     { id: "testimonials", label: "Reviews" },
     { id: "contact", label: "Contact" },
   ];

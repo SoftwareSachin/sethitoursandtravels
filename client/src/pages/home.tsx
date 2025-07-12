@@ -1,5 +1,8 @@
 import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
+import FleetShowcase from "@/components/fleet-showcase";
+import QuickBooking from "@/components/quick-booking";
+import ServicesOverview from "@/components/services-overview";
 import ServiceCategories from "@/components/service-categories";
 import TourPackages from "@/components/tour-packages";
 import ComprehensivePackages from "@/components/comprehensive-packages";
@@ -26,6 +29,9 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Navigation />
       <HeroSection />
+      <FleetShowcase />
+      <QuickBooking />
+      <ServicesOverview />
       <ServiceCategories />
       <TourPackages />
       <ComprehensivePackages />
