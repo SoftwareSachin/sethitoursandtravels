@@ -42,6 +42,7 @@ import rajasthaniWelcomeImage from '@assets/image_1752342637765.png';
 import dzireImage from '@assets/image_1752328537540.png';
 import ertigaImage from '@assets/image_1752328561242.png';
 import innovaImage from '@assets/image_1752328589553.png';
+import birlaMandirImage from '@assets/image_1752343342879.png';
 
 export default function JaipurCityTour() {
   const { toast } = useToast();
@@ -467,13 +468,17 @@ export default function JaipurCityTour() {
             </Card>
 
             <Card className="group overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-              <div className="relative h-64 bg-gradient-to-br from-orange-100 to-pink-100 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Building2 className="w-10 h-10 text-white" />
-                  </div>
-                  <h4 className="text-lg font-semibold text-gray-800">Birla Mandir</h4>
-                </div>
+              <div className="relative h-64">
+                <img 
+                  src={birlaMandirImage} 
+                  alt="Birla Mandir" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  style={{ 
+                    imageRendering: 'auto',
+                    filter: 'contrast(1.1) brightness(1.05)'
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                 <div className="absolute top-4 right-4">
                   <div className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                     Temple
