@@ -42,10 +42,9 @@ export default function Navigation() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-gray-800 hover:text-pink-600 transition-all duration-300 font-serif text-sm tracking-wider uppercase font-semibold hover:scale-105 relative group"
+                  className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-sm"
                 >
-                  <span className="relative z-10">{item.label}</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-pink-50 to-orange-50 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -m-2"></div>
+                  {item.label}
                 </button>
               ))}
             </div>
@@ -67,20 +66,18 @@ export default function Navigation() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-gray-800 hover:text-pink-600 transition-all duration-300 font-serif text-sm tracking-wider uppercase font-semibold hover:scale-105 relative group"
+                  className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-sm"
                 >
-                  <span className="relative z-10">{item.label}</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-pink-50 to-orange-50 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -m-2"></div>
+                  {item.label}
                 </button>
               ))}
               {specialNavItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-gray-800 hover:text-pink-600 transition-all duration-300 font-serif text-sm tracking-wider uppercase font-semibold hover:scale-105 relative group"
+                  className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-sm"
                 >
-                  <span className="relative z-10">{item.label}</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-pink-50 to-orange-50 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -m-2"></div>
+                  {item.label}
                 </Link>
               ))}
             </div>
@@ -95,8 +92,8 @@ export default function Navigation() {
                 />
               </div>
               <div className="min-w-0 flex-1">
-                <h1 className="text-sm sm:text-base font-bold text-pink-600 truncate font-serif tracking-wide">SETHI TOUR & TRAVELS</h1>
-                <p className="text-xs text-gray-600 truncate font-serif italic tracking-wider">Authentic India Tours</p>
+                <h1 className="text-sm sm:text-base font-bold text-pink-600 truncate">Sethi Tour & Travels</h1>
+                <p className="text-xs text-gray-600 truncate">Authentic India Tours</p>
               </div>
             </div>
 
@@ -126,8 +123,8 @@ export default function Navigation() {
                     />
                   </div>
                   <div>
-                    <h1 className="text-lg font-bold text-pink-600 font-serif tracking-wide">SETHI TOUR & TRAVELS</h1>
-                    <p className="text-xs text-gray-600 font-serif italic tracking-wider">Authentic India Tours</p>
+                    <h1 className="text-lg font-bold text-pink-600">Sethi Tour & Travels</h1>
+                    <p className="text-xs text-gray-600">Authentic India Tours</p>
                   </div>
                 </div>
                 <div className="flex flex-col space-y-4">
@@ -135,7 +132,7 @@ export default function Navigation() {
                     <button
                       key={item.id}
                       onClick={() => scrollToSection(item.id)}
-                      className="text-left text-gray-800 hover:text-pink-600 transition-all duration-300 py-3 px-4 rounded-lg hover:bg-gradient-to-r hover:from-pink-50 hover:to-orange-50 text-base font-serif font-semibold tracking-wide uppercase hover:scale-105"
+                      className="text-left text-gray-700 hover:text-pink-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50 text-base font-medium"
                     >
                       {item.label}
                     </button>
@@ -144,7 +141,7 @@ export default function Navigation() {
                     <Link
                       key={item.href}
                       href={item.href}
-                      className="text-left text-gray-800 hover:text-pink-600 transition-all duration-300 py-3 px-4 rounded-lg hover:bg-gradient-to-r hover:from-pink-50 hover:to-orange-50 text-base font-serif font-semibold tracking-wide uppercase hover:scale-105"
+                      className="text-left text-gray-700 hover:text-pink-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50 text-base font-medium"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.label}
