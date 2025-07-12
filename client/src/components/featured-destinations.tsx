@@ -22,7 +22,7 @@ export default function FeaturedDestinations() {
           </div>
           <div>
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              🕌 <span className="text-secondary italic">Taj Mahal</span> Agra: UNESCO World Heritage Wonder
+              <span className="text-secondary italic">Taj Mahal</span> Agra: UNESCO World Heritage Wonder
             </h3>
             <p className="text-gray-600 text-lg mb-6 leading-relaxed">
               Experience the eternal symbol of love - the magnificent Taj Mahal! Built by Emperor Shah Jahan for his beloved wife Mumtaz, 
@@ -35,7 +35,7 @@ export default function FeaturedDestinations() {
                 className="bg-secondary hover:bg-orange-600 text-white"
               >
                 <a href="https://api.whatsapp.com/send?phone=919772021780&text=नमस्ते! मुझे ताज महल आगरा टूर बुक करना है। कृपया रेट और डिटेल्स भेजें।">
-                  🕌 BOOK TAJ MAHAL TOUR
+                  BOOK TAJ MAHAL TOUR
                 </a>
               </Button>
               <Button 
@@ -55,7 +55,7 @@ export default function FeaturedDestinations() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              💕 <span className="text-secondary italic">Udaipur</span> Venice of the East - City of Lakes
+              <span className="text-secondary italic">Udaipur</span> Venice of the East - City of Lakes
             </h3>
             <p className="text-gray-600 text-lg mb-6 leading-relaxed">
               Discover the most romantic city in India! Udaipur's pristine lakes, magnificent palaces, and fairy-tale setting 
@@ -76,7 +76,7 @@ export default function FeaturedDestinations() {
                 className="bg-secondary hover:bg-orange-600 text-white"
               >
                 <a href="https://api.whatsapp.com/send?phone=919772021780&text=नमस्ते! मुझे उदयपुर लेक सिटी टूर चाहिए। कृपया पैकेज डिटेल्स दें।">
-                  💕 BOOK UDAIPUR TOUR
+                  BOOK UDAIPUR TOUR
                 </a>
               </Button>
               <Button 

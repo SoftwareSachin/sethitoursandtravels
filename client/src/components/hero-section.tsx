@@ -25,14 +25,14 @@ export default function HeroSection() {
           राजस्थान - RAJASTHAN
         </h2>
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed">
-          🕌 Experience the royal splendor of India with authentic Rajasthan tours! Explore magnificent palaces of Jaipur, 
+          Experience the royal splendor of India with authentic Rajasthan tours! Explore magnificent palaces of Jaipur, 
           romantic lakes of Udaipur, golden dunes of Jaisalmer, and the blue city Jodhpur. From the iconic Taj Mahal 
           to Hawa Mahal, Amber Fort to City Palace - discover India's incredible heritage, vibrant culture, 
           and warm hospitality with our expert local guides and premium travel services.
         </p>
         <div className="mb-6 sm:mb-8 space-y-4">
           <div className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 max-w-4xl mx-auto">
-            <span className="text-secondary font-semibold block sm:inline mb-2 sm:mb-0">🇮🇳 Complete India Tourism Solutions:</span> 
+            <span className="text-secondary font-semibold block sm:inline mb-2 sm:mb-0">Complete India Tourism Solutions:</span> 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-1 text-center sm:text-left mt-2 sm:mt-0">
               <span className="block sm:inline">• Golden Triangle Tours</span>
               <span className="block sm:inline">• Rajasthan Heritage Tours</span>

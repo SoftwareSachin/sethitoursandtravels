@@ -44,7 +44,7 @@ export class MemStorage implements IStorage {
     const packages: InsertTourPackage[] = [
       {
         name: "Golden Triangle Tour - Delhi • Agra • Jaipur",
-        description: "🇮🇳 Classic India tour covering UNESCO World Heritage sites: Red Fort, Taj Mahal, Amber Fort, and Hawa Mahal. Perfect introduction to India's rich Mughal and Rajput heritage.",
+        description: "Classic India tour covering UNESCO World Heritage sites: Red Fort, Taj Mahal, Amber Fort, and Hawa Mahal. Perfect introduction to India's rich Mughal and Rajput heritage.",
         image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         destination: "Delhi-Agra-Jaipur",
         price: 18000,
@@ -54,7 +54,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Royal Rajasthan Heritage Tour",
-        description: "🏰 Experience the Land of Kings! Explore magnificent palaces of Jaipur & Udaipur, golden dunes of Jaisalmer, and blue city Jodhpur. Includes camel safari and cultural performances.",
+        description: "Experience the Land of Kings! Explore magnificent palaces of Jaipur & Udaipur, golden dunes of Jaisalmer, and blue city Jodhpur. Includes camel safari and cultural performances.",
         image: "https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         destination: "Rajasthan Circuit",
         price: 28000,
@@ -64,7 +64,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Taj Mahal Same Day Tour by Car",
-        description: "🕌 Comfortable same-day Agra tour from Delhi. Visit the iconic Taj Mahal, Agra Fort, and Mehtab Bagh. Includes lunch and professional guide. Perfect for time-constrained travelers.",
+        description: "Comfortable same-day Agra tour from Delhi. Visit the iconic Taj Mahal, Agra Fort, and Mehtab Bagh. Includes lunch and professional guide. Perfect for time-constrained travelers.",
         image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         destination: "Agra from Delhi",
         price: 8500,
@@ -74,7 +74,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Jaisalmer Desert Safari Package",
-        description: "🐪 Authentic desert experience in the Thar Desert! Camel safari, sand dunes, traditional Rajasthani dinner, folk music & dance under starlit sky. Stay in luxury desert camps.",
+        description: "Authentic desert experience in the Thar Desert! Camel safari, sand dunes, traditional Rajasthani dinner, folk music & dance under starlit sky. Stay in luxury desert camps.",
         image: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         destination: "Jaisalmer, Rajasthan",
         price: 12000,
@@ -84,7 +84,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Udaipur Lake City Romance Tour",
-        description: "💕 Experience the Venice of East! Boat rides on Lake Pichola, City Palace complex, Jag Mandir island, sunset at Sajjangarh Palace. Perfect for couples and photographers.",
+        description: "Experience the Venice of East! Boat rides on Lake Pichola, City Palace complex, Jag Mandir island, sunset at Sajjangarh Palace. Perfect for couples and photographers.",
         image: "https://images.unsplash.com/photo-1599661046827-dacde645fe26?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         destination: "Udaipur, Rajasthan",
         price: 15000,
@@ -94,7 +94,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Jaipur Pink City Exploration",
-        description: "🌸 Discover the Pink City's royal heritage! Amber Fort elephant ride, Hawa Mahal photography, City Palace museum, local bazaars for textiles, jewelry and handicrafts.",
+        description: "Discover the Pink City's royal heritage! Amber Fort elephant ride, Hawa Mahal photography, City Palace museum, local bazaars for textiles, jewelry and handicrafts.",
         image: "https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         destination: "Jaipur, Rajasthan",
         price: 9500,
@@ -104,7 +104,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Ranthambore Wildlife Safari",
-        description: "🐅 Tiger safari in India's famous national park! Morning and evening game drives, wildlife photography, ancient Ranthambore Fort. Best chance to spot Royal Bengal Tigers.",
+        description: "Tiger safari in India's famous national park! Morning and evening game drives, wildlife photography, ancient Ranthambore Fort. Best chance to spot Royal Bengal Tigers.",
         image: "https://images.unsplash.com/photo-1425082661705-1834bfd09dca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         destination: "Ranthambore, Rajasthan",
         price: 14000,
@@ -114,7 +114,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Jodhpur Blue City Adventure",
-        description: "🔵 Explore the Blue City's majestic Mehrangarh Fort, Jaswant Thada memorial, vibrant blue houses, spice markets, and authentic Rajasthani cuisine experiences.",
+        description: "Explore the Blue City's majestic Mehrangarh Fort, Jaswant Thada memorial, vibrant blue houses, spice markets, and authentic Rajasthani cuisine experiences.",
         image: "https://images.unsplash.com/photo-1608321672966-0dbb87c832c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         destination: "Jodhpur, Rajasthan",
         price: 11000,
