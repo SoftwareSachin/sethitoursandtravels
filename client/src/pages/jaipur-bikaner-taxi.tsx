@@ -2,6 +2,9 @@ import { Link } from "wouter";
 import { Car, Phone, Clock, Users, Star, ArrowLeft, MapPin, Route, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import heroImage from "@assets/image_1752344666560.png";
+import nagaurFortImage from "@assets/image_1752344804650.png";
+import karniMataImage from "@assets/image_1752344824068.png";
 
 const taxiRates = [
   {
@@ -17,12 +20,14 @@ const attractions = [
   {
     name: "Nagaur Fort",
     description: "A great stop for exploring history and heritage",
-    icon: <MapPin className="w-5 h-5" />
+    icon: <MapPin className="w-5 h-5" />,
+    image: nagaurFortImage
   },
   {
     name: "Deshnok Karni Mata Temple",
     description: "Famous for its unique rat temple experience",
-    icon: <MapPin className="w-5 h-5" />
+    icon: <MapPin className="w-5 h-5" />,
+    image: karniMataImage
   }
 ];
 
@@ -65,25 +70,36 @@ export default function JaipurBikanerTaxi() {
       </div>
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-orange-600 to-yellow-600 text-white py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+      <div className="relative py-20 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={heroImage} 
+            alt="Jaipur to Bikaner Route - Historical Architecture" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-900/80 to-yellow-900/80"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-6xl mx-auto px-4">
+          <div className="text-center text-white">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
               Jaipur to Bikaner Taxi Service
             </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-90">
+            <p className="text-xl md:text-2xl mb-8 opacity-90 drop-shadow-md">
               Experience a smooth and reliable journey with Sethi Tour & Travels
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Star className="w-5 h-5 text-yellow-400" />
                 <span>4.9/5 Rating</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Route className="w-5 h-5" />
                 <span>335 KM Distance</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Clock className="w-5 h-5" />
                 <span>6 Hours Journey</span>
               </div>
@@ -142,9 +158,16 @@ export default function JaipurBikanerTaxi() {
           <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">
             Popular Attractions Along the Jaipur to Bikaner Route
           </h3>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {attractions.map((attraction, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
+                <div className="aspect-video relative overflow-hidden">
+                  <img 
+                    src={attraction.image} 
+                    alt={attraction.name} 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
                 <CardHeader className="pb-4">
                   <div className="flex items-center gap-3">
                     <div className="p-3 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-lg text-white">
