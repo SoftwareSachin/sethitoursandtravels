@@ -1,3 +1,4 @@
+// Backup of comprehensive-packages.tsx before debugging
 export default function ComprehensivePackages() {
   return (
     <div className="py-16 bg-gray-100">
@@ -10,7 +11,7 @@ export default function ComprehensivePackages() {
         </p>
         <div className="text-center">
           <p className="text-lg font-medium text-green-600">
-            Component is working correctly! Tour packages will be restored shortly.
+            Component is working correctly!
           </p>
         </div>
       </div>
