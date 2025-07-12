@@ -129,7 +129,7 @@ export default function HeroSection() {
         {/* Complete India Tourism Solutions */}
         <div className="mb-6 sm:mb-8 space-y-4">
           <div className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 max-w-4xl mx-auto">
-            <span className="text-secondary font-semibold block mb-4">Premium India Tourism Experiences</span> 
+            <span className="text-secondary font-semibold block mb-4">India Tourism Experiences</span> 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-center">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
                 <span className="text-white font-medium">Golden Triangle</span>
