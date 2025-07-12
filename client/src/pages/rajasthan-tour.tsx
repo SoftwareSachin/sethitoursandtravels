@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -23,6 +23,9 @@ import {
   ChevronRight
 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import rajasthanImage1 from '@assets/image_1752337890653.png';
+import rajasthanImage2 from '@assets/image_1752337943946.png';
+import rajasthanImage3 from '@assets/image_1752337963821.png';
 
 export default function RajasthanTour() {
   const [formData, setFormData] = useState({
@@ -30,7 +33,24 @@ export default function RajasthanTour() {
     email: '',
     message: ''
   });
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const { toast } = useToast();
+
+  const heroImages = [
+    rajasthanImage1,
+    rajasthanImage2,
+    rajasthanImage3
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -90,18 +110,39 @@ export default function RajasthanTour() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-pink-50">
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-orange-600 to-pink-600 text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+      {/* Hero Section with Sliding Background */}
+      <div className="relative h-screen min-h-[600px] overflow-hidden">
+        {/* Background Image Slider */}
+        <div className="absolute inset-0">
+          {heroImages.map((image, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              <img
+                src={image}
+                alt={`Rajasthan destination ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
+        
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/50"></div>
+        
+        {/* Hero Content */}
+        <div className="relative h-full flex items-center justify-center text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 drop-shadow-lg">
               Journey Through the Land of Kings
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl lg:text-3xl mb-8 max-w-4xl mx-auto drop-shadow-md">
               Embark on an unforgettable adventure through Rajasthan, a land steeped in history, culture, and grandeur
             </p>
-            <div className="flex justify-center items-center gap-8 text-sm md:text-base">
+            <div className="flex justify-center items-center gap-8 text-sm md:text-base lg:text-lg bg-white/10 backdrop-blur-sm rounded-full px-8 py-4 mx-auto w-fit">
               <div className="flex items-center gap-2">
                 <Star className="w-5 h-5 text-yellow-400" />
                 <span>4.9/5 Rating</span>
@@ -116,6 +157,21 @@ export default function RajasthanTour() {
               </div>
             </div>
           </div>
+        </div>
+        
+        {/* Image Indicators */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {heroImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentImageIndex(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentImageIndex 
+                  ? 'bg-white scale-125' 
+                  : 'bg-white/50 hover:bg-white/80'
+              }`}
+            />
+          ))}
         </div>
       </div>
 
