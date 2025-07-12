@@ -112,19 +112,21 @@ export default function PunjabTaxiService() {
           <div className="flex flex-wrap justify-center gap-8">
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-yellow-600 to-green-600 hover:from-yellow-700 hover:to-green-700 text-white px-12 py-5 text-2xl font-bold shadow-2xl border-2 border-yellow-500 hover:border-yellow-600 transition-all duration-300 rounded-full"
+              className="bg-gradient-to-r from-yellow-600 to-green-600 hover:from-yellow-700 hover:to-green-700 text-white font-black px-12 py-5 text-2xl shadow-2xl border-2 border-yellow-500 hover:border-yellow-600 transition-all duration-300 rounded-full backdrop-blur-sm"
               onClick={() => window.open(`https://wa.me/917727021780?text=सत श्री अकाल! मुझे पंजाब टैक्सी सेवा की जानकारी चाहिए।`, '_blank')}
+              style={{ color: 'white', fontWeight: '900' }}
             >
-              <Phone className="w-6 h-6 mr-3" />
-              Book Punjab Tour
+              <Phone className="w-6 h-6 mr-3 text-white" />
+              <span className="text-white font-black">Get Punjab Tour Quote</span>
             </Button>
             <Button 
               size="lg" 
-              className="bg-white/95 backdrop-blur-sm text-gray-900 hover:bg-white border-3 border-white px-12 py-5 text-2xl font-bold shadow-2xl transition-all duration-300 rounded-full hover:scale-105"
+              className="bg-white hover:bg-gray-100 text-gray-900 font-black border-3 border-white px-12 py-5 text-2xl shadow-2xl transition-all duration-300 rounded-full hover:scale-105"
               onClick={() => window.open(`tel:+919772021780`, '_blank')}
+              style={{ color: '#1f2937', fontWeight: '900' }}
             >
-              <Car className="w-6 h-6 mr-3" />
-              Call Now
+              <Car className="w-6 h-6 mr-3 text-gray-900" />
+              <span className="text-gray-900 font-black">Call for Instant Booking</span>
             </Button>
           </div>
         </div>
@@ -264,20 +266,21 @@ export default function PunjabTaxiService() {
             <div className="flex flex-wrap justify-center gap-6">
               <Button 
                 size="lg"
-                className="bg-gradient-to-r from-yellow-600 to-green-600 hover:from-yellow-700 hover:to-green-700 text-white px-10 py-4 text-xl font-bold shadow-2xl border-2 border-yellow-500 rounded-full"
+                className="bg-gradient-to-r from-yellow-600 to-green-600 hover:from-yellow-700 hover:to-green-700 text-white font-black px-10 py-4 text-xl shadow-2xl border-2 border-yellow-500 rounded-full backdrop-blur-sm"
                 onClick={() => window.open(`https://wa.me/917727021780?text=सत श्री अकाल! मुझे पंजाब टूर पैकेज की पूरी जानकारी चाहिए। कृपया सभी विकल्प और रेट बताएं।`, '_blank')}
+                style={{ color: 'white', fontWeight: '900' }}
               >
-                <Phone className="w-6 h-6 mr-3" />
-                Get Punjab Tour Quote
+                <Phone className="w-6 h-6 mr-3 text-white" />
+                <span className="text-white font-black">Get Punjab Tour Quote</span>
               </Button>
               <Button 
                 size="lg"
-                variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-gray-900 px-10 py-4 text-xl font-bold rounded-full"
+                className="bg-white hover:bg-gray-100 text-gray-900 font-black border-2 border-white px-10 py-4 text-xl shadow-2xl rounded-full"
                 onClick={() => window.open(`tel:+919772021780`, '_blank')}
+                style={{ color: '#1f2937', fontWeight: '900' }}
               >
-                <Car className="w-6 h-6 mr-3" />
-                Call for Instant Booking
+                <Car className="w-6 h-6 mr-3 text-gray-900" />
+                <span className="text-gray-900 font-black">Call for Instant Booking</span>
               </Button>
             </div>
           </div>
