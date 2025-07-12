@@ -23,6 +23,7 @@ import {
   ChevronRight
 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import WhatsAppButton from '@/components/whatsapp-button';
 import rajasthanImage1 from '@assets/image_1752337890653.png';
 import rajasthanImage2 from '@assets/image_1752337943946.png';
 import rajasthanImage3 from '@assets/image_1752337963821.png';
@@ -289,10 +290,10 @@ export default function RajasthanTour() {
                 Ready to embark on your Rajasthan adventure? Contact Kuldeep Choudhary for personalized tour packages and bookings across India and Rajasthan.
               </p>
 
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <a 
                   href="tel:+919772021780" 
-                  className="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
+                  className="flex items-center gap-4 hover:bg-gray-50 transition-colors group"
                 >
                   <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center group-hover:bg-orange-200 transition-colors">
                     <Phone className="w-6 h-6 text-orange-600" />
@@ -306,7 +307,7 @@ export default function RajasthanTour() {
                   href="https://wa.me/917727021780?text=नमस्कार%20सेठी%20टूर%20एंड%20ट्रेवल्स%20में%20आपका%20स्वागत%20है।%20मैं%20राजस्थान%20टूर%20पैकेज%20के%20बारे%20में%20जानकारी%20चाहता%20हूँ।" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
+                  className="flex items-center gap-4 hover:bg-gray-50 transition-colors group"
                 >
                   <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center group-hover:bg-green-200 transition-colors">
                     <MessageCircle className="w-6 h-6 text-green-600" />
@@ -318,7 +319,7 @@ export default function RajasthanTour() {
                 </a>
                 <a 
                   href="mailto:sethitourstravels8888@gmail.com?subject=Rajasthan%20Tour%20Package%20Inquiry&body=नमस्कार%20कुलदीप%20जी,%0A%0Aमैं%20राजस्थान%20टूर%20पैकेज%20के%20बारे%20में%20जानकारी%20चाहता%20हूँ।%20कृपया%20मुझे%20विस्तृत%20जानकारी%20भेजें।%0A%0Aधन्यवाद"
-                  className="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
+                  className="flex items-center gap-4 hover:bg-gray-50 transition-colors group"
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-200 transition-colors">
                     <Mail className="w-6 h-6 text-blue-600" />
@@ -410,6 +411,23 @@ export default function RajasthanTour() {
             </Card>
           </div>
         </div>
+      </div>
+      
+      {/* WhatsApp Button */}
+      <WhatsAppButton />
+      
+      {/* Floating Call Button */}
+      <div className="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-50">
+        <a
+          href="tel:+919772021780"
+          className="bg-orange-600 hover:bg-orange-700 text-white p-3 sm:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center group focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+          aria-label="Call us"
+        >
+          <Phone className="text-lg sm:text-2xl group-hover:scale-110 transition-transform duration-200" />
+          <span className="ml-2 font-semibold hidden sm:group-hover:inline-block transition-all duration-200">
+            Call Now
+          </span>
+        </a>
       </div>
     </div>
   );
