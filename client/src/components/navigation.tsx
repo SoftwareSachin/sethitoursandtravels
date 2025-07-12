@@ -29,7 +29,8 @@ export default function Navigation() {
   const specialNavItems = [
     { href: "/jaipur-taxi", label: "Jaipur Taxi" },
     { href: "/jaipur-city-tour", label: "Jaipur City Tour" },
-    { href: "/rajasthan-tour", label: "Rajasthan Tour" }
+    { href: "/rajasthan-tour", label: "Rajasthan Tour" },
+    { href: "/taxi-services", label: "Taxi Services" }
   ];
 
   return (

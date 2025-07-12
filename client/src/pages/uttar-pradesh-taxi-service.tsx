@@ -1,0 +1,153 @@
+import { Link } from "wouter";
+import { Car, Phone, Clock, Users, Star, ArrowLeft } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
+const upTaxiServices = [
+  {
+    name: "Agra Local Taxi Service",
+    description: "Taj Mahal and Agra sightseeing tours",
+    price: "₹12/KM",
+    features: ["Taj Mahal", "Agra Fort", "Itimad-ud-Daulah", "Mehtab Bagh"]
+  },
+  {
+    name: "Varanasi Taxi Service",
+    description: "Spiritual city tours and Ganga Aarti",
+    price: "₹10/KM",
+    features: ["Ganga Aarti", "Kashi Vishwanath", "Sarnath", "Boat rides"]
+  },
+  {
+    name: "Lucknow Taxi Service",
+    description: "City of Nawabs tours and local transportation",
+    price: "₹11/KM",
+    features: ["Bara Imambara", "Chota Imambara", "Rumi Darwaza", "Hazratganj"]
+  },
+  {
+    name: "Delhi to Agra Taxi",
+    description: "Same day Taj Mahal tour from Delhi",
+    price: "₹4,500",
+    features: ["Same day return", "AC vehicle", "English guide", "All monuments"]
+  },
+  {
+    name: "Mathura Vrindavan Taxi",
+    description: "Krishna pilgrimage tours",
+    price: "₹2,800",
+    features: ["Krishna Janmabhoomi", "Banke Bihari", "ISKCON", "Govardhan"]
+  }
+];
+
+export default function UttarPradeshTaxiService() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      {/* Breadcrumb Navigation */}
+      <div className="bg-white border-b">
+        <div className="max-w-6xl mx-auto px-4 py-4">
+          <div className="flex items-center gap-2 text-sm text-gray-600">
+            <Link href="/taxi-services" className="hover:text-blue-600 flex items-center gap-1">
+              <ArrowLeft className="w-4 h-4" />
+              Taxi Services
+            </Link>
+            <span>/</span>
+            <span className="text-gray-800 font-medium">Uttar Pradesh taxi service</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Hero Section */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Uttar Pradesh Taxi Service
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 opacity-90">
+              Explore India's Cultural Heritage with our premium taxi services
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base">
+              <div className="flex items-center gap-2">
+                <Star className="w-5 h-5 text-yellow-400" />
+                <span>4.9/5 Rating</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="w-5 h-5" />
+                <span>8,000+ UP Tours</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Clock className="w-5 h-5" />
+                <span>24/7 Available</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Services Grid */}
+      <div className="max-w-6xl mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Popular UP Destinations
+          </h2>
+          <p className="text-lg text-gray-600">
+            Discover the cultural and spiritual heart of India with our reliable taxi services
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {upTaxiServices.map((service, index) => (
+            <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-0 shadow-md">
+              <CardHeader className="pb-3">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white">
+                      <Car className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-lg text-gray-800">{service.name}</CardTitle>
+                      <div className="text-sm font-semibold text-blue-600">{service.price}</div>
+                    </div>
+                  </div>
+                </div>
+                <CardDescription className="text-gray-600">
+                  {service.description}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="pt-0">
+                <div className="space-y-2 mb-4">
+                  {service.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">
+                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white">
+                  Book Now
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+
+      {/* Contact Section */}
+      <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-6">Ready to Explore Uttar Pradesh?</h2>
+          <p className="text-lg mb-8 opacity-90">
+            Contact us now for instant booking and best rates
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="tel:+919772021780" className="flex items-center gap-2 bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg transition-colors">
+              <Phone className="w-5 h-5" />
+              <span>Call: +91 97720 21780</span>
+            </a>
+            <a href="https://wa.me/917727021780" className="flex items-center gap-2 bg-green-500 hover:bg-green-600 px-6 py-3 rounded-lg transition-colors">
+              <Phone className="w-5 h-5" />
+              <span>WhatsApp: +91 77270 21780</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

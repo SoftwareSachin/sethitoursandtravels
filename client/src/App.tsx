@@ -8,6 +8,12 @@ import Home from "@/pages/home";
 import JaipurTaxi from "@/pages/jaipur-taxi";
 import JaipurCityTour from "@/pages/jaipur-city-tour";
 import RajasthanTour from "@/pages/rajasthan-tour";
+import TaxiServices from "@/pages/taxi-services";
+import RajasthanTaxiService from "@/pages/rajasthan-taxi-service";
+import PunjabTaxiService from "@/pages/punjab-taxi-service";
+import UttarPradeshTaxiService from "@/pages/uttar-pradesh-taxi-service";
+import DelhiTaxiService from "@/pages/delhi-taxi-service";
+import CharDhamTaxiService from "@/pages/char-dham-taxi-service";
 
 function Router() {
   return (
@@ -16,6 +22,12 @@ function Router() {
       <Route path="/jaipur-taxi" component={JaipurTaxi} />
       <Route path="/jaipur-city-tour" component={JaipurCityTour} />
       <Route path="/rajasthan-tour" component={RajasthanTour} />
+      <Route path="/taxi-services" component={TaxiServices} />
+      <Route path="/taxi-services/rajasthan" component={RajasthanTaxiService} />
+      <Route path="/taxi-services/punjab" component={PunjabTaxiService} />
+      <Route path="/taxi-services/uttar-pradesh" component={UttarPradeshTaxiService} />
+      <Route path="/taxi-services/delhi" component={DelhiTaxiService} />
+      <Route path="/taxi-services/char-dham" component={CharDhamTaxiService} />
       <Route component={NotFound} />
     </Switch>
   );
