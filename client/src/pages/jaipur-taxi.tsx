@@ -737,6 +737,212 @@ export default function JaipurTaxi() {
         </div>
       </section>
 
+      {/* Premium Services Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Premium Services</h2>
+            <p className="text-xl text-gray-600">Comprehensive taxi services for all your travel needs</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <Card key={index} className="hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg group">
+                <CardContent className="p-8">
+                  <div className="bg-gradient-to-r from-orange-500 to-pink-500 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <div className="text-2xl font-bold text-orange-600 mb-4">{service.price}</div>
+                  <ul className="text-sm text-gray-500 mb-6 space-y-1">
+                    {service.features.map((feature, i) => (
+                      <li key={i} className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex gap-2">
+                    <Button 
+                      className="flex-1 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold shadow-lg transform group-hover:scale-105 transition-all duration-300"
+                      onClick={() => whatsapp(`नमस्ते! मुझे ${service.title} की जानकारी चाहिए।`)}
+                    >
+                      <FaWhatsapp className="mr-2 h-4 w-4" />
+                      WhatsApp
+                    </Button>
+                    <Button 
+                      variant="outline"
+                      className="flex-1 border-orange-500 text-orange-500 hover:bg-orange-50"
+                      onClick={() => phone(`${service.title} के लिए कॉल करें`)}
+                    >
+                      <Phone className="mr-2 h-4 w-4" />
+                      Call
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Vehicle Fleet Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Vehicle Fleet</h2>
+            <p className="text-xl text-gray-600">Choose from our premium collection of well-maintained vehicles</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {vehicles.map((vehicle, index) => (
+              <Card key={index} className="hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg group relative">
+                {vehicle.popular && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                    <Badge className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-4 py-1">
+                      Most Popular
+                    </Badge>
+                  </div>
+                )}
+                <CardContent className="p-6">
+                  <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
+                    <img 
+                      src={vehicle.image} 
+                      alt={vehicle.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">{vehicle.name}</h3>
+                  <p className="text-gray-600 mb-2">{vehicle.type}</p>
+                  <p className="text-sm text-gray-500 mb-4">Capacity: {vehicle.passengers} passengers</p>
+                  <div className="text-2xl font-bold text-orange-600 mb-4">{vehicle.price}</div>
+                  <ul className="text-sm text-gray-500 mb-6 space-y-1">
+                    {vehicle.features.map((feature, i) => (
+                      <li key={i} className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex gap-2">
+                    <Button 
+                      className="flex-1 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold shadow-lg transform group-hover:scale-105 transition-all duration-300"
+                      onClick={() => whatsapp(`नमस्ते! मुझे ${vehicle.name} बुक करनी है।`)}
+                    >
+                      <FaWhatsapp className="mr-2 h-4 w-4" />
+                      Book Now
+                    </Button>
+                    <Button 
+                      variant="outline"
+                      className="flex-1 border-orange-500 text-orange-500 hover:bg-orange-50"
+                      onClick={() => phone(`${vehicle.name} की जानकारी के लिए कॉल करें`)}
+                    >
+                      <Phone className="mr-2 h-4 w-4" />
+                      Call
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Tour Packages Section */}
+      <section className="py-20 bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Popular Tour Packages</h2>
+            <p className="text-xl text-gray-600">Explore Rajasthan with our specially curated tour packages</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {tourPackages.map((pkg, index) => (
+              <Card key={index} className="hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg group">
+                <CardContent className="p-0">
+                  <div className="relative h-64 rounded-t-lg overflow-hidden">
+                    <img 
+                      src={pkg.image} 
+                      alt={pkg.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <Badge className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-3 py-1">
+                        {pkg.duration}
+                      </Badge>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-3">{pkg.name}</h3>
+                    <p className="text-gray-600 mb-4">
+                      {pkg.places.join(" → ")}
+                    </p>
+                    <ul className="text-sm text-gray-500 mb-6 space-y-1">
+                      {pkg.highlights.map((highlight, i) => (
+                        <li key={i} className="flex items-center">
+                          <Star className="h-4 w-4 text-yellow-500 mr-2" />
+                          {highlight}
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="text-2xl font-bold text-orange-600">{pkg.price}</div>
+                      <div className="text-sm text-gray-500">per person</div>
+                    </div>
+                    <div className="flex gap-2">
+                      <Button 
+                        className="flex-1 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold shadow-lg transform group-hover:scale-105 transition-all duration-300"
+                        onClick={() => whatsapp(`नमस्ते! मुझे ${pkg.name} की जानकारी चाहिए।`)}
+                      >
+                        <FaWhatsapp className="mr-2 h-4 w-4" />
+                        Enquire Now
+                      </Button>
+                      <Button 
+                        variant="outline"
+                        className="flex-1 border-orange-500 text-orange-500 hover:bg-orange-50"
+                        onClick={() => phone(`${pkg.name} पैकेज के लिए कॉल करें`)}
+                      >
+                        <Phone className="mr-2 h-4 w-4" />
+                        Call
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Testimonials */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Happy Customers</h2>
+            <p className="text-xl text-gray-600">What our customers say about our services</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg">
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <div className="flex text-yellow-500">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-gray-600 mb-4 italic">"{testimonial.comment}"</p>
+                  <div className="border-t pt-4">
+                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                    <p className="text-sm text-gray-500">{testimonial.location}</p>
+                    <p className="text-sm text-orange-600 mt-1">{testimonial.service}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Booking Information */}
       <section className="py-16 bg-secondary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
