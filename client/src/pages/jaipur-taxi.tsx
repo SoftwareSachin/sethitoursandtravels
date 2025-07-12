@@ -160,6 +160,64 @@ export default function JaipurTaxi() {
     }
   ];
 
+  const testimonials = [
+    {
+      name: "Priya Sharma",
+      location: "Mumbai",
+      rating: 5,
+      comment: "Excellent service from Sethi Tour & Travels. The driver was very courteous and knowledgeable about all the places in Jaipur. Highly recommended!",
+      service: "Local Jaipur Tour"
+    },
+    {
+      name: "Rajesh Kumar",
+      location: "Delhi",
+      rating: 5,
+      comment: "Perfect service for our family trip. Clean vehicle, professional driver, and very reasonable rates. Will definitely book again!",
+      service: "Delhi to Jaipur"
+    },
+    {
+      name: "Anjali Patel",
+      location: "Ahmedabad",
+      rating: 5,
+      comment: "Kuldeep ji provided excellent service. The car was clean and comfortable. Driver was very helpful and showed us the best places to visit.",
+      service: "Jaipur Sightseeing"
+    },
+    {
+      name: "Vikram Singh",
+      location: "Jodhpur",
+      rating: 5,
+      comment: "Great experience with Sethi Tour & Travels. On-time pickup, safe driving, and very affordable rates. Thank you for making our trip memorable!",
+      service: "Jodhpur to Jaipur"
+    }
+  ];
+
+  const tourPackages = [
+    {
+      name: "Golden Triangle Tour",
+      duration: "3 Days",
+      places: ["Delhi", "Agra", "Jaipur"],
+      price: "₹15,000",
+      image: "/attached_assets/image_1752331571103.png",
+      highlights: ["Taj Mahal", "Red Fort", "City Palace", "Hawa Mahal"]
+    },
+    {
+      name: "Rajasthan Heritage Tour",
+      duration: "5 Days",
+      places: ["Jaipur", "Udaipur", "Jodhpur", "Jaisalmer"],
+      price: "₹25,000",
+      image: "/attached_assets/image_1752331579972.png",
+      highlights: ["City Palace", "Lake Pichola", "Mehrangarh Fort", "Desert Safari"]
+    },
+    {
+      name: "Jaipur Day Tour",
+      duration: "1 Day",
+      places: ["Jaipur City"],
+      price: "₹2,500",
+      image: "/attached_assets/image_1752331584537.png",
+      highlights: ["Amber Fort", "City Palace", "Jantar Mantar", "Hawa Mahal"]
+    }
+  ];
+
 
 
 
@@ -774,7 +832,141 @@ export default function JaipurTaxi() {
         </div>
       </section>
 
+      {/* Customer Testimonials */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-full px-6 py-2 mb-6">
+              <Star className="h-4 w-4 mr-2" />
+              <span className="text-sm font-medium">Customer Reviews</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent">
+              What Our Customers Say
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Read genuine reviews from travelers who experienced the royal treatment with Sethi Tour & Travels
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg bg-white relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-pink-500"></div>
+                <CardContent className="p-8">
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                      {testimonial.name.charAt(0)}
+                    </div>
+                    <div className="ml-4 flex-1">
+                      <h4 className="font-bold text-lg text-gray-900">{testimonial.name}</h4>
+                      <p className="text-gray-600">{testimonial.location}</p>
+                    </div>
+                    <div className="flex items-center">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                  <blockquote className="text-gray-700 italic leading-relaxed mb-4">
+                    "{testimonial.comment}"
+                  </blockquote>
+                  <div className="inline-flex items-center bg-orange-50 rounded-full px-4 py-2">
+                    <Badge className="bg-gradient-to-r from-orange-500 to-pink-500 text-white border-0">
+                      {testimonial.service}
+                    </Badge>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
 
+      {/* Popular Tour Packages */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full px-6 py-2 mb-6">
+              <Globe className="h-4 w-4 mr-2" />
+              <span className="text-sm font-medium">Complete Tour Packages</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent">
+              Popular Tour Packages
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Explore Rajasthan with our specially curated tour packages. From the Pink City to the Golden City, experience royal grandeur like never before.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {tourPackages.map((tour, index) => (
+              <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-0 shadow-xl group">
+                <div className="relative h-56 overflow-hidden">
+                  <img 
+                    src={tour.image} 
+                    alt={tour.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                  <div className="absolute top-4 right-4">
+                    <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white border-0 shadow-lg">
+                      {tour.duration}
+                    </Badge>
+                  </div>
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <h3 className="text-xl font-bold mb-2">{tour.name}</h3>
+                    <div className="flex items-center text-sm opacity-90">
+                      <MapPin className="h-4 w-4 mr-1" />
+                      {tour.places.join(" • ")}
+                    </div>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <div className="flex justify-between items-center mb-4">
+                    <div className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent">
+                      {tour.price}
+                    </div>
+                    <div className="flex items-center text-yellow-500">
+                      <Star className="h-4 w-4 fill-current" />
+                      <span className="ml-1 text-sm font-medium">4.9</span>
+                    </div>
+                  </div>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-2">Highlights:</h4>
+                    <div className="grid grid-cols-2 gap-2">
+                      {tour.highlights.map((highlight, i) => (
+                        <div key={i} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="h-3 w-3 text-green-500 mr-2 flex-shrink-0" />
+                          {highlight}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="flex gap-2">
+                    <Button 
+                      className="flex-1 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold shadow-lg transform group-hover:scale-105 transition-all duration-300"
+                      onClick={() => whatsapp(`नमस्ते! मुझे ${tour.name} टूर पैकेज की जानकारी चाहिए।`)}
+                    >
+                      <FaWhatsapp className="mr-2 h-4 w-4" />
+                      Book Tour
+                    </Button>
+                    <Button 
+                      variant="outline"
+                      className="flex-1 border-2 border-orange-500 text-orange-500 hover:bg-orange-50 font-semibold"
+                      onClick={() => phone()}
+                    >
+                      <Phone className="mr-2 h-3 w-3" />
+                      Details
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Premium Services Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-indigo-50">
