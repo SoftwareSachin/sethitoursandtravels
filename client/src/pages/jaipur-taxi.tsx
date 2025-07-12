@@ -1250,8 +1250,8 @@ export default function JaipurTaxi() {
           
           {/* Premium Heading */}
           <div className="mb-8">
-            <h2 className="text-6xl md:text-8xl font-black mb-4 leading-tight">
-              <span className="block bg-gradient-to-r from-yellow-200 via-amber-200 to-orange-200 bg-clip-text text-transparent drop-shadow-2xl">
+            <h2 className="text-6xl md:text-8xl font-black mb-4 leading-relaxed">
+              <span className="block bg-gradient-to-r from-yellow-200 via-amber-200 to-orange-200 bg-clip-text text-transparent drop-shadow-2xl mb-4">
                 Ready to Experience
               </span>
               <span className="block bg-gradient-to-r from-orange-200 via-red-200 to-pink-200 bg-clip-text text-transparent drop-shadow-2xl">
