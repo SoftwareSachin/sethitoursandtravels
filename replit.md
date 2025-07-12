@@ -120,7 +120,24 @@ The application follows a monorepo structure with clear separation between clien
 
 ## Recent Changes (January 2025)
 
-### Enhanced Navigation Design (Latest - January 2025)
+### Updated Contact Information (Latest - January 2025)
+- **Business Card Integration**: Updated all contact information to match official business card details
+- **Contact Person**: Added Kuldeep Choudhary as the designated contact person
+- **Phone Numbers**: Updated to +91 97720 21780 (primary) and +91 77270 21780 (WhatsApp)
+- **Email Address**: Updated to sethitourstravels8888@gmail.com
+- **Physical Address**: S-147, 4S New Loha Mandi Road, Machada, Jaipur-302013
+- **Consistency**: Ensured all contact details are consistent across the entire website
+
+### Rajasthan Tour Page with Sliding Hero Images (Latest - January 2025)
+- **New Dedicated Page**: Created comprehensive Rajasthan tour page at `/rajasthan-tour`
+- **Sliding Background Hero**: Implemented automatic image carousel with 5-second transitions
+- **Authentic Rajasthan Images**: Features desert safari, lake palaces, and heritage architecture
+- **Interactive Elements**: Clickable indicators for manual image navigation
+- **Enhanced Visual Design**: Full-screen hero with gradient overlays and drop shadows
+- **Comprehensive Content**: Detailed destination information, package highlights, and contact form
+- **Navigation Integration**: Added to main navigation menu for easy access
+
+### Enhanced Navigation Design (January 2025)
 - **Rajasthan Tourism Color Scheme**: Updated navigation with authentic pink accent colors and warm yellow-orange gradient background
 - **Dual Logo System**: 
   - Central placement of official Rajasthan tourism logo for desktop navigation

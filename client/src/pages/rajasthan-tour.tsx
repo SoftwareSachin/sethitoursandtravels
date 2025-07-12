@@ -286,7 +286,7 @@ export default function RajasthanTour() {
                 Contact Sethi Tour & Travels
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Ready to embark on your Rajasthan adventure? Get in touch with us for personalized tour packages and bookings.
+                Ready to embark on your Rajasthan adventure? Contact Kuldeep Choudhary for personalized tour packages and bookings across India and Rajasthan.
               </p>
 
               <div className="space-y-6">
@@ -296,7 +296,7 @@ export default function RajasthanTour() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">+91 9829155015 | +91 9829155016</p>
+                    <p className="text-gray-600">+91 97720 21780</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -305,7 +305,7 @@ export default function RajasthanTour() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">WhatsApp</h3>
-                    <p className="text-gray-600">+91 9829155015</p>
+                    <p className="text-gray-600">+91 77270 21780</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -314,7 +314,25 @@ export default function RajasthanTour() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">info@sethitourandtravels.com</p>
+                    <p className="text-gray-600">sethitourstravels8888@gmail.com</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-red-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Address</h3>
+                    <p className="text-gray-600">S-147, 4S New Loha Mandi Road<br />Machada, Jaipur-302013</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                    <Users className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Contact Person</h3>
+                    <p className="text-gray-600">Kuldeep Choudhary</p>
                   </div>
                 </div>
               </div>

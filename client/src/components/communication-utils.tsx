@@ -3,7 +3,8 @@ import { useToast } from "@/hooks/use-toast";
 // Contact information for Sethi Tour & Travels
 export const CONTACT_INFO = {
   phone: "9772021780",
-  whatsapp: "919772021780",
+  whatsapp: "7727021780",
+  whatsappFull: "917727021780",
   email: "sethitourstravels8888@gmail.com",
   address: "S-147, 4S New Loha Mandi Road, Machada, Jaipur-302013, Rajasthan, India",
   businessOwner: "Kuldeep Choudhary",
