@@ -306,12 +306,13 @@ export default function RajasthanTaxiService() {
                       </div>
                     ))}
                   </div>
-                  <Link href={service.path}>
-                    <Button className="w-full bg-gradient-to-r from-pink-500 to-orange-600 hover:from-pink-600 hover:to-orange-700 text-white font-semibold py-3 shadow-lg hover:shadow-xl transition-all duration-300">
-                      <MapPin className="w-4 h-4 mr-2" />
-                      Book This Route
-                    </Button>
-                  </Link>
+                  <Button 
+                    className="w-full bg-gradient-to-r from-pink-500 to-orange-600 hover:from-pink-600 hover:to-orange-700 text-white font-semibold py-3 shadow-lg hover:shadow-xl transition-all duration-300"
+                    onClick={() => window.open(`https://wa.me/917727021780?text=नमस्कार! मुझे ${service.name} की बुकिंग करनी है। कृपया दरें और उपलब्धता बताएं।`, '_blank')}
+                  >
+                    <Phone className="w-4 h-4 mr-2" />
+                    Book This Route
+                  </Button>
                 </CardContent>
               </Card>
             ))}
