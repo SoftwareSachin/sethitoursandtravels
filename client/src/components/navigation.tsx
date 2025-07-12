@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Phone } from "lucide-react";
+import logoGif from "@assets/fetchpik.com-iconscout-HXNPRTYJxe_1752324682347.gif";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,8 +30,12 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <div className="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mr-3">
-              <span className="text-xl font-bold">S</span>
+            <div className="w-12 h-12 rounded-full overflow-hidden mr-3 bg-white shadow-md">
+              <img 
+                src={logoGif} 
+                alt="Sethi Tour & Travels Logo" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <h1 className="text-xl font-bold text-primary">Sethi Tour & Travels</h1>
