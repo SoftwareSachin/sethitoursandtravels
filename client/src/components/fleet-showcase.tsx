@@ -58,15 +58,15 @@ export default function FleetShowcase() {
   return (
     <section id="fleet" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Travel Fleet</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Travel Fleet</h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             Discover India in comfort with our carefully selected vehicles. From intimate city tours to grand heritage journeys, 
             each vehicle comes with professional drivers who know every hidden gem and historic tale along the way.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           {fleetVehicles.map((vehicle, index) => (
             <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="relative">
@@ -84,21 +84,21 @@ export default function FleetShowcase() {
                 </div>
               </div>
               
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{vehicle.name}</h3>
+              <CardContent className="p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{vehicle.name}</h3>
                 
-                <div className="space-y-3 mb-4">
+                <div className="space-y-2 sm:space-y-3 mb-4">
                   <div className="flex items-center gap-2 text-gray-600">
                     <Users className="h-4 w-4" />
-                    <span className="text-sm">{vehicle.capacity}</span>
+                    <span className="text-xs sm:text-sm">{vehicle.capacity}</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
                     <Luggage className="h-4 w-4" />
-                    <span className="text-sm">{vehicle.luggage}</span>
+                    <span className="text-xs sm:text-sm">{vehicle.luggage}</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
                     <MapPin className="h-4 w-4" />
-                    <span className="text-sm">{vehicle.ideal}</span>
+                    <span className="text-xs sm:text-sm">{vehicle.ideal}</span>
                   </div>
                 </div>
 

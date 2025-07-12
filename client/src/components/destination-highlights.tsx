@@ -93,50 +93,50 @@ export default function DestinationHighlights() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Popular Rajasthan Destinations</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Popular Rajasthan Destinations</h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             Discover the magnificent cities of Rajasthan, each with its unique character, history, and attractions. 
             From royal palaces to desert adventures, create memories that last a lifetime.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {destinations.map((destination, index) => (
             <Card key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
               <div className="relative overflow-hidden">
                 <img 
                   src={destination.image}
                   alt={destination.name}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-40 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                 />
-                <div className="absolute top-4 left-4 flex gap-2">
-                  <span className="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium flex items-center">
-                    <Clock className="h-3 w-3 mr-1" />
+                <div className="absolute top-3 sm:top-4 left-3 sm:left-4 flex gap-1 sm:gap-2">
+                  <span className="bg-primary text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium flex items-center">
+                    <Clock className="h-2 w-2 sm:h-3 sm:w-3 mr-1" />
                     {destination.duration}
                   </span>
-                  <span className="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center">
-                    <Star className="h-3 w-3 mr-1" />
+                  <span className="bg-yellow-500 text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium flex items-center">
+                    <Star className="h-2 w-2 sm:h-3 sm:w-3 mr-1" />
                     {destination.rating}
                   </span>
                 </div>
               </div>
               
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+              <CardContent className="p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
                   {destination.name}
                 </h3>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">{destination.description}</p>
+                <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed">{destination.description}</p>
                 
-                <div className="mb-4">
-                  <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                    <Camera className="h-4 w-4 mr-2" />
+                <div className="mb-3 sm:mb-4">
+                  <h4 className="font-semibold text-gray-900 mb-2 flex items-center text-sm sm:text-base">
+                    <Camera className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
                     Must Visit Places:
                   </h4>
-                  <ul className="text-sm text-gray-600 space-y-1">
+                  <ul className="text-xs sm:text-sm text-gray-600 space-y-1">
                     {destination.highlights.slice(0, 3).map((highlight, idx) => (
                       <li key={idx} className="flex items-center">
-                        <MapPin className="h-3 w-3 mr-2 text-primary flex-shrink-0" />
+                        <MapPin className="h-2 w-2 sm:h-3 sm:w-3 mr-2 text-primary flex-shrink-0" />
                         {highlight}
                       </li>
                     ))}
@@ -161,10 +161,10 @@ export default function DestinationHighlights() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-primary to-secondary rounded-xl shadow-lg p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Custom Rajasthan Tours</h3>
-            <p className="text-lg mb-6 max-w-2xl mx-auto">
+        <div className="text-center mt-8 sm:mt-12">
+          <div className="bg-gradient-to-r from-primary to-secondary rounded-xl shadow-lg p-4 sm:p-6 md:p-8 text-white">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4">Custom Rajasthan Tours</h3>
+            <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 max-w-2xl mx-auto">
               Want to visit multiple cities? We create customized itineraries combining your favorite destinations 
               with comfortable transportation and expert local guides.
             </p>

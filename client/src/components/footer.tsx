@@ -15,34 +15,34 @@ export default function Footer() {
       {/* Trust Indicators */}
       <div className="bg-gradient-to-r from-orange-600 to-pink-600 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
             <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-2">
-                <Star className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-full flex items-center justify-center mb-2">
+                <Star className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
-              <h4 className="text-lg font-bold">5000+</h4>
-              <p className="text-sm text-white/90">Happy Travelers</p>
+              <h4 className="text-base sm:text-lg font-bold">5000+</h4>
+              <p className="text-xs sm:text-sm text-white/90">Happy Travelers</p>
             </div>
             <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-2">
-                <Award className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-full flex items-center justify-center mb-2">
+                <Award className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
-              <h4 className="text-lg font-bold">15+</h4>
-              <p className="text-sm text-white/90">Years Experience</p>
+              <h4 className="text-base sm:text-lg font-bold">15+</h4>
+              <p className="text-xs sm:text-sm text-white/90">Years Experience</p>
             </div>
             <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-2">
-                <Shield className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-full flex items-center justify-center mb-2">
+                <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
-              <h4 className="text-lg font-bold">100%</h4>
-              <p className="text-sm text-white/90">Safe & Secure</p>
+              <h4 className="text-base sm:text-lg font-bold">100%</h4>
+              <p className="text-xs sm:text-sm text-white/90">Safe & Secure</p>
             </div>
             <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-2">
-                <Clock className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-full flex items-center justify-center mb-2">
+                <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
-              <h4 className="text-lg font-bold">24/7</h4>
-              <p className="text-sm text-white/90">Support Available</p>
+              <h4 className="text-base sm:text-lg font-bold">24/7</h4>
+              <p className="text-xs sm:text-sm text-white/90">Support Available</p>
             </div>
           </div>
         </div>

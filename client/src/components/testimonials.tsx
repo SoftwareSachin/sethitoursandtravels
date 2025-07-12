@@ -56,42 +56,42 @@ export default function Testimonials() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             Don't just take our word for it. Here's what our satisfied customers have to say about their experiences with Sethi Tour & Travels.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 relative">
-              <CardContent className="p-6">
-                <div className="absolute top-4 right-4">
-                  <Quote className="h-8 w-8 text-primary/20" />
+              <CardContent className="p-4 sm:p-6">
+                <div className="absolute top-3 sm:top-4 right-3 sm:right-4">
+                  <Quote className="h-6 w-6 sm:h-8 sm:w-8 text-primary/20" />
                 </div>
                 
-                <div className="flex items-center mb-4">
+                <div className="flex items-center mb-3 sm:mb-4">
                   <div className="flex">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 text-yellow-500 fill-current" />
+                      <Star key={i} className="h-3 w-3 sm:h-4 sm:w-4 text-yellow-500 fill-current" />
                     ))}
                   </div>
-                  <span className="ml-2 text-sm text-gray-600">({testimonial.rating}.0)</span>
+                  <span className="ml-2 text-xs sm:text-sm text-gray-600">({testimonial.rating}.0)</span>
                 </div>
                 
-                <p className="text-gray-700 mb-4 leading-relaxed italic">
+                <p className="text-gray-700 mb-3 sm:mb-4 leading-relaxed italic text-sm sm:text-base">
                   "{testimonial.text}"
                 </p>
                 
-                <div className="border-t pt-4">
+                <div className="border-t pt-3 sm:pt-4">
                   <div className="flex items-center justify-between">
                     <div>
-                      <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
-                      <p className="text-sm text-gray-600">{testimonial.location}</p>
+                      <h4 className="font-semibold text-gray-900 text-sm sm:text-base">{testimonial.name}</h4>
+                      <p className="text-xs sm:text-sm text-gray-600">{testimonial.location}</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-sm font-medium text-primary">{testimonial.tour}</p>
+                      <p className="text-xs sm:text-sm font-medium text-primary">{testimonial.tour}</p>
                       <p className="text-xs text-gray-500">{testimonial.date}</p>
                     </div>
                   </div>
