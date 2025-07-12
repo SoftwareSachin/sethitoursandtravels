@@ -80,18 +80,12 @@ export const CommunicationUtils = {
   // WhatsApp with premium greeting and custom message
   openWhatsApp: (message?: string, language: 'rajasthani' | 'hindi' | 'english' = 'rajasthani') => {
     const greeting = getTimeBasedGreeting(language);
-    const msgs = PREMIUM_MESSAGES[language];
     const baseMessage = message || "मैं राजस्थान टूर बुक करना चाहता हूं। कृपया पैकेज और रेट्स की जानकारी दें।";
     
-    // Create a natural customer message
+    // Create a simple, natural customer message
     const finalMessage = `${greeting}
 
-${baseMessage}
-
-${msgs.businessContact}
-${msgs.serviceTag}
-
-${msgs.farewell}`;
+${baseMessage}`;
     
     // Use the standard Indian WhatsApp format
     const whatsappNumber = "91" + CONTACT_INFO.phone;
@@ -165,10 +159,7 @@ ${msgs.farewell}`;
 
 मैं ${packageName} बुक करना चाहता हूं।${datesInfo}${travelersInfo}
 
-कृपया पैकेज का रेट और डिटेल्स भेजें। कब से कब तक टूर है और क्या क्या इंक्लूड है?
-
-${PREMIUM_MESSAGES.rajasthani.businessContact}
-${PREMIUM_MESSAGES.rajasthani.serviceTag}`;
+कृपया पैकेज का रेट और डिटेल्स भेजें। कब से कब तक टूर है और क्या क्या इंक्लूड है?`;
   },
 
   // Service specific message
@@ -180,10 +171,7 @@ ${PREMIUM_MESSAGES.rajasthani.serviceTag}`;
 
 मुझे ${serviceName} बुक करनी है।${info}
 
-कृपया रेट बताएं और कब अवेलेबल है? AC कार है या नॉन AC?
-
-${PREMIUM_MESSAGES.rajasthani.businessContact}
-${PREMIUM_MESSAGES.rajasthani.serviceTag}`;
+कृपया रेट बताएं और कब अवेलेबल है? AC कार है या नॉन AC?`;
   },
 
   // Emergency message
@@ -195,8 +183,7 @@ ${PREMIUM_MESSAGES.rajasthani.serviceTag}`;
     const locationInfo = location ? `\nमैं यहां हूं: ${location}` : '';
     return `${baseMessage}${locationInfo}
 
-कृपया जल्दी से जल्दी भेज दें। एमर्जेंसी है।
-धन्यवाद!`;
+कृपया जल्दी से जल्दी भेज दें। एमर्जेंसी है।`;
   },
 
   // Corporate booking message
@@ -207,10 +194,7 @@ ${PREMIUM_MESSAGES.rajasthani.serviceTag}`;
 Company: ${companyName}
 Requirement: ${requirement}
 
-Please contact for corporate rates and services.
-
-Best regards,
-Sethi Tour & Travels`;
+Please contact for corporate rates and services.`;
   }
 };
 
