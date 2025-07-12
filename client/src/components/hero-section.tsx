@@ -98,7 +98,7 @@ export default function HeroSection() {
       </div>
       
       {/* Central Logo and Content */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-4 mt-16">
+      <div className="relative z-10 text-center max-w-6xl mx-auto px-4 py-8 sm:py-16">
         {/* Rajasthan Logo */}
         <div className="mb-8 flex justify-center">
           <img 
@@ -144,7 +144,7 @@ export default function HeroSection() {
         </div>
         
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8">
           <Button 
             onClick={() => whatsapp("मैं टूर बुक करना चाहता हूं। कृपया AC कार का रेट और पैकेज डिटेल्स दें।", 'rajasthani')}
             size="lg"
@@ -164,7 +164,7 @@ export default function HeroSection() {
         </div>
         
         {/* Service Statistics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-center max-w-3xl mx-auto mt-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-center max-w-3xl mx-auto">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3">
             <div className="text-lg sm:text-xl md:text-2xl font-bold text-secondary">2500+</div>
             <div className="text-xs sm:text-sm text-gray-200">Foreign Tourists</div>
@@ -185,7 +185,7 @@ export default function HeroSection() {
       </div>
       
       {/* Bottom Navigation Hint */}
-      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-center z-10">
+      <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 text-center z-10">
         <p className="text-gray-200 text-sm">Scroll down to explore our incredible tours</p>
         <div className="animate-bounce mt-2">
           <svg className="w-6 h-6 mx-auto text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
