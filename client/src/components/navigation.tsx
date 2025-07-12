@@ -18,6 +18,7 @@ export default function Navigation() {
     { id: "home", label: "Home" },
     { id: "services", label: "Services" },
     { id: "packages", label: "Tour Packages" },
+    { id: "vehicles", label: "Taxi Services" },
     { id: "gallery", label: "Gallery" },
     { id: "contact", label: "Contact" },
   ];

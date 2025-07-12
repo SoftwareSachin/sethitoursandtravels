@@ -5,7 +5,9 @@ import TourPackages from "@/components/tour-packages";
 import FeaturedDestinations from "@/components/featured-destinations";
 import TaxiServices from "@/components/taxi-services";
 import CustomerSupport from "@/components/customer-support";
+import WhatWeOffer from "@/components/what-we-offer";
 import PhotoGallery from "@/components/photo-gallery";
+import LatestArticles from "@/components/latest-articles";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
 import WhatsAppButton from "@/components/whatsapp-button";
@@ -20,7 +22,9 @@ export default function Home() {
       <FeaturedDestinations />
       <TaxiServices />
       <CustomerSupport />
+      <WhatWeOffer />
       <PhotoGallery />
+      <LatestArticles />
       <ContactSection />
       <Footer />
       <WhatsAppButton />

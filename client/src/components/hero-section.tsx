@@ -23,8 +23,18 @@ export default function HeroSection() {
         </h2>
         <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
           Discover the royal heritage of Rajasthan with Sethi Tour and Travels. 
-          Explore Jaipur, Udaipur, and more on a seamless, unforgettable journey through the Land of Kings
+          Explore majestic palaces, vibrant markets, desert safaris, and cultural experiences. 
+          From the Pink City of Jaipur to the romantic lakes of Udaipur, experience the Land of Kings like never before.
         </p>
+        <div className="mb-8">
+          <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">
+            <span className="text-secondary font-semibold">Our Services:</span> 
+            <span className="mx-2">•</span> One Way <span className="mx-2">•</span> Round Trip Taxi 
+            <span className="mx-2">•</span> All India/Rajasthan Tour 
+            <span className="mx-2">•</span> Tour Package <span className="mx-2">•</span> Hotel & Resorts 
+            <span className="mx-2">•</span> All Type Taxi Cars
+          </p>
+        </div>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button 
             asChild

@@ -25,7 +25,8 @@ export default function Footer() {
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Your trusted partner for memorable travel experiences across Rajasthan and beyond. 
-              We provide premium taxi services and expertly crafted tour packages.
+              We provide premium taxi services, expertly crafted tour packages, and complete travel solutions. 
+              From local sightseeing to interstate journeys, we ensure comfort, safety, and reliability.
             </p>
             <div className="flex space-x-4">
               <a 
@@ -54,10 +55,10 @@ export default function Footer() {
             <ul className="space-y-3 text-gray-400">
               <li>
                 <button 
-                  onClick={() => scrollToSection('services')}
+                  onClick={() => scrollToSection('vehicles')}
                   className="hover:text-white transition-colors"
                 >
-                  Taxi Services
+                  Local Car Rentals
                 </button>
               </li>
               <li>
@@ -65,12 +66,12 @@ export default function Footer() {
                   onClick={() => scrollToSection('packages')}
                   className="hover:text-white transition-colors"
                 >
-                  Tour Packages
+                  Rajasthan Tour Packages
                 </button>
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToSection('services')}
+                  onClick={() => scrollToSection('vehicles')}
                   className="hover:text-white transition-colors"
                 >
                   Airport Transfer
@@ -78,7 +79,7 @@ export default function Footer() {
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToSection('services')}
+                  onClick={() => scrollToSection('vehicles')}
                   className="hover:text-white transition-colors"
                 >
                   Outstation Travel
@@ -86,10 +87,18 @@ export default function Footer() {
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToSection('services')}
+                  onClick={() => scrollToSection('vehicles')}
                   className="hover:text-white transition-colors"
                 >
-                  Corporate Rental
+                  Corporate Car Rental
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('vehicles')}
+                  className="hover:text-white transition-colors"
+                >
+                  Tempo Traveller
                 </button>
               </li>
             </ul>

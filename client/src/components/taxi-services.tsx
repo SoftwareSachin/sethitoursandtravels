@@ -13,7 +13,7 @@ export default function TaxiServices() {
 
   const getIcon = (iconName: string) => {
     const IconComponent = Icons[iconName as keyof typeof Icons] as any;
-    return IconComponent ? <IconComponent className="text-4xl text-secondary" /> : <Icons.Car className="text-4xl text-secondary" />;
+    return IconComponent ? <IconComponent className="h-12 w-12 text-secondary" /> : <Icons.Car className="h-12 w-12 text-secondary" />;
   };
 
   if (isLoading) {
@@ -55,17 +55,17 @@ export default function TaxiServices() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services?.map((service) => (
-            <Card key={service.id} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-              <CardContent className="p-0">
-                <div className="text-secondary text-4xl mb-4">
+            <Card key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <CardContent className="p-8 text-center">
+                <div className="mb-6 flex justify-center text-secondary group-hover:scale-110 transition-transform duration-300">
                   {getIcon(service.icon)}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.name}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{service.name}</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
                 <Button 
                   asChild
                   variant="link"
-                  className="text-primary hover:text-blue-700 p-0 h-auto"
+                  className="text-primary hover:text-blue-700 p-0 h-auto group-hover:underline"
                 >
                   <a href={`https://api.whatsapp.com/send?phone=919772021780&text=Hello%20I%20need%20${encodeURIComponent(service.name)}`}>
                     Book Now <ArrowRight className="ml-1 h-4 w-4" />
