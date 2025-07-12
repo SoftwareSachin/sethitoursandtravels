@@ -5,15 +5,74 @@ export const CONTACT_INFO = {
   phone: "9772021780",
   whatsapp: "919772021780",
   email: "sethitourstravels8888@gmail.com",
-  address: "Jaipur, Rajasthan, India"
+  address: "S-147, 4S New Loha Mandi Road, Machada, Jaipur-302013, Rajasthan, India",
+  businessOwner: "Kuldeep Choudhary",
+  businessHours: "24/7 Service Available",
+  languages: ["Hindi", "English", "Rajasthani"],
+  specialties: ["Rajasthan Heritage Tours", "Golden Triangle", "Desert Safaris", "Royal Palace Tours"]
+};
+
+// Premium Rajasthani greetings and messages
+export const PREMIUM_MESSAGES = {
+  rajasthani: {
+    greeting: "खम्मा गणी सा! राजस्थान में आपका स्वागत है।",
+    welcome: "पधारो म्हारे देश! (Welcome to our land!)",
+    farewell: "फिर मिलेंगे, राम राम सा!"
+  },
+  hindi: {
+    greeting: "नमस्कार! सेठी टूर एंड ट्रेवल्स में आपका स्वागत है।",
+    welcome: "आपकी यात्रा को यादगार बनाने के लिए हम यहाँ हैं।",
+    farewell: "धन्यवाद! आपकी सेवा में हमेशा तत्पर।"
+  },
+  english: {
+    greeting: "Namaste! Welcome to Sethi Tour & Travels.",
+    welcome: "Experience the Royal Heritage of Rajasthan with us.",
+    farewell: "Thank you for choosing us. We're always at your service!"
+  }
+};
+
+// Premium greeting messages in Rajasthani and Hindi
+const PREMIUM_GREETINGS = {
+  rajasthani: {
+    morning: "राम राम सा! 🌅 सेठी टूर एंड ट्रेवल्स में आपका स्वागत है।",
+    afternoon: "राम राम सा! 🌞 सेठी टूर एंड ट्रेवल्स में आपका स्वागत है।",
+    evening: "राम राम सा! 🌆 सेठी टूर एंड ट्रेवल्स में आपका स्वागत है।",
+    night: "राम राम सा! 🌙 सेठी टूर एंड ट्रेवल्स में आपका स्वागत है।"
+  },
+  hindi: {
+    morning: "सुप्रभात! 🌅 सेठी टूर एंड ट्रेवल्स में आपका हार्दिक स्वागत है।",
+    afternoon: "नमस्ते! 🌞 सेठी टूर एंड ट्रेवल्स में आपका हार्दिक स्वागत है।",
+    evening: "शुभ संध्या! 🌆 सेठी टूर एंड ट्रेवल्स में आपका हार्दिक स्वागत है।",
+    night: "शुभ रात्रि! 🌙 सेठी टूर एंड ट्रेवल्स में आपका हार्दिक स्वागत है।"
+  },
+  english: {
+    morning: "Good Morning! 🌅 Welcome to Sethi Tour & Travels.",
+    afternoon: "Good Afternoon! 🌞 Welcome to Sethi Tour & Travels.",
+    evening: "Good Evening! 🌆 Welcome to Sethi Tour & Travels.",
+    night: "Good Night! 🌙 Welcome to Sethi Tour & Travels."
+  }
+};
+
+// Get time-based greeting
+const getTimeBasedGreeting = (language: 'rajasthani' | 'hindi' | 'english' = 'rajasthani') => {
+  const hour = new Date().getHours();
+  let timeOfDay: 'morning' | 'afternoon' | 'evening' | 'night';
+  
+  if (hour >= 5 && hour < 12) timeOfDay = 'morning';
+  else if (hour >= 12 && hour < 17) timeOfDay = 'afternoon';
+  else if (hour >= 17 && hour < 21) timeOfDay = 'evening';
+  else timeOfDay = 'night';
+  
+  return PREMIUM_GREETINGS[language][timeOfDay];
 };
 
 // Utility functions for communication
 export const CommunicationUtils = {
-  // WhatsApp with custom message
-  openWhatsApp: (message?: string) => {
-    const defaultMessage = "Hello! I need assistance with Sethi Tour & Travels services.";
-    const finalMessage = message || defaultMessage;
+  // WhatsApp with premium greeting and custom message
+  openWhatsApp: (message?: string, language: 'rajasthani' | 'hindi' | 'english' = 'rajasthani') => {
+    const greeting = getTimeBasedGreeting(language);
+    const baseMessage = message || "मैं आपकी सेवाओं के बारे में जानकारी चाहता हूं।";
+    const finalMessage = `${greeting}\n\n${baseMessage}\n\n📞 कुलदीप चौधरी\n✨ प्रीमियम टूर एंड ट्रेवल सर्विसेज\n🏰 राजस्थान की पूरी यात्रा का आनंद लें!`;
     const encodedMessage = encodeURIComponent(finalMessage);
     const url = `https://api.whatsapp.com/send?phone=${CONTACT_INFO.whatsapp}&text=${encodedMessage}`;
     
@@ -41,13 +100,37 @@ export const CommunicationUtils = {
     }
   },
 
-  // Email with subject and body
-  sendEmail: (subject?: string, body?: string) => {
-    const defaultSubject = "Inquiry about Sethi Tour & Travels Services";
-    const defaultBody = "Hello,\n\nI am interested in your services. Please provide more information.\n\nThank you!";
+  // Email with premium template
+  sendEmail: (subject?: string, body?: string, language: 'rajasthani' | 'hindi' | 'english' = 'hindi') => {
+    const greeting = getTimeBasedGreeting(language);
+    const defaultSubject = "🏰 प्रीमियम राजस्थान टूर पूछताछ - सेठी टूर एंड ट्रेवल्स";
+    const premiumEmailBody = `${greeting}
+
+${body || "मैं आपकी प्रीमियम राजस्थान टूर सेवाओं के बारे में जानकारी चाहता हूं।"}
+
+📋 सेवाएं जिनमें मुझे रुचि है:
+□ राजस्थान हेरिटेज टूर पैकेज
+□ गोल्डन ट्राइएंगल टूर (दिल्ली-आगरा-जयपुर)
+□ टैक्सी सर्विस (लोकल/आउटस्टेशन)
+□ एयरपोर्ट/रेलवे ट्रांसफर
+□ कॉर्पोरेट ट्रेवल सोल्यूशन
+□ अन्य (कृपया बताएं)
+
+🗓️ यात्रा की तिथि: ________________
+👥 कुल यात्री: ________________
+📱 संपर्क नंबर: ________________
+
+धन्यवाद!
+कुलदीप चौधरी जी की सेवा में,
+सेठी टूर एंड ट्रेवल्स
+
+✨ प्रीमियम टूर एक्सपीरियंस
+🏰 राजस्थान की पूरी यात्रा का आनंद
+📞 24/7 कस्टमर सपोर्ट
+🎯 1000+ खुश ग्राहक`;
     
     const finalSubject = encodeURIComponent(subject || defaultSubject);
-    const finalBody = encodeURIComponent(body || defaultBody);
+    const finalBody = encodeURIComponent(premiumEmailBody);
     const emailUrl = `mailto:${CONTACT_INFO.email}?subject=${finalSubject}&body=${finalBody}`;
     
     try {
@@ -61,33 +144,65 @@ export const CommunicationUtils = {
     }
   },
 
-  // Service-specific WhatsApp messages
+  // Service-specific WhatsApp messages with Rajasthani touch
   getServiceMessage: (serviceName: string, additionalInfo?: string) => {
-    const baseMessage = `Hello! I'm interested in your ${serviceName} service.`;
-    return additionalInfo ? `${baseMessage} ${additionalInfo}` : baseMessage;
+    const greeting = getTimeBasedGreeting('rajasthani');
+    const baseMessage = `${greeting}\n\n🚗 मैं आपकी ${serviceName} सेवा के बारे में जानकारी चाहता हूं।`;
+    const footer = `\n\n✨ कुलदीप चौधरी जी की सेवा में\n🏰 राजस्थान की पूरी यात्रा का आनंद लें!`;
+    return additionalInfo ? `${baseMessage}\n\n📝 ${additionalInfo}${footer}` : `${baseMessage}${footer}`;
   },
 
-  // Booking-specific WhatsApp message
-  getBookingMessage: (packageName: string, dates?: string) => {
-    let message = `Hello! I want to book the ${packageName} package.`;
+  // Premium booking message with cultural elements
+  getBookingMessage: (packageName: string, dates?: string, travelers?: number) => {
+    const greeting = getTimeBasedGreeting('rajasthani');
+    let message = `${greeting}\n\n🎫 मैं ${packageName} बुक करना चाहता हूं।`;
+    
     if (dates) {
-      message += ` Preferred dates: ${dates}.`;
+      message += `\n📅 पसंदीदा तिथि: ${dates}`;
     }
-    message += " Please send me the details and availability.";
+    if (travelers) {
+      message += `\n👥 कुल यात्री: ${travelers} व्यक्ति`;
+    }
+    
+    message += `\n\n📋 कृपया भेजें:
+• पूरा टूर प्रोग्राम
+• कीमत की जानकारी
+• होटल की विकल्प
+• गाड़ी की सुविधा
+• बुकिंग की प्रक्रिया
+
+🙏 धन्यवाद!
+कुलदीप चौधरी जी की सेवा में
+✨ सेठी टूर एंड ट्रेवल्स`;
+    
     return message;
+  },
+
+  // Emergency service message
+  getEmergencyMessage: (location?: string) => {
+    const greeting = getTimeBasedGreeting('rajasthani');
+    const baseMessage = `${greeting}\n\n🚨 मुझे तत्काल टैक्सी सेवा चाहिए।`;
+    const locationInfo = location ? `\n📍 स्थान: ${location}` : '';
+    return `${baseMessage}${locationInfo}\n\n⏰ कृपया जल्दी भेजें।\n🙏 धन्यवाद!`;
+  },
+
+  // Corporate booking message
+  getCorporateMessage: (companyName: string, requirement: string) => {
+    const greeting = getTimeBasedGreeting('english');
+    return `${greeting}\n\n🏢 Company: ${companyName}\n📋 Requirement: ${requirement}\n\n📞 Please contact for corporate rates and services.\n\n✨ Best regards,\nSethi Tour & Travels`;
   }
 };
 
-// Hook for communication actions with toast notifications
+// Hook for premium communication actions with toast notifications
 export const useCommunication = () => {
   const { toast } = useToast();
 
   const communicateWithToast = {
-    whatsapp: (message?: string) => {
-      CommunicationUtils.openWhatsApp(message);
+    whatsapp: (message?: string, language: 'rajasthani' | 'hindi' | 'english' = 'rajasthani') => {
+      CommunicationUtils.openWhatsApp(message, language);
       toast({
-        title: "Opening WhatsApp",
-        description: "Redirecting you to WhatsApp chat...",
+        title: language === 'rajasthani' ? "खम्मा गणी सा!" : language === 'hindi' ? "WhatsApp खुल रहा है" : "Opening WhatsApp",
+        description: language === 'rajasthani' ? "राजस्थानी में बातचीत करने के लिए..." : language === 'hindi' ? "WhatsApp चैट में भेजा जा रहा है..." : "Redirecting you to WhatsApp chat...",
         duration: 2000,
       });
     },
@@ -95,17 +210,26 @@ export const useCommunication = () => {
     phone: () => {
       CommunicationUtils.makePhoneCall();
       toast({
-        title: "Calling",
-        description: `Dialing +91${CONTACT_INFO.phone}...`,
+        title: "📞 कॉल कर रहे हैं...",
+        description: `कुलदीप चौधरी जी को कॉल: +91${CONTACT_INFO.phone}`,
         duration: 2000,
       });
     },
 
-    email: (subject?: string, body?: string) => {
-      CommunicationUtils.sendEmail(subject, body);
+    email: (subject?: string, body?: string, language: 'rajasthani' | 'hindi' | 'english' = 'hindi') => {
+      CommunicationUtils.sendEmail(subject, body, language);
       toast({
-        title: "Opening Email",
-        description: "Redirecting you to email client...",
+        title: "📧 ईमेल खुल रहा है...",
+        description: "प्रीमियम टेम्प्लेट के साथ ईमेल भेजने के लिए...",
+        duration: 2000,
+      });
+    },
+
+    emergency: (location?: string) => {
+      CommunicationUtils.openWhatsApp(CommunicationUtils.getEmergencyMessage(location));
+      toast({
+        title: "🚨 आपातकालीन सेवा",
+        description: "तत्काल सहायता के लिए WhatsApp खुल रहा है...",
         duration: 2000,
       });
     }

@@ -60,7 +60,7 @@ export default function HeroSection() {
         </div>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button 
-            onClick={() => whatsapp("Hello! I need a taxi booking for Rajasthan tour with Sethi Tour & Travels.")}
+            onClick={() => whatsapp("मैं राजस्थान टूर के लिए टैक्सी बुकिंग चाहता हूं।", 'rajasthani')}
             size="lg"
             className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 text-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
           >

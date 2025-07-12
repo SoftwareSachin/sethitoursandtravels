@@ -29,7 +29,7 @@ export default function CustomerSupport() {
                 Call: 97720 21780
               </Button>
               <Button 
-                onClick={() => whatsapp("Hello! I need assistance with Sethi Tour & Travels services.")}
+                onClick={() => whatsapp("मुझे सेठी टूर एंड ट्रेवल्स की सेवाओं के लिए सहायता चाहिए।", 'rajasthani')}
                 size="lg"
                 className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 text-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
               >

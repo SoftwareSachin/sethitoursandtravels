@@ -140,7 +140,7 @@ export default function ContactSection() {
                   <h4 className="font-semibold text-gray-900">WhatsApp</h4>
                   <p className="text-gray-600">
                     <button 
-                      onClick={() => whatsapp("Hello! I need assistance with Sethi Tour & Travels services.")}
+                      onClick={() => whatsapp("मैं सेठी टूर एंड ट्रेवल्स की सेवाओं के बारे में जानकारी चाहता हूं।", 'rajasthani')}
                       className="hover:text-emerald-600 transition-colors underline focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 rounded"
                     >
                       Click to chat on WhatsApp

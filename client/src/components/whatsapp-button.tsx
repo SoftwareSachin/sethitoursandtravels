@@ -6,7 +6,7 @@ export default function WhatsAppButton() {
 
   const handleWhatsAppClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    whatsapp("Hello! I need assistance with Sethi Tour & Travels services.");
+    whatsapp("मैं सेठी टूर एंड ट्रेवल्स की सेवाओं के बारे में जानकारी चाहता हूं।", 'rajasthani');
   };
 
   return (
