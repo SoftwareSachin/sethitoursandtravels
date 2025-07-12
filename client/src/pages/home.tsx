@@ -6,15 +6,17 @@ import ComprehensivePackages from "@/components/comprehensive-packages";
 import PricingPackages from "@/components/pricing-packages";
 import DestinationHighlights from "@/components/destination-highlights";
 import FeaturedDestinations from "@/components/featured-destinations";
-import TaxiServices from "@/components/taxi-services";
+import DetailedAgraTour from "@/components/detailed-agra-tour";
+import ComprehensiveTaxiServices from "@/components/comprehensive-taxi-services";
 import ServiceDetails from "@/components/service-details";
 import VehicleFleet from "@/components/vehicle-fleet";
-import CustomerSupport from "@/components/customer-support";
+import EnhancedCustomerSupport from "@/components/enhanced-customer-support";
+import UdaipurDetailedTour from "@/components/udaipur-detailed-tour";
 import SafetyFeatures from "@/components/safety-features";
 import WhatWeOffer from "@/components/what-we-offer";
 import PhotoGallery from "@/components/photo-gallery";
 import Testimonials from "@/components/testimonials";
-import LatestArticles from "@/components/latest-articles";
+import EnhancedArticles from "@/components/enhanced-articles";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
 import WhatsAppButton from "@/components/whatsapp-button";
@@ -30,15 +32,17 @@ export default function Home() {
       <PricingPackages />
       <DestinationHighlights />
       <FeaturedDestinations />
-      <TaxiServices />
+      <DetailedAgraTour />
+      <ComprehensiveTaxiServices />
       <ServiceDetails />
       <VehicleFleet />
-      <CustomerSupport />
+      <EnhancedCustomerSupport />
+      <UdaipurDetailedTour />
       <SafetyFeatures />
       <WhatWeOffer />
       <PhotoGallery />
       <Testimonials />
-      <LatestArticles />
+      <EnhancedArticles />
       <ContactSection />
       <Footer />
       <WhatsAppButton />
