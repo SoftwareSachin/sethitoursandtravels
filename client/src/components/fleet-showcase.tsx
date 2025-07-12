@@ -132,33 +132,76 @@ export default function FleetShowcase() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <div className="bg-white rounded-lg p-8 shadow-md max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">All Vehicles Include</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-              <div className="space-y-2">
-                <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mx-auto">
-                  <Users className="h-6 w-6 text-secondary" />
-                </div>
-                <span className="text-sm font-medium">Professional Driver</span>
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-primary to-secondary rounded-3xl p-10 shadow-2xl text-white relative overflow-hidden">
+            {/* Background Elements */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
+            
+            <div className="relative z-10">
+              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full">
+                <Star className="h-4 w-4 text-white" />
+                <span className="text-white font-semibold text-sm uppercase tracking-wider">Premium Inclusions</span>
               </div>
-              <div className="space-y-2">
-                <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mx-auto">
-                  <MapPin className="h-6 w-6 text-secondary" />
+              
+              <h3 className="text-3xl md:text-4xl font-bold mb-3">Every Journey Includes</h3>
+              <p className="text-blue-100 mb-10 max-w-2xl mx-auto text-lg">
+                Experience worry-free travel with our comprehensive service inclusions designed for your comfort and safety
+              </p>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+                <div className="group">
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <Users className="h-8 w-8 text-white" />
+                  </div>
+                  <h4 className="font-bold text-lg mb-2">Expert Driver</h4>
+                  <p className="text-blue-100 text-sm leading-relaxed">Licensed & experienced drivers with local knowledge</p>
                 </div>
-                <span className="text-sm font-medium">GPS Navigation</span>
+                
+                <div className="group">
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <MapPin className="h-8 w-8 text-white" />
+                  </div>
+                  <h4 className="font-bold text-lg mb-2">GPS Tracking</h4>
+                  <p className="text-blue-100 text-sm leading-relaxed">Real-time navigation & route optimization</p>
+                </div>
+                
+                <div className="group">
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <Star className="h-8 w-8 text-white" />
+                  </div>
+                  <h4 className="font-bold text-lg mb-2">Full Insurance</h4>
+                  <p className="text-blue-100 text-sm leading-relaxed">Comprehensive coverage for complete peace of mind</p>
+                </div>
+                
+                <div className="group">
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <Luggage className="h-8 w-8 text-white" />
+                  </div>
+                  <h4 className="font-bold text-lg mb-2">24/7 Support</h4>
+                  <p className="text-blue-100 text-sm leading-relaxed">Round-the-clock assistance & emergency help</p>
+                </div>
               </div>
-              <div className="space-y-2">
-                <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mx-auto">
-                  <Star className="h-6 w-6 text-secondary" />
+              
+              <div className="mt-10 pt-8 border-t border-white/20">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                  <div>
+                    <div className="text-2xl font-bold text-white mb-1">AC</div>
+                    <div className="text-blue-100 text-sm">Climate Control</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-white mb-1">Fuel</div>
+                    <div className="text-blue-100 text-sm">Included in Price</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-white mb-1">Tolls</div>
+                    <div className="text-blue-100 text-sm">No Extra Charges</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-white mb-1">Clean</div>
+                    <div className="text-blue-100 text-sm">Sanitized Daily</div>
+                  </div>
                 </div>
-                <span className="text-sm font-medium">Insurance Coverage</span>
-              </div>
-              <div className="space-y-2">
-                <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mx-auto">
-                  <Luggage className="h-6 w-6 text-secondary" />
-                </div>
-                <span className="text-sm font-medium">24/7 Support</span>
               </div>
             </div>
           </div>
