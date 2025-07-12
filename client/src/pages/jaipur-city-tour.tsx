@@ -36,6 +36,7 @@ import amberFortImage from '@assets/image_1752341727345.png';
 import jalMahalImage from '@assets/image_1752341827928.png';
 import jantarMantarImage from '@assets/image_1752341803586.png';
 import albertHallImage from '@assets/image_1752341852851.png';
+import rajasthaniCharacter from '@assets/image_1752342014985.png';
 
 export default function JaipurCityTour() {
   const { toast } = useToast();
@@ -136,6 +137,18 @@ export default function JaipurCityTour() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
         <div className="relative z-10 container mx-auto px-4 py-20 md:py-32 text-center text-white">
           <div className="max-w-5xl mx-auto">
+            {/* Rajasthani Character */}
+            <div className="mb-8 flex justify-center">
+              <div className="relative">
+                <img 
+                  src={rajasthaniCharacter} 
+                  alt="Rajasthani Character" 
+                  className="w-24 h-24 md:w-32 md:h-32 object-contain animate-pulse"
+                />
+                <div className="absolute inset-0 bg-orange-400/20 rounded-full blur-xl"></div>
+              </div>
+            </div>
+            
             {/* Rajasthani Greeting */}
             <div className="mb-6">
               <p className="text-lg md:text-xl text-orange-300 font-medium">खम्मा गणी सा! Welcome to</p>
