@@ -80,7 +80,7 @@ export const CommunicationUtils = {
   // WhatsApp with premium greeting and custom message
   openWhatsApp: (message?: string, language: 'rajasthani' | 'hindi' | 'english' = 'rajasthani') => {
     const greeting = getTimeBasedGreeting(language);
-    const baseMessage = message || "मैं राजस्थान टूर बुक करना चाहता हूं। कृपया पैकेज और रेट्स की जानकारी दें।";
+    const baseMessage = message || "मैं टूर बुक करना चाहता हूं। कृपया पैकेज और रेट्स की जानकारी दें।";
     
     // Create a simple, natural customer message
     const finalMessage = `${greeting}
@@ -119,7 +119,7 @@ ${baseMessage}`;
     const msgs = PREMIUM_MESSAGES[language];
     
     const defaultSubject = language === 'rajasthani' ? 
-      "राजस्थान टूर की जानकारी" : 
+      "टूर की जानकारी" : 
       language === 'hindi' ? 
       "सेठी टूर एंड ट्रेवल्स - सेवा की जानकारी" : 
       "Sethi Tour & Travels - Service Inquiry";
