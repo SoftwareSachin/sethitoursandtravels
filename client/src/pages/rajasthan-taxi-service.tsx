@@ -201,17 +201,19 @@ export default function RajasthanTaxiService() {
             </Badge>
           </div>
 
-          {/* Main Heading */}
+          {/* Main Heading with Background */}
           <div className="mb-10">
-            <h1 className="text-6xl md:text-8xl font-extrabold mb-6 text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] leading-tight">
-              Rajasthan
-              <span className="block text-5xl md:text-7xl text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-                Taxi Services
-              </span>
-            </h1>
-            <p className="text-2xl md:text-4xl mb-8 text-white/95 drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] font-light">
-              Discover the Royal Heritage of the Land of Kings
-            </p>
+            <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 mb-8">
+              <h1 className="text-6xl md:text-8xl font-extrabold mb-6 text-white leading-tight">
+                Rajasthan
+                <span className="block text-5xl md:text-7xl text-white">
+                  Taxi Services
+                </span>
+              </h1>
+              <p className="text-xl md:text-3xl text-white/95 font-light">
+                Discover the Royal Heritage of the Land of Kings
+              </p>
+            </div>
           </div>
 
           {/* Enhanced Trust Indicators */}
