@@ -1,20 +1,99 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { useCommunication } from "./communication-utils";
+import tigerSafariImage from "@assets/image_1752328934514.png";
+import hawaMahalImage from "@assets/image_1752328950240.png";
+import jaisalmerImage from "@assets/image_1752328960163.png";
+import jodhpurPalaceImage from "@assets/image_1752328968915.png";
+import jaipurPalaceImage from "@assets/image_1752328975745.png";
+import jaipurFortImage from "@assets/image_1752328985310.png";
 
 export default function HeroSection() {
   const { whatsapp, phone } = useCommunication();
+  
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  const backgroundImages = [
+    {
+      src: tigerSafariImage,
+      alt: "Ranthambore Tiger Safari - Wildlife Adventure Tours",
+      title: "Wildlife Safari Experience"
+    },
+    {
+      src: hawaMahalImage,
+      alt: "Hawa Mahal Jaipur - Palace of Winds Architecture",
+      title: "Jaipur Pink City Heritage"
+    },
+    {
+      src: jaisalmerImage,
+      alt: "Jaisalmer Golden Architecture - Desert City Rajasthan",
+      title: "Jaisalmer Golden City"
+    },
+    {
+      src: jodhpurPalaceImage,
+      alt: "Jodhpur Palace Architecture - Royal Heritage",
+      title: "Jodhpur Royal Palace"
+    },
+    {
+      src: jaipurPalaceImage,
+      alt: "Jaipur City Palace - Rajput Architecture",
+      title: "Royal Jaipur Heritage"
+    },
+    {
+      src: jaipurFortImage,
+      alt: "Jaipur Fort Sunset View - Amber Fort Heritage",
+      title: "Majestic Rajasthan Forts"
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % backgroundImages.length);
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [backgroundImages.length]);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden mt-16">
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
-        }}
-      >
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      {/* Dynamic Background Images */}
+      {backgroundImages.map((image, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+            index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+          }`}
+          style={{
+            backgroundImage: `url(${image.src})`
+          }}
+        >
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        </div>
+      ))}
+      
+      {/* Image Indicators */}
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+        {backgroundImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentImageIndex(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentImageIndex 
+                ? 'bg-secondary scale-125' 
+                : 'bg-white/50 hover:bg-white/75'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+
+      {/* Current Image Title */}
+      <div className="absolute top-20 right-6 z-20 bg-black/20 backdrop-blur-sm rounded-lg px-4 py-2">
+        <p className="text-white text-sm font-medium">
+          {backgroundImages[currentImageIndex].title}
+        </p>
       </div>
       
       <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4 py-8 sm:py-16">
