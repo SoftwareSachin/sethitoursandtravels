@@ -3,8 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Phone, Search, User, MapPin, Home } from "lucide-react";
 import { Link } from "wouter";
-import rajasthanLogo from "@assets/{2A22383F-014B-42F4-BE3A-441FF3E7D66A}_1752335976312.png";
-import travelLogo from "@assets/{EA6D6F7F-DEEC-4D98-9B5B-CD04F5567A36}_1752336049036.png";
+import companyLogo from "@assets/{EA6D6F7F-DEEC-4D98-9B5B-CD04F5567A36}_1752336151486.png";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,10 +51,10 @@ export default function Navigation() {
 
             {/* Central Logo */}
             <div className="flex justify-center items-center">
-              <div className="bg-yellow-50 rounded-lg p-2 shadow-lg border border-orange-200">
+              <div className="bg-white rounded-lg p-2 shadow-lg border border-orange-200">
                 <img 
-                  src={rajasthanLogo} 
-                  alt="Rajasthan - The Incredible State of India" 
+                  src={companyLogo} 
+                  alt="Sethi Tour & Travels - Premium Travel Services" 
                   className="h-12 w-auto"
                 />
               </div>
@@ -87,7 +86,7 @@ export default function Navigation() {
             <div className="lg:hidden flex items-center min-w-0 flex-1">
               <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg overflow-hidden mr-2 sm:mr-3 bg-white shadow-lg border-2 border-orange-200 p-1 flex-shrink-0">
                 <img 
-                  src={travelLogo} 
+                  src={companyLogo} 
                   alt="Sethi Tour & Travels" 
                   className="w-full h-full object-contain"
                 />
@@ -118,7 +117,7 @@ export default function Navigation() {
                 <div className="flex items-center space-x-3 pb-4 border-b border-gray-200">
                   <div className="w-12 h-12 rounded-lg overflow-hidden bg-white shadow-lg border-2 border-orange-200 p-1">
                     <img 
-                      src={travelLogo} 
+                      src={companyLogo} 
                       alt="Sethi Tour & Travels" 
                       className="w-full h-full object-contain"
                     />
