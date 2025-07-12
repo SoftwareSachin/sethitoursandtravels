@@ -2,10 +2,12 @@ import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
 import ServiceCategories from "@/components/service-categories";
 import TourPackages from "@/components/tour-packages";
+import ComprehensivePackages from "@/components/comprehensive-packages";
 import PricingPackages from "@/components/pricing-packages";
 import DestinationHighlights from "@/components/destination-highlights";
 import FeaturedDestinations from "@/components/featured-destinations";
 import TaxiServices from "@/components/taxi-services";
+import ServiceDetails from "@/components/service-details";
 import VehicleFleet from "@/components/vehicle-fleet";
 import CustomerSupport from "@/components/customer-support";
 import SafetyFeatures from "@/components/safety-features";
@@ -24,10 +26,12 @@ export default function Home() {
       <HeroSection />
       <ServiceCategories />
       <TourPackages />
+      <ComprehensivePackages />
       <PricingPackages />
       <DestinationHighlights />
       <FeaturedDestinations />
       <TaxiServices />
+      <ServiceDetails />
       <VehicleFleet />
       <CustomerSupport />
       <SafetyFeatures />
