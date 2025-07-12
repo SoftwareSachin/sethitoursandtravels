@@ -75,12 +75,12 @@ export default function HeroSection() {
       ))}
       
       {/* Image Indicators */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+      <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
         {backgroundImages.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentImageIndex(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
               index === currentImageIndex 
                 ? 'bg-secondary scale-125' 
                 : 'bg-white/50 hover:bg-white/75'
@@ -91,8 +91,8 @@ export default function HeroSection() {
       </div>
 
       {/* Current Image Title */}
-      <div className="absolute top-20 right-6 z-20 bg-black/20 backdrop-blur-sm rounded-lg px-4 py-2">
-        <p className="text-white text-sm font-medium">
+      <div className="absolute top-20 right-2 sm:right-4 md:right-6 z-20 bg-black/20 backdrop-blur-sm rounded-lg px-2 sm:px-3 md:px-4 py-1 sm:py-2">
+        <p className="text-white text-xs sm:text-sm font-medium">
           {backgroundImages[currentImageIndex].title}
         </p>
       </div>
@@ -100,21 +100,21 @@ export default function HeroSection() {
       {/* Central Logo and Content */}
       <div className="relative z-10 text-center max-w-6xl mx-auto px-4 py-8 sm:py-16">
         {/* Rajasthan Logo */}
-        <div className="mb-8 flex justify-center">
+        <div className="mb-6 sm:mb-8 flex justify-center">
           <img 
             src={rajasthanLogo} 
             alt="Rajasthan - The Incredible State of India" 
-            className="h-24 w-auto"
+            className="h-16 sm:h-20 md:h-24 w-auto"
           />
         </div>
         
         {/* Main Heading */}
-        <h1 className="text-6xl md:text-8xl font-bold text-white mb-4 tracking-wider">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-4 tracking-wider">
           RAJASTHAN
         </h1>
         
         {/* Elegant Subtitle */}
-        <h2 className="text-3xl md:text-4xl font-italic text-secondary mb-8" style={{ fontFamily: 'serif' }}>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-italic text-secondary mb-6 sm:mb-8" style={{ fontFamily: 'serif' }}>
           The Land of Kings
         </h2>
         
@@ -130,29 +130,29 @@ export default function HeroSection() {
         <div className="mb-6 sm:mb-8 space-y-4">
           <div className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 max-w-4xl mx-auto">
             <span className="text-secondary font-semibold block mb-4">India Tourism Experiences</span> 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-center">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
-                <span className="text-white font-medium">Golden Triangle</span>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 text-center">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1 sm:py-2">
+                <span className="text-white font-medium text-xs sm:text-sm">Golden Triangle</span>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
-                <span className="text-white font-medium">Royal Palaces</span>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1 sm:py-2">
+                <span className="text-white font-medium text-xs sm:text-sm">Royal Palaces</span>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
-                <span className="text-white font-medium">Desert Safari</span>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1 sm:py-2">
+                <span className="text-white font-medium text-xs sm:text-sm">Desert Safari</span>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
-                <span className="text-white font-medium">Heritage Tours</span>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1 sm:py-2">
+                <span className="text-white font-medium text-xs sm:text-sm">Heritage Tours</span>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
-                <span className="text-white font-medium">Lake City Udaipur</span>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1 sm:py-2">
+                <span className="text-white font-medium text-xs sm:text-sm">Lake City Udaipur</span>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
-                <span className="text-white font-medium">Pink City Jaipur</span>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1 sm:py-2">
+                <span className="text-white font-medium text-xs sm:text-sm">Pink City Jaipur</span>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
-                <span className="text-white font-medium">Cultural Immersion</span>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1 sm:py-2">
+                <span className="text-white font-medium text-xs sm:text-sm">Cultural Immersion</span>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1 sm:py-2">
                 <span className="text-white font-medium">Luxury Experiences</span>
               </div>
             </div>

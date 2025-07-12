@@ -54,11 +54,11 @@ export default function Navigation() {
 
             {/* Central Logo */}
             <div className="flex justify-center items-center">
-              <div className="bg-white rounded-lg p-2 shadow-lg border border-orange-200">
+              <div className="bg-white rounded-lg p-1 sm:p-2 shadow-lg border border-orange-200">
                 <img 
                   src={companyLogo} 
                   alt="Sethi Tour & Travels - Premium Travel Services" 
-                  className="h-12 w-auto"
+                  className="h-8 sm:h-10 md:h-12 w-auto"
                 />
               </div>
             </div>

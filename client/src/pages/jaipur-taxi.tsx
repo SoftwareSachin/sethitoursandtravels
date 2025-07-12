@@ -284,7 +284,7 @@ export default function JaipurTaxi() {
               <span className="text-sm font-medium">Rajasthan's #1 Rated Taxi Service</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-300 bg-clip-text text-transparent animate-gradient">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-300 bg-clip-text text-transparent animate-gradient px-4">
               Jaipur Taxi Service
             </h1>
             <div className="mb-6 flex justify-center">
@@ -298,7 +298,7 @@ export default function JaipurTaxi() {
                 }}
               />
             </div>
-            <p className="text-xl md:text-2xl mb-10 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl mb-10 max-w-4xl mx-auto leading-relaxed px-4">
               Experience royal comfort with our premium taxi services in Jaipur. 
               From Amber Fort to City Palace, explore the Pink City's heritage with 
               <span className="text-yellow-300 font-semibold"> 24/7 availability</span> and 
@@ -306,41 +306,43 @@ export default function JaipurTaxi() {
             </p>
             
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10 max-w-3xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-2xl font-bold text-yellow-300">5000+</div>
-                <div className="text-sm">Happy Customers</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-10 max-w-3xl mx-auto px-4">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 text-center">
+                <div className="text-xl sm:text-2xl font-bold text-yellow-300">5000+</div>
+                <div className="text-xs sm:text-sm">Happy Customers</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-2xl font-bold text-yellow-300">24/7</div>
-                <div className="text-sm">Service Available</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 text-center">
+                <div className="text-xl sm:text-2xl font-bold text-yellow-300">24/7</div>
+                <div className="text-xs sm:text-sm">Service Available</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-2xl font-bold text-yellow-300">20+</div>
-                <div className="text-sm">Destinations</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 text-center">
+                <div className="text-xl sm:text-2xl font-bold text-yellow-300">20+</div>
+                <div className="text-xs sm:text-sm">Destinations</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-2xl font-bold text-yellow-300">5★</div>
-                <div className="text-sm">Customer Rating</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 text-center">
+                <div className="text-xl sm:text-2xl font-bold text-yellow-300">5★</div>
+                <div className="text-xs sm:text-sm">Customer Rating</div>
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-10 py-5 text-lg font-semibold shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse-glow"
+                className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 sm:px-8 md:px-10 py-4 sm:py-5 text-sm sm:text-base md:text-lg font-semibold shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse-glow w-full sm:w-auto"
                 onClick={() => whatsapp("नमस्कार! मुझे जयपुर टैक्सी सर्विस चाहिए।")}
               >
-                <FaWhatsapp className="mr-3 h-6 w-6" />
-                Book Instantly on WhatsApp
+                <FaWhatsapp className="mr-2 sm:mr-3 h-5 w-5 sm:h-6 sm:w-6" />
+                <span className="hidden sm:inline">Book Instantly on WhatsApp</span>
+                <span className="sm:hidden">WhatsApp Book</span>
               </Button>
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-10 py-5 text-lg font-semibold shadow-2xl transform hover:scale-105 transition-all duration-300 border-0"
+                className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-6 sm:px-8 md:px-10 py-4 sm:py-5 text-sm sm:text-base md:text-lg font-semibold shadow-2xl transform hover:scale-105 transition-all duration-300 border-0 w-full sm:w-auto"
                 onClick={() => phone()}
               >
-                <Phone className="mr-3 h-6 w-6" />
-                Call: +91 97720 21780
+                <Phone className="mr-2 sm:mr-3 h-5 w-5 sm:h-6 sm:w-6" />
+                <span className="hidden sm:inline">Call: +91 97720 21780</span>
+                <span className="sm:hidden">Call Now</span>
               </Button>
             </div>
           </div>
@@ -348,20 +350,21 @@ export default function JaipurTaxi() {
       </section>
 
       {/* Quick Contact Bar */}
-      <section className="bg-gradient-to-r from-orange-500 to-red-500 text-white py-6 shadow-lg">
+      <section className="bg-gradient-to-r from-orange-500 to-red-500 text-white py-4 sm:py-6 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
-              <Phone className="h-5 w-5 text-yellow-300" />
-              <span className="font-semibold">+91 97720 21780</span>
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 md:gap-6">
+            <div className="flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 sm:py-3 w-full sm:w-auto justify-center">
+              <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-300" />
+              <span className="font-semibold text-sm sm:text-base">+91 97720 21780</span>
             </div>
-            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
-              <FaWhatsapp className="h-5 w-5 text-green-300" />
-              <span className="font-semibold">WhatsApp: 77270 21780</span>
+            <div className="flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 sm:py-3 w-full sm:w-auto justify-center">
+              <FaWhatsapp className="h-4 w-4 sm:h-5 sm:w-5 text-green-300" />
+              <span className="font-semibold text-sm sm:text-base">WhatsApp: 77270 21780</span>
             </div>
-            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
-              <Mail className="h-5 w-5 text-blue-300" />
-              <span className="font-semibold">sethitourstravels8888@gmail.com</span>
+            <div className="flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 sm:py-3 w-full sm:w-auto justify-center">
+              <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-blue-300" />
+              <span className="font-semibold text-sm sm:text-base hidden md:inline">sethitourstravels8888@gmail.com</span>
+              <span className="font-semibold text-sm sm:text-base md:hidden">Email Us</span>
             </div>
           </div>
         </div>
@@ -375,23 +378,23 @@ export default function JaipurTaxi() {
               <Award className="h-4 w-4 mr-2" />
               <span className="text-sm font-medium">Premium Service Excellence</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent px-4 text-center">
               Why Choose Sethi Tour & Travels
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
               Experience the best taxi service in Jaipur with our professional approach, 
               customer-first mindset, and commitment to excellence in every journey.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0 shadow-lg group">
-                <CardContent className="p-8">
-                  <div className="bg-gradient-to-br from-orange-500 to-pink-500 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="h-8 w-8 text-white" />
+                <CardContent className="p-4 sm:p-6 md:p-8">
+                  <div className="bg-gradient-to-br from-orange-500 to-pink-500 rounded-full w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-4 sm:mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">{feature.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-gray-900">{feature.title}</h3>
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
