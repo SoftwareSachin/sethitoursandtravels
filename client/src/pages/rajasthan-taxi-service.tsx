@@ -184,7 +184,7 @@ export default function RajasthanTaxiService() {
       </div>
 
       {/* Hero Section with Background Image - No Overlay */}
-      <div className="relative min-h-[85vh] flex items-center justify-center text-white overflow-hidden">
+      <div className="relative min-h-[85vh] flex items-center justify-center text-white overflow-hidden pt-20">
         <div 
           className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
           style={{ 
