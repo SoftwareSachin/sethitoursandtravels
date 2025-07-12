@@ -109,6 +109,17 @@ The application follows a monorepo structure with clear separation between clien
 
 ## Recent Changes (January 2025)
 
+### New Rajasthan Tour Page (Latest - January 2025)
+- **Comprehensive Rajasthan Tour Package Page**: Created dedicated `/rajasthan-tour` route with complete "Journey Through the Land of Kings" content
+- **Authentic Destination Coverage**: Detailed sections for Jaipur (Pink City), Udaipur (City of Lakes), Jodhpur (Blue City), Jaisalmer (Golden City), and Pushkar & Ajmer
+- **Updated Contact Information**: Integrated all Sethi Tour & Travels contact details (phone, WhatsApp, email) throughout the page
+- **Professional Design**: Gradient backgrounds, interactive cards, and comprehensive package highlights
+- **Navigation Integration**: Added "Rajasthan Tour" to both desktop and mobile navigation menus
+- **Contact Form**: Integrated inquiry form for tour bookings and information requests
+- **Package Highlights**: Complete list of available itineraries from 1-day to 10-day tours
+
+## Recent Changes (January 2025)
+
 ### Enhanced Navigation Design (Latest - January 2025)
 - **Rajasthan Tourism Color Scheme**: Updated navigation with authentic pink accent colors and warm yellow-orange gradient background
 - **Dual Logo System**: 
