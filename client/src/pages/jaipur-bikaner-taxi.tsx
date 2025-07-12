@@ -1,18 +1,48 @@
 import { Link } from "wouter";
-import { Car, Phone, Clock, Users, Star, ArrowLeft, MapPin, Route, Shield } from "lucide-react";
+import { Car, Phone, Clock, Users, Star, ArrowLeft, MapPin, Route, Shield, Luggage } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import heroImage from "@assets/image_1752344666560.png";
 import nagaurFortImage from "@assets/image_1752344804650.png";
 import karniMataImage from "@assets/image_1752344824068.png";
+import dzireImage from "@assets/image_1752328537540.png";
+import ertigaImage from "@assets/image_1752328561242.png";
+import innovaImage from "@assets/image_1752328589553.png";
 
-const taxiRates = [
+const fleetVehicles = [
   {
-    route: "Jaipur to Bikaner",
-    distance: "335 km",
-    sedan: "₹4,500",
-    suv: "₹6,500",
-    innova: "₹9,000"
+    name: "Sedan",
+    model: "Maruti Suzuki Dzire",
+    image: dzireImage,
+    price: "₹4,500",
+    capacity: "4 Passengers",
+    luggage: "2 Large Bags",
+    features: ["AC", "Music System", "GPS"],
+    ideal: "Comfortable travel for couples and small families",
+    rating: 4.8
+  },
+  {
+    name: "SUV",
+    model: "Maruti Suzuki Ertiga",
+    image: ertigaImage,
+    price: "₹6,500",
+    capacity: "6 Passengers",
+    luggage: "3 Large Bags",
+    features: ["AC", "Captain Seats", "Entertainment"],
+    ideal: "Perfect for family trips and group travel",
+    rating: 4.7
+  },
+  {
+    name: "Innova Crysta",
+    model: "Toyota Innova Crysta",
+    image: innovaImage,
+    price: "₹9,000",
+    capacity: "7 Passengers",
+    luggage: "4 Large Bags",
+    features: ["Luxury AC", "Premium Interiors", "Extra Comfort"],
+    ideal: "Premium comfort for luxury travel experience",
+    rating: 4.9
   }
 ];
 
@@ -122,34 +152,86 @@ export default function JaipurBikanerTaxi() {
           </p>
         </div>
 
-        {/* Taxi Rates Table */}
+        {/* Fleet Showcase */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">
-            Taxi Rates from Jaipur to Bikaner
-          </h3>
-          <div className="overflow-x-auto">
-            <table className="w-full bg-white rounded-lg shadow-lg overflow-hidden">
-              <thead className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white">
-                <tr>
-                  <th className="px-6 py-4 text-left font-semibold">Route</th>
-                  <th className="px-6 py-4 text-left font-semibold">Distance (km)</th>
-                  <th className="px-6 py-4 text-left font-semibold">Sedan (Approx. Rate)</th>
-                  <th className="px-6 py-4 text-left font-semibold">SUV (Approx. Rate)</th>
-                  <th className="px-6 py-4 text-left font-semibold">Innova Crysta (Approx. Rate)</th>
-                </tr>
-              </thead>
-              <tbody>
-                {taxiRates.map((rate, index) => (
-                  <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
-                    <td className="px-6 py-4 font-medium text-gray-900">{rate.route}</td>
-                    <td className="px-6 py-4 text-gray-700">{rate.distance}</td>
-                    <td className="px-6 py-4 text-orange-600 font-semibold">{rate.sedan}</td>
-                    <td className="px-6 py-4 text-orange-600 font-semibold">{rate.suv}</td>
-                    <td className="px-6 py-4 text-orange-600 font-semibold">{rate.innova}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-gray-800 mb-4">
+              Choose Your Vehicle for Jaipur to Bikaner (335 KM)
+            </h3>
+            <p className="text-lg text-gray-600">
+              Select from our premium fleet of well-maintained vehicles for your journey
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {fleetVehicles.map((vehicle, index) => (
+              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
+                <div className="relative">
+                  <img 
+                    src={vehicle.image} 
+                    alt={vehicle.model}
+                    className="w-full h-48 object-cover"
+                  />
+                  <Badge className="absolute top-3 right-3 bg-orange-500 text-white">
+                    {vehicle.name}
+                  </Badge>
+                  <div className="absolute bottom-3 left-3 bg-white/90 rounded-lg px-2 py-1 flex items-center gap-1">
+                    <Star className="h-4 w-4 text-yellow-500 fill-current" />
+                    <span className="text-sm font-medium">{vehicle.rating}</span>
+                  </div>
+                </div>
+                
+                <CardContent className="p-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <div>
+                      <h4 className="text-xl font-bold text-gray-900">{vehicle.model}</h4>
+                      <p className="text-sm text-gray-600 mt-1">{vehicle.ideal}</p>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-orange-600">{vehicle.price}</div>
+                      <div className="text-sm text-gray-500">Total Fare</div>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-3 mb-4">
+                    <div className="flex items-center gap-2 text-gray-600">
+                      <Users className="h-4 w-4" />
+                      <span className="text-sm">{vehicle.capacity}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-gray-600">
+                      <Luggage className="h-4 w-4" />
+                      <span className="text-sm">{vehicle.luggage}</span>
+                    </div>
+                  </div>
+                  
+                  <div className="mb-4">
+                    <div className="flex flex-wrap gap-1">
+                      {vehicle.features.map((feature, idx) => (
+                        <Badge key={idx} variant="outline" className="text-xs">
+                          {feature}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="flex gap-2">
+                    <Button 
+                      className="flex-1 bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white"
+                      onClick={() => window.open(`https://wa.me/917727021780?text=मुझे जयपुर से बीकानेर के लिए ${vehicle.model} बुक करना है। कृपया विस्तृत जानकारी दें।`, '_blank')}
+                    >
+                      Book Now
+                    </Button>
+                    <Button 
+                      variant="outline" 
+                      className="border-orange-500 text-orange-500 hover:bg-orange-50"
+                      onClick={() => window.open(`tel:+919772021780`, '_blank')}
+                    >
+                      Call
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
 
