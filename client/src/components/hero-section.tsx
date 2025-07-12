@@ -9,32 +9,12 @@ export default function HeroSection() {
   const { whatsapp, phone } = useCommunication();
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden mt-16">
+    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
       {/* Beautiful Gradient Background similar to Rajasthan Tourism */}
       <div className="absolute inset-0 bg-gradient-to-b from-yellow-200 via-orange-200 to-purple-300"></div>
       
-      {/* Top Navigation Bar similar to Rajasthan Tourism */}
-      <div className="absolute top-0 left-0 right-0 bg-pink-600 text-white py-2 z-20">
-        <div className="container mx-auto px-4 flex justify-between items-center text-sm">
-          <div className="flex items-center space-x-4">
-            <span>DISCOVER</span>
-            <span>EXPERIENCE</span>
-            <span>PLAN</span>
-          </div>
-          <div className="flex items-center space-x-4">
-            <span>ABOUT US</span>
-            <span>STAY</span>
-            <span>E-TICKETING</span>
-            <span>हिन्दी</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Pink Decorative Border */}
-      <div className="absolute top-12 left-0 right-0 h-2 bg-pink-600 z-10"></div>
-      
       {/* Central Logo and Content */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-4 mt-8">
+      <div className="relative z-10 text-center max-w-4xl mx-auto px-4 mt-16">
         {/* Rajasthan Logo */}
         <div className="mb-8 flex justify-center">
           <img 
