@@ -205,7 +205,7 @@ export default function RajasthanTaxiService() {
           <div className="mb-10">
             <h1 className="text-6xl md:text-8xl font-extrabold mb-6 text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] leading-tight">
               Rajasthan
-              <span className="block text-5xl md:text-7xl bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent">
+              <span className="block text-5xl md:text-7xl text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
                 Taxi Services
               </span>
             </h1>
