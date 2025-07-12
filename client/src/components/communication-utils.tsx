@@ -1,18 +1,18 @@
 import { useToast } from "@/hooks/use-toast";
 
-// Contact information constants
+// Contact information for Sethi Tour & Travels
 export const CONTACT_INFO = {
   phone: "9772021780",
   whatsapp: "919772021780",
   email: "sethitourstravels8888@gmail.com",
-  address: "S-147, 4S New Loha Mandi Road, Machada, Jaipur-302013, Rajasthan, India",
-  businessOwner: "Kuldeep Choudhary",
+  owner: "Kuldeep Choudhary",
+  businessName: "Sethi Tour & Travels",
   businessHours: "24/7 Service Available",
   languages: ["Hindi", "English", "Rajasthani"],
   specialties: ["Rajasthan Heritage Tours", "Golden Triangle", "Desert Safaris", "Royal Palace Tours"]
 };
 
-// Premium Rajasthani greetings and messages
+// Premium Rajasthani greetings and messages - NO EMOJIS
 export const PREMIUM_MESSAGES = {
   rajasthani: {
     greeting: "खम्मा गणी सा! राजस्थान में आपका स्वागत है।",
@@ -40,7 +40,7 @@ export const PREMIUM_MESSAGES = {
   }
 };
 
-// Premium greeting messages in Rajasthani and Hindi (no emojis)
+// Premium greeting messages in Rajasthani and Hindi - NO EMOJIS
 const PREMIUM_GREETINGS = {
   rajasthani: {
     morning: "राम राम सा! सुप्रभात! सेठी टूर एंड ट्रेवल्स में आपका स्वागत है।",
@@ -75,9 +75,9 @@ const getTimeBasedGreeting = (language: 'rajasthani' | 'hindi' | 'english' = 'ra
   return PREMIUM_GREETINGS[language][timeOfDay];
 };
 
-// Utility functions for communication
+// Utility functions for communication - NO EMOJIS
 export const CommunicationUtils = {
-  // WhatsApp with premium greeting and custom message (no emojis)
+  // WhatsApp with premium greeting and custom message
   openWhatsApp: (message?: string, language: 'rajasthani' | 'hindi' | 'english' = 'rajasthani') => {
     const greeting = getTimeBasedGreeting(language);
     const msgs = PREMIUM_MESSAGES[language];
@@ -103,162 +103,104 @@ ${msgs.farewell}`;
       window.open(url, '_blank', 'noopener,noreferrer');
     } catch (error) {
       console.error('Error opening WhatsApp:', error);
-      // Fallback to direct link
       window.location.href = url;
     }
   },
 
-  // Phone call with error handling
+  // Phone call function
   makePhoneCall: () => {
     const phoneUrl = `tel:+91${CONTACT_INFO.phone}`;
-    
     try {
-      window.location.href = phoneUrl;
+      window.open(phoneUrl, '_self');
     } catch (error) {
       console.error('Error making phone call:', error);
-      // Copy number to clipboard as fallback
-      navigator.clipboard?.writeText(`+91${CONTACT_INFO.phone}`).then(() => {
-        alert(`Phone number copied: +91${CONTACT_INFO.phone}`);
-      });
+      window.location.href = phoneUrl;
     }
   },
 
-  // Email with premium template (no emojis)
+  // Email function with premium template
   sendEmail: (subject?: string, body?: string, language: 'rajasthani' | 'hindi' | 'english' = 'hindi') => {
     const greeting = getTimeBasedGreeting(language);
     const msgs = PREMIUM_MESSAGES[language];
-    const defaultSubject = "प्रीमियम राजस्थान टूर पूछताछ - सेठी टूर एंड ट्रेवल्स";
     
-    const premiumEmailBody = `${greeting}
+    const defaultSubject = language === 'rajasthani' ? 
+      "राजस्थान टूर की जानकारी" : 
+      language === 'hindi' ? 
+      "सेठी टूर एंड ट्रेवल्स - सेवा की जानकारी" : 
+      "Sethi Tour & Travels - Service Inquiry";
+    
+    const defaultBody = `${greeting}
 
-${body || "मैं आपकी प्रीमियम राजस्थान टूर सेवाओं के बारे में जानकारी चाहता हूं।"}
+${body || "मैं आपकी सेवाओं के बारे में विस्तार से जानना चाहता हूं।"}
 
-सेवाएं जिनमें मुझे रुचि है:
-• राजस्थान हेरिटेज टूर पैकेज
-• गोल्डन ट्राइएंगल टूर (दिल्ली-आगरा-जयपुर)
-• टैक्सी सर्विस (लोकल/आउटस्टेशन)
-• एयरपोर्ट/रेलवे ट्रांसफर
-• कॉर्पोरेट ट्रेवल सोल्यूशन
-• अन्य (कृपया बताएं)
-
-यात्रा की तिथि: ________________
-कुल यात्री: ________________
-संपर्क नंबर: ________________
-
-धन्यवाद!
 ${msgs.businessContact}
 ${msgs.serviceTag}
+${msgs.experience}
 
-विशेषताएं:
-• प्रीमियम टूर एक्सपीरियंस
-• राजस्थान की पूरी यात्रा का आनंद
-• 24/7 कस्टमर सपोर्ट
-• 1000+ खुश ग्राहक
-
-संपर्क: +91${CONTACT_INFO.phone}
-${CONTACT_INFO.businessHours}
+संपर्क विवरण:
+फोन: +91${CONTACT_INFO.phone}
+व्हाट्सएप: +91${CONTACT_INFO.phone}
+सेवा समय: ${CONTACT_INFO.businessHours}
 
 ${msgs.farewell}`;
     
-    const finalSubject = encodeURIComponent(subject || defaultSubject);
-    const finalBody = encodeURIComponent(premiumEmailBody);
-    const emailUrl = `mailto:${CONTACT_INFO.email}?subject=${finalSubject}&body=${finalBody}`;
+    const emailUrl = `mailto:${CONTACT_INFO.email}?subject=${encodeURIComponent(subject || defaultSubject)}&body=${encodeURIComponent(defaultBody)}`;
     
     try {
-      window.location.href = emailUrl;
+      window.open(emailUrl, '_blank', 'noopener,noreferrer');
     } catch (error) {
       console.error('Error opening email:', error);
-      // Copy email to clipboard as fallback
-      navigator.clipboard?.writeText(CONTACT_INFO.email).then(() => {
-        alert(`Email copied: ${CONTACT_INFO.email}`);
-      });
+      window.location.href = emailUrl;
     }
   },
 
-  // Service-specific WhatsApp messages with Rajasthani touch (no emojis)
-  getServiceMessage: (serviceName: string, additionalInfo?: string) => {
-    const greeting = getTimeBasedGreeting('rajasthani');
-    const msgs = PREMIUM_MESSAGES['rajasthani'];
-    const baseMessage = `${greeting}
-
-मैं आपकी ${serviceName} सेवा के बारे में जानकारी चाहता हूं।`;
-    
-    const footer = `
-
-${msgs.businessContact}
-${msgs.serviceTag}
-राजस्थान की पूरी यात्रा का आनंद लें!
-
-संपर्क: +91${CONTACT_INFO.phone}
-${CONTACT_INFO.businessHours}
-
-${msgs.farewell}`;
-    
-    return additionalInfo ? `${baseMessage}
-
-अतिरिक्त जानकारी: ${additionalInfo}${footer}` : `${baseMessage}${footer}`;
-  },
-
-  // Premium booking message with cultural elements (no emojis)
+  // Booking specific message
   getBookingMessage: (packageName: string, dates?: string, travelers?: number) => {
     const greeting = getTimeBasedGreeting('rajasthani');
-    const msgs = PREMIUM_MESSAGES['rajasthani'];
-    let message = `${greeting}
-
-मैं ${packageName} बुक करना चाहता हूं।`;
+    const datesInfo = dates ? `\nयात्रा की तारीख: ${dates}` : '';
+    const travelersInfo = travelers ? `\nयात्रियों की संख्या: ${travelers}` : '';
     
-    if (dates) {
-      message += `\nपसंदीदा तिथि: ${dates}`;
-    }
-    if (travelers) {
-      message += `\nकुल यात्री: ${travelers} व्यक्ति`;
-    }
-    
-    message += `
+    return `${greeting}
 
-कृपया भेजें:
-• पूरा टूर प्रोग्राम
-• कीमत की जानकारी
-• होटल की विकल्प
-• गाड़ी की सुविधा
-• बुकिंग की प्रक्रिया
+मैं ${packageName} के लिए बुकिंग करना चाहता हूं।${datesInfo}${travelersInfo}
 
-${msgs.businessContact}
-${msgs.serviceTag}
-राजस्थान की पूरी यात्रा का आनंद लें!
+कृपया विस्तृत जानकारी और दरें भेजें।
 
-संपर्क: +91${CONTACT_INFO.phone}
-${CONTACT_INFO.businessHours}
-
-धन्यवाद!
-${msgs.farewell}`;
-    
-    return message;
+${PREMIUM_MESSAGES.rajasthani.businessContact}
+${PREMIUM_MESSAGES.rajasthani.serviceTag}`;
   },
 
-  // Emergency service message (no emojis)
+  // Service specific message
+  getServiceMessage: (serviceName: string, additionalInfo?: string) => {
+    const greeting = getTimeBasedGreeting('rajasthani');
+    const info = additionalInfo ? `\n${additionalInfo}` : '';
+    
+    return `${greeting}
+
+मुझे ${serviceName} की सेवा चाहिए।${info}
+
+कृपया दरें और उपलब्धता की जानकारी दें।
+
+${PREMIUM_MESSAGES.rajasthani.businessContact}
+${PREMIUM_MESSAGES.rajasthani.serviceTag}`;
+  },
+
+  // Emergency message
   getEmergencyMessage: (location?: string) => {
     const greeting = getTimeBasedGreeting('rajasthani');
-    const msgs = PREMIUM_MESSAGES['rajasthani'];
     const baseMessage = `${greeting}
 
-आपातकालीन सेवा - मुझे तत्काल टैक्सी सेवा चाहिए।`;
-    const locationInfo = location ? `\nवर्तमान स्थान: ${location}` : '';
+मुझे तत्काल टैक्सी सेवा चाहिए।`;
+    const locationInfo = location ? `\nस्थान: ${location}` : '';
     return `${baseMessage}${locationInfo}
 
 कृपया जल्दी भेजें।
-समय: ${new Date().toLocaleString('hi-IN')}
-
-${msgs.businessContact}
-आपातकालीन संपर्क: +91${CONTACT_INFO.phone}
-
 धन्यवाद!`;
   },
 
-  // Corporate booking message (no emojis)
+  // Corporate booking message
   getCorporateMessage: (companyName: string, requirement: string) => {
     const greeting = getTimeBasedGreeting('english');
-    const msgs = PREMIUM_MESSAGES['english'];
     return `${greeting}
 
 Company: ${companyName}
@@ -266,16 +208,12 @@ Requirement: ${requirement}
 
 Please contact for corporate rates and services.
 
-${msgs.businessContact}
-${msgs.serviceTag}
-Contact: +91${CONTACT_INFO.phone}
-${CONTACT_INFO.businessHours}
-
-${msgs.farewell}`;
+Best regards,
+Sethi Tour & Travels`;
   }
 };
 
-// Hook for premium communication actions with toast notifications
+// Premium communication hook with enhanced features - NO EMOJIS
 export const useCommunication = () => {
   const { toast } = useToast();
 
@@ -283,36 +221,68 @@ export const useCommunication = () => {
     whatsapp: (message?: string, language: 'rajasthani' | 'hindi' | 'english' = 'rajasthani') => {
       CommunicationUtils.openWhatsApp(message, language);
       toast({
-        title: language === 'rajasthani' ? "खम्मा गणी सा!" : language === 'hindi' ? "WhatsApp खुल रहा है" : "Opening WhatsApp",
-        description: language === 'rajasthani' ? "राजस्थानी में बातचीत करने के लिए..." : language === 'hindi' ? "WhatsApp चैट में भेजा जा रहा है..." : "Redirecting you to WhatsApp chat...",
-        duration: 2000,
+        title: "WhatsApp पर जा रहे हैं",
+        description: "आपको WhatsApp चैट पर भेजा जा रहा है... राम राम सा!",
+        duration: 3000,
       });
     },
 
     phone: () => {
-      CommunicationUtils.makeCall();
+      CommunicationUtils.makePhoneCall();
       toast({
-        title: "कॉल कर रहे हैं...",
-        description: `कुलदीप चौधरी जी को कॉल: +91${CONTACT_INFO.phone}`,
-        duration: 2000,
+        title: "कॉल कर रहे हैं",
+        description: `कुलदीप चौधरी जी को डायल कर रहे हैं: +91${CONTACT_INFO.phone}`,
+        duration: 3000,
       });
     },
 
     email: (subject?: string, body?: string, language: 'rajasthani' | 'hindi' | 'english' = 'hindi') => {
       CommunicationUtils.sendEmail(subject, body, language);
       toast({
-        title: "ईमेल खुल रहा है...",
-        description: "प्रीमियम टेम्प्लेट के साथ ईमेल भेजने के लिए...",
-        duration: 2000,
+        title: "ईमेल खोल रहे हैं",
+        description: "आपको ईमेल क्लाइंट पर भेजा जा रहा है...",
+        duration: 3000,
       });
     },
 
-    emergency: (location?: string) => {
-      CommunicationUtils.openWhatsApp(CommunicationUtils.getEmergencyMessage(location));
+    // Premium service-specific communications
+    bookingWhatsApp: (packageName: string, dates?: string, travelers?: number) => {
+      const message = CommunicationUtils.getBookingMessage(packageName, dates, travelers);
+      CommunicationUtils.openWhatsApp(message);
+      toast({
+        title: "बुकिंग के लिए भेजा जा रहा है",
+        description: `${packageName} के लिए WhatsApp पर जा रहे हैं`,
+        duration: 3000,
+      });
+    },
+
+    serviceWhatsApp: (serviceName: string, additionalInfo?: string) => {
+      const message = CommunicationUtils.getServiceMessage(serviceName, additionalInfo);
+      CommunicationUtils.openWhatsApp(message);
+      toast({
+        title: "सेवा के लिए भेजा जा रहा है",
+        description: `${serviceName} के लिए WhatsApp पर जा रहे हैं`,
+        duration: 3000,
+      });
+    },
+
+    emergencyWhatsApp: (location?: string) => {
+      const message = CommunicationUtils.getEmergencyMessage(location);
+      CommunicationUtils.openWhatsApp(message);
       toast({
         title: "आपातकालीन सेवा",
-        description: "तत्काल सहायता के लिए WhatsApp खुल रहा है...",
-        duration: 2000,
+        description: "तत्काल सहायता के लिए WhatsApp पर जा रहे हैं",
+        duration: 3000,
+      });
+    },
+
+    corporateWhatsApp: (companyName: string, requirement: string) => {
+      const message = CommunicationUtils.getCorporateMessage(companyName, requirement);
+      CommunicationUtils.openWhatsApp(message);
+      toast({
+        title: "कॉर्पोरेट पूछताछ",
+        description: `${companyName} के लिए WhatsApp पर जा रहे हैं`,
+        duration: 3000,
       });
     }
   };
