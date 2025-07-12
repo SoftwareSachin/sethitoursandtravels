@@ -25,6 +25,8 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { useToast } from '@/hooks/use-toast';
 import WhatsAppButton from '@/components/whatsapp-button';
 import Footer from '@/components/footer';
+import { useCommunication } from '@/components/communication-utils';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 
 // Import city images
 import jaipurCityImage from '@assets/image_1752338074515.png';
@@ -46,7 +48,9 @@ import birlaMandirImage from '@assets/image_1752343342879.png';
 
 export default function JaipurCityTour() {
   const { toast } = useToast();
+  const { phone } = useCommunication();
   const [selectedVehicle, setSelectedVehicle] = useState<string>('');
+  const [isPhoneDialogOpen, setIsPhoneDialogOpen] = useState(false);
 
   const attractions = [
     {
@@ -643,18 +647,90 @@ export default function JaipurCityTour() {
         </div>
       </div>
 
+      {/* Phone Popup Dialog */}
+      <Dialog open={isPhoneDialogOpen} onOpenChange={setIsPhoneDialogOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-center text-xl font-bold text-orange-600">
+              कॉल करें - Sethi Tour & Travels
+            </DialogTitle>
+          </DialogHeader>
+          <div className="space-y-6 py-4">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                तुरंत संपर्क करें
+              </h3>
+              <p className="text-gray-600 mb-4">
+                जयपुर सिटी टूर की जानकारी और बुकिंग के लिए अभी कॉल करें
+              </p>
+            </div>
+            
+            <div className="space-y-3">
+              <a
+                href="tel:+919772021780"
+                onClick={() => setIsPhoneDialogOpen(false)}
+                className="flex items-center gap-4 p-4 bg-gradient-to-r from-orange-50 to-pink-50 rounded-lg hover:from-orange-100 hover:to-pink-100 transition-colors border border-orange-200"
+              >
+                <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-orange-600" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-semibold text-gray-900">मुख्य नंबर</h4>
+                  <p className="text-orange-600 font-bold">+91 97720 21780</p>
+                  <p className="text-sm text-gray-600">कुलदीप चौधरी जी</p>
+                </div>
+                <div className="text-orange-600">
+                  <span className="text-lg">→</span>
+                </div>
+              </a>
+              
+              <a
+                href="tel:+917727021780"
+                onClick={() => setIsPhoneDialogOpen(false)}
+                className="flex items-center gap-4 p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg hover:from-green-100 hover:to-emerald-100 transition-colors border border-green-200"
+              >
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                  <FaWhatsapp className="w-6 h-6 text-green-600" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-semibold text-gray-900">WhatsApp नंबर</h4>
+                  <p className="text-green-600 font-bold">+91 77270 21780</p>
+                  <p className="text-sm text-gray-600">चैट और कॉल दोनों</p>
+                </div>
+                <div className="text-green-600">
+                  <span className="text-lg">→</span>
+                </div>
+              </a>
+            </div>
+            
+            <div className="text-center pt-4 border-t">
+              <p className="text-sm text-gray-600">
+                <Clock className="w-4 h-4 inline mr-1" />
+                24/7 सेवा उपलब्ध
+              </p>
+              <p className="text-xs text-gray-500 mt-1">
+                तुरंत बुकिंग और जानकारी के लिए कॉल करें
+              </p>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
       {/* Floating Action Buttons */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
         <WhatsAppButton />
-        <a
-          href="tel:+919772021780"
+        <Button
           className="group flex items-center bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105"
+          onClick={() => setIsPhoneDialogOpen(true)}
         >
           <Phone className="text-lg sm:text-2xl group-hover:scale-110 transition-transform duration-200" />
           <span className="ml-2 font-semibold hidden sm:group-hover:inline-block transition-all duration-200">
             Call Now
           </span>
-        </a>
+        </Button>
       </div>
       
       {/* Footer */}
