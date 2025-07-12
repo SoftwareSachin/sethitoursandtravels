@@ -14,6 +14,7 @@ import {
   Users
 } from "lucide-react";
 import dzireTaxiImage from "@assets/image_1752329180785.png";
+import indiaLandmarksImage from "@assets/image_1752329328612.png";
 
 export default function ServicesOverview() {
   const services = [
@@ -68,7 +69,7 @@ export default function ServicesOverview() {
       description: "Personalized tours designed according to your preferences and budget",
       features: ["Flexible Itinerary", "Choice of Hotels", "Custom Activities", "Group Discounts"],
       startingPrice: "On Request",
-      image: "https://images.unsplash.com/photo-1599661046827-dacde645fe26?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      image: indiaLandmarksImage,
       whatsappText: "खम्मा गणी सा! मुझे कस्टम टूर पैकेज बनवाना है।"
     }
   ];
