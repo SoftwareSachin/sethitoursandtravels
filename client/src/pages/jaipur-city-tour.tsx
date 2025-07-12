@@ -29,6 +29,7 @@ import Footer from '@/components/footer';
 // Import city images
 import jaipurCityImage from '@assets/image_1752338074515.png';
 import hawamahalImage from '@assets/image_1752338428906.png';
+import newHawamahalImage from '@assets/image_1752341165448.png';
 import cityPalaceImage from '@assets/image_1752338463592.png';
 import amberFortImage from '@assets/image_1752338490127.png';
 import jalMahalImage from '@assets/image_1752338516875.png';
@@ -127,12 +128,11 @@ export default function JaipurCityTour() {
       <div 
         className="relative min-h-screen bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url(${jaipurCityImage})`
+          backgroundImage: `url(${newHawamahalImage})`
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-900/60 to-pink-900/60"></div>
         <div className="relative z-10 container mx-auto px-4 py-32 text-center text-white">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto bg-black/30 backdrop-blur-sm rounded-2xl p-8 md:p-12">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-400">
                 Discover the Pink City
