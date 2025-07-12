@@ -319,54 +319,7 @@ export default function RajasthanTaxiService() {
         </div>
       </div>
 
-      {/* Enhanced Special Features */}
-      <div className="bg-gradient-to-br from-pink-600 via-purple-600 to-orange-600 py-20">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-white/20 text-white border-white/30">
-              Why Choose Us
-            </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Premium Rajasthan Experience
-            </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Discover why thousands of travelers trust us for their royal Rajasthan journey
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="group text-center hover:transform hover:scale-105 transition-all duration-300">
-              <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg group-hover:bg-white/30">
-                <Shield className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Safe & Secure</h3>
-              <p className="text-white/80 leading-relaxed">
-                GPS tracking, verified drivers, and 24/7 support for your complete safety
-              </p>
-            </div>
-            
-            <div className="group text-center hover:transform hover:scale-105 transition-all duration-300">
-              <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg group-hover:bg-white/30">
-                <Award className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Expert Guides</h3>
-              <p className="text-white/80 leading-relaxed">
-                Local expertise and cultural insights to make your trip truly memorable
-              </p>
-            </div>
-            
-            <div className="group text-center hover:transform hover:scale-105 transition-all duration-300">
-              <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg group-hover:bg-white/30">
-                <Star className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Premium Fleet</h3>
-              <p className="text-white/80 leading-relaxed">
-                Well-maintained AC vehicles for comfortable travel across Rajasthan
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+
 
       {/* Enhanced Contact Section */}
       <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-20">
