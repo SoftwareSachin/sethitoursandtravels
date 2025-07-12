@@ -47,13 +47,13 @@ export default function TourPackages() {
         <div className="text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Award className="h-4 w-4 mr-2" />
-            Premium Tour Packages
+            Tour Packages
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Authentic India & Rajasthan Tour Packages
+            India & Rajasthan Tour Packages
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Discover the incredible heritage, culture, and beauty of India with our expertly crafted authentic tour experiences. 
+            Discover the incredible heritage, culture, and beauty of India with our expertly crafted tour experiences. 
             From the iconic Taj Mahal to Rajasthan's royal palaces - explore real India with local expert guides and create 
             unforgettable memories that will last a lifetime.
           </p>
@@ -188,10 +188,10 @@ export default function TourPackages() {
               </div>
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Why Choose Our Authentic India Tours?
+              Why Choose Our India Tours?
             </h3>
             <p className="text-gray-600 mb-8 leading-relaxed">
-              Experience the real India with our expert local guides, authentic cultural experiences, and carefully curated 
+              Experience the real India with our expert local guides, cultural experiences, and carefully curated 
               itineraries. From UNESCO World Heritage sites to hidden gems, we ensure every moment of your journey is 
               meaningful and memorable.
             </p>
@@ -207,7 +207,7 @@ export default function TourPackages() {
                 <div className="bg-primary/10 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
                   <MapPin className="h-8 w-8 text-primary" />
                 </div>
-                <h4 className="font-semibold text-gray-900 mb-2">Authentic Experiences</h4>
+                <h4 className="font-semibold text-gray-900 mb-2">Cultural Experiences</h4>
                 <p className="text-sm text-gray-600">Real cultural immersion and local interactions</p>
               </div>
               <div className="text-center">
