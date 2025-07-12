@@ -160,21 +160,12 @@ export default function TourPackages() {
                   </div>
                 </div>
                 
-                <div className="space-y-2">
-                  <Button 
-                    onClick={() => whatsapp(CommunicationUtils.getBookingMessage(pkg.name))}
-                    className="w-full bg-primary hover:bg-blue-700 text-white group-hover:bg-secondary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                  >
-                    BOOK NOW
-                  </Button>
-                  <Button 
-                    onClick={() => whatsapp(`Hello, I want to know more details about ${pkg.name} tour package`)}
-                    variant="outline"
-                    className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-colors"
-                  >
-                    View Details
-                  </Button>
-                </div>
+                <Button 
+                  onClick={() => whatsapp(CommunicationUtils.getBookingMessage(pkg.name))}
+                  className="w-full bg-primary hover:bg-blue-700 text-white group-hover:bg-secondary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                >
+                  BOOK NOW
+                </Button>
               </CardContent>
             </Card>
           ))}
