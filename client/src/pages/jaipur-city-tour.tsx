@@ -127,10 +127,10 @@ export default function JaipurCityTour() {
       <div 
         className="relative min-h-screen bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url(${jaipurCityImage})`
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url(${jaipurCityImage})`
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-900/80 to-pink-900/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-900/60 to-pink-900/60"></div>
         <div className="relative z-10 container mx-auto px-4 py-32 text-center text-white">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
