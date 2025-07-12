@@ -595,7 +595,7 @@ export default function JaipurTaxi() {
             खम्मा गणी सा! Let's Start Your Journey
           </p>
           <p className="text-xl mb-12 max-w-4xl mx-auto leading-relaxed">
-            Planning a trip around Jaipur or beyond? Mukesh Tour and Travels is your go-to for safe, 
+            Planning a trip around Jaipur or beyond? Sethi Tour & Travels is your go-to for safe, 
             reliable, and affordable taxi services. Book now and experience the Pink City like never before!
           </p>
           
@@ -634,22 +634,22 @@ export default function JaipurTaxi() {
               onClick={() => phone()}
             >
               <Phone className="mr-3 h-6 w-6" />
-              Call: +91 7737017755
+              Call: +91 97720 21780
             </Button>
           </div>
           
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 text-lg bg-white/5 backdrop-blur-sm rounded-2xl p-8">
             <div>
-              <span className="block font-semibold text-yellow-300">📧 Email Us</span>
-              <span>mukeshtourandtravelsjaipur@gmail.com</span>
+              <span className="block font-semibold text-yellow-300">Email Us</span>
+              <span>sethitourstravels8888@gmail.com</span>
             </div>
             <div>
-              <span className="block font-semibold text-green-300">🌐 Website</span>
-              <span>https://mukeshtourandtravels.com/</span>
+              <span className="block font-semibold text-green-300">Website</span>
+              <span>Contact: Kuldeep Choudhary</span>
             </div>
             <div>
-              <span className="block font-semibold text-orange-300">📍 Location</span>
-              <span>Jaipur, Rajasthan</span>
+              <span className="block font-semibold text-orange-300">Location</span>
+              <span>S-147, 4S New Loha Mandi Road, Machada, Jaipur-302013</span>
             </div>
           </div>
         </div>
@@ -671,7 +671,7 @@ export default function JaipurTaxi() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {/* Company Info */}
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-yellow-300">Mukesh Tour & Travels</h3>
+              <h3 className="text-2xl font-bold mb-6 text-yellow-300">Sethi Tour & Travels</h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Your trusted partner for exploring the magnificent Pink City of Jaipur. 
                 Experience royal heritage with our premium taxi services.
