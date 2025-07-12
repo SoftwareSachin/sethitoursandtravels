@@ -30,11 +30,11 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <div className="w-12 h-12 rounded-full overflow-hidden mr-3 bg-white shadow-md">
+            <div className="w-14 h-14 rounded-lg overflow-hidden mr-3 bg-gradient-to-br from-blue-50 to-blue-100 shadow-lg border-2 border-primary/20 p-1">
               <img 
                 src={logoGif} 
                 alt="Sethi Tour & Travels Logo" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain rounded-md"
               />
             </div>
             <div>
