@@ -3,6 +3,7 @@ import { Car, Phone, Clock, Users, Star, ArrowLeft, MapPin, Route, Shield, Lugga
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import Footer from "@/components/footer";
 import heroImage from "@assets/image_1752344666560.png";
 import nagaurFortImage from "@assets/image_1752344804650.png";
 import karniMataImage from "@assets/image_1752344824068.png";
@@ -313,29 +314,8 @@ export default function JaipurBikanerTaxi() {
         </div>
       </div>
 
-      {/* Footer Contact */}
-      <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Professional Jaipur to Bikaner Taxi Service</h2>
-          <p className="text-lg mb-8 opacity-90">
-            Trusted by thousands of travelers for reliable and comfortable journeys
-          </p>
-          <div className="grid md:grid-cols-3 gap-8 text-sm">
-            <div>
-              <h4 className="font-semibold mb-2">Contact Person</h4>
-              <p className="opacity-90">Kuldeep Choudhary</p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-2">Email</h4>
-              <p className="opacity-90">sethitourstravels8888@gmail.com</p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-2">Address</h4>
-              <p className="opacity-90">S-147, 4S New Loha Mandi Road, Machada, Jaipur-302013</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Website Footer */}
+      <Footer />
     </div>
   );
 }
