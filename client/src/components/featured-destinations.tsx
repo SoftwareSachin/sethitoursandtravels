@@ -22,20 +22,20 @@ export default function FeaturedDestinations() {
           </div>
           <div>
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Explore Agra <span className="text-secondary italic">Taj Mahal</span>: A Journey Through Love and Legacy
+              🕌 <span className="text-secondary italic">Taj Mahal</span> Agra: UNESCO World Heritage Wonder
             </h3>
             <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-              Explore the grand Mughal architecture of Agra Fort, followed by serene views of the Taj from Mehtab Bagh. 
-              Discover the "Baby Taj" and its intricate marble work, and finish the tour in local markets and marble workshops, 
-              where Agra's rich artistry and vibrant culture come to life.
+              Experience the eternal symbol of love - the magnificent Taj Mahal! Built by Emperor Shah Jahan for his beloved wife Mumtaz, 
+              this ivory-white marble mausoleum changes colors throughout the day. Visit at sunrise for magical golden hues, 
+              explore Agra Fort's red sandstone architecture, and shop for authentic marble inlay work in local artisan workshops.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 asChild
                 className="bg-secondary hover:bg-orange-600 text-white"
               >
-                <a href="https://api.whatsapp.com/send?phone=919772021780&text=Hello%20I%20need%20Agra%20Tour%20Package">
-                  BOOK NOW
+                <a href="https://api.whatsapp.com/send?phone=919772021780&text=नमस्ते! मुझे ताज महल आगरा टूर बुक करना है। कृपया रेट और डिटेल्स भेजें।">
+                  🕌 BOOK TAJ MAHAL TOUR
                 </a>
               </Button>
               <Button 
@@ -55,12 +55,12 @@ export default function FeaturedDestinations() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              <span className="text-secondary italic">Udaipur</span> A Journey Through the City of Lakes and Royal Heritage
+              💕 <span className="text-secondary italic">Udaipur</span> Venice of the East - City of Lakes
             </h3>
             <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-              The "City of Lakes," highlighting its royal heritage and scenic beauty. Begin with the majestic City Palace, 
-              overlooking Lake Pichola, where intricate architecture and royal artifacts showcase Rajasthan's opulent past. 
-              Enjoy a serene boat ride on Lake Pichola with stops at Jag Mandir Island.
+              Discover the most romantic city in India! Udaipur's pristine lakes, magnificent palaces, and fairy-tale setting 
+              make it perfect for couples and culture lovers. Take sunset boat rides on Lake Pichola, explore the massive City Palace complex, 
+              visit the famous Jag Mandir island palace, and enjoy traditional Rajasthani cultural performances in royal havelis.
             </p>
             <ul className="text-gray-600 mb-6 space-y-2">
               {features.map((feature, index) => (
@@ -75,8 +75,8 @@ export default function FeaturedDestinations() {
                 asChild
                 className="bg-secondary hover:bg-orange-600 text-white"
               >
-                <a href="https://api.whatsapp.com/send?phone=919772021780&text=Hello%20I%20need%20Udaipur%20Tour%20Package">
-                  Book Now
+                <a href="https://api.whatsapp.com/send?phone=919772021780&text=नमस्ते! मुझे उदयपुर लेक सिटी टूर चाहिए। कृपया पैकेज डिटेल्स दें।">
+                  💕 BOOK UDAIPUR TOUR
                 </a>
               </Button>
               <Button 

@@ -17,10 +17,10 @@ export default function Navigation() {
 
   const navItems = [
     { id: "home", label: "Home" },
-    { id: "services", label: "Services" },
-    { id: "packages", label: "Tour Packages" },
+    { id: "packages", label: "India Tours" },
+    { id: "services", label: "Rajasthan Heritage" },
     { id: "vehicles", label: "Taxi Services" },
-    { id: "gallery", label: "Gallery" },
+    { id: "gallery", label: "Photo Gallery" },
     { id: "testimonials", label: "Reviews" },
     { id: "contact", label: "Contact" },
   ];
@@ -39,7 +39,7 @@ export default function Navigation() {
             </div>
             <div className="min-w-0 flex-1">
               <h1 className="text-sm sm:text-base md:text-xl font-bold text-primary truncate">Sethi Tour & Travels</h1>
-              <p className="text-xs sm:text-xs md:text-sm text-gray-600 truncate">Premium Travel Services</p>
+              <p className="text-xs sm:text-xs md:text-sm text-gray-600 truncate">🇮🇳 Authentic India Tours</p>
             </div>
           </div>
           

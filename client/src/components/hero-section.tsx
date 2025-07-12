@@ -11,7 +11,7 @@ export default function HeroSection() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('https://pixabay.com/get/g9be0342e43efa79697b15219f66e73196e7c0b87c3827d596a4a699f31d35637c7104ec607da0aa7e93484cdb0601daee643a040b742934b6d34cf2df079efda_1280.jpg')"
+          backgroundImage: "url('https://images.unsplash.com/photo-1598091383021-15ddea10925d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -19,47 +19,47 @@ export default function HeroSection() {
       
       <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4 py-8 sm:py-16">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
-          HEAVENLY PLACE ON EARTH
+          INCREDIBLE INDIA
         </h1>
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-secondary mb-6 sm:mb-8">
-          RAJASTHAN
+          राजस्थान - RAJASTHAN
         </h2>
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed">
-          Discover the royal heritage of Rajasthan with Sethi Tour and Travels. 
-          Explore majestic palaces, ancient forts, vibrant markets, thrilling desert safaris, and rich cultural experiences. 
-          From the Pink City of Jaipur to the romantic lakes of Udaipur, the golden sands of Jaisalmer to the blue city of Jodhpur, 
-          experience the complete essence of the Land of Kings with our expert guidance and premium services.
+          🕌 Experience the royal splendor of India with authentic Rajasthan tours! Explore magnificent palaces of Jaipur, 
+          romantic lakes of Udaipur, golden dunes of Jaisalmer, and the blue city Jodhpur. From the iconic Taj Mahal 
+          to Hawa Mahal, Amber Fort to City Palace - discover India's incredible heritage, vibrant culture, 
+          and warm hospitality with our expert local guides and premium travel services.
         </p>
         <div className="mb-6 sm:mb-8 space-y-4">
           <div className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 max-w-4xl mx-auto">
-            <span className="text-secondary font-semibold block sm:inline mb-2 sm:mb-0">Complete Travel Solutions:</span> 
+            <span className="text-secondary font-semibold block sm:inline mb-2 sm:mb-0">🇮🇳 Complete India Tourism Solutions:</span> 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-1 text-center sm:text-left mt-2 sm:mt-0">
-              <span className="block sm:inline">• Local & Outstation Taxi</span>
-              <span className="block sm:inline">• Heritage Tours</span>
-              <span className="block sm:inline">• Golden Triangle</span>
-              <span className="block sm:inline">• International Tours</span>
-              <span className="block sm:inline">• Airport Transfers</span>
-              <span className="block sm:inline">• Corporate Travel</span>
-              <span className="block sm:inline">• Wedding Transport</span>
-              <span className="block sm:inline">• Adventure Tours</span>
+              <span className="block sm:inline">• Golden Triangle Tours</span>
+              <span className="block sm:inline">• Rajasthan Heritage Tours</span>
+              <span className="block sm:inline">• Taj Mahal & Agra Tours</span>
+              <span className="block sm:inline">• Desert Safari Jaisalmer</span>
+              <span className="block sm:inline">• Palace Tours Udaipur</span>
+              <span className="block sm:inline">• Pink City Jaipur</span>
+              <span className="block sm:inline">• Camel Safari & Camps</span>
+              <span className="block sm:inline">• Cultural Experiences</span>
             </div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-center max-w-3xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3">
-              <div className="text-lg sm:text-xl md:text-2xl font-bold text-secondary">1000+</div>
-              <div className="text-xs sm:text-sm text-gray-200">Happy Customers</div>
+              <div className="text-lg sm:text-xl md:text-2xl font-bold text-secondary">2500+</div>
+              <div className="text-xs sm:text-sm text-gray-200">Foreign Tourists</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3">
               <div className="text-lg sm:text-xl md:text-2xl font-bold text-secondary">24/7</div>
-              <div className="text-xs sm:text-sm text-gray-200">Service Available</div>
+              <div className="text-xs sm:text-sm text-gray-200">India Tours</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3">
-              <div className="text-lg sm:text-xl md:text-2xl font-bold text-secondary">15+</div>
-              <div className="text-xs sm:text-sm text-gray-200">Destinations</div>
+              <div className="text-lg sm:text-xl md:text-2xl font-bold text-secondary">25+</div>
+              <div className="text-xs sm:text-sm text-gray-200">Heritage Sites</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3">
               <div className="text-lg sm:text-xl md:text-2xl font-bold text-secondary">5★</div>
-              <div className="text-xs sm:text-sm text-gray-200">Customer Rating</div>
+              <div className="text-xs sm:text-sm text-gray-200">TripAdvisor Rating</div>
             </div>
           </div>
         </div>
