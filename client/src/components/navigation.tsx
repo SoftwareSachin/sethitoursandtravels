@@ -40,12 +40,12 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
           <div className="flex justify-between items-center h-16 sm:h-20">
             {/* Left Navigation */}
-            <div className="hidden lg:flex items-center space-x-8 flex-1">
+            <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
               {navItems.slice(0, 3).map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-sm"
+                  className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-sm whitespace-nowrap"
                 >
                   {item.label}
                 </button>
@@ -53,7 +53,7 @@ export default function Navigation() {
             </div>
 
             {/* Central Logo - Desktop Only */}
-            <div className="hidden lg:flex justify-center items-center">
+            <div className="hidden lg:flex justify-center items-center mx-6 xl:mx-8">
               <div className="bg-white rounded-lg p-1 sm:p-2 shadow-lg border border-orange-200">
                 <img 
                   src={companyLogo} 
@@ -64,12 +64,12 @@ export default function Navigation() {
             </div>
 
             {/* Right Navigation */}
-            <div className="hidden lg:flex items-center space-x-8 flex-1 justify-end">
+            <div className="hidden lg:flex items-center space-x-3 xl:space-x-4 justify-end">
               {navItems.slice(3).map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-sm"
+                  className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-sm whitespace-nowrap"
                 >
                   {item.label}
                 </button>
@@ -78,7 +78,7 @@ export default function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-sm"
+                  className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-sm whitespace-nowrap"
                 >
                   {item.label}
                 </Link>
