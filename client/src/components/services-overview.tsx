@@ -13,6 +13,7 @@ import {
   Shield,
   Users
 } from "lucide-react";
+import dzireTaxiImage from "@assets/image_1752329180785.png";
 
 export default function ServicesOverview() {
   const services = [
@@ -22,7 +23,7 @@ export default function ServicesOverview() {
       description: "Comfortable one-way travel to your destination with professional drivers",
       features: ["Airport Transfers", "Intercity Travel", "Local Sightseeing", "Business Travel"],
       startingPrice: "₹8/km",
-      image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      image: dzireTaxiImage,
       whatsappText: "हाय! मुझे वन-वे टैक्सी चाहिए। कृपया रेट बताएं।"
     },
     {
@@ -31,7 +32,7 @@ export default function ServicesOverview() {
       description: "Complete round-trip packages with waiting time and return journey included",
       features: ["Multi-day Tours", "Wedding Functions", "Corporate Events", "Family Trips"],
       startingPrice: "₹12/km",
-      image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      image: dzireTaxiImage,
       whatsappText: "नमस्ते! मुझे राउंड ट्रिप टैक्सी बुक करनी है।"
     },
     {
