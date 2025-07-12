@@ -21,6 +21,7 @@ import {
 import { FaWhatsapp } from "react-icons/fa";
 import { useCommunication } from "../components/communication-utils";
 import Footer from "../components/footer";
+import JaipurTaxiFloatingButtons from "../components/jaipur-taxi-floating-buttons";
 import rajasthaniWelcomeImage from '@assets/image_1752342637765.png';
 import dzireImage from "@assets/image_1752328537540.png";
 import ertigaImage from "@assets/image_1752328561242.png";
@@ -1212,6 +1213,9 @@ export default function JaipurTaxi() {
 
       {/* Original Website Footer */}
       <Footer />
+      
+      {/* Floating WhatsApp and Phone Buttons */}
+      <JaipurTaxiFloatingButtons />
     </div>
   );
 }
