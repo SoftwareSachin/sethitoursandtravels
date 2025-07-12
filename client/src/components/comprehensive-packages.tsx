@@ -185,7 +185,7 @@ export default function ComprehensivePackages() {
             <Globe className="h-5 w-5 mr-2" />
             Complete Tour Package Collection
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight">
             Explore Our Tour Packages
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
