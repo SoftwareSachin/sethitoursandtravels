@@ -10,6 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { MapPin, Phone, Mail, Send } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import { useCommunication, CONTACT_INFO } from "./communication-utils";
 import type { InsertContactInquiry } from "@shared/schema";
 
 export default function ContactSection() {
@@ -22,6 +23,7 @@ export default function ContactSection() {
 
   const { toast } = useToast();
   const queryClient = useQueryClient();
+  const { whatsapp, phone, email } = useCommunication();
 
   const mutation = useMutation({
     mutationFn: async (data: InsertContactInquiry) => {
@@ -92,10 +94,24 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Phone Numbers</h4>
-                  <p className="text-gray-600">
-                    <a href="tel:9772021780" className="hover:text-primary transition-colors">97720 21780</a><br/>
-                    <a href="tel:7727021780" className="hover:text-primary transition-colors">77270 21780</a>
-                  </p>
+                  <div className="space-y-1">
+                    <p className="text-gray-600">
+                      <button 
+                        onClick={() => phone()}
+                        className="hover:text-primary transition-colors underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                      >
+                        +91 {CONTACT_INFO.phone}
+                      </button>
+                    </p>
+                    <p className="text-gray-600">
+                      <button 
+                        onClick={() => window.location.href = 'tel:7727021780'}
+                        className="hover:text-primary transition-colors underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                      >
+                        +91 77270 21780
+                      </button>
+                    </p>
+                  </div>
                 </div>
               </div>
 
@@ -106,9 +122,12 @@ export default function ContactSection() {
                 <div>
                   <h4 className="font-semibold text-gray-900">Email</h4>
                   <p className="text-gray-600">
-                    <a href="mailto:sethitourstravels8888@gmail.com" className="hover:text-primary transition-colors">
-                      sethitourstravels8888@gmail.com
-                    </a>
+                    <button 
+                      onClick={() => email()}
+                      className="hover:text-primary transition-colors underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                    >
+                      {CONTACT_INFO.email}
+                    </button>
                   </p>
                 </div>
               </div>
@@ -120,10 +139,12 @@ export default function ContactSection() {
                 <div>
                   <h4 className="font-semibold text-gray-900">WhatsApp</h4>
                   <p className="text-gray-600">
-                    <a href="https://api.whatsapp.com/send?phone=919772021780&text=Hello%20I%20need%20assistance" 
-                       className="hover:text-emerald-600 transition-colors">
+                    <button 
+                      onClick={() => whatsapp("Hello! I need assistance with Sethi Tour & Travels services.")}
+                      className="hover:text-emerald-600 transition-colors underline focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 rounded"
+                    >
                       Click to chat on WhatsApp
-                    </a>
+                    </button>
                   </p>
                 </div>
               </div>

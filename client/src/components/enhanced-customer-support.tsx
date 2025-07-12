@@ -1,8 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle, Clock, Shield, Users, MapPin } from "lucide-react";
+import { useCommunication } from "./communication-utils";
 
 export default function EnhancedCustomerSupport() {
+  const { whatsapp, phone } = useCommunication();
+
   return (
     <section className="py-20 bg-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,25 +54,21 @@ export default function EnhancedCustomerSupport() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
-                asChild
+                onClick={() => whatsapp("Hello! I need immediate taxi service from Sethi Tour & Travels.")}
                 size="lg"
-                className="bg-secondary hover:bg-orange-600 text-white"
+                className="bg-secondary hover:bg-orange-600 text-white focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
               >
-                <a href="https://api.whatsapp.com/send?phone=919772021780&text=Hello%20I%20need%20immediate%20taxi%20service">
-                  <MessageCircle className="mr-2 h-5 w-5" />
-                  Contact Now
-                </a>
+                <MessageCircle className="mr-2 h-5 w-5" />
+                Contact Now
               </Button>
               <Button 
-                asChild
+                onClick={() => phone()}
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-primary"
+                className="border-white text-white hover:bg-white hover:text-primary focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
               >
-                <a href="tel:9772021780">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call Emergency
-                </a>
+                <Phone className="mr-2 h-5 w-5" />
+                Call Emergency
               </Button>
             </div>
           </div>

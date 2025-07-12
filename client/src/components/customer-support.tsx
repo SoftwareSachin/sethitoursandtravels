@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import { useCommunication } from "./communication-utils";
 
 export default function CustomerSupport() {
+  const { whatsapp, phone } = useCommunication();
+
   return (
     <section className="py-20 bg-primary text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,24 +21,20 @@ export default function CustomerSupport() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
-                asChild
+                onClick={() => phone()}
                 size="lg"
-                className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 text-lg"
+                className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 text-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
               >
-                <a href="tel:9772021780">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call: 97720 21780
-                </a>
+                <Phone className="mr-2 h-5 w-5" />
+                Call: 97720 21780
               </Button>
               <Button 
-                asChild
+                onClick={() => whatsapp("Hello! I need assistance with Sethi Tour & Travels services.")}
                 size="lg"
-                className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 text-lg"
+                className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 text-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
               >
-                <a href="https://api.whatsapp.com/send?phone=919772021780&text=Hello%20I%20need%20assistance">
-                  <FaWhatsapp className="mr-2 h-5 w-5" />
-                  WhatsApp
-                </a>
+                <FaWhatsapp className="mr-2 h-5 w-5" />
+                WhatsApp
               </Button>
             </div>
           </div>

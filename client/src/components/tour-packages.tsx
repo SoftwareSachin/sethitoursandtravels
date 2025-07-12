@@ -2,12 +2,15 @@ import { useQuery } from "@tanstack/react-query";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
+import { useCommunication, CommunicationUtils } from "./communication-utils";
 import type { TourPackage } from "@shared/schema";
 
 export default function TourPackages() {
   const { data: packages, isLoading } = useQuery<TourPackage[]>({
     queryKey: ["/api/tour-packages"],
   });
+
+  const { whatsapp } = useCommunication();
 
   if (isLoading) {
     return (
@@ -69,12 +72,10 @@ export default function TourPackages() {
                   </div>
                 )}
                 <Button 
-                  asChild
-                  className="w-full bg-primary hover:bg-blue-700 text-white group-hover:bg-secondary transition-colors"
+                  onClick={() => whatsapp(CommunicationUtils.getBookingMessage(pkg.name))}
+                  className="w-full bg-primary hover:bg-blue-700 text-white group-hover:bg-secondary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                 >
-                  <a href={`https://api.whatsapp.com/send?phone=919772021780&text=Hello%20I%20need%20${encodeURIComponent(pkg.name)}`}>
-                    BOOK NOW
-                  </a>
+                  BOOK NOW
                 </Button>
               </CardContent>
             </Card>
