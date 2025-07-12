@@ -39,6 +39,7 @@ import albertHallImage from '@assets/image_1752341852851.png';
 import rajasthaniCharacter from '@assets/image_1752342014985.png';
 import jaipurMarketImage from '@assets/image_1752342304077.png';
 import photoOpportunityImage from '@assets/image_1752342374722.png';
+import rajasthaniWelcomeImage from '@assets/image_1752342637765.png';
 
 export default function JaipurCityTour() {
   const { toast } = useToast();
@@ -154,9 +155,17 @@ export default function JaipurCityTour() {
               </div>
             </div>
             
-            {/* Rajasthani Greeting */}
-            <div className="mb-6">
-              <p className="text-lg md:text-xl text-orange-300 font-medium">खम्मा गणी सा! Welcome to</p>
+            {/* Rajasthani Welcome Image */}
+            <div className="mb-6 flex justify-center">
+              <img 
+                src={rajasthaniWelcomeImage} 
+                alt="Rajasthani Welcome" 
+                className="w-48 h-auto md:w-56 object-contain drop-shadow-lg"
+                style={{ 
+                  imageRendering: 'auto',
+                  filter: 'contrast(1.1) brightness(1.05) saturate(1.1)'
+                }}
+              />
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">

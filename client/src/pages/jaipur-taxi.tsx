@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { useCommunication } from "../components/communication-utils";
+import rajasthaniWelcomeImage from '@assets/image_1752342637765.png';
 
 export default function JaipurTaxi() {
   const { whatsapp, phone } = useCommunication();
@@ -159,7 +160,7 @@ export default function JaipurTaxi() {
       name: "Priya Sharma",
       location: "Mumbai",
       rating: 5,
-      comment: "खम्मा गणी सा! Excellent service from Sethi Tour & Travels. The driver was very courteous and knowledgeable about all the places in Jaipur. Highly recommended!",
+      comment: "Excellent service from Sethi Tour & Travels. The driver was very courteous and knowledgeable about all the places in Jaipur. Highly recommended!",
       service: "Local Jaipur Tour"
     },
     {
@@ -278,9 +279,17 @@ export default function JaipurTaxi() {
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-300 bg-clip-text text-transparent animate-gradient">
               Jaipur Taxi Service
             </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-yellow-200 animate-slide-in">
-              खम्मा गणी सा! Welcome to Pink City
-            </h2>
+            <div className="mb-6 flex justify-center">
+              <img 
+                src={rajasthaniWelcomeImage} 
+                alt="Rajasthani Welcome" 
+                className="w-48 h-auto md:w-56 object-contain drop-shadow-lg animate-slide-in"
+                style={{ 
+                  imageRendering: 'auto',
+                  filter: 'contrast(1.1) brightness(1.05) saturate(1.1)'
+                }}
+              />
+            </div>
             <p className="text-xl md:text-2xl mb-10 max-w-4xl mx-auto leading-relaxed">
               Experience royal comfort with our premium taxi services in Jaipur. 
               From Amber Fort to City Palace, explore the Pink City's heritage with 
@@ -312,7 +321,7 @@ export default function JaipurTaxi() {
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-10 py-5 text-lg font-semibold shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse-glow"
-                onClick={() => whatsapp("खम्मा गणी सा! मुझे जयपुर टैक्सी सर्विस चाहिए।")}
+                onClick={() => whatsapp("नमस्कार! मुझे जयपुर टैक्सी सर्विस चाहिए।")}
               >
                 <FaWhatsapp className="mr-3 h-6 w-6" />
                 Book Instantly on WhatsApp
@@ -994,9 +1003,17 @@ export default function JaipurTaxi() {
           <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
             Ready to Explore Jaipur?
           </h2>
-          <p className="text-2xl md:text-3xl font-semibold mb-8 text-yellow-200">
-            खम्मा गणी सा! Let's Start Your Journey
-          </p>
+          <div className="mb-8 flex justify-center">
+            <img 
+              src={rajasthaniWelcomeImage} 
+              alt="Rajasthani Welcome" 
+              className="w-44 h-auto md:w-48 object-contain drop-shadow-lg"
+              style={{ 
+                imageRendering: 'auto',
+                filter: 'contrast(1.1) brightness(1.05) saturate(1.1)'
+              }}
+            />
+          </div>
           <p className="text-xl mb-12 max-w-4xl mx-auto leading-relaxed">
             Planning a trip around Jaipur or beyond? Sethi Tour & Travels is your go-to for safe, 
             reliable, and affordable taxi services. Book now and experience the Pink City like never before!
@@ -1082,7 +1099,7 @@ export default function JaipurTaxi() {
               <div className="flex space-x-4">
                 <Button
                   className="bg-green-600 hover:bg-green-700 text-white"
-                  onClick={() => whatsapp("खम्मा गणी सा! मुझे जयपुर टैक्सी की जानकारी चाहिए।")}
+                  onClick={() => whatsapp("नमस्कार! मुझे जयपुर टैक्सी की जानकारी चाहिए।")}
                 >
                   <FaWhatsapp className="h-5 w-5" />
                 </Button>

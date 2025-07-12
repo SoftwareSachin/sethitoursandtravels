@@ -70,7 +70,7 @@ export default function ServicesOverview() {
       features: ["Flexible Itinerary", "Choice of Hotels", "Custom Activities", "Group Discounts"],
       startingPrice: "On Request",
       image: indiaLandmarksImage,
-      whatsappText: "खम्मा गणी सा! मुझे कस्टम टूर पैकेज बनवाना है।"
+      whatsappText: "नमस्कार! मुझे कस्टम टूर पैकेज बनवाना है।"
     }
   ];
 

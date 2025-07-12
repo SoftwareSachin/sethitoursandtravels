@@ -16,7 +16,7 @@ export const CONTACT_INFO = {
 // Premium Rajasthani greetings and messages - NO EMOJIS
 export const PREMIUM_MESSAGES = {
   rajasthani: {
-    greeting: "खम्मा गणी सा! राजस्थान में आपका स्वागत है।",
+    greeting: "राम राम सा! राजस्थान में आपका स्वागत है।",
     welcome: "पधारो म्हारे देश में! राजस्थान की रॉयल यात्रा का आनंद लें।",
     farewell: "फिर मिलेंगे, राम राम सा!",
     businessContact: "कुलदीप चौधरी जी की सेवा में",
