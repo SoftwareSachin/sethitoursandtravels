@@ -162,7 +162,7 @@ export default function JaipurTaxi() {
               />
             </div>
           ))}
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-600/40 via-pink-600/40 to-purple-800/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-orange-600/15 via-pink-600/15 to-purple-800/20"></div>
         </div>
         
         {/* Animated Background Elements */}
