@@ -24,6 +24,7 @@ import {
 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import WhatsAppButton from '@/components/whatsapp-button';
+import Footer from '@/components/footer';
 import rajasthanImage1 from '@assets/image_1752337890653.png';
 import rajasthanImage2 from '@assets/image_1752337943946.png';
 import rajasthanImage3 from '@assets/image_1752337963821.png';
@@ -449,6 +450,9 @@ export default function RajasthanTour() {
           </span>
         </a>
       </div>
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
