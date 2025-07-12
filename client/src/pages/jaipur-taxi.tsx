@@ -242,14 +242,15 @@ export default function JaipurTaxi() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
               <Phone className="h-5 w-5 text-yellow-300" />
-              <span className="font-semibold">📞 +91 97720 21780</span>
+              <span className="font-semibold">+91 97720 21780</span>
             </div>
             <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
               <FaWhatsapp className="h-5 w-5 text-green-300" />
-              <span className="font-semibold">💬 WhatsApp: 77270 21780</span>
+              <span className="font-semibold">WhatsApp: 77270 21780</span>
             </div>
             <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
-              <span className="font-semibold">📧 sethitourstravels8888@gmail.com</span>
+              <Mail className="h-5 w-5 text-blue-300" />
+              <span className="font-semibold">sethitourstravels8888@gmail.com</span>
             </div>
           </div>
         </div>
