@@ -118,43 +118,68 @@ export default function HeroSection() {
           Incredibly majestic!
         </h2>
         
+        {/* Comprehensive Service Description */}
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed text-white">
+          Experience the royal splendor of India with authentic Rajasthan tours! Explore magnificent palaces of Jaipur, 
+          romantic lakes of Udaipur, golden dunes of Jaisalmer, and the blue city Jodhpur. From the iconic Taj Mahal 
+          to Hawa Mahal, Amber Fort to City Palace - discover India's incredible heritage, vibrant culture, 
+          and warm hospitality with our expert local guides and premium travel services.
+        </p>
+        
+        {/* Complete India Tourism Solutions */}
+        <div className="mb-6 sm:mb-8 space-y-4">
+          <div className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 max-w-4xl mx-auto">
+            <span className="text-secondary font-semibold block sm:inline mb-2 sm:mb-0">Complete India Tourism Solutions:</span> 
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-1 text-center sm:text-left mt-2 sm:mt-0">
+              <span className="block sm:inline">• Golden Triangle Tours</span>
+              <span className="block sm:inline">• Rajasthan Heritage Tours</span>
+              <span className="block sm:inline">• Taj Mahal & Agra Tours</span>
+              <span className="block sm:inline">• Desert Safari Jaisalmer</span>
+              <span className="block sm:inline">• Palace Tours Udaipur</span>
+              <span className="block sm:inline">• Pink City Jaipur</span>
+              <span className="block sm:inline">• Camel Safari & Camps</span>
+              <span className="block sm:inline">• Cultural Experiences</span>
+            </div>
+          </div>
+        </div>
+        
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
           <Button 
-            onClick={() => whatsapp("मैं राजस्थान टूर बुक करना चाहता हूं। कृपया AC कार का रेट और पैकेज डिटेल्स दें।", 'rajasthani')}
+            onClick={() => whatsapp("मैं टूर बुक करना चाहता हूं। कृपया AC कार का रेट और पैकेज डिटेल्स दें।", 'rajasthani')}
             size="lg"
-            className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto"
+            className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 w-full sm:w-auto"
           >
-            <FaWhatsapp className="mr-2 h-5 w-5" />
-            Book Tour on WhatsApp
+            <FaWhatsapp className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+            Book on WhatsApp
           </Button>
           <Button 
             onClick={() => phone()}
             size="lg"
-            className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto"
+            className="bg-secondary hover:bg-orange-600 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 w-full sm:w-auto"
           >
-            <Phone className="mr-2 h-5 w-5" />
+            <Phone className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
             Call Now
           </Button>
         </div>
         
         {/* Service Statistics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-2xl mx-auto">
-          <div className="text-center bg-white/20 backdrop-blur-sm rounded-lg p-4">
-            <div className="text-2xl font-bold text-secondary">2500+</div>
-            <div className="text-sm text-gray-200">Happy Tourists</div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-center max-w-3xl mx-auto mt-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3">
+            <div className="text-lg sm:text-xl md:text-2xl font-bold text-secondary">2500+</div>
+            <div className="text-xs sm:text-sm text-gray-200">Foreign Tourists</div>
           </div>
-          <div className="text-center bg-white/20 backdrop-blur-sm rounded-lg p-4">
-            <div className="text-2xl font-bold text-secondary">24/7</div>
-            <div className="text-sm text-gray-200">Service</div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3">
+            <div className="text-lg sm:text-xl md:text-2xl font-bold text-secondary">24/7</div>
+            <div className="text-xs sm:text-sm text-gray-200">India Tours</div>
           </div>
-          <div className="text-center bg-white/20 backdrop-blur-sm rounded-lg p-4">
-            <div className="text-2xl font-bold text-secondary">25+</div>
-            <div className="text-sm text-gray-200">Heritage Sites</div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3">
+            <div className="text-lg sm:text-xl md:text-2xl font-bold text-secondary">25+</div>
+            <div className="text-xs sm:text-sm text-gray-200">Heritage Sites</div>
           </div>
-          <div className="text-center bg-white/20 backdrop-blur-sm rounded-lg p-4">
-            <div className="text-2xl font-bold text-secondary">5★</div>
-            <div className="text-sm text-gray-200">Rating</div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3">
+            <div className="text-lg sm:text-xl md:text-2xl font-bold text-secondary">5★</div>
+            <div className="text-xs sm:text-sm text-gray-200">TripAdvisor Rating</div>
           </div>
         </div>
       </div>
