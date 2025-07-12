@@ -39,6 +39,9 @@ import albertHallImage from '@assets/image_1752341852851.png';
 import jaipurMarketImage from '@assets/image_1752342304077.png';
 import photoOpportunityImage from '@assets/image_1752342374722.png';
 import rajasthaniWelcomeImage from '@assets/image_1752342637765.png';
+import dzireImage from '@assets/image_1752328537540.png';
+import ertigaImage from '@assets/image_1752328561242.png';
+import innovaImage from '@assets/image_1752328589553.png';
 
 export default function JaipurCityTour() {
   const { toast } = useToast();
@@ -96,7 +99,7 @@ export default function JaipurCityTour() {
       extraKm: "₹12/km",
       extraHour: "₹200/hour",
       capacity: "4 Passengers",
-      image: "/api/placeholder/200/120"
+      image: dzireImage
     },
     {
       type: "SUV (Ertiga, Xylo)",
@@ -104,7 +107,7 @@ export default function JaipurCityTour() {
       extraKm: "₹16/km",
       extraHour: "₹300/hour",
       capacity: "6-7 Passengers",
-      image: "/api/placeholder/200/120"
+      image: ertigaImage
     },
     {
       type: "Innova Crysta",
@@ -112,7 +115,7 @@ export default function JaipurCityTour() {
       extraKm: "₹18/km",
       extraHour: "₹350/hour",
       capacity: "7-8 Passengers",
-      image: "/api/placeholder/200/120"
+      image: innovaImage
     }
   ];
 
@@ -644,10 +647,15 @@ export default function JaipurCityTour() {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {vehiclePricing.map((vehicle, index) => (
               <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={vehicle.image} 
+                    alt={vehicle.type}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                </div>
                 <CardHeader className="text-center pb-2">
-                  <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Car className="w-10 h-10 text-white" />
-                  </div>
                   <CardTitle className="text-xl font-bold text-gray-800">{vehicle.type}</CardTitle>
                   <p className="text-gray-600">{vehicle.capacity}</p>
                 </CardHeader>
