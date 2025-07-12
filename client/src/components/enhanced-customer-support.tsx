@@ -54,7 +54,7 @@ export default function EnhancedCustomerSupport() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
-                onClick={() => whatsapp("मुझे तत्काल टैक्सी सेवा चाहिए।", 'rajasthani')}
+                onClick={() => whatsapp("मुझे अभी तुरंत टैक्सी चाहिए। कृपया जल्दी से जल्दी भेज दें।", 'rajasthani')}
                 size="lg"
                 className="bg-secondary hover:bg-orange-600 text-white focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
               >

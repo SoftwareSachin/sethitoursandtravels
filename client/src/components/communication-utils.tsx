@@ -81,9 +81,9 @@ export const CommunicationUtils = {
   openWhatsApp: (message?: string, language: 'rajasthani' | 'hindi' | 'english' = 'rajasthani') => {
     const greeting = getTimeBasedGreeting(language);
     const msgs = PREMIUM_MESSAGES[language];
-    const baseMessage = message || "मैं आपकी सेवाओं के बारे में जानकारी चाहता हूं।";
+    const baseMessage = message || "मैं राजस्थान टूर बुक करना चाहता हूं। कृपया पैकेज और रेट्स की जानकारी दें।";
     
-    // Create a clean, simple message for better compatibility
+    // Create a natural customer message
     const finalMessage = `${greeting}
 
 ${baseMessage}
@@ -91,18 +91,12 @@ ${baseMessage}
 ${msgs.businessContact}
 ${msgs.serviceTag}
 
-संपर्क: +91${CONTACT_INFO.phone}
-${CONTACT_INFO.businessHours}
-
 ${msgs.farewell}`;
     
     // Use the standard Indian WhatsApp format
     const whatsappNumber = "91" + CONTACT_INFO.phone;
     const encodedMessage = encodeURIComponent(finalMessage);
     const url = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-    
-    console.log('WhatsApp URL:', url);
-    console.log('WhatsApp Number:', whatsappNumber);
     
     try {
       window.open(url, '_blank', 'noopener,noreferrer');
@@ -169,9 +163,9 @@ ${msgs.farewell}`;
     
     return `${greeting}
 
-मैं ${packageName} के लिए बुकिंग करना चाहता हूं।${datesInfo}${travelersInfo}
+मैं ${packageName} बुक करना चाहता हूं।${datesInfo}${travelersInfo}
 
-कृपया विस्तृत जानकारी और दरें भेजें।
+कृपया पैकेज का रेट और डिटेल्स भेजें। कब से कब तक टूर है और क्या क्या इंक्लूड है?
 
 ${PREMIUM_MESSAGES.rajasthani.businessContact}
 ${PREMIUM_MESSAGES.rajasthani.serviceTag}`;
@@ -184,9 +178,9 @@ ${PREMIUM_MESSAGES.rajasthani.serviceTag}`;
     
     return `${greeting}
 
-मुझे ${serviceName} की सेवा चाहिए।${info}
+मुझे ${serviceName} बुक करनी है।${info}
 
-कृपया दरें और उपलब्धता की जानकारी दें।
+कृपया रेट बताएं और कब अवेलेबल है? AC कार है या नॉन AC?
 
 ${PREMIUM_MESSAGES.rajasthani.businessContact}
 ${PREMIUM_MESSAGES.rajasthani.serviceTag}`;
@@ -197,11 +191,11 @@ ${PREMIUM_MESSAGES.rajasthani.serviceTag}`;
     const greeting = getTimeBasedGreeting('rajasthani');
     const baseMessage = `${greeting}
 
-मुझे तत्काल टैक्सी सेवा चाहिए।`;
-    const locationInfo = location ? `\nस्थान: ${location}` : '';
+मुझे अभी तुरंत टैक्सी चाहिए।`;
+    const locationInfo = location ? `\nमैं यहां हूं: ${location}` : '';
     return `${baseMessage}${locationInfo}
 
-कृपया जल्दी भेजें।
+कृपया जल्दी से जल्दी भेज दें। एमर्जेंसी है।
 धन्यवाद!`;
   },
 
