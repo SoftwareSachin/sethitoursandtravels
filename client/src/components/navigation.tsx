@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Phone, Search, User, MapPin, Home } from "lucide-react";
 import { Link } from "wouter";
-import rajasthanLogo from "@assets/orange-logo_1752335072563.png";
+import rajasthanLogo from "@assets/{2A22383F-014B-42F4-BE3A-441FF3E7D66A}_1752335976312.png";
+import travelLogo from "@assets/{EA6D6F7F-DEEC-4D98-9B5B-CD04F5567A36}_1752336049036.png";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,22 +37,33 @@ export default function Navigation() {
       <div className="bg-gradient-to-b from-yellow-50 to-orange-50 border-b-2 border-pink-600">
         <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
           <div className="flex justify-between items-center h-16 sm:h-20">
-            <div className="flex items-center min-w-0 flex-1">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full overflow-hidden mr-2 sm:mr-3 bg-white shadow-lg border-2 border-orange-200 p-1 flex-shrink-0">
+            {/* Left Navigation */}
+            <div className="hidden lg:flex items-center space-x-8 flex-1">
+              {navItems.slice(0, 3).map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="text-gray-700 hover:text-pink-600 transition-colors"
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Central Logo */}
+            <div className="flex justify-center items-center">
+              <div className="bg-yellow-50 rounded-lg p-2 shadow-lg border border-orange-200">
                 <img 
                   src={rajasthanLogo} 
-                  alt="Sethi Tour & Travels Logo" 
-                  className="w-full h-full object-contain rounded-md"
+                  alt="Rajasthan - The Incredible State of India" 
+                  className="h-12 w-auto"
                 />
               </div>
-              <div className="min-w-0 flex-1">
-                <h1 className="text-sm sm:text-base md:text-xl font-bold text-pink-600 truncate">Sethi Tour & Travels</h1>
-                <p className="text-xs sm:text-xs md:text-sm text-gray-600 truncate">Authentic India Tours</p>
-              </div>
             </div>
-            
-            <div className="hidden md:flex items-center space-x-8">
-              {navItems.map((item) => (
+
+            {/* Right Navigation */}
+            <div className="hidden lg:flex items-center space-x-8 flex-1 justify-end">
+              {navItems.slice(3).map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
@@ -71,12 +83,23 @@ export default function Navigation() {
               ))}
             </div>
 
-            <div className="hidden md:flex items-center space-x-4">
-              <a href="tel:9772021780" className="text-pink-600 font-semibold flex items-center hover:text-pink-500 transition-colors">
-                <Phone className="w-4 h-4 mr-1" />
-                <span className="text-sm lg:text-base">97720 21780</span>
-              </a>
+            {/* Mobile Logo and Title */}
+            <div className="lg:hidden flex items-center min-w-0 flex-1">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg overflow-hidden mr-2 sm:mr-3 bg-white shadow-lg border-2 border-orange-200 p-1 flex-shrink-0">
+                <img 
+                  src={travelLogo} 
+                  alt="Sethi Tour & Travels" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="min-w-0 flex-1">
+                <h1 className="text-sm sm:text-base font-bold text-pink-600 truncate">Sethi Tour & Travels</h1>
+                <p className="text-xs text-gray-600 truncate">Authentic India Tours</p>
+              </div>
             </div>
+
+
+
 
             <div className="md:hidden flex items-center space-x-4">
               <a href="tel:9772021780" className="text-pink-600 font-semibold flex items-center">
@@ -93,16 +116,16 @@ export default function Navigation() {
             <SheetContent side="right" className="w-[280px] sm:w-[320px]">
               <div className="flex flex-col space-y-6 mt-8">
                 <div className="flex items-center space-x-3 pb-4 border-b border-gray-200">
-                  <div className="w-12 h-12 rounded-full overflow-hidden bg-white shadow-lg border-2 border-orange-200 p-1">
+                  <div className="w-12 h-12 rounded-lg overflow-hidden bg-white shadow-lg border-2 border-orange-200 p-1">
                     <img 
-                      src={rajasthanLogo} 
-                      alt="Rajasthan Tourism Logo" 
+                      src={travelLogo} 
+                      alt="Sethi Tour & Travels" 
                       className="w-full h-full object-contain"
                     />
                   </div>
                   <div>
-                    <h1 className="text-lg font-bold text-pink-600">Rajasthan Tours</h1>
-                    <p className="text-xs text-gray-600">Incredible State of India</p>
+                    <h1 className="text-lg font-bold text-pink-600">Sethi Tour & Travels</h1>
+                    <p className="text-xs text-gray-600">Authentic India Tours</p>
                   </div>
                 </div>
                 <div className="flex flex-col space-y-4">
