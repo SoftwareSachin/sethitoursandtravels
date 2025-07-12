@@ -83,21 +83,22 @@ export const CommunicationUtils = {
     const msgs = PREMIUM_MESSAGES[language];
     const baseMessage = message || "मैं आपकी सेवाओं के बारे में जानकारी चाहता हूं।";
     
+    // Create a clean, simple message for better compatibility
     const finalMessage = `${greeting}
 
 ${baseMessage}
 
 ${msgs.businessContact}
 ${msgs.serviceTag}
-${msgs.experience}
 
 संपर्क: +91${CONTACT_INFO.phone}
 ${CONTACT_INFO.businessHours}
 
 ${msgs.farewell}`;
     
+    // Use the standard Indian WhatsApp format
+    const whatsappNumber = "91" + CONTACT_INFO.phone;
     const encodedMessage = encodeURIComponent(finalMessage);
-    const whatsappNumber = CONTACT_INFO.whatsapp;
     const url = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     
     console.log('WhatsApp URL:', url);
@@ -107,15 +108,14 @@ ${msgs.farewell}`;
       window.open(url, '_blank', 'noopener,noreferrer');
     } catch (error) {
       console.error('Error opening WhatsApp:', error);
-      // Fallback to a simpler message if the complex one fails
-      const simpleMessage = encodeURIComponent(`राम राम सा! मैं सेठी टूर एंड ट्रेवल्स की सेवाओं के बारे में जानकारी चाहता हूं। संपर्क: +91${CONTACT_INFO.phone}`);
-      const simpleUrl = `https://wa.me/${whatsappNumber}?text=${simpleMessage}`;
-      window.open(simpleUrl, '_blank', 'noopener,noreferrer');
+      // Fallback to just opening WhatsApp without message
+      const fallbackUrl = `https://wa.me/${whatsappNumber}`;
+      window.open(fallbackUrl, '_blank', 'noopener,noreferrer');
     }
   },
 
   // Phone call function
-  makeCall: () => {
+  makePhoneCall: () => {
     const phoneUrl = `tel:+91${CONTACT_INFO.phone}`;
     try {
       window.location.href = phoneUrl;
