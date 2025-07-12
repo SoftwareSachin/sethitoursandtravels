@@ -22,6 +22,10 @@ import { FaWhatsapp } from "react-icons/fa";
 import { useCommunication } from "../components/communication-utils";
 import Footer from "../components/footer";
 import rajasthaniWelcomeImage from '@assets/image_1752342637765.png';
+import dzireImage from "@assets/image_1752328537540.png";
+import ertigaImage from "@assets/image_1752328561242.png";
+import innovaImage from "@assets/image_1752328589553.png";
+import tempoImage from "@assets/image_1752328614332.png";
 
 export default function JaipurTaxi() {
   const { whatsapp, phone } = useCommunication();
@@ -123,7 +127,7 @@ export default function JaipurTaxi() {
       type: "Sedan",
       passengers: "4+1",
       price: "₹8/km",
-      image: "/attached_assets/image_1752331025342.png",
+      image: dzireImage,
       features: ["AC", "Music System", "Comfortable Seats", "Spacious"],
       popular: true
     },
@@ -132,7 +136,7 @@ export default function JaipurTaxi() {
       type: "SUV",
       passengers: "6+1",
       price: "₹12/km",
-      image: "/attached_assets/image_1752331548623.png",
+      image: ertigaImage,
       features: ["AC", "Music System", "Extra Luggage", "Family Friendly"],
       popular: false
     },
@@ -141,7 +145,7 @@ export default function JaipurTaxi() {
       type: "Premium SUV",
       passengers: "7+1",
       price: "₹16/km",
-      image: "/attached_assets/image_1752331554106.png",
+      image: innovaImage,
       features: ["Premium AC", "Push-back Seats", "Extra Comfort", "Luxury Travel"],
       popular: true
     },
@@ -150,7 +154,7 @@ export default function JaipurTaxi() {
       type: "Mini Bus",
       passengers: "12+1",
       price: "₹20/km",
-      image: "/attached_assets/image_1752331562660.png",
+      image: tempoImage,
       features: ["Group Travel", "AC", "Luggage Space", "Comfortable Journey"],
       popular: false
     }
