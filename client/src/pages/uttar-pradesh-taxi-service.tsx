@@ -1,7 +1,11 @@
 import { Link } from "wouter";
-import { Car, Phone, Clock, Users, Star, ArrowLeft } from "lucide-react";
+import { Car, Phone, Clock, Users, Star, ArrowLeft, Shield, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import Navigation from "@/components/navigation";
+import Footer from "@/components/footer";
+import uttarPradeshImage from "@assets/image_1752345670377.png";
 
 const upTaxiServices = [
   {
@@ -39,6 +43,8 @@ const upTaxiServices = [
 export default function UttarPradeshTaxiService() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <Navigation />
+      
       {/* Breadcrumb Navigation */}
       <div className="bg-white border-b">
         <div className="max-w-6xl mx-auto px-4 py-4">
@@ -53,29 +59,55 @@ export default function UttarPradeshTaxiService() {
         </div>
       </div>
 
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
-        <div className="max-w-6xl mx-auto px-4">
+      {/* Hero Section with Background Image */}
+      <div className="relative bg-gradient-to-r from-blue-600/90 to-purple-600/90 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={uttarPradeshImage} 
+            alt="Uttar Pradesh Taj Mahal and Taxi Service" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/80 to-purple-600/80"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-6xl mx-auto px-4">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
               Uttar Pradesh Taxi Service
             </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Explore India's Cultural Heritage with our premium taxi services
+            <p className="text-xl md:text-2xl mb-8 opacity-95 drop-shadow-md">
+              Explore India's Cultural Heritage with Premium Taxi Services
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base">
-              <div className="flex items-center gap-2">
+            <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base mb-8">
+              <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">
                 <Star className="w-5 h-5 text-yellow-400" />
-                <span>4.9/5 Rating</span>
+                <span className="font-semibold">4.9/5 Rating</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">
                 <Users className="w-5 h-5" />
-                <span>8,000+ UP Tours</span>
+                <span className="font-semibold">8,000+ UP Tours</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">
                 <Clock className="w-5 h-5" />
-                <span>24/7 Available</span>
+                <span className="font-semibold">24/7 Available</span>
               </div>
+            </div>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button 
+                size="lg" 
+                className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg font-semibold shadow-lg"
+                onClick={() => window.open(`https://wa.me/917727021780?text=नमस्कार! मुझे उत्तर प्रदेश टैक्सी सेवा की जानकारी चाहिए।`, '_blank')}
+              >
+                Book UP Tour
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg font-semibold"
+                onClick={() => window.open(`tel:+919772021780`, '_blank')}
+              >
+                Call Now
+              </Button>
             </div>
           </div>
         </div>
@@ -148,6 +180,9 @@ export default function UttarPradeshTaxiService() {
           </div>
         </div>
       </div>
+
+      {/* Website Footer */}
+      <Footer />
     </div>
   );
 }

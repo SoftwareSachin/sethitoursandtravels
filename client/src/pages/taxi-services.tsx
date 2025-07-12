@@ -1,7 +1,11 @@
 import { Link } from "wouter";
-import { Car, MapPin, Phone, Clock, Users, Star } from "lucide-react";
+import { Car, MapPin, Phone, Clock, Users, Star, Shield, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import Navigation from "@/components/navigation";
+import Footer from "@/components/footer";
+import heroImage from "@assets/image_1752345572318.png";
 
 const taxiServices = [
   {
@@ -44,29 +48,93 @@ const taxiServices = [
 export default function TaxiServices() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-pink-50">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-orange-600 to-pink-600 text-white py-20">
-        <div className="max-w-6xl mx-auto px-4">
+      <Navigation />
+      
+      {/* Hero Section with Background Image */}
+      <div className="relative bg-gradient-to-r from-orange-600/90 to-pink-600/90 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={heroImage} 
+            alt="Taxi Services Across India" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-600/80 to-pink-600/80"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-6xl mx-auto px-4">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Taxi Services Across India
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
+              Premium Taxi Services
             </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Reliable taxi services for all your travel needs
+            <p className="text-xl md:text-2xl mb-8 opacity-95 drop-shadow-md">
+              Reliable & Comfortable Travel Across India
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base">
-              <div className="flex items-center gap-2">
+            <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base mb-8">
+              <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">
                 <Star className="w-5 h-5 text-yellow-400" />
-                <span>4.8/5 Rating</span>
+                <span className="font-semibold">4.9/5 Rating</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">
                 <Users className="w-5 h-5" />
-                <span>10,000+ Happy Customers</span>
+                <span className="font-semibold">15,000+ Happy Customers</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">
                 <Clock className="w-5 h-5" />
-                <span>24/7 Service</span>
+                <span className="font-semibold">24/7 Service</span>
               </div>
+            </div>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button 
+                size="lg" 
+                className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-3 text-lg font-semibold shadow-lg"
+                onClick={() => window.open(`https://wa.me/917727021780?text=नमस्कार! मुझे टैक्सी सेवा की जानकारी चाहिए।`, '_blank')}
+              >
+                Book Now
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 text-lg font-semibold"
+                onClick={() => window.open(`tel:+919772021780`, '_blank')}
+              >
+                Call Now
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Trust Indicators */}
+      <div className="bg-white py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full flex items-center justify-center mb-4">
+                <Shield className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-800">100%</h3>
+              <p className="text-gray-600">Safe & Secure</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full flex items-center justify-center mb-4">
+                <Award className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-800">15+</h3>
+              <p className="text-gray-600">Years Experience</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full flex items-center justify-center mb-4">
+                <Car className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-800">50+</h3>
+              <p className="text-gray-600">Premium Vehicles</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full flex items-center justify-center mb-4">
+                <Clock className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-800">24/7</h3>
+              <p className="text-gray-600">Support Available</p>
             </div>
           </div>
         </div>
@@ -136,6 +204,9 @@ export default function TaxiServices() {
           </div>
         </div>
       </div>
+
+      {/* Website Footer */}
+      <Footer />
     </div>
   );
 }
