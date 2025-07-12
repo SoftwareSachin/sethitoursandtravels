@@ -36,7 +36,6 @@ import amberFortImage from '@assets/image_1752341727345.png';
 import jalMahalImage from '@assets/image_1752341827928.png';
 import jantarMantarImage from '@assets/image_1752341803586.png';
 import albertHallImage from '@assets/image_1752341852851.png';
-import rajasthaniCharacter from '@assets/image_1752342014985.png';
 import jaipurMarketImage from '@assets/image_1752342304077.png';
 import photoOpportunityImage from '@assets/image_1752342374722.png';
 import rajasthaniWelcomeImage from '@assets/image_1752342637765.png';
@@ -140,23 +139,8 @@ export default function JaipurCityTour() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
         <div className="relative z-10 container mx-auto px-4 py-20 md:py-32 text-center text-white">
           <div className="max-w-5xl mx-auto">
-            {/* Rajasthani Character */}
-            <div className="mb-8 flex justify-center">
-              <div className="relative">
-                <img 
-                  src={rajasthaniCharacter} 
-                  alt="Rajasthani Character" 
-                  className="w-32 h-32 md:w-40 md:h-40 object-contain"
-                  style={{ 
-                    imageRendering: 'auto',
-                    filter: 'contrast(1.1) brightness(1.05) saturate(1.1)'
-                  }}
-                />
-              </div>
-            </div>
-            
             {/* Rajasthani Welcome Image */}
-            <div className="mb-6 flex justify-center">
+            <div className="mb-8 flex justify-center">
               <img 
                 src={rajasthaniWelcomeImage} 
                 alt="Rajasthani Welcome" 
