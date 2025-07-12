@@ -186,10 +186,11 @@ export default function ComprehensivePackages() {
             Complete Tour Package Collection
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight">
-            Complete Tour Packages
+            Explore Our Tour Packages
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Choose from our carefully crafted tour packages designed to give you the best Rajasthan experience. All packages include accommodation, transportation, and guided tours.
+            Explore our comprehensive range of tour packages designed for every traveler. From spiritual journeys 
+            to adventure trips, domestic heritage tours to international experiences - we have something special for everyone.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mt-8">
             <div className="flex items-center bg-white rounded-full px-6 py-3 shadow-lg">
