@@ -143,9 +143,9 @@ export default function JaipurCityTour() {
                 <img 
                   src={rajasthaniCharacter} 
                   alt="Rajasthani Character" 
-                  className="w-24 h-24 md:w-32 md:h-32 object-contain animate-pulse"
+                  className="w-24 h-24 md:w-32 md:h-32 object-contain"
+                  style={{ imageRendering: 'high-quality' }}
                 />
-                <div className="absolute inset-0 bg-orange-400/20 rounded-full blur-xl"></div>
               </div>
             </div>
             
@@ -290,9 +290,11 @@ export default function JaipurCityTour() {
                       src={attraction.image}
                       alt={attraction.name}
                       className="w-full h-full object-cover"
-                      style={{ imageRendering: 'crisp-edges' }}
+                      style={{ 
+                        imageRendering: 'high-quality'
+                      }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
                     <div className="absolute top-4 left-4">
                       <div className="p-3 bg-white/20 rounded-full backdrop-blur-sm">
                         {attraction.icon}
