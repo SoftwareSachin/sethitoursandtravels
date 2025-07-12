@@ -395,7 +395,7 @@ export default function ComprehensivePackages() {
                 onClick={() => whatsapp("Hello, I want to speak with a travel expert about tour packages")}
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-purple-600 font-medium transform hover:scale-105 transition-all duration-300"
+                className="border-white text-white hover:bg-white hover:text-purple-600 font-medium transform hover:scale-105 transition-all duration-300 bg-transparent"
               >
                 Speak to Travel Expert
               </Button>
