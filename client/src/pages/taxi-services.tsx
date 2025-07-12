@@ -56,9 +56,16 @@ export default function TaxiServices() {
           src={heroImage}
           alt="Premium Taxi Services with Hawa Mahal"
           className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{
+            imageRendering: 'auto',
+            filter: 'none',
+            transform: 'translateZ(0)'
+          }}
+          loading="eager"
+          decoding="sync"
         />
         {/* Subtle gradient overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/25"></div>
         
         <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
           {/* Main Heading */}
