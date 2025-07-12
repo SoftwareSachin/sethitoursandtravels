@@ -88,4 +88,30 @@
       transform: translateY(-10px);
     }
   }
+  
+  /* Mobile-friendly utilities */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Ensure proper text scaling on mobile */
+  @media (max-width: 640px) {
+    .text-responsive {
+      font-size: clamp(0.875rem, 2.5vw, 1rem);
+    }
+    
+    .heading-responsive {
+      font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+  }
 }

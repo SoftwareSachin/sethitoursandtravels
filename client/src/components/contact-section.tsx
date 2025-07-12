@@ -64,38 +64,38 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-12 sm:py-16 md:py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
-          <p className="text-xl text-gray-600">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Get in touch for all your travel and taxi service needs
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
             
             <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="bg-primary text-white p-3 rounded-lg">
-                  <MapPin className="h-6 w-6" />
+              <div className="flex items-start space-x-3 sm:space-x-4">
+                <div className="bg-primary text-white p-2 sm:p-3 rounded-lg flex-shrink-0">
+                  <MapPin className="h-5 w-5 sm:h-6 sm:w-6" />
                 </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Address</h4>
-                  <p className="text-gray-600">S-147, 4S New Loha Mandi Road, Machada, Jaipur-302013</p>
+                <div className="min-w-0 flex-1">
+                  <h4 className="font-semibold text-gray-900 text-sm sm:text-base">Address</h4>
+                  <p className="text-gray-600 text-sm sm:text-base">S-147, 4S New Loha Mandi Road, Machada, Jaipur-302013</p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="bg-primary text-white p-3 rounded-lg">
-                  <Phone className="h-6 w-6" />
+              <div className="flex items-start space-x-3 sm:space-x-4">
+                <div className="bg-primary text-white p-2 sm:p-3 rounded-lg flex-shrink-0">
+                  <Phone className="h-5 w-5 sm:h-6 sm:w-6" />
                 </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Phone Numbers</h4>
+                <div className="min-w-0 flex-1">
+                  <h4 className="font-semibold text-gray-900 text-sm sm:text-base">Phone Numbers</h4>
                   <div className="space-y-1">
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 text-sm sm:text-base">
                       <button 
                         onClick={() => phone()}
                         className="hover:text-primary transition-colors underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
@@ -103,7 +103,7 @@ export default function ContactSection() {
                         +91 {CONTACT_INFO.phone}
                       </button>
                     </p>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 text-sm sm:text-base">
                       <button 
                         onClick={() => window.location.href = 'tel:7727021780'}
                         className="hover:text-primary transition-colors underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
@@ -115,13 +115,13 @@ export default function ContactSection() {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="bg-primary text-white p-3 rounded-lg">
-                  <Mail className="h-6 w-6" />
+              <div className="flex items-start space-x-3 sm:space-x-4">
+                <div className="bg-primary text-white p-2 sm:p-3 rounded-lg flex-shrink-0">
+                  <Mail className="h-5 w-5 sm:h-6 sm:w-6" />
                 </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Email</h4>
-                  <p className="text-gray-600">
+                <div className="min-w-0 flex-1">
+                  <h4 className="font-semibold text-gray-900 text-sm sm:text-base">Email</h4>
+                  <p className="text-gray-600 text-sm sm:text-base break-all">
                     <button 
                       onClick={() => email()}
                       className="hover:text-primary transition-colors underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
@@ -132,13 +132,13 @@ export default function ContactSection() {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="bg-emerald-600 text-white p-3 rounded-lg">
-                  <FaWhatsapp className="h-6 w-6" />
+              <div className="flex items-start space-x-3 sm:space-x-4">
+                <div className="bg-emerald-600 text-white p-2 sm:p-3 rounded-lg flex-shrink-0">
+                  <FaWhatsapp className="h-5 w-5 sm:h-6 sm:w-6" />
                 </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">WhatsApp</h4>
-                  <p className="text-gray-600">
+                <div className="min-w-0 flex-1">
+                  <h4 className="font-semibold text-gray-900 text-sm sm:text-base">WhatsApp</h4>
+                  <p className="text-gray-600 text-sm sm:text-base">
                     <button 
                       onClick={() => whatsapp("मैं टूर बुक करना चाहता हूं। कृपया पैकेज और रेट्स की जानकारी दें।", 'rajasthani')}
                       className="hover:text-emerald-600 transition-colors underline focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 rounded"
