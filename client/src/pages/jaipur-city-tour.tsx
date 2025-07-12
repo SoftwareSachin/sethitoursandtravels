@@ -37,6 +37,8 @@ import jalMahalImage from '@assets/image_1752341827928.png';
 import jantarMantarImage from '@assets/image_1752341803586.png';
 import albertHallImage from '@assets/image_1752341852851.png';
 import rajasthaniCharacter from '@assets/image_1752342014985.png';
+import jaipurMarketImage from '@assets/image_1752342304077.png';
+import photoOpportunityImage from '@assets/image_1752342374722.png';
 
 export default function JaipurCityTour() {
   const { toast } = useToast();
@@ -407,32 +409,125 @@ export default function JaipurCityTour() {
       </div>
 
       {/* Additional Attractions */}
-      <div className="py-16 bg-white">
+      <div className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-gray-800">More Attractions</h2>
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-pink-100 text-pink-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <Camera className="w-4 h-4" />
+              Cultural Experiences
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">Complete Your Jaipur Experience</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Beyond the monuments, discover the vibrant culture, bustling markets, and perfect photo spots that make Jaipur unforgettable.
+            </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Building2 className="w-8 h-8 text-white" />
+          
+          <div className="grid lg:grid-cols-3 gap-8">
+            <Card className="group overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+              <div className="relative h-64">
+                <img 
+                  src={jaipurMarketImage} 
+                  alt="Jaipur Markets" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  style={{ 
+                    imageRendering: 'auto',
+                    filter: 'contrast(1.1) brightness(1.05)'
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                <div className="absolute top-4 right-4">
+                  <div className="bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    Shopping
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Birla Mandir</h3>
-              <p className="text-gray-600">Beautiful white marble temple dedicated to Lord Vishnu and Goddess Laxmi</p>
+              <div className="p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <ShoppingBag className="w-5 h-5 text-pink-500" />
+                  <h3 className="text-xl font-bold text-gray-800">Jaipur Markets</h3>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Explore vibrant bazaars filled with traditional jewelry, colorful textiles, handicrafts, and authentic Rajasthani souvenirs.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="text-xs bg-pink-50 text-pink-700 px-2 py-1 rounded-full">Johari Bazaar</span>
+                  <span className="text-xs bg-pink-50 text-pink-700 px-2 py-1 rounded-full">Bapu Bazaar</span>
+                  <span className="text-xs bg-pink-50 text-pink-700 px-2 py-1 rounded-full">Nehru Bazaar</span>
+                </div>
+                <Button size="sm" className="bg-pink-500 hover:bg-pink-600 text-white">
+                  Explore Markets
+                </Button>
+              </div>
             </Card>
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <ShoppingBag className="w-8 h-8 text-white" />
+
+            <Card className="group overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+              <div className="relative h-64">
+                <img 
+                  src={photoOpportunityImage} 
+                  alt="Photo Opportunities" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  style={{ 
+                    imageRendering: 'auto',
+                    filter: 'contrast(1.1) brightness(1.05)'
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                <div className="absolute top-4 right-4">
+                  <div className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    Photography
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Jaipur Markets</h3>
-              <p className="text-gray-600">Shop for traditional jewelry, textiles, and handicrafts in vibrant bazaars</p>
+              <div className="p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <Camera className="w-5 h-5 text-blue-500" />
+                  <h3 className="text-xl font-bold text-gray-800">Photo Opportunities</h3>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Capture stunning photos at iconic locations, royal gardens, and architectural marvels throughout the Pink City.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded-full">Royal Gardens</span>
+                  <span className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded-full">Architecture</span>
+                  <span className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded-full">Scenic Views</span>
+                </div>
+                <Button size="sm" className="bg-blue-500 hover:bg-blue-600 text-white">
+                  Best Photo Spots
+                </Button>
+              </div>
             </Card>
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Camera className="w-8 h-8 text-white" />
+
+            <Card className="group overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+              <div className="relative h-64 bg-gradient-to-br from-orange-100 to-pink-100 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Building2 className="w-10 h-10 text-white" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-800">Birla Mandir</h4>
+                </div>
+                <div className="absolute top-4 right-4">
+                  <div className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    Temple
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Photo Opportunities</h3>
-              <p className="text-gray-600">Capture stunning photos at iconic locations throughout the Pink City</p>
+              <div className="p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <Building2 className="w-5 h-5 text-orange-500" />
+                  <h3 className="text-xl font-bold text-gray-800">Birla Mandir</h3>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Beautiful white marble temple dedicated to Lord Vishnu and Goddess Laxmi, offering spiritual tranquility and architectural beauty.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="text-xs bg-orange-50 text-orange-700 px-2 py-1 rounded-full">White Marble</span>
+                  <span className="text-xs bg-orange-50 text-orange-700 px-2 py-1 rounded-full">Spiritual</span>
+                  <span className="text-xs bg-orange-50 text-orange-700 px-2 py-1 rounded-full">Architecture</span>
+                </div>
+                <Button size="sm" className="bg-orange-500 hover:bg-orange-600 text-white">
+                  Visit Temple
+                </Button>
+              </div>
             </Card>
           </div>
         </div>
