@@ -14,7 +14,9 @@ import {
   Calendar,
   CreditCard,
   Navigation,
-  Award
+  Award,
+  Mail,
+  Globe
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { useCommunication } from "../components/communication-utils";
@@ -128,6 +130,16 @@ export default function JaipurTaxi() {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-orange-600 via-pink-600 to-purple-800 text-white py-24 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/attached_assets/image_1752329903571.png" 
+            alt="Hawa Mahal Jaipur Palace"
+            className="w-full h-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-orange-600/80 via-pink-600/80 to-purple-800/80"></div>
+        </div>
+        
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
@@ -616,6 +628,127 @@ export default function JaipurTaxi() {
           </div>
         </div>
       </section>
+
+      {/* Footer with Jal Mahal Image */}
+      <footer className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-16 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/attached_assets/image_1752329927206.png" 
+            alt="Jal Mahal Water Palace Jaipur"
+            className="w-full h-full object-cover opacity-40"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/85 via-blue-900/85 to-purple-900/85"></div>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {/* Company Info */}
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-yellow-300">Mukesh Tour & Travels</h3>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                Your trusted partner for exploring the magnificent Pink City of Jaipur. 
+                Experience royal heritage with our premium taxi services.
+              </p>
+              <div className="flex space-x-4">
+                <Button
+                  className="bg-green-600 hover:bg-green-700 text-white"
+                  onClick={() => whatsapp("खम्मा गणी सा! मुझे जयपुर टैक्सी की जानकारी चाहिए।")}
+                >
+                  <FaWhatsapp className="h-5 w-5" />
+                </Button>
+                <Button
+                  variant="outline"
+                  className="border-white text-white hover:bg-white hover:text-gray-900"
+                  onClick={() => phone()}
+                >
+                  <Phone className="h-5 w-5" />
+                </Button>
+              </div>
+            </div>
+
+            {/* Services */}
+            <div>
+              <h3 className="text-xl font-bold mb-6 text-orange-300">Our Services</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-center">
+                  <Car className="h-4 w-4 mr-3 text-yellow-400" />
+                  Local Jaipur City Tours
+                </li>
+                <li className="flex items-center">
+                  <MapPin className="h-4 w-4 mr-3 text-yellow-400" />
+                  Airport Transfers
+                </li>
+                <li className="flex items-center">
+                  <Navigation className="h-4 w-4 mr-3 text-yellow-400" />
+                  One-Way & Round-Trip
+                </li>
+                <li className="flex items-center">
+                  <Users className="h-4 w-4 mr-3 text-yellow-400" />
+                  Group Travel Packages
+                </li>
+                <li className="flex items-center">
+                  <Star className="h-4 w-4 mr-3 text-yellow-400" />
+                  Heritage Site Visits
+                </li>
+              </ul>
+            </div>
+
+            {/* Contact Info */}
+            <div>
+              <h3 className="text-xl font-bold mb-6 text-pink-300">Contact Information</h3>
+              <div className="space-y-4 text-gray-300">
+                <div className="flex items-center">
+                  <Phone className="h-5 w-5 mr-3 text-green-400" />
+                  <div>
+                    <p className="font-semibold">+91 7737017755</p>
+                    <p>+91 7014913953</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <FaWhatsapp className="h-5 w-5 mr-3 text-green-400" />
+                  <p>WhatsApp: 7737017755</p>
+                </div>
+                <div className="flex items-start">
+                  <Mail className="h-5 w-5 mr-3 text-blue-400 mt-0.5" />
+                  <p>mukeshtourandtravelsjaipur@gmail.com</p>
+                </div>
+                <div className="flex items-start">
+                  <MapPin className="h-5 w-5 mr-3 text-red-400 mt-0.5" />
+                  <p>Jaipur, Rajasthan, India</p>
+                </div>
+                <div className="flex items-start">
+                  <Globe className="h-5 w-5 mr-3 text-purple-400 mt-0.5" />
+                  <p>https://mukeshtourandtravels.com/</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Bar */}
+          <div className="border-t border-white/20 mt-12 pt-8 text-center">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <p className="text-gray-400 mb-4 md:mb-0">
+                © 2025 Mukesh Tour & Travels. Experience the Royal Heritage of Jaipur.
+              </p>
+              <div className="flex items-center space-x-4 text-sm text-gray-400">
+                <span className="flex items-center">
+                  <Shield className="h-4 w-4 mr-1 text-green-400" />
+                  Licensed & Insured
+                </span>
+                <span className="flex items-center">
+                  <Clock className="h-4 w-4 mr-1 text-yellow-400" />
+                  24/7 Service
+                </span>
+                <span className="flex items-center">
+                  <Star className="h-4 w-4 mr-1 text-orange-400" />
+                  5★ Rated
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
