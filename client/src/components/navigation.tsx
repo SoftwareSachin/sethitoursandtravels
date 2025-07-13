@@ -38,7 +38,7 @@ export default function Navigation() {
       {/* Main Navigation */}
       <div className="bg-gradient-to-b from-yellow-50 to-orange-50 border-b-2 border-pink-600">
         <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-          <div className="flex justify-between items-center h-16 sm:h-20">
+          <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
             {/* Left Navigation */}
             <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
               {navItems.slice(0, 3).map((item) => (

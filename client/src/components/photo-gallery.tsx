@@ -67,9 +67,9 @@ export default function PhotoGallery() {
   ];
 
   return (
-    <section id="gallery" className="py-20 bg-gradient-to-br from-orange-50 to-pink-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-16">
+    <section id="gallery" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-orange-50 to-pink-50">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="text-center mb-10 sm:mb-12 md:mb-16">
           <div className="inline-flex items-center bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Camera className="h-4 w-4 mr-2" />
             Authentic India Photography

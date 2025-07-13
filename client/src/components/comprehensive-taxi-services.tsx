@@ -91,18 +91,18 @@ export default function ComprehensiveTaxiServices() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="relative mb-8">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-transparent bg-gradient-to-r from-pink-600 via-purple-600 to-pink-800 bg-clip-text mb-6 tracking-wide" 
+    <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="relative mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-transparent bg-gradient-to-r from-pink-600 via-purple-600 to-pink-800 bg-clip-text mb-4 sm:mb-6 tracking-wide leading-tight" 
                 style={{ fontFamily: "'Cinzel', serif" }}>
               Get Affordable Taxi Services In Jaipur
             </h2>
             <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-500 to-pink-600 rounded-lg blur opacity-20 animate-pulse"></div>
           </div>
           <div className="relative">
-            <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium" 
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium px-2" 
                style={{ fontFamily: "'Crimson Text', serif" }}>
               As a passionate cab service provider, we can provide you with the best car rental services in Jaipur and across Rajasthan. 
               Choose from our comprehensive range of taxi services designed for every travel need and budget.
@@ -113,10 +113,10 @@ export default function ComprehensiveTaxiServices() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {taxiServices.map((service, index) => (
             <Card key={index} className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 group border-2 border-pink-200 hover:border-pink-400 overflow-hidden">
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-40 sm:h-48 md:h-52 overflow-hidden">
                 <img 
                   src={service.image} 
                   alt={service.title}

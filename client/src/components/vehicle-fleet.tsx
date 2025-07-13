@@ -67,18 +67,18 @@ export default function VehicleFleet() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="relative mb-8">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-transparent bg-gradient-to-r from-orange-600 via-amber-600 to-orange-800 bg-clip-text mb-6 tracking-wide" 
+    <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="relative mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-transparent bg-gradient-to-r from-orange-600 via-amber-600 to-orange-800 bg-clip-text mb-4 sm:mb-6 tracking-wide leading-tight" 
                 style={{ fontFamily: "'Cinzel', serif" }}>
               Our Premium Vehicle Fleet
             </h2>
             <div className="absolute -inset-1 bg-gradient-to-r from-orange-400 via-amber-500 to-orange-600 rounded-lg blur opacity-20 animate-pulse"></div>
           </div>
           <div className="relative">
-            <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium" 
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium px-2" 
                style={{ fontFamily: "'Crimson Text', serif" }}>
               Choose from our diverse range of meticulously maintained vehicles. From premium sedans to luxury coaches, 
               we have the perfect vehicle for every royal journey across the majestic landscapes of Rajasthan.
@@ -89,10 +89,10 @@ export default function VehicleFleet() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {vehicles.map((vehicle, index) => (
             <Card key={index} className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 group border-2 border-orange-200 hover:border-orange-400 overflow-hidden">
-              <div className="relative h-56 overflow-hidden">
+              <div className="relative h-48 sm:h-56 md:h-60 overflow-hidden">
                 <img 
                   src={vehicle.image}
                   alt={vehicle.name}

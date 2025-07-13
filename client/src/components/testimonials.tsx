@@ -54,9 +54,9 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-16">
+    <section className="py-12 sm:py-16 md:py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="text-center mb-10 sm:mb-12 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             Don't just take our word for it. Here's what our satisfied customers have to say about their experiences with Sethi Tour & Travels.

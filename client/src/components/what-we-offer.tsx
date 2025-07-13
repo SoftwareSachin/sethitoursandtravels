@@ -50,22 +50,22 @@ export default function WhatWeOffer() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+    <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
           <div className="relative mb-8">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-transparent bg-gradient-to-r from-purple-600 via-pink-600 to-purple-800 bg-clip-text mb-6 tracking-wide" 
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-transparent bg-gradient-to-r from-purple-600 via-pink-600 to-purple-800 bg-clip-text mb-4 sm:mb-6 tracking-wide leading-tight" 
                 style={{ fontFamily: "'Cinzel', serif" }}>
               What We Offer
             </h2>
             <div className="absolute -inset-1 bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600 rounded-lg blur opacity-20 animate-pulse"></div>
           </div>
           <div className="relative">
-            <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium mb-4" 
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium mb-3 sm:mb-4 px-2" 
                style={{ fontFamily: "'Crimson Text', serif" }}>
               Royal Taxi Services and Bespoke Tour Packages for Every Majestic Destination
             </p>
-            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed" 
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed px-2" 
                style={{ fontFamily: "'Crimson Text', serif" }}>
               Experience the grandeur of Rajasthan with our premium transportation and carefully curated cultural experiences
             </p>
@@ -75,11 +75,11 @@ export default function WhatWeOffer() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
           {offerings.map((offering, index) => (
             <Card key={index} className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 group border-2 border-purple-200 hover:border-purple-400 overflow-hidden">
               <div className={`h-2 bg-gradient-to-r ${offering.color}`}></div>
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
                 <div className="relative">
                   <div className={`absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br ${offering.bgColor} rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
                   <div className="relative z-10">
