@@ -19,7 +19,7 @@ import SafetyFeatures from "@/components/safety-features";
 import WhatWeOffer from "@/components/what-we-offer";
 import PhotoGallery from "@/components/photo-gallery";
 import Testimonials from "@/components/testimonials";
-import EnhancedArticles from "@/components/enhanced-articles";
+import LatestArticles from "@/components/latest-articles";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
 import WhatsAppButton from "@/components/whatsapp-button";
@@ -47,7 +47,7 @@ export default function Home() {
       <WhatWeOffer />
       <PhotoGallery />
       <Testimonials />
-      <EnhancedArticles />
+      <LatestArticles />
       <ContactSection />
       <Footer />
       <WhatsAppButton />
