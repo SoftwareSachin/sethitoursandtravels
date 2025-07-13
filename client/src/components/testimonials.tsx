@@ -1,5 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
+import image1 from "@assets/image_1752394391126.png";
+import image2 from "@assets/image_1752394415933.png";
+import image3 from "@assets/image_1752394440227.png";
+import image4 from "@assets/image_1752394455855.png";
+import image5 from "@assets/image_1752394475081.png";
+import image6 from "@assets/image_1752394495002.png";
 
 export default function Testimonials() {
   const testimonials = [
@@ -9,7 +15,8 @@ export default function Testimonials() {
       rating: 5,
       text: "Excellent service from Sethi Tour & Travels! The Golden Triangle tour was perfectly organized. Our driver Ramesh was very knowledgeable and punctual. Hotel arrangements were great and all attractions were covered. Highly recommended!",
       tour: "Golden Triangle Tour",
-      date: "November 2024"
+      date: "November 2024",
+      image: image1
     },
     {
       name: "Priya Sharma", 
@@ -17,7 +24,8 @@ export default function Testimonials() {
       rating: 5,
       text: "We booked a Rajasthan family tour and it exceeded our expectations. The vehicle was clean and comfortable, driver was professional, and the itinerary was well-planned. Kids enjoyed the desert safari in Jaisalmer. Will definitely book again!",
       tour: "Rajasthan Family Tour",
-      date: "October 2024"
+      date: "October 2024",
+      image: image2
     },
     {
       name: "Michael Johnson",
@@ -25,7 +33,8 @@ export default function Testimonials() {
       rating: 5,
       text: "As foreign tourists, we were concerned about language and cultural barriers. Sethi Tours made our Rajasthan trip seamless. Guide spoke excellent English, explained history beautifully, and took care of all arrangements. Wonderful experience!",
       tour: "Luxury Rajasthan Tour",
-      date: "September 2024"
+      date: "September 2024",
+      image: image3
     },
     {
       name: "Amit Patel",
@@ -33,7 +42,8 @@ export default function Testimonials() {
       rating: 5,
       text: "Booked last-minute taxi service for airport pickup. Driver arrived 15 minutes early, very courteous behavior, and clean AC car. Fair pricing and no hidden charges. This is how taxi service should be! Will use again for sure.",
       tour: "Airport Transfer",
-      date: "December 2024"
+      date: "December 2024",
+      image: image4
     },
     {
       name: "Sneha & Rohit",
@@ -41,7 +51,8 @@ export default function Testimonials() {
       rating: 5,
       text: "Our honeymoon trip to Udaipur was magical thanks to Sethi Tours. The romantic hotel, boat ride arrangements, special dinner setup - everything was perfect. They made our special moments even more memorable. Thank you!",
       tour: "Honeymoon Package",
-      date: "October 2024"
+      date: "October 2024",
+      image: image5
     },
     {
       name: "Dr. Suresh Gupta",
@@ -49,50 +60,82 @@ export default function Testimonials() {
       rating: 5,
       text: "Regular user of their local taxi service. Always on time, well-maintained vehicles, and reasonable rates. The drivers are trustworthy and know the city well. Great for medical practice emergency calls and family trips.",
       tour: "Local Taxi Service",
-      date: "Ongoing"
+      date: "Ongoing",
+      image: image6
     }
   ];
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="text-center mb-10 sm:mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+    <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-br from-gray-50 to-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6">
+            <Star className="h-8 w-8 text-primary" />
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            What Our Customers Say
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Don't just take our word for it. Here's what our satisfied customers have to say about their experiences with Sethi Tour & Travels.
           </p>
+          <div className="flex items-center justify-center mt-8 space-x-8">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-primary">1000+</div>
+              <div className="text-sm text-gray-600">Happy Customers</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-primary">4.9/5</div>
+              <div className="text-sm text-gray-600">Average Rating</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-primary">98%</div>
+              <div className="text-sm text-gray-600">Return Rate</div>
+            </div>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 relative">
-              <CardContent className="p-4 sm:p-6">
-                <div className="absolute top-3 sm:top-4 right-3 sm:right-4">
-                  <Quote className="h-6 w-6 sm:h-8 sm:w-8 text-primary/20" />
-                </div>
-                
-                <div className="flex items-center mb-3 sm:mb-4">
-                  <div className="flex">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-3 w-3 sm:h-4 sm:w-4 text-yellow-500 fill-current" />
-                    ))}
+            <Card key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0 overflow-hidden">
+              <CardContent className="p-0">
+                <div className="relative bg-gradient-to-br from-gray-50 to-gray-100 p-6 pb-4">
+                  <div className="absolute top-4 right-4">
+                    <Quote className="h-8 w-8 text-primary/20" />
                   </div>
-                  <span className="ml-2 text-xs sm:text-sm text-gray-600">({testimonial.rating}.0)</span>
+                  
+                  <div className="flex items-center mb-4">
+                    <div className="flex">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 text-yellow-500 fill-current" />
+                      ))}
+                    </div>
+                    <span className="ml-2 text-sm font-medium text-gray-700">({testimonial.rating}.0)</span>
+                  </div>
+                  
+                  <p className="text-gray-700 mb-6 leading-relaxed italic text-base line-clamp-4">
+                    "{testimonial.text}"
+                  </p>
                 </div>
                 
-                <p className="text-gray-700 mb-3 sm:mb-4 leading-relaxed italic text-sm sm:text-base">
-                  "{testimonial.text}"
-                </p>
-                
-                <div className="border-t pt-3 sm:pt-4">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h4 className="font-semibold text-gray-900 text-sm sm:text-base">{testimonial.name}</h4>
-                      <p className="text-xs sm:text-sm text-gray-600">{testimonial.location}</p>
+                <div className="p-6 pt-0">
+                  <div className="flex items-center space-x-4">
+                    <div className="relative">
+                      <img 
+                        src={testimonial.image} 
+                        alt={testimonial.name}
+                        className="w-16 h-16 rounded-full object-cover border-3 border-white shadow-lg"
+                      />
+                      <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                        <div className="w-3 h-3 bg-white rounded-full"></div>
+                      </div>
                     </div>
-                    <div className="text-right">
-                      <p className="text-xs sm:text-sm font-medium text-primary">{testimonial.tour}</p>
-                      <p className="text-xs text-gray-500">{testimonial.date}</p>
+                    <div className="flex-1">
+                      <h4 className="font-bold text-gray-900 text-lg">{testimonial.name}</h4>
+                      <p className="text-gray-600 text-sm">{testimonial.location}</p>
+                      <div className="flex items-center justify-between mt-2">
+                        <p className="text-primary font-semibold text-sm">{testimonial.tour}</p>
+                        <p className="text-gray-500 text-xs">{testimonial.date}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
