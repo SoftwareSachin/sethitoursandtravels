@@ -118,7 +118,6 @@ export default function LatestArticles() {
           </div>
           
           <div className="inline-flex items-center bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-full text-sm font-bold mb-6 shadow-lg">
-            <span className="mr-2">✨</span>
             यात्रा लेख और अंतर्दृष्टि | Travel Blog & Insights
           </div>
           
@@ -168,7 +167,7 @@ export default function LatestArticles() {
                   {article.trending && (
                     <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-bold flex items-center shadow-lg">
                       <TrendingUp className="h-3 w-3 mr-1" />
-                      🔥 Trending
+                      Trending
                     </span>
                   )}
                 </div>
