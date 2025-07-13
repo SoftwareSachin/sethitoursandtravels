@@ -241,9 +241,30 @@ export default function ComprehensivePackages() {
           </div>
         </div>
 
+        {/* Traditional Indian decorative pattern above cards */}
+        <div className="flex justify-center mb-12">
+          <div className="flex items-center space-x-4">
+            <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center">
+              <div className="w-4 h-4 bg-white rounded-full"></div>
+            </div>
+            <div className="w-32 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
+            <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full flex items-center justify-center relative">
+              <div className="w-6 h-6 bg-white rounded-full"></div>
+              <div className="absolute top-0 right-0 w-3 h-3 bg-orange-400 rounded-full"></div>
+            </div>
+            <div className="w-32 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full"></div>
+            <div className="w-8 h-8 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center">
+              <div className="w-4 h-4 bg-white rounded-full"></div>
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {allPackages.map((pkg, index) => (
-            <Card key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group transform hover:-translate-y-2 border-2 border-orange-100 hover:border-orange-300">
+            <Card key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group transform hover:-translate-y-2 border-2 border-orange-100 hover:border-orange-300 relative">
+              {/* Traditional Indian corner decorations */}
+              <div className="absolute -top-2 -left-2 w-6 h-6 bg-gradient-to-r from-orange-500 to-red-500 rounded-full border-2 border-white z-10"></div>
+              <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full border-2 border-white z-10"></div>
               <div className="relative overflow-hidden">
                 <img 
                   src={pkg.image}
@@ -256,13 +277,23 @@ export default function ComprehensivePackages() {
                 <div className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 opacity-20 rounded-br-full"></div>
                 <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-yellow-500 to-orange-500 opacity-20 rounded-bl-full"></div>
                 
+                {/* Duration badge with Indian styling */}
                 <div className="absolute top-4 left-4">
+                  <div className="bg-black/70 backdrop-blur-sm text-white px-4 py-2 rounded-lg text-sm font-medium shadow-lg border border-orange-300 flex items-center">
+                    <Clock className="h-4 w-4 mr-2" />
+                    {pkg.duration}
+                  </div>
+                </div>
+                
+                {/* Category badge with traditional styling */}
+                <div className="absolute top-4 right-4">
                   <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg border-2 border-white">
-                    {pkg.category}
+                    ⭐ {pkg.category}
                   </span>
                 </div>
                 
-                <div className="absolute top-4 right-4">
+                {/* Rating badge positioned below category */}
+                <div className="absolute top-16 right-4">
                   <div className="bg-white/95 backdrop-blur-sm rounded-full px-3 py-1 flex items-center shadow-lg border-2 border-orange-200">
                     <Star className="h-4 w-4 text-yellow-400 fill-yellow-400 mr-1" />
                     <span className="text-sm font-medium text-gray-900">{pkg.rating}</span>
@@ -270,8 +301,11 @@ export default function ComprehensivePackages() {
                 </div>
               </div>
               
-              <CardContent className="p-6">
-                <div className="mb-4">
+              <CardContent className="p-6 relative">
+                {/* Traditional Indian decorative border */}
+                <div className="absolute top-0 left-6 right-6 h-1 bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 rounded-full"></div>
+                
+                <div className="mb-4 pt-2">
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors duration-300" style={{ fontFamily: "'Crimson Text', serif" }}>
                     {pkg.name}
                   </h3>
@@ -281,18 +315,26 @@ export default function ComprehensivePackages() {
                   </div>
                 </div>
                 
-                {/* Pricing Section */}
-                <div className="mb-6">
+                {/* Pricing Section with Indian currency styling */}
+                <div className="mb-6 bg-gradient-to-r from-orange-50 to-red-50 p-4 rounded-lg border-2 border-orange-200">
                   <div className="flex items-baseline space-x-2 mb-2">
                     <span className="text-3xl font-bold text-blue-600">{pkg.price}</span>
                     <span className="text-lg text-gray-500 line-through">{pkg.originalPrice}</span>
                     <span className="text-sm text-gray-600">per person</span>
                   </div>
+                  <div className="text-sm text-green-600 font-medium">
+                    💰 Save {Math.round((1 - parseInt(pkg.price.replace(/[^\d]/g, '')) / parseInt(pkg.originalPrice.replace(/[^\d]/g, ''))) * 100)}%
+                  </div>
                 </div>
                 
-                {/* Package Includes */}
+                {/* Package Includes with Indian styling */}
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Package Includes:</h4>
+                  <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                    <div className="w-6 h-6 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mr-3 flex items-center justify-center">
+                      <Heart className="h-3 w-3 text-white" />
+                    </div>
+                    Package Includes:
+                  </h4>
                   <ul className="text-sm text-gray-600 space-y-2">
                     {pkg.inclusions.slice(0, 4).map((inclusion, i) => (
                       <li key={i} className="flex items-center">
@@ -303,12 +345,20 @@ export default function ComprehensivePackages() {
                   </ul>
                 </div>
                 
+                {/* Traditional Indian decorative separator */}
+                <div className="flex justify-center mb-6">
+                  <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
+                </div>
+                
                 <Button 
                   onClick={() => whatsapp(`Hello, I'm interested in the ${pkg.name} package. Could you provide more details about pricing and availability?`)}
-                  className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-medium py-3 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-medium py-3 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border-2 border-orange-300 relative overflow-hidden"
                 >
-                  <Calendar className="h-4 w-4 mr-2" />
-                  BOOK NOW
+                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 animate-pulse"></div>
+                  <div className="relative flex items-center justify-center">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    BOOK NOW
+                  </div>
                 </Button>
               </CardContent>
             </Card>
