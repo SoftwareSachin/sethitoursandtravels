@@ -18,7 +18,7 @@ export default function ServiceDetails() {
       ],
       vehicles: ["Maruti Swift Dzire", "Toyota Etios", "Honda City", "Hyundai Xcent"],
       pricing: "Starting from ₹12/km",
-      image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/attached_assets/image_1752396950527.png",
       rating: "4.8"
     },
     {
@@ -35,7 +35,7 @@ export default function ServiceDetails() {
       ],
       vehicles: ["Toyota Innova", "Mahindra Scorpio", "Maruti Ertiga", "Force Urbania"],
       pricing: "Starting from ₹10/km",
-      image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/attached_assets/image_1752396973984.png",
       rating: "4.9"
     },
     {
@@ -52,7 +52,7 @@ export default function ServiceDetails() {
       ],
       vehicles: ["Maruti Swift Dzire", "Toyota Innova", "Honda City", "Mahindra Scorpio"],
       pricing: "Fixed rates starting ₹800",
-      image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/attached_assets/image_1752397036190.png",
       rating: "4.9"
     }
   ];
