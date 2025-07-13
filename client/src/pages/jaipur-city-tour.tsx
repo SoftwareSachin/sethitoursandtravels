@@ -48,7 +48,7 @@ import birlaMandirImage from '@assets/image_1752343342879.png';
 
 export default function JaipurCityTour() {
   const { toast } = useToast();
-  const { phone } = useCommunication();
+  const { phone, whatsapp } = useCommunication();
   const [selectedVehicle, setSelectedVehicle] = useState<string>('');
   const [isPhoneDialogOpen, setIsPhoneDialogOpen] = useState(false);
 
@@ -199,7 +199,7 @@ export default function JaipurCityTour() {
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-orange-600 to-pink-600 hover:from-orange-700 hover:to-pink-700 text-white px-8 py-6 text-lg font-semibold rounded-full shadow-2xl transform transition-all duration-300 hover:scale-105 border-2 border-white/20"
-                onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => whatsapp("नमस्कार! मुझे जयपुर सिटी टूर बुक करना है। कृपया विस्तृत जानकारी और दरें भेजें।", 'rajasthani')}
               >
                 <Car className="mr-2 h-5 w-5" />
                 Book Your Tour Now
