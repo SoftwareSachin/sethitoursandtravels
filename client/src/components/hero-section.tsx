@@ -108,18 +108,18 @@ export default function HeroSection() {
           />
         </div>
         
-        {/* Main Heading */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-4 tracking-wider">
+        {/* Main Heading - Enhanced Mobile Responsiveness */}
+        <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white mb-3 xs:mb-4 tracking-wider leading-tight">
           RAJASTHAN
         </h1>
         
-        {/* Elegant Subtitle */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-italic text-secondary mb-6 sm:mb-8" style={{ fontFamily: 'serif' }}>
+        {/* Elegant Subtitle - Enhanced Mobile Responsiveness */}
+        <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-italic text-secondary mb-4 xs:mb-6 sm:mb-8 leading-tight" style={{ fontFamily: 'serif' }}>
           The Land of Kings
         </h2>
         
-        {/* Comprehensive Service Description */}
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed text-white">
+        {/* Comprehensive Service Description - Enhanced Mobile Responsiveness */}
+        <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl mb-4 xs:mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed text-white px-2 xs:px-4">
           Discover the royal grandeur of India's most magnificent state. Journey through ancient palaces of Jaipur, 
           serene lakes of Udaipur, golden dunes of Jaisalmer, and the majestic blue city of Jodhpur. From the 
           world-famous Taj Mahal to the iconic Hawa Mahal, experience India's rich heritage, vibrant traditions, 
@@ -159,23 +159,25 @@ export default function HeroSection() {
           </div>
         </div>
         
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8">
+        {/* Action Buttons - Enhanced Mobile Responsiveness */}
+        <div className="flex flex-col xs:flex-row gap-2 xs:gap-3 sm:gap-4 justify-center items-center mb-4 xs:mb-6 sm:mb-8 px-2 xs:px-4">
           <Button 
             onClick={() => whatsapp("मैं टूर बुक करना चाहता हूं। कृपया AC कार का रेट और पैकेज डिटेल्स दें।", 'rajasthani')}
             size="lg"
-            className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 w-full sm:w-auto"
+            className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 xs:px-6 sm:px-8 py-3 xs:py-3 sm:py-4 text-sm xs:text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 w-full xs:w-auto min-h-[48px]"
           >
-            <FaWhatsapp className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-            Book on WhatsApp
+            <FaWhatsapp className="mr-1 xs:mr-2 h-4 w-4 xs:h-4 xs:w-4 sm:h-5 sm:w-5" />
+            <span className="hidden xs:inline">Book on WhatsApp</span>
+            <span className="xs:hidden">WhatsApp</span>
           </Button>
           <Button 
             onClick={() => phone()}
             size="lg"
-            className="bg-secondary hover:bg-orange-600 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 w-full sm:w-auto"
+            className="bg-secondary hover:bg-orange-600 text-white px-4 xs:px-6 sm:px-8 py-3 xs:py-3 sm:py-4 text-sm xs:text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 w-full xs:w-auto min-h-[48px]"
           >
-            <Phone className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-            Call Now
+            <Phone className="mr-1 xs:mr-2 h-4 w-4 xs:h-4 xs:w-4 sm:h-5 sm:w-5" />
+            <span className="hidden xs:inline">Call Now</span>
+            <span className="xs:hidden">Call</span>
           </Button>
         </div>
         

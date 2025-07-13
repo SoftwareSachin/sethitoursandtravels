@@ -85,9 +85,9 @@ export default function Navigation() {
               ))}
             </div>
 
-            {/* Mobile Logo and Title */}
+            {/* Mobile Logo and Title - Enhanced Mobile Responsiveness */}
             <div className="lg:hidden flex items-center min-w-0 flex-1">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg overflow-hidden mr-2 sm:mr-3 bg-white shadow-lg border-2 border-orange-200 p-1 flex-shrink-0">
+              <div className="w-8 h-8 xs:w-10 xs:h-10 sm:w-12 sm:h-12 rounded-lg overflow-hidden mr-2 sm:mr-3 bg-white shadow-lg border-2 border-orange-200 p-0.5 sm:p-1 flex-shrink-0">
                 <img 
                   src={companyLogo} 
                   alt="Sethi Tour & Travels" 
@@ -95,29 +95,29 @@ export default function Navigation() {
                 />
               </div>
               <div className="min-w-0 flex-1">
-                <h1 className="text-sm sm:text-base font-bold text-transparent bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text truncate" style={{ fontFamily: "'Cinzel', serif", letterSpacing: '0.5px' }}>
+                <h1 className="text-xs xs:text-sm sm:text-base font-bold text-transparent bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text truncate leading-tight" style={{ fontFamily: "'Cinzel', serif", letterSpacing: '0.5px' }}>
                   Sethi Tour & Travels
                 </h1>
-                <p className="text-xs text-gray-600 truncate">Authentic India Tours</p>
+                <p className="text-xs xs:text-xs sm:text-xs text-gray-600 truncate leading-tight">India Tours</p>
               </div>
             </div>
 
 
 
 
-            <div className="md:hidden flex items-center space-x-4">
-              <a href="tel:9772021780" className="text-pink-600 font-semibold flex items-center">
-                <Phone className="w-4 h-4 mr-1" />
-                <span className="text-sm">Call</span>
+            <div className="lg:hidden flex items-center space-x-2 xs:space-x-3 sm:space-x-4">
+              <a href="tel:9772021780" className="text-pink-600 font-semibold flex items-center min-h-[44px] min-w-[44px] justify-center">
+                <Phone className="w-3 h-3 xs:w-4 xs:h-4 mr-0.5 xs:mr-1" />
+                <span className="text-xs xs:text-sm hidden xs:inline">Call</span>
               </a>
 
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="h-6 w-6" />
+              <Button variant="ghost" size="icon" className="lg:hidden min-h-[44px] min-w-[44px]">
+                <Menu className="h-5 w-5 xs:h-6 xs:w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[280px] sm:w-[320px]">
+            <SheetContent side="right" className="w-[260px] xs:w-[280px] sm:w-[320px]">
               <div className="flex flex-col space-y-6 mt-8">
                 <div className="flex items-center space-x-3 pb-4 border-b border-gray-200">
                   <div className="w-12 h-12 rounded-lg overflow-hidden bg-white shadow-lg border-2 border-orange-200 p-1">

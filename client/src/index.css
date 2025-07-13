@@ -61,10 +61,39 @@
     scroll-behavior: smooth;
   }
 
-  /* Mobile-friendly improvements */
+  /* Enhanced Mobile-friendly improvements */
   * {
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
+  }
+
+  /* Ultra-mobile (320px and up) */
+  @media (max-width: 480px) {
+    body {
+      font-size: 16px; /* Prevent zoom on iOS */
+    }
+    
+    /* Improve button touch targets for very small screens */
+    button, a, input, textarea, select {
+      min-height: 48px;
+      min-width: 48px;
+    }
+    
+    /* Ultra-responsive text sizing */
+    h1 { font-size: clamp(1.25rem, 6vw, 2.5rem); }
+    h2 { font-size: clamp(1.125rem, 5vw, 2rem); }
+    h3 { font-size: clamp(1rem, 4vw, 1.75rem); }
+    h4 { font-size: clamp(0.875rem, 3vw, 1.25rem); }
+    p { font-size: clamp(0.875rem, 3vw, 1rem); }
+    
+    /* Ultra-mobile spacing */
+    .container { padding-left: 0.75rem; padding-right: 0.75rem; }
+    
+    /* Single column for everything */
+    .grid { grid-template-columns: 1fr !important; }
+    
+    /* Compact padding */
+    section { padding-top: 2rem !important; padding-bottom: 2rem !important; }
   }
 
   @media (max-width: 768px) {
@@ -86,6 +115,14 @@
     
     /* Improve spacing */
     .container { padding-left: 1rem; padding-right: 1rem; }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    /* Tablet optimizations */
+    .grid-cols-1 { grid-template-columns: repeat(2, 1fr); }
+    .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-cols-3 { grid-template-columns: repeat(2, 1fr); }
+    .grid-cols-4 { grid-template-columns: repeat(3, 1fr); }
   }
 }
 
@@ -124,6 +161,112 @@
   @media (min-width: 1024px) {
     .mobile-grid {
       @apply grid-cols-3 gap-8;
+    }
+  }
+
+  /* Enhanced responsive breakpoints */
+  .xs-grid-1 { grid-template-columns: repeat(1, 1fr); }
+  .sm-grid-2 { grid-template-columns: repeat(1, 1fr); }
+  .md-grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .lg-grid-4 { grid-template-columns: repeat(3, 1fr); }
+  .xl-grid-5 { grid-template-columns: repeat(4, 1fr); }
+
+  @media (min-width: 640px) {
+    .sm-grid-2 { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 768px) {
+    .md-grid-3 { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    .lg-grid-4 { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  @media (min-width: 1280px) {
+    .xl-grid-5 { grid-template-columns: repeat(5, 1fr); }
+  }
+
+  /* Comprehensive Mobile Optimizations */
+  .mobile-responsive-section {
+    @apply py-8 px-3;
+  }
+
+  @media (min-width: 475px) {
+    .mobile-responsive-section {
+      @apply py-12 px-4;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .mobile-responsive-section {
+      @apply py-16 px-6;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .mobile-responsive-section {
+      @apply py-20 px-8;
+    }
+  }
+
+  /* Mobile-friendly text sizes */
+  .mobile-responsive-heading {
+    @apply text-xl;
+  }
+
+  @media (min-width: 475px) {
+    .mobile-responsive-heading {
+      @apply text-2xl;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .mobile-responsive-heading {
+      @apply text-3xl;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .mobile-responsive-heading {
+      @apply text-4xl;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .mobile-responsive-heading {
+      @apply text-5xl;
+    }
+  }
+
+  /* Mobile card optimizations */
+  .mobile-card {
+    @apply p-3 rounded-lg shadow-md;
+  }
+
+  @media (min-width: 475px) {
+    .mobile-card {
+      @apply p-4;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .mobile-card {
+      @apply p-6 rounded-xl shadow-lg;
+    }
+  }
+
+  /* Touch-friendly elements */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+    touch-action: manipulation;
+  }
+
+  @media (max-width: 475px) {
+    .touch-target {
+      min-height: 48px;
+      min-width: 48px;
     }
   }
   

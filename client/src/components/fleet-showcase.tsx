@@ -56,7 +56,7 @@ export default function FleetShowcase() {
   ];
 
   return (
-    <section id="fleet" className="py-20 bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50 relative overflow-hidden">
+    <section id="fleet" className="py-8 xs:py-12 sm:py-16 md:py-20 bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50 relative overflow-hidden">
       {/* Traditional Indian motifs background */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-full h-full" style={{
@@ -74,8 +74,8 @@ export default function FleetShowcase() {
       <div className="absolute top-0 left-0 w-full h-6 bg-gradient-to-r from-orange-600 via-red-600 via-yellow-600 to-orange-600"></div>
       <div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-r from-yellow-600 via-red-600 via-orange-600 to-yellow-600"></div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-16">
+      <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 relative">
+        <div className="text-center mb-8 xs:mb-12 sm:mb-16">
           {/* Royal elephant silhouette decoration */}
           <div className="flex justify-center mb-8">
             <div className="relative">
@@ -97,15 +97,15 @@ export default function FleetShowcase() {
             <Sparkles className="h-4 w-4 ml-2 animate-pulse" />
           </div>
 
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-transparent bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text mb-8" style={{ fontFamily: "'Cinzel', serif" }}>
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-transparent bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text mb-4 xs:mb-6 sm:mb-8" style={{ fontFamily: "'Cinzel', serif" }}>
             Our Royal Travel Fleet
           </h2>
           
-          <p className="text-xl sm:text-2xl text-gray-700 max-w-5xl mx-auto leading-relaxed font-medium mb-6" style={{ fontFamily: "'Crimson Text', serif" }}>
+          <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-gray-700 max-w-5xl mx-auto leading-relaxed font-medium mb-4 xs:mb-6 px-2 xs:px-0" style={{ fontFamily: "'Crimson Text', serif" }}>
             Discover the splendor of India in unparalleled comfort with our carefully curated royal vehicles. From intimate darshan of ancient temples to grand heritage palace tours, each chariot comes with professional drivers who are custodians of every hidden gem and historic tale along the sacred paths of Rajasthan.
           </p>
           
-          <p className="text-lg text-orange-600 font-semibold mb-8" style={{ fontFamily: "'Crimson Text', serif" }}>
+          <p className="text-sm xs:text-base sm:text-lg text-orange-600 font-semibold mb-6 xs:mb-8" style={{ fontFamily: "'Crimson Text', serif" }}>
             "आपकी यात्रा, हमारी परंपरा" - Your Journey, Our Tradition
           </p>
 
@@ -119,7 +119,7 @@ export default function FleetShowcase() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 xs:gap-4 sm:gap-6 lg:gap-8">
           {fleetVehicles.map((vehicle, index) => (
             <Card key={index} className="group overflow-hidden hover:shadow-2xl transition-all duration-500 bg-white border-4 border-yellow-400/40 hover:border-yellow-400/70 rounded-2xl relative">
               {/* Royal corner decorations */}

@@ -44,7 +44,7 @@ export default function ServiceCategories() {
   };
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50 relative overflow-hidden">
+    <section id="services" className="py-8 xs:py-12 sm:py-16 md:py-20 bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50 relative overflow-hidden">
       {/* Traditional Indian pattern background */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-full h-full" style={{
@@ -59,8 +59,8 @@ export default function ServiceCategories() {
       <div className="absolute top-0 left-0 w-full h-4 bg-gradient-to-r from-orange-600 via-red-600 to-yellow-600"></div>
       <div className="absolute bottom-0 left-0 w-full h-4 bg-gradient-to-r from-yellow-600 via-red-600 to-orange-600"></div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-16">
+      <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 relative">
+        <div className="text-center mb-8 xs:mb-12 sm:mb-16">
           {/* Royal crown decoration */}
           <div className="flex justify-center mb-8">
             <div className="relative">

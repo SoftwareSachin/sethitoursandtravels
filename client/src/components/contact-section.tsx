@@ -64,36 +64,36 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-16 sm:py-20 md:py-24 bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6">
-            <Phone className="h-8 w-8 text-primary" />
+    <section id="contact" className="py-8 xs:py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 xs:mb-12 sm:mb-16">
+          <div className="inline-flex items-center justify-center w-12 h-12 xs:w-16 xs:h-16 bg-primary/10 rounded-2xl mb-4 xs:mb-6">
+            <Phone className="h-6 w-6 xs:h-8 xs:w-8 text-primary" />
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">Contact Us</h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 xs:mb-6">Contact Us</h2>
+          <p className="text-base xs:text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-2 xs:px-0">
             Get in touch for all your travel and taxi service needs. We're here to help you plan your perfect journey.
           </p>
-          <div className="flex items-center justify-center mt-8 space-x-8">
+          <div className="flex items-center justify-center mt-6 xs:mt-8 space-x-4 xs:space-x-6 sm:space-x-8">
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary">24/7</div>
-              <div className="text-sm text-gray-600">Service Available</div>
+              <div className="text-lg xs:text-xl sm:text-2xl font-bold text-primary">24/7</div>
+              <div className="text-xs xs:text-sm text-gray-600">Service Available</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary">5min</div>
-              <div className="text-sm text-gray-600">Response Time</div>
+              <div className="text-lg xs:text-xl sm:text-2xl font-bold text-primary">5min</div>
+              <div className="text-xs xs:text-sm text-gray-600">Response Time</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary">100%</div>
-              <div className="text-sm text-gray-600">Support</div>
+              <div className="text-lg xs:text-xl sm:text-2xl font-bold text-primary">100%</div>
+              <div className="text-xs xs:text-sm text-gray-600">Support</div>
             </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 xs:gap-8 sm:gap-12">
+          <div className="space-y-4 xs:space-y-6 sm:space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-8">Get In Touch</h3>
+              <h3 className="text-xl xs:text-2xl font-bold text-gray-900 mb-4 xs:mb-6 sm:mb-8">Get In Touch</h3>
               
               <div className="space-y-6">
                 <div className="group p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
