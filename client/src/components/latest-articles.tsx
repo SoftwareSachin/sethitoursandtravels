@@ -97,69 +97,116 @@ export default function LatestArticles() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-gradient-to-br from-orange-50 via-yellow-50 to-red-50 relative overflow-hidden">
+      {/* Traditional Indian Pattern Background */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d97706' fill-opacity='0.3'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundSize: '60px 60px'
+        }} />
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <TrendingUp className="h-4 w-4 mr-2" />
-            Travel Blog & Insights
+          {/* Traditional Indian Border Design */}
+          <div className="inline-flex items-center justify-center mb-6">
+            <div className="h-1 w-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full" />
+            <div className="mx-4 p-4 bg-gradient-to-br from-orange-500 to-red-500 rounded-full">
+              <TrendingUp className="h-8 w-8 text-white" />
+            </div>
+            <div className="h-1 w-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          
+          <div className="inline-flex items-center bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-full text-sm font-bold mb-6 shadow-lg">
+            <span className="mr-2">✨</span>
+            यात्रा लेख और अंतर्दृष्टि | Travel Blog & Insights
+          </div>
+          
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent">
             Latest Travel Articles
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="text-2xl md:text-3xl font-bold text-orange-700 mb-4">
+            नवीनतम यात्रा लेख
+          </div>
+          
+          <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
             Stay updated with expert travel insights, destination guides, and insider tips from 
-            Rajasthan's most trusted travel service provider
+            Rajasthan's most trusted travel service provider. Discover the incredible heritage, 
+            culture, and beauty of India through our curated articles.
           </p>
+          
+          {/* Traditional Indian Decorative Elements */}
+          <div className="flex items-center justify-center mt-8 space-x-4">
+            <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
+            <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse" style={{animationDelay: '0.2s'}} />
+            <div className="w-4 h-4 bg-yellow-500 rounded-full animate-pulse" style={{animationDelay: '0.4s'}} />
+            <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse" style={{animationDelay: '0.6s'}} />
+            <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" style={{animationDelay: '0.8s'}} />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {articles.map((article, index) => (
-            <Card key={index} className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group transform hover:-translate-y-1 ${
-              article.featured ? 'ring-2 ring-primary/20' : ''
+            <Card key={index} className={`bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group transform hover:-translate-y-2 border-2 ${
+              article.featured ? 'border-orange-300 bg-gradient-to-b from-orange-50 to-white' : 'border-gray-100'
             }`}>
               <div className="relative">
+                {/* Traditional Indian Border Top */}
+                <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500" />
+                
                 <img 
                   src={article.image}
                   alt={article.title}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
-                <div className="absolute top-4 left-4 flex items-center space-x-2">
-                  <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-medium">
+                <div className="absolute top-6 left-4 flex items-center space-x-2">
+                  <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
                     {article.category}
                   </span>
                   {article.trending && (
-                    <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-medium flex items-center">
+                    <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-bold flex items-center shadow-lg">
                       <TrendingUp className="h-3 w-3 mr-1" />
-                      Trending
+                      🔥 Trending
                     </span>
                   )}
                 </div>
                 
                 {article.featured && (
-                  <div className="absolute top-4 right-4">
-                    <div className="bg-yellow-500 text-white p-2 rounded-full">
+                  <div className="absolute top-6 right-4">
+                    <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-white p-2 rounded-full shadow-lg">
                       <Star className="h-4 w-4 fill-current" />
                     </div>
                   </div>
                 )}
+                
+                {/* Traditional Indian Corner Decoration */}
+                <div className="absolute bottom-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity duration-300">
+                  <div className="w-8 h-8 border-2 border-orange-400 rounded-full flex items-center justify-center">
+                    <div className="w-4 h-4 bg-orange-400 rounded-full" />
+                  </div>
+                </div>
               </div>
               
-              <CardContent className="p-6">
-                <div className="flex items-center text-sm text-gray-500 mb-3 space-x-4">
-                  <div className="flex items-center">
-                    <Calendar className="h-4 w-4 mr-1" />
-                    {article.date}
+              <CardContent className="p-6 relative">
+                {/* Traditional Indian Pattern Background */}
+                <div className="absolute top-0 right-0 w-16 h-16 opacity-5">
+                  <div className="w-full h-full bg-gradient-to-br from-orange-400 to-red-400 rounded-bl-3xl" />
+                </div>
+                
+                <div className="flex items-center text-sm text-gray-600 mb-4 space-x-4">
+                  <div className="flex items-center bg-orange-50 px-3 py-1 rounded-full">
+                    <Calendar className="h-4 w-4 mr-1 text-orange-600" />
+                    <span className="font-medium">{article.date}</span>
                   </div>
-                  <div className="flex items-center">
-                    <Clock className="h-4 w-4 mr-1" />
-                    {article.readTime}
+                  <div className="flex items-center bg-red-50 px-3 py-1 rounded-full">
+                    <Clock className="h-4 w-4 mr-1 text-red-600" />
+                    <span className="font-medium">{article.readTime}</span>
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors cursor-pointer line-clamp-2">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors cursor-pointer line-clamp-2 leading-tight">
                   {article.title}
                 </h3>
                 
@@ -169,48 +216,47 @@ export default function LatestArticles() {
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {article.tags.map((tag, idx) => (
-                    <span key={idx} className="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-xs hover:bg-primary/10 hover:text-primary transition-colors cursor-pointer">
+                    <span key={idx} className="bg-gradient-to-r from-orange-100 to-red-100 text-orange-700 px-3 py-1 rounded-full text-xs font-medium hover:from-orange-200 hover:to-red-200 transition-all cursor-pointer border border-orange-200">
                       #{tag}
                     </span>
                   ))}
                 </div>
                 
-                <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                <div className="flex items-center justify-between text-sm text-gray-600 mb-4 bg-gradient-to-r from-orange-50 to-red-50 p-3 rounded-xl">
                   <div className="flex items-center space-x-4">
-                    <div className="flex items-center">
+                    <div className="flex items-center text-orange-600">
                       <Eye className="h-4 w-4 mr-1" />
-                      {article.views}
+                      <span className="font-medium">{article.views}</span>
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex items-center text-red-600">
                       <Heart className="h-4 w-4 mr-1" />
-                      {article.likes}
+                      <span className="font-medium">{article.likes}</span>
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex items-center text-yellow-600">
                       <MessageCircle className="h-4 w-4 mr-1" />
-                      {article.comments}
+                      <span className="font-medium">{article.comments}</span>
                     </div>
                   </div>
-                  <div className="flex items-center">
+                  <div className="flex items-center text-gray-700">
                     <User className="h-4 w-4 mr-1" />
-                    {article.author}
+                    <span className="font-medium">{article.author}</span>
                   </div>
                 </div>
                 
                 <div className="flex items-center justify-between">
                   <Button 
                     asChild
-                    variant="ghost" 
-                    className="text-primary hover:text-blue-700 p-0 h-auto group/btn"
+                    className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-4 py-2 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 group/btn"
                   >
                     <a href={`https://api.whatsapp.com/send?phone=919772021780&text=Hello%20I%20want%20to%20know%20more%20about%20${encodeURIComponent(article.title)}`}>
-                      <span className="mr-2">Continue Reading</span>
+                      <span className="mr-2">पढ़ना जारी रखें | Continue Reading</span>
                       <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform duration-200" />
                     </a>
                   </Button>
                   
                   <div className="flex items-center space-x-2">
-                    <Button variant="ghost" size="sm" className="p-2 hover:bg-gray-100">
-                      <Share2 className="h-4 w-4" />
+                    <Button variant="ghost" size="sm" className="p-2 hover:bg-orange-100 rounded-full">
+                      <Share2 className="h-4 w-4 text-orange-600" />
                     </Button>
                   </div>
                 </div>
@@ -220,39 +266,63 @@ export default function LatestArticles() {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="bg-white rounded-xl shadow-lg p-8 max-w-3xl mx-auto border border-gray-200">
-            <div className="flex items-center justify-center mb-6">
-              <div className="bg-primary/10 p-3 rounded-full">
-                <TrendingUp className="h-6 w-6 text-primary" />
-              </div>
+          <div className="bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 rounded-3xl shadow-2xl p-10 max-w-4xl mx-auto border-4 border-yellow-300 relative overflow-hidden">
+            {/* Traditional Indian Pattern Overlay */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute inset-0" style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.3'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm0 0c0 5.5 4.5 10 10 10s10-4.5 10-10-4.5-10-10-10-10 4.5-10 10z'/%3E%3C/g%3E%3C/svg%3E")`,
+                backgroundSize: '40px 40px'
+              }} />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Stay Updated with Travel Insights
-            </h3>
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              Get the latest travel tips, destination guides, seasonal offers, and exclusive insights 
-              from Rajasthan's premier travel experts. Join thousands of travelers who trust our expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                asChild
-                size="lg"
-                className="bg-primary hover:bg-blue-700 text-white px-8 py-3"
-              >
-                <a href="https://api.whatsapp.com/send?phone=919772021780&text=Hello%20I%20want%20to%20subscribe%20to%20travel%20updates%20and%20latest%20articles">
-                  Subscribe for Updates
-                </a>
-              </Button>
-              <Button 
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-3"
-              >
-                <a href="https://api.whatsapp.com/send?phone=919772021780&text=Hello%20I%20want%20to%20explore%20more%20travel%20articles%20and%20destination%20guides">
-                  Explore More Articles
-                </a>
-              </Button>
+            
+            <div className="relative z-10">
+              <div className="flex items-center justify-center mb-6">
+                <div className="bg-white/20 p-4 rounded-full">
+                  <TrendingUp className="h-8 w-8 text-white" />
+                </div>
+              </div>
+              
+              <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                Stay Updated with Travel Insights
+              </h3>
+              <div className="text-xl font-bold text-yellow-200 mb-6">
+                यात्रा अंतर्दृष्टि के साथ अपडेट रहें
+              </div>
+              
+              <p className="text-white/90 mb-8 leading-relaxed text-lg max-w-2xl mx-auto">
+                Get the latest travel tips, destination guides, seasonal offers, and exclusive insights 
+                from Rajasthan's premier travel experts. Join thousands of travelers who trust our expertise.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  asChild
+                  size="lg"
+                  className="bg-white text-orange-600 hover:bg-yellow-100 hover:text-red-600 px-8 py-4 text-lg font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  <a href="https://api.whatsapp.com/send?phone=919772021780&text=Hello%20I%20want%20to%20subscribe%20to%20travel%20updates%20and%20latest%20articles">
+                    📱 Subscribe for Updates
+                  </a>
+                </Button>
+                <Button 
+                  asChild
+                  size="lg"
+                  className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-4 text-lg font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  <a href="https://api.whatsapp.com/send?phone=919772021780&text=Hello%20I%20want%20to%20explore%20more%20travel%20articles%20and%20destination%20guides">
+                    📚 Explore More Articles
+                  </a>
+                </Button>
+              </div>
+              
+              {/* Traditional Indian Bottom Border */}
+              <div className="flex items-center justify-center mt-8 space-x-2">
+                <div className="w-3 h-3 bg-yellow-300 rounded-full animate-bounce" />
+                <div className="w-2 h-2 bg-white rounded-full animate-bounce" style={{animationDelay: '0.1s'}} />
+                <div className="w-3 h-3 bg-yellow-300 rounded-full animate-bounce" style={{animationDelay: '0.2s'}} />
+                <div className="w-2 h-2 bg-white rounded-full animate-bounce" style={{animationDelay: '0.3s'}} />
+                <div className="w-3 h-3 bg-yellow-300 rounded-full animate-bounce" style={{animationDelay: '0.4s'}} />
+              </div>
             </div>
           </div>
         </div>
