@@ -21,7 +21,7 @@ export default function FeaturedDestinations() {
               className="relative rounded-2xl shadow-2xl w-full transform group-hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute top-4 left-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-              🏛️ UNESCO Heritage
+              UNESCO Heritage
             </div>
           </div>
           <div>
@@ -34,9 +34,9 @@ export default function FeaturedDestinations() {
             </div>
             <p className="text-gray-700 text-lg lg:text-xl mb-8 leading-relaxed font-medium" 
                style={{ fontFamily: "'Crimson Text', serif" }}>
-              💎 Experience the eternal symbol of love - the magnificent Taj Mahal! Built by Emperor Shah Jahan for his beloved wife Mumtaz, 
+              Experience the eternal symbol of love - the magnificent Taj Mahal! Built by Emperor Shah Jahan for his beloved wife Mumtaz, 
               this ivory-white marble mausoleum changes colors throughout the day. Visit at sunrise for magical golden hues, 
-              explore Agra Fort's red sandstone architecture, and shop for authentic marble inlay work in local artisan workshops. ✨
+              explore Agra Fort's red sandstone architecture, and shop for authentic marble inlay work in local artisan workshops.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
@@ -44,7 +44,7 @@ export default function FeaturedDestinations() {
                 className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 <a href="https://api.whatsapp.com/send?phone=919772021780&text=नमस्ते! मुझे ताज महल आगरा टूर बुक करना है। कृपया रेट और डिटेल्स भेजें।">
-                  🎫 BOOK TAJ MAHAL TOUR
+                  BOOK TAJ MAHAL TOUR
                 </a>
               </Button>
               <Button 
@@ -72,13 +72,13 @@ export default function FeaturedDestinations() {
             </div>
             <p className="text-gray-700 text-lg lg:text-xl mb-8 leading-relaxed font-medium" 
                style={{ fontFamily: "'Crimson Text', serif" }}>
-              🌅 Discover the most romantic city in India! Udaipur's pristine lakes, magnificent palaces, and fairy-tale setting 
+              Discover the most romantic city in India! Udaipur's pristine lakes, magnificent palaces, and fairy-tale setting 
               make it perfect for couples and culture lovers. Take sunset boat rides on Lake Pichola, explore the massive City Palace complex, 
-              visit the famous Jag Mandir island palace, and enjoy traditional Rajasthani cultural performances in royal havelis. 💝
+              visit the famous Jag Mandir island palace, and enjoy traditional Rajasthani cultural performances in royal havelis.
             </p>
             <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 mb-8 border border-pink-200 shadow-lg">
               <h4 className="text-lg font-bold text-gray-800 mb-4 flex items-center" style={{ fontFamily: "'Cinzel', serif" }}>
-                <span className="text-pink-600">🏰</span> Royal Experience Includes:
+                Royal Experience Includes:
               </h4>
               <ul className="text-gray-700 space-y-3">
                 {features.map((feature, index) => (
@@ -95,7 +95,7 @@ export default function FeaturedDestinations() {
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 <a href="https://api.whatsapp.com/send?phone=919772021780&text=नमस्ते! मुझे उदयपुर लेक सिटी टूर चाहिए। कृपया पैकेज डिटेल्स दें।">
-                  🌊 BOOK UDAIPUR TOUR
+                  BOOK UDAIPUR TOUR
                 </a>
               </Button>
               <Button 
@@ -118,7 +118,7 @@ export default function FeaturedDestinations() {
               className="relative rounded-2xl shadow-2xl w-full transform group-hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-              🏰 Royal City
+              Royal City
             </div>
           </div>
         </div>

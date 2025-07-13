@@ -104,8 +104,8 @@ export default function DestinationHighlights() {
           <div className="relative">
             <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto px-4 leading-relaxed font-medium" 
                style={{ fontFamily: "'Crimson Text', serif" }}>
-              🏰 Discover the magnificent cities of Rajasthan, each with its unique character, history, and attractions. 
-              From royal palaces to desert adventures, create memories that last a lifetime. ✨
+              Discover the magnificent cities of Rajasthan, each with its unique character, history, and attractions. 
+              From royal palaces to desert adventures, create memories that last a lifetime.
             </p>
             <div className="mt-4 flex justify-center">
               <div className="h-1 w-24 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full"></div>
