@@ -381,11 +381,11 @@ export default function ContactSection() {
                     const whatsappUrl = `https://wa.me/917727021780?text=${encodeURIComponent(message)}`;
                     window.open(whatsappUrl, '_blank');
                   }}
-                  className="w-full h-14 bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg rounded-xl focus:outline-none focus:ring-4 focus:ring-orange-300 transition-all shadow-xl hover:shadow-2xl border-2 border-orange-800 hover:scale-105"
+                  className="w-full h-14 bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg rounded-xl focus:outline-none focus:ring-4 focus:ring-orange-300 transition-all shadow-xl hover:shadow-2xl border-2 border-orange-800 hover:scale-105 flex items-center justify-center"
                   style={{ fontFamily: "'Cinzel', serif" }}
                 >
-                  Send Message via WhatsApp | व्हाट्सऐप से संदेश भेजें
-                  <FaWhatsapp className="ml-2 h-6 w-6" />
+                  <FaWhatsapp className="mr-3 h-6 w-6 flex-shrink-0" />
+                  <span>Send Message via WhatsApp | व्हाट्सऐप से संदेश भेजें</span>
                 </button>
               </div>
               
