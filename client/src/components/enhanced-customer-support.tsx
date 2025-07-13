@@ -25,8 +25,8 @@ export default function EnhancedCustomerSupport() {
               nearby, ready to take you to your destination whenever you need.
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 sm:p-6 border border-white/20">
                 <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-4">
                   <Clock className="h-6 w-6 text-white" />
                 </div>
@@ -95,7 +95,7 @@ export default function EnhancedCustomerSupport() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="h-8 w-8 text-white" />

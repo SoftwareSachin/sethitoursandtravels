@@ -108,18 +108,18 @@ export default function HeroSection() {
           />
         </div>
         
-        {/* Main Heading - Enhanced Mobile Responsiveness */}
-        <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white mb-3 xs:mb-4 tracking-wider leading-tight">
+        {/* Main Heading - Fully Mobile Optimized */}
+        <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl font-bold text-white mb-2 xs:mb-3 sm:mb-4 tracking-wider leading-tight px-2">
           RAJASTHAN
         </h1>
         
-        {/* Elegant Subtitle - Enhanced Mobile Responsiveness */}
-        <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-italic text-secondary mb-4 xs:mb-6 sm:mb-8 leading-tight" style={{ fontFamily: 'serif' }}>
+        {/* Elegant Subtitle - Fully Mobile Optimized */}
+        <h2 className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-italic text-secondary mb-3 xs:mb-4 sm:mb-6 md:mb-8 leading-tight px-2" style={{ fontFamily: 'serif' }}>
           The Land of Kings
         </h2>
         
-        {/* Comprehensive Service Description - Enhanced Mobile Responsiveness */}
-        <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl mb-4 xs:mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed text-white px-2 xs:px-4">
+        {/* Service Description - Fully Mobile Optimized */}
+        <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-3 xs:mb-4 sm:mb-6 md:mb-8 max-w-4xl mx-auto leading-relaxed text-white px-3 xs:px-4 sm:px-6">
           Discover the royal grandeur of India's most magnificent state. Journey through ancient palaces of Jaipur, 
           serene lakes of Udaipur, golden dunes of Jaisalmer, and the majestic blue city of Jodhpur. From the 
           world-famous Taj Mahal to the iconic Hawa Mahal, experience India's rich heritage, vibrant traditions, 

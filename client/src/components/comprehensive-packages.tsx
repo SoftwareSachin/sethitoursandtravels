@@ -277,7 +277,7 @@ export default function ComprehensivePackages() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {allPackages.map((pkg, index) => (
             <Card key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group transform hover:-translate-y-2 border-2 border-gradient-to-r from-orange-200 to-pink-200 hover:from-orange-300 hover:to-pink-300 relative">
               {/* Enhanced Traditional Indian corner decorations */}

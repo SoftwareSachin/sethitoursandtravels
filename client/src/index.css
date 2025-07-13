@@ -67,11 +67,51 @@
     touch-action: manipulation;
   }
 
-  /* Ultra-mobile (320px and up) */
+  /* Mobile-first responsive improvements */
   @media (max-width: 480px) {
     body {
       font-size: 16px; /* Prevent zoom on iOS */
     }
+    
+    /* Ensure minimum touch target sizes */
+    button, a, input, select, textarea {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+
+  /* Enhanced touch-friendly interactions */
+  @media (max-width: 768px) {
+    /* Better spacing for touch devices */
+    .mobile-spacing > * + * {
+      margin-top: 1rem;
+    }
+    
+    /* Enhanced button sizes for mobile */
+    .mobile-btn {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      min-height: 48px;
+    }
+    
+    /* Better text readability on mobile */
+    .mobile-text {
+      line-height: 1.6;
+      letter-spacing: 0.025em;
+    }
+  }
+
+  /* Ultra-small screens (320px - 374px) */
+  @media (max-width: 374px) {
+    html {
+      font-size: 14px;
+    }
+    
+    .container {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+  }
     
     /* Improve button touch targets for very small screens */
     button, a, input, textarea, select {
@@ -124,7 +164,6 @@
     .grid-cols-3 { grid-template-columns: repeat(2, 1fr); }
     .grid-cols-4 { grid-template-columns: repeat(3, 1fr); }
   }
-}
 
 @layer components {
   .hero-gradient {

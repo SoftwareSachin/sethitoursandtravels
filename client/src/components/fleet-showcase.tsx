@@ -119,7 +119,7 @@ export default function FleetShowcase() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 xs:gap-4 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {fleetVehicles.map((vehicle, index) => (
             <Card key={index} className="group overflow-hidden hover:shadow-2xl transition-all duration-500 bg-white border-4 border-yellow-400/40 hover:border-yellow-400/70 rounded-2xl relative">
               {/* Royal corner decorations */}
