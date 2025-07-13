@@ -91,18 +91,18 @@ export default function ComprehensiveTaxiServices() {
   ];
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50">
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-16">
+    <section className="py-8 xs:py-12 sm:py-16 md:py-20 bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50">
+      <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 xs:mb-12 sm:mb-16">
           <div className="relative mb-6 sm:mb-8">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-transparent bg-gradient-to-r from-pink-600 via-purple-600 to-pink-800 bg-clip-text mb-4 sm:mb-6 tracking-wide leading-tight" 
+            <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-transparent bg-gradient-to-r from-pink-600 via-purple-600 to-pink-800 bg-clip-text mb-3 xs:mb-4 sm:mb-6 tracking-wide leading-tight px-2 xs:px-0" 
                 style={{ fontFamily: "'Cinzel', serif" }}>
               Get Affordable Taxi Services In Jaipur
             </h2>
             <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-500 to-pink-600 rounded-lg blur opacity-20 animate-pulse"></div>
           </div>
           <div className="relative">
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium px-2" 
+            <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium px-3 xs:px-2" 
                style={{ fontFamily: "'Crimson Text', serif" }}>
               As a passionate cab service provider, we can provide you with the best car rental services in Jaipur and across Rajasthan. 
               Choose from our comprehensive range of taxi services designed for every travel need and budget.

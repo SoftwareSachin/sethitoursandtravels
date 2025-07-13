@@ -67,9 +67,9 @@ export default function VehicleFleet() {
   ];
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50">
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-16">
+    <section className="py-8 xs:py-12 sm:py-16 md:py-20 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50">
+      <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 xs:mb-12 sm:mb-16">
           <div className="relative mb-6 sm:mb-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-transparent bg-gradient-to-r from-orange-600 via-amber-600 to-orange-800 bg-clip-text mb-4 sm:mb-6 tracking-wide leading-tight" 
                 style={{ fontFamily: "'Cinzel', serif" }}>

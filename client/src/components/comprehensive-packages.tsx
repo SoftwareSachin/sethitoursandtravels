@@ -178,7 +178,7 @@ export default function ComprehensivePackages() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-br from-orange-50 via-pink-50 to-rose-50 relative overflow-hidden">
+    <section className="py-8 xs:py-12 sm:py-16 md:py-20 bg-gradient-to-br from-orange-50 via-pink-50 to-rose-50 relative overflow-hidden">
       {/* Enhanced Traditional Indian patterns background */}
       <div className="absolute inset-0 opacity-8">
         <div className="absolute top-0 left-0 w-full h-full" style={{

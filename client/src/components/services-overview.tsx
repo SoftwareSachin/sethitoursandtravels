@@ -98,7 +98,7 @@ export default function ServicesOverview() {
   ];
 
   return (
-    <section id="services" className="py-24 bg-gradient-to-br from-orange-50 via-red-50 via-yellow-50 to-pink-50 relative overflow-hidden">
+    <section id="services" className="py-8 xs:py-12 sm:py-16 md:py-20 bg-gradient-to-br from-orange-50 via-red-50 via-yellow-50 to-pink-50 relative overflow-hidden">
       {/* Multi-state Traditional Pattern Background */}
       <div className="absolute inset-0 opacity-4">
         <div className="absolute top-0 left-0 w-full h-full" style={{
@@ -118,8 +118,8 @@ export default function ServicesOverview() {
       <div className="absolute top-0 left-0 w-full h-8 bg-gradient-to-r from-orange-600 via-red-600 via-yellow-600 via-green-600 via-blue-600 to-purple-600"></div>
       <div className="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-r from-purple-600 via-blue-600 via-green-600 via-yellow-600 via-red-600 to-orange-600"></div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-20">
+      <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 relative">
+        <div className="text-center mb-8 xs:mb-12 sm:mb-16 md:mb-20">
           {/* Royal Indian Crown with State Gems */}
           <div className="flex justify-center mb-8">
             <div className="relative">
@@ -193,7 +193,7 @@ export default function ServicesOverview() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-24">
+        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-6 sm:gap-8 md:gap-10 mb-12 xs:mb-16 sm:mb-20 md:mb-24">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             const stateColors = [

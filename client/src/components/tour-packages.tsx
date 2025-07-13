@@ -15,7 +15,7 @@ export default function TourPackages() {
 
   if (isLoading) {
     return (
-      <section id="packages" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50 relative overflow-hidden">
+      <section id="packages" className="py-8 xs:py-12 sm:py-16 md:py-20 bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Tour Packages</h2>
@@ -32,7 +32,7 @@ export default function TourPackages() {
   }
 
   return (
-    <section id="packages" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50 relative overflow-hidden">
+    <section id="packages" className="py-8 xs:py-12 sm:py-16 md:py-20 bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50 relative overflow-hidden">
       {/* Traditional Indian patterns background */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-full h-full" style={{
@@ -47,8 +47,8 @@ export default function TourPackages() {
       <div className="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500"></div>
       <div className="absolute bottom-0 left-0 w-full h-3 bg-gradient-to-r from-yellow-500 via-red-500 to-orange-500"></div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-12 sm:mb-16">
+      <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 relative">
+        <div className="text-center mb-8 xs:mb-12 sm:mb-16">
           {/* Traditional Indian decorative elements */}
           <div className="flex justify-center mb-8">
             <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>

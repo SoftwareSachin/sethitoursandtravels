@@ -97,7 +97,7 @@ export default function LatestArticles() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-orange-50 via-yellow-50 to-red-50 relative overflow-hidden">
+    <section className="py-8 xs:py-12 sm:py-16 md:py-20 bg-gradient-to-br from-orange-50 via-yellow-50 to-red-50 relative overflow-hidden">
       {/* Traditional Indian Pattern Background */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -106,8 +106,8 @@ export default function LatestArticles() {
         }} />
       </div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-16">
+      <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 relative">
+        <div className="text-center mb-8 xs:mb-12 sm:mb-16">
           {/* Traditional Indian Border Design */}
           <div className="inline-flex items-center justify-center mb-6">
             <div className="h-1 w-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full" />
@@ -121,14 +121,14 @@ export default function LatestArticles() {
             यात्रा लेख और अंतर्दृष्टि | Travel Blog & Insights
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 xs:mb-6 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent">
             Latest Travel Articles
           </h2>
-          <div className="text-2xl md:text-3xl font-bold text-orange-700 mb-4">
+          <div className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold text-orange-700 mb-3 xs:mb-4">
             नवीनतम यात्रा लेख
           </div>
           
-          <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-sm xs:text-base sm:text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed px-2 xs:px-0">
             Stay updated with expert travel insights, destination guides, and insider tips from 
             Rajasthan's most trusted travel service provider. Discover the incredible heritage, 
             culture, and beauty of India through our curated articles.
@@ -144,7 +144,7 @@ export default function LatestArticles() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-6 sm:gap-8">
           {articles.map((article, index) => (
             <Card key={index} className={`bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group transform hover:-translate-y-2 border-2 ${
               article.featured ? 'border-orange-300 bg-gradient-to-b from-orange-50 to-white' : 'border-gray-100'
