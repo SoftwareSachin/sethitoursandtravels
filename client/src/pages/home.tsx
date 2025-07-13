@@ -14,7 +14,7 @@ import ComprehensiveTaxiServices from "@/components/comprehensive-taxi-services"
 import ServiceDetails from "@/components/service-details";
 import VehicleFleet from "@/components/vehicle-fleet";
 import EnhancedCustomerSupport from "@/components/enhanced-customer-support";
-import UdaipurDetailedTour from "@/components/udaipur-detailed-tour";
+
 import SafetyFeatures from "@/components/safety-features";
 import WhatWeOffer from "@/components/what-we-offer";
 import PhotoGallery from "@/components/photo-gallery";
@@ -42,7 +42,7 @@ export default function Home() {
       <ServiceDetails />
       <VehicleFleet />
       <EnhancedCustomerSupport />
-      <UdaipurDetailedTour />
+
       <SafetyFeatures />
       <WhatWeOffer />
       <PhotoGallery />
