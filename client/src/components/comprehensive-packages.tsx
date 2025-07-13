@@ -272,62 +272,40 @@ export default function ComprehensivePackages() {
               
               <CardContent className="p-6">
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors duration-300" style={{ fontFamily: "'Crimson Text', serif" }}>
                     {pkg.name}
                   </h3>
                   <div className="flex items-center text-gray-600 mb-3">
-                    <Clock className="h-4 w-4 mr-2" />
-                    <span className="text-sm">{pkg.duration}</span>
-                  </div>
-                  <div className="flex items-start text-gray-600 mb-4">
-                    <MapPin className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">{pkg.destinations.join(" • ")}</span>
+                    <Users className="h-4 w-4 mr-2 text-orange-500" />
+                    <span className="text-sm font-medium">Destinations: {pkg.destinations.join(", ")}</span>
                   </div>
                 </div>
                 
-                <div className="mb-4">
-                  <h4 className="font-medium text-gray-900 mb-2 flex items-center">
-                    <Heart className="h-4 w-4 mr-2 text-red-500" />
-                    Package Highlights
-                  </h4>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    {pkg.highlights.slice(0, 4).map((highlight, i) => (
-                      <li key={i} className="flex items-center">
-                        <div className="w-1.5 h-1.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mr-2 flex-shrink-0"></div>
-                        {highlight}
-                      </li>
-                    ))}
-                  </ul>
+                {/* Pricing Section */}
+                <div className="mb-6">
+                  <div className="flex items-baseline space-x-2 mb-2">
+                    <span className="text-3xl font-bold text-blue-600">{pkg.price}</span>
+                    <span className="text-lg text-gray-500 line-through">{pkg.originalPrice}</span>
+                    <span className="text-sm text-gray-600">per person</span>
+                  </div>
                 </div>
                 
-                <div className="mb-4">
-                  <h4 className="font-medium text-gray-900 mb-2 flex items-center">
-                    <TrendingUp className="h-4 w-4 mr-2 text-green-500" />
-                    Package Inclusions
-                  </h4>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    {pkg.inclusions.slice(0, 3).map((inclusion, i) => (
+                {/* Package Includes */}
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-3">Package Includes:</h4>
+                  <ul className="text-sm text-gray-600 space-y-2">
+                    {pkg.inclusions.slice(0, 4).map((inclusion, i) => (
                       <li key={i} className="flex items-center">
-                        <div className="w-1.5 h-1.5 bg-gradient-to-r from-green-500 to-blue-500 rounded-full mr-2 flex-shrink-0"></div>
+                        <div className="w-2 h-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mr-3 flex-shrink-0"></div>
                         {inclusion}
                       </li>
                     ))}
                   </ul>
                 </div>
                 
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-2xl font-bold text-gray-900">{pkg.price}</span>
-                    <span className="text-sm text-gray-500 line-through">{pkg.originalPrice}</span>
-                  </div>
-                  <div className="text-sm text-green-600 font-medium">
-                    Save {Math.round((1 - parseInt(pkg.price.replace(/[^\d]/g, '')) / parseInt(pkg.originalPrice.replace(/[^\d]/g, ''))) * 100)}%
-                  </div>
-                </div>
-                
                 <Button 
                   onClick={() => whatsapp(`Hello, I'm interested in the ${pkg.name} package. Could you provide more details about pricing and availability?`)}
-                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium py-3 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-medium py-3 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   <Calendar className="h-4 w-4 mr-2" />
                   BOOK NOW
