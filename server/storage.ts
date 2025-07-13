@@ -40,8 +40,89 @@ export class MemStorage implements IStorage {
   }
 
   private initializeData() {
-    // Initialize empty tour packages array
-    const packages: InsertTourPackage[] = [];
+    // Initialize authentic India & Rajasthan tour packages
+    const packages: InsertTourPackage[] = [
+      {
+        name: "Golden Triangle Tour - Delhi • Agra • Jaipur",
+        description: "Classic India tour covering UNESCO World Heritage sites: Red Fort, Taj Mahal, Amber Fort, and Hawa Mahal. Perfect introduction to India's rich Mughal and Rajput heritage.",
+        image: "/attached_assets/image_1752355162127.png",
+        destination: "Delhi-Agra-Jaipur",
+        price: 18000,
+        duration: "6 Days / 5 Nights",
+        highlights: ["Taj Mahal Sunrise", "Red Fort Delhi", "Amber Fort Jaipur", "Hawa Mahal", "City Palace", "Local Markets"],
+        isActive: true
+      },
+      {
+        name: "Royal Rajasthan Heritage Tour",
+        description: "Experience the Land of Kings! Explore magnificent palaces of Jaipur & Udaipur, golden dunes of Jaisalmer, and blue city Jodhpur. Includes camel safari and cultural performances.",
+        image: "/attached_assets/image_1752355178625.png",
+        destination: "Rajasthan Circuit",
+        price: 28000,
+        duration: "10 Days / 9 Nights",
+        highlights: ["Jaipur Pink City", "Udaipur Lake Palace", "Jaisalmer Camel Safari", "Jodhpur Mehrangarh Fort", "Desert Camping", "Folk Performances"],
+        isActive: true
+      },
+      {
+        name: "Taj Mahal Same Day Tour by Car",
+        description: "Comfortable same-day Agra tour from Delhi. Visit the iconic Taj Mahal, Agra Fort, and Mehtab Bagh. Includes lunch and professional guide. Perfect for time-constrained travelers.",
+        image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        destination: "Agra from Delhi",
+        price: 8500,
+        duration: "1 Day (12 Hours)",
+        highlights: ["Taj Mahal Visit", "Agra Fort", "Mehtab Bagh Garden", "Local Marble Shopping", "Professional Guide", "AC Car"],
+        isActive: true
+      },
+      {
+        name: "Jaisalmer Desert Safari Package",
+        description: "Authentic desert experience in the Thar Desert! Camel safari, sand dunes, traditional Rajasthani dinner, folk music & dance under starlit sky. Stay in luxury desert camps.",
+        image: "/attached_assets/image_1752355204306.png",
+        destination: "Jaisalmer, Rajasthan",
+        price: 12000,
+        duration: "3 Days / 2 Nights",
+        highlights: ["Sam Sand Dunes", "Camel Safari", "Desert Camping", "Jaisalmer Fort", "Cultural Programs", "Traditional Meals"],
+        isActive: true
+      },
+      {
+        name: "Udaipur Lake City Romance Tour",
+        description: "Experience the Venice of East! Boat rides on Lake Pichola, City Palace complex, Jag Mandir island, sunset at Sajjangarh Palace. Perfect for couples and photographers.",
+        image: "/attached_assets/image_1752355235261.png",
+        destination: "Udaipur, Rajasthan",
+        price: 15000,
+        duration: "4 Days / 3 Nights",
+        highlights: ["Lake Pichola Boat Ride", "City Palace Museum", "Jag Mandir Island", "Saheliyon Ki Bari", "Bagore Ki Haveli", "Sunset Point"],
+        isActive: true
+      },
+      {
+        name: "Jaipur Pink City Exploration",
+        description: "Discover the Pink City's royal heritage! Amber Fort elephant ride, Hawa Mahal photography, City Palace museum, local bazaars for textiles, jewelry and handicrafts.",
+        image: "/attached_assets/image_1752355253209.png",
+        destination: "Jaipur, Rajasthan",
+        price: 9500,
+        duration: "2 Days / 1 Night",
+        highlights: ["Amber Fort", "Hawa Mahal", "City Palace", "Jantar Mantar", "Local Markets", "Traditional Lunch"],
+        isActive: true
+      },
+      {
+        name: "Ranthambore Wildlife Safari",
+        description: "Tiger safari in India's famous national park! Morning and evening game drives, wildlife photography, ancient Ranthambore Fort. Best chance to spot Royal Bengal Tigers.",
+        image: "/attached_assets/image_1752355272251.png",
+        destination: "Ranthambore, Rajasthan",
+        price: 14000,
+        duration: "3 Days / 2 Nights",
+        highlights: ["Tiger Safari", "Wildlife Photography", "Ranthambore Fort", "Nature Walks", "Luxury Resort Stay", "Professional Guide"],
+        isActive: true
+      },
+      {
+        name: "Jodhpur Blue City Adventure",
+        description: "Explore the Blue City's majestic Mehrangarh Fort, Jaswant Thada memorial, vibrant blue houses, spice markets, and authentic Rajasthani cuisine experiences.",
+        image: "/attached_assets/image_1752355302261.png",
+        destination: "Jodhpur, Rajasthan",
+        price: 11000,
+        duration: "3 Days / 2 Nights",
+        highlights: ["Mehrangarh Fort", "Jaswant Thada", "Blue City Walk", "Clock Tower Market", "Umaid Bhawan Palace", "Flying Fox Zipline"],
+        isActive: true
+      }
+    ];
 
     packages.forEach(pkg => this.createTourPackage(pkg));
 
