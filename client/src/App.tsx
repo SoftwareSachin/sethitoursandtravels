@@ -15,6 +15,7 @@ import UttarPradeshTaxiService from "@/pages/uttar-pradesh-taxi-service";
 import DelhiTaxiService from "@/pages/delhi-taxi-service";
 import CharDhamTaxiService from "@/pages/char-dham-taxi-service";
 import JaipurBikanerTaxi from "@/pages/jaipur-bikaner-taxi";
+import LoadingDemo from "@/pages/loading-demo";
 
 function Router() {
   return (
@@ -30,6 +31,7 @@ function Router() {
       <Route path="/taxi-services/delhi" component={DelhiTaxiService} />
       <Route path="/taxi-services/char-dham" component={CharDhamTaxiService} />
       <Route path="/taxi-services/rajasthan/jaipur-bikaner" component={JaipurBikanerTaxi} />
+      <Route path="/loading-demo" component={LoadingDemo} />
       <Route component={NotFound} />
     </Switch>
   );

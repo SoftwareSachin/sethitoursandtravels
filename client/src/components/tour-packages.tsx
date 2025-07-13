@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
+import { LoadingSpinner } from "@/components/ui/loading-spinner";
 import { useCommunication, CommunicationUtils } from "./communication-utils";
 import { MapPin, Clock, Star, Users, Calendar, Award, TrendingUp, Heart } from "lucide-react";
 import type { TourPackage } from "@shared/schema";
@@ -15,7 +15,7 @@ export default function TourPackages() {
 
   if (isLoading) {
     return (
-      <section id="packages" className="py-12 sm:py-16 md:py-20 bg-gray-50">
+      <section id="packages" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Tour Packages</h2>
@@ -23,18 +23,8 @@ export default function TourPackages() {
               Explore incredible destinations with our expertly crafted tour packages
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-            {Array.from({ length: 8 }).map((_, index) => (
-              <Card key={index}>
-                <Skeleton className="w-full h-36 sm:h-48" />
-                <CardContent className="p-4 sm:p-6">
-                  <Skeleton className="h-5 sm:h-6 w-3/4 mb-2" />
-                  <Skeleton className="h-4 w-full mb-2" />
-                  <Skeleton className="h-4 w-2/3 mb-4" />
-                  <Skeleton className="h-9 sm:h-10 w-full" />
-                </CardContent>
-              </Card>
-            ))}
+          <div className="flex justify-center items-center py-20">
+            <LoadingSpinner variant="text" text="Loading Tour Packages..." />
           </div>
         </div>
       </section>

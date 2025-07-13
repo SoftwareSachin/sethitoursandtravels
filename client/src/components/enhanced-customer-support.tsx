@@ -79,7 +79,7 @@ export default function EnhancedCustomerSupport() {
           
           <div className="text-center">
             <img 
-              src="/attached_assets/{3B95DF1D-9C4B-4127-AF6A-2B0A3C2B031F}_1752400080998.png"
+              src="/attached_assets/image_1752400302716.png"
               alt="24/7 Customer Support"
               className="rounded-xl shadow-lg mx-auto w-full max-w-md"
             />
