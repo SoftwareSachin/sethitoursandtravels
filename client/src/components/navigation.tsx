@@ -95,7 +95,9 @@ export default function Navigation() {
                 />
               </div>
               <div className="min-w-0 flex-1">
-                <h1 className="text-sm sm:text-base font-bold text-pink-600 truncate">Sethi Tour & Travels</h1>
+                <h1 className="text-sm sm:text-base font-bold text-transparent bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text truncate" style={{ fontFamily: "'Cinzel', serif", letterSpacing: '0.5px' }}>
+                  Sethi Tour & Travels
+                </h1>
                 <p className="text-xs text-gray-600 truncate">Authentic India Tours</p>
               </div>
             </div>
@@ -126,7 +128,9 @@ export default function Navigation() {
                     />
                   </div>
                   <div>
-                    <h1 className="text-lg font-bold text-pink-600">Sethi Tour & Travels</h1>
+                    <h1 className="text-lg font-bold text-transparent bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text" style={{ fontFamily: "'Cinzel', serif", letterSpacing: '0.5px' }}>
+                      Sethi Tour & Travels
+                    </h1>
                     <p className="text-xs text-gray-600">Authentic India Tours</p>
                   </div>
                 </div>
