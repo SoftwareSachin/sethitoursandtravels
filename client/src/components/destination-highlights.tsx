@@ -22,7 +22,7 @@ export default function DestinationHighlights() {
       name: "Udaipur - City of Lakes",
       duration: "2-3 Days", 
       rating: "4.9",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/attached_assets/image_1752391017047.png",
       highlights: [
         "City Palace overlooking Lake Pichola",
         "Jagdish Temple",
@@ -36,7 +36,7 @@ export default function DestinationHighlights() {
       name: "Jodhpur - The Blue City",
       duration: "1-2 Days",
       rating: "4.7",
-      image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/attached_assets/image_1752391043467.png",
       highlights: [
         "Mehrangarh Fort",
         "Jaswant Thada",
@@ -50,7 +50,7 @@ export default function DestinationHighlights() {
       name: "Jaisalmer - The Golden City",
       duration: "2-3 Days",
       rating: "4.8",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/attached_assets/image_1752391068010.png",
       highlights: [
         "Jaisalmer Fort (Living Fort)",
         "Patwon Ki Haveli",
@@ -64,7 +64,7 @@ export default function DestinationHighlights() {
       name: "Pushkar - Holy City",
       duration: "1 Day",
       rating: "4.6",
-      image: "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/attached_assets/image_1752391084564.png",
       highlights: [
         "Brahma Temple",
         "Pushkar Lake",
@@ -78,7 +78,7 @@ export default function DestinationHighlights() {
       name: "Mount Abu - Hill Station",
       duration: "2 Days",
       rating: "4.5",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/attached_assets/image_1752391115021.png",
       highlights: [
         "Dilwara Jain Temples",
         "Nakki Lake",
