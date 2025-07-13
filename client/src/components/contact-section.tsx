@@ -300,7 +300,7 @@ export default function ContactSection() {
             </div>
             
             <CardContent className="p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <Label htmlFor="name" className="block text-sm font-bold text-gray-800 mb-3" style={{ fontFamily: "'Cinzel', serif" }}>
@@ -325,67 +325,76 @@ export default function ContactSection() {
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => handleInputChange("phone", e.target.value)}
-                      placeholder="Enter your phone number"
-                      className="w-full h-12 border-2 border-gray-200 rounded-xl focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                      placeholder="Enter your phone number | अपना फोन नंबर दर्ज करें"
+                      className="w-full h-12 border-3 border-orange-300 rounded-xl focus:border-orange-600 focus:ring-2 focus:ring-orange-200 transition-all bg-amber-50"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <Label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-3">
-                    Service Required *
+                  <Label htmlFor="service" className="block text-sm font-bold text-gray-800 mb-3" style={{ fontFamily: "'Cinzel', serif" }}>
+                    Service Required | आवश्यक सेवा *
                   </Label>
                   <Select value={formData.service} onValueChange={(value) => handleInputChange("service", value)}>
-                    <SelectTrigger className="w-full h-12 border-2 border-gray-200 rounded-xl focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
-                      <SelectValue placeholder="Select a service" />
+                    <SelectTrigger className="w-full h-12 border-3 border-orange-300 rounded-xl focus:border-orange-600 focus:ring-2 focus:ring-orange-200 transition-all bg-amber-50">
+                      <SelectValue placeholder="Select a service | एक सेवा चुनें" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="taxi">Taxi Service</SelectItem>
-                      <SelectItem value="tour">Tour Package</SelectItem>
-                      <SelectItem value="outstation">Outstation Travel</SelectItem>
-                      <SelectItem value="airport">Airport Transfer</SelectItem>
-                      <SelectItem value="rental">Car Rental</SelectItem>
-                      <SelectItem value="wedding">Wedding Transportation</SelectItem>
+                      <SelectItem value="taxi">Taxi Service | टैक्सी सेवा</SelectItem>
+                      <SelectItem value="tour">Tour Package | टूर पैकेज</SelectItem>
+                      <SelectItem value="outstation">Outstation Travel | आउटस्टेशन यात्रा</SelectItem>
+                      <SelectItem value="airport">Airport Transfer | एयरपोर्ट ट्रांसफर</SelectItem>
+                      <SelectItem value="rental">Car Rental | कार किराया</SelectItem>
+                      <SelectItem value="wedding">Wedding Transportation | शादी परिवहन</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
 
                 <div>
-                  <Label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-3">
-                    Message *
+                  <Label htmlFor="message" className="block text-sm font-bold text-gray-800 mb-3" style={{ fontFamily: "'Cinzel', serif" }}>
+                    Message | संदेश *
                   </Label>
                   <Textarea
                     id="message"
                     rows={5}
                     value={formData.message}
                     onChange={(e) => handleInputChange("message", e.target.value)}
-                    placeholder="Tell us about your requirements, preferred dates, destinations, or any specific needs..."
-                    className="w-full border-2 border-gray-200 rounded-xl focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none"
+                    placeholder="Tell us about your requirements, preferred dates, destinations, or any specific needs... | अपनी आवश्यकताओं, पसंदीदा तारीखों, गंतव्यों या किसी विशिष्ट जरूरत के बारे में बताएं..."
+                    className="w-full border-3 border-orange-300 rounded-xl focus:border-orange-600 focus:ring-2 focus:ring-orange-200 transition-all resize-none bg-amber-50"
                   />
                 </div>
 
-                <Button 
-                  type="submit"
-                  disabled={mutation.isPending}
-                  className="w-full bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 text-white py-4 px-8 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                <button
+                  type="button"
+                  onClick={() => {
+                    const message = `नमस्कार सेठी टूर एंड ट्रेवल्स में आपका स्वागत है।
+
+नाम: ${formData.name}
+फोन: ${formData.phone}
+ईमेल: ${formData.email}
+सेवा: ${formData.service}
+
+संदेश: ${formData.message}
+
+कृपया जल्दी से जवाब दें। धन्यवाद!`;
+                    
+                    const whatsappUrl = `https://wa.me/917727021780?text=${encodeURIComponent(message)}`;
+                    window.open(whatsappUrl, '_blank');
+                  }}
+                  className="w-full h-14 bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg rounded-xl focus:outline-none focus:ring-4 focus:ring-orange-300 transition-all shadow-xl hover:shadow-2xl border-2 border-orange-800 hover:scale-105"
+                  style={{ fontFamily: "'Cinzel', serif" }}
                 >
-                  {mutation.isPending ? (
-                    <>
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      Send Message
-                      <Send className="ml-2 h-5 w-5" />
-                    </>
-                  )}
-                </Button>
-              </form>
+                  Send Message via WhatsApp | व्हाट्सऐप से संदेश भेजें
+                  <FaWhatsapp className="ml-2 h-6 w-6" />
+                </button>
+              </div>
               
-              <div className="mt-6 p-4 bg-gray-50 rounded-xl">
-                <p className="text-sm text-gray-600 text-center">
-                  <span className="font-semibold">Quick Response:</span> We typically respond within 5 minutes during business hours (9 AM - 9 PM IST)
+              <div className="mt-6 p-4 bg-orange-100 rounded-xl border-2 border-orange-300">
+                <p className="text-sm text-gray-700 text-center">
+                  <span className="font-bold">Quick Response | त्वरित उत्तर:</span> We typically respond within 5 minutes on WhatsApp (9 AM - 9 PM IST)
+                </p>
+                <p className="text-xs text-gray-600 text-center mt-1">
+                  व्हाट्सऐप पर हम आमतौर पर 5 मिनट में जवाब देते हैं
                 </p>
               </div>
             </CardContent>
