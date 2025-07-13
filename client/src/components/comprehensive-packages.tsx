@@ -178,20 +178,26 @@ export default function ComprehensivePackages() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50 relative overflow-hidden">
-      {/* Traditional Indian patterns background */}
-      <div className="absolute inset-0 opacity-10">
+    <section className="py-16 sm:py-20 bg-gradient-to-br from-orange-50 via-pink-50 to-rose-50 relative overflow-hidden">
+      {/* Enhanced Traditional Indian patterns background */}
+      <div className="absolute inset-0 opacity-8">
         <div className="absolute top-0 left-0 w-full h-full" style={{
-          backgroundImage: `radial-gradient(circle at 20% 20%, #f97316 3px, transparent 3px),
-                           radial-gradient(circle at 80% 80%, #dc2626 3px, transparent 3px),
-                           radial-gradient(circle at 60% 40%, #eab308 2px, transparent 2px)`,
-          backgroundSize: '100px 100px, 120px 120px, 80px 80px'
+          backgroundImage: `radial-gradient(circle at 15% 25%, #f97316 4px, transparent 4px),
+                           radial-gradient(circle at 85% 75%, #ec4899 4px, transparent 4px),
+                           radial-gradient(circle at 65% 35%, #dc2626 3px, transparent 3px),
+                           radial-gradient(circle at 35% 85%, #eab308 2px, transparent 2px)`,
+          backgroundSize: '120px 120px, 140px 140px, 100px 100px, 80px 80px'
         }}></div>
       </div>
       
-      {/* Traditional Indian border patterns */}
-      <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500"></div>
-      <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-yellow-500 via-red-500 to-orange-500"></div>
+      {/* Enhanced Traditional Indian border patterns */}
+      <div className="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-orange-500 via-pink-500 via-red-500 to-yellow-500 shadow-lg"></div>
+      <div className="absolute bottom-0 left-0 w-full h-3 bg-gradient-to-r from-yellow-500 via-red-500 via-pink-500 to-orange-500 shadow-lg"></div>
+      
+      {/* Additional decorative elements */}
+      <div className="absolute top-10 left-10 w-20 h-20 bg-gradient-to-r from-orange-400 to-pink-400 rounded-full opacity-20 animate-pulse"></div>
+      <div className="absolute top-20 right-20 w-16 h-16 bg-gradient-to-r from-pink-400 to-red-400 rounded-full opacity-20 animate-pulse" style={{animationDelay: '1s'}}></div>
+      <div className="absolute bottom-20 left-20 w-24 h-24 bg-gradient-to-r from-red-400 to-yellow-400 rounded-full opacity-20 animate-pulse" style={{animationDelay: '2s'}}></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
@@ -205,13 +211,15 @@ export default function ComprehensivePackages() {
             <div className="w-32 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full"></div>
           </div>
           
-          <div className="inline-flex items-center bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full text-lg font-bold mb-8 shadow-lg relative">
-            <div className="absolute -top-2 -left-2 w-6 h-6 bg-yellow-400 rounded-full border-2 border-white"></div>
-            <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full border-2 border-white"></div>
+          <div className="inline-flex items-center bg-gradient-to-r from-orange-500 via-pink-500 to-red-500 text-white px-8 py-4 rounded-full text-lg font-bold mb-8 shadow-lg relative animate-pulse">
+            <div className="absolute -top-2 -left-2 w-6 h-6 bg-yellow-400 rounded-full border-2 border-white animate-bounce"></div>
+            <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full border-2 border-white animate-bounce" style={{animationDelay: '0.5s'}}></div>
+            <div className="absolute -top-1 -right-1 w-4 h-4 bg-pink-300 rounded-full border border-white animate-ping"></div>
+            <Globe className="h-5 w-5 mr-2" />
             Complete Tour Package Collection
           </div>
           
-          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-transparent bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text mb-8 leading-tight" style={{ fontFamily: "'Cinzel', serif" }}>
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-transparent bg-gradient-to-r from-orange-600 via-pink-600 via-red-600 to-rose-600 bg-clip-text mb-8 leading-tight drop-shadow-lg" style={{ fontFamily: "'Cinzel', serif" }}>
             Complete Tour Packages
           </h2>
           
@@ -219,25 +227,35 @@ export default function ComprehensivePackages() {
             Choose from our carefully crafted tour packages designed to give you the best Rajasthan experience. All packages include accommodation, transportation, and guided tours.
           </p>
           
-          {/* Traditional Indian feature badges */}
+          {/* Enhanced Hindi/Rajasthani greeting */}
+          <div className="mb-8">
+            <p className="text-2xl font-bold text-transparent bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text mb-2" style={{ fontFamily: "'Cinzel', serif" }}>
+              🙏 राजस्थान में आपका स्वागत है! 🙏
+            </p>
+            <p className="text-lg text-gray-600 italic">
+              (Welcome to Rajasthan! Experience the royal heritage of the Land of Kings)
+            </p>
+          </div>
+          
+          {/* Enhanced Traditional Indian feature badges */}
           <div className="flex flex-wrap justify-center gap-6 mt-8">
-            <div className="flex items-center bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg border-2 border-orange-200 hover:border-orange-400 transition-all duration-300">
+            <div className="flex items-center bg-gradient-to-r from-orange-100 to-pink-100 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg border-2 border-orange-300 hover:border-orange-500 transition-all duration-300 transform hover:scale-105">
               <Award className="h-5 w-5 text-orange-600 mr-2" />
               <span className="text-sm font-medium text-gray-800">Authentic Experiences</span>
             </div>
-            <div className="flex items-center bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg border-2 border-red-200 hover:border-red-400 transition-all duration-300">
-              <Shield className="h-5 w-5 text-red-600 mr-2" />
+            <div className="flex items-center bg-gradient-to-r from-pink-100 to-red-100 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg border-2 border-pink-300 hover:border-pink-500 transition-all duration-300 transform hover:scale-105">
+              <Shield className="h-5 w-5 text-pink-600 mr-2" />
               <span className="text-sm font-medium text-gray-800">Trusted Service</span>
             </div>
-            <div className="flex items-center bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg border-2 border-yellow-200 hover:border-yellow-400 transition-all duration-300">
-              <Users className="h-5 w-5 text-yellow-600 mr-2" />
+            <div className="flex items-center bg-gradient-to-r from-red-100 to-yellow-100 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg border-2 border-red-300 hover:border-red-500 transition-all duration-300 transform hover:scale-105">
+              <Users className="h-5 w-5 text-red-600 mr-2" />
               <span className="text-sm font-medium text-gray-800">Expert Guides</span>
             </div>
           </div>
           
-          {/* Traditional Indian decorative border */}
+          {/* Enhanced Traditional Indian decorative border */}
           <div className="flex justify-center mt-8">
-            <div className="h-1 w-40 bg-gradient-to-r from-orange-500 to-red-600 rounded-full"></div>
+            <div className="h-1 w-40 bg-gradient-to-r from-orange-500 via-pink-500 to-red-600 rounded-full shadow-lg"></div>
           </div>
         </div>
 
@@ -261,10 +279,12 @@ export default function ComprehensivePackages() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {allPackages.map((pkg, index) => (
-            <Card key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group transform hover:-translate-y-2 border-2 border-orange-100 hover:border-orange-300 relative">
-              {/* Traditional Indian corner decorations */}
-              <div className="absolute -top-2 -left-2 w-6 h-6 bg-gradient-to-r from-orange-500 to-red-500 rounded-full border-2 border-white z-10"></div>
-              <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full border-2 border-white z-10"></div>
+            <Card key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group transform hover:-translate-y-2 border-2 border-gradient-to-r from-orange-200 to-pink-200 hover:from-orange-300 hover:to-pink-300 relative">
+              {/* Enhanced Traditional Indian corner decorations */}
+              <div className="absolute -top-2 -left-2 w-6 h-6 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full border-2 border-white z-10 animate-pulse"></div>
+              <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-pink-500 to-red-500 rounded-full border-2 border-white z-10 animate-pulse" style={{animationDelay: '0.5s'}}></div>
+              <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full border-2 border-white z-10"></div>
+              <div className="absolute -bottom-2 -right-2 w-4 h-4 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full border-2 border-white z-10"></div>
               <div className="relative overflow-hidden">
                 <img 
                   src={pkg.image}
@@ -273,9 +293,11 @@ export default function ComprehensivePackages() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
-                {/* Traditional Indian decorative corner */}
-                <div className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 opacity-20 rounded-br-full"></div>
-                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-yellow-500 to-orange-500 opacity-20 rounded-bl-full"></div>
+                {/* Enhanced Traditional Indian decorative corner */}
+                <div className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-orange-500 to-pink-500 opacity-25 rounded-br-full"></div>
+                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-pink-500 to-red-500 opacity-25 rounded-bl-full"></div>
+                <div className="absolute bottom-0 left-0 w-12 h-12 bg-gradient-to-tr from-red-500 to-yellow-500 opacity-20 rounded-tr-full"></div>
+                <div className="absolute bottom-0 right-0 w-12 h-12 bg-gradient-to-tl from-yellow-500 to-orange-500 opacity-20 rounded-tl-full"></div>
                 
                 {/* Duration badge with Indian styling */}
                 <div className="absolute top-4 left-4">
@@ -285,16 +307,16 @@ export default function ComprehensivePackages() {
                   </div>
                 </div>
                 
-                {/* Category badge with traditional styling */}
+                {/* Category badge with enhanced traditional styling */}
                 <div className="absolute top-4 right-4">
-                  <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg border-2 border-white">
+                  <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg border-2 border-white animate-pulse">
                     ⭐ {pkg.category}
                   </span>
                 </div>
                 
                 {/* Rating badge positioned below category */}
                 <div className="absolute top-16 right-4">
-                  <div className="bg-white/95 backdrop-blur-sm rounded-full px-3 py-1 flex items-center shadow-lg border-2 border-orange-200">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-full px-3 py-1 flex items-center shadow-lg border-2 border-pink-200">
                     <Star className="h-4 w-4 text-yellow-400 fill-yellow-400 mr-1" />
                     <span className="text-sm font-medium text-gray-900">{pkg.rating}</span>
                   </div>
@@ -302,8 +324,8 @@ export default function ComprehensivePackages() {
               </div>
               
               <CardContent className="p-6 relative">
-                {/* Traditional Indian decorative border */}
-                <div className="absolute top-0 left-6 right-6 h-1 bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 rounded-full"></div>
+                {/* Enhanced Traditional Indian decorative border */}
+                <div className="absolute top-0 left-6 right-6 h-1 bg-gradient-to-r from-orange-500 via-pink-500 via-red-500 to-yellow-500 rounded-full shadow-lg"></div>
                 
                 <div className="mb-4 pt-2">
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors duration-300" style={{ fontFamily: "'Crimson Text', serif" }}>
@@ -315,10 +337,10 @@ export default function ComprehensivePackages() {
                   </div>
                 </div>
                 
-                {/* Pricing Section with Indian currency styling */}
-                <div className="mb-6 bg-gradient-to-r from-orange-50 to-red-50 p-4 rounded-lg border-2 border-orange-200">
+                {/* Enhanced Pricing Section with Indian currency styling */}
+                <div className="mb-6 bg-gradient-to-r from-orange-50 via-pink-50 to-red-50 p-4 rounded-lg border-2 border-gradient-to-r from-orange-300 to-pink-300 shadow-lg">
                   <div className="flex items-baseline space-x-2 mb-2">
-                    <span className="text-3xl font-bold text-blue-600">{pkg.price}</span>
+                    <span className="text-3xl font-bold text-transparent bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text">{pkg.price}</span>
                     <span className="text-lg text-gray-500 line-through">{pkg.originalPrice}</span>
                     <span className="text-sm text-gray-600">per person</span>
                   </div>
@@ -327,10 +349,10 @@ export default function ComprehensivePackages() {
                   </div>
                 </div>
                 
-                {/* Package Includes with Indian styling */}
+                {/* Enhanced Package Includes with Indian styling */}
                 <div className="mb-6">
                   <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
-                    <div className="w-6 h-6 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mr-3 flex items-center justify-center">
+                    <div className="w-6 h-6 bg-gradient-to-r from-orange-500 via-pink-500 to-red-500 rounded-full mr-3 flex items-center justify-center">
                       <Heart className="h-3 w-3 text-white" />
                     </div>
                     Package Includes:
@@ -338,23 +360,23 @@ export default function ComprehensivePackages() {
                   <ul className="text-sm text-gray-600 space-y-2">
                     {pkg.inclusions.slice(0, 4).map((inclusion, i) => (
                       <li key={i} className="flex items-center">
-                        <div className="w-2 h-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mr-3 flex-shrink-0"></div>
+                        <div className="w-2 h-2 bg-gradient-to-r from-orange-500 via-pink-500 to-red-500 rounded-full mr-3 flex-shrink-0"></div>
                         {inclusion}
                       </li>
                     ))}
                   </ul>
                 </div>
                 
-                {/* Traditional Indian decorative separator */}
+                {/* Enhanced Traditional Indian decorative separator */}
                 <div className="flex justify-center mb-6">
-                  <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
+                  <div className="w-20 h-1 bg-gradient-to-r from-orange-500 via-pink-500 to-red-500 rounded-full shadow-lg"></div>
                 </div>
                 
                 <Button 
                   onClick={() => whatsapp(`Hello, I'm interested in the ${pkg.name} package. Could you provide more details about pricing and availability?`)}
-                  className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-medium py-3 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border-2 border-orange-300 relative overflow-hidden"
+                  className="w-full bg-gradient-to-r from-orange-500 via-pink-500 to-red-500 hover:from-orange-600 hover:via-pink-600 hover:to-red-600 text-white font-medium py-3 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border-2 border-pink-300 relative overflow-hidden"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 animate-pulse"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 via-pink-400/20 to-orange-400/20 animate-pulse"></div>
                   <div className="relative flex items-center justify-center">
                     <Calendar className="h-4 w-4 mr-2" />
                     BOOK NOW
