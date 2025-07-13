@@ -91,39 +91,53 @@ export default function DestinationHighlights() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Popular Rajasthan Destinations</h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-            Discover the magnificent cities of Rajasthan, each with its unique character, history, and attractions. 
-            From royal palaces to desert adventures, create memories that last a lifetime.
-          </p>
+          <div className="relative">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-transparent bg-gradient-to-r from-pink-600 via-purple-600 to-pink-800 bg-clip-text mb-6 tracking-wide" 
+                style={{ fontFamily: "'Cinzel', 'Playfair Display', serif" }}>
+              Popular Rajasthan Destinations
+            </h2>
+            <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-500 to-pink-600 rounded-lg blur opacity-20 animate-pulse"></div>
+          </div>
+          <div className="relative">
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto px-4 leading-relaxed font-medium" 
+               style={{ fontFamily: "'Crimson Text', serif" }}>
+              🏰 Discover the magnificent cities of Rajasthan, each with its unique character, history, and attractions. 
+              From royal palaces to desert adventures, create memories that last a lifetime. ✨
+            </p>
+            <div className="mt-4 flex justify-center">
+              <div className="h-1 w-24 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full"></div>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {destinations.map((destination, index) => (
-            <Card key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
+            <Card key={index} className="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group border-2 border-pink-100 hover:border-pink-300">
               <div className="relative overflow-hidden">
                 <img 
                   src={destination.image}
                   alt={destination.name}
-                  className="w-full h-40 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-40 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute top-3 sm:top-4 left-3 sm:left-4 flex gap-1 sm:gap-2">
-                  <span className="bg-primary text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium flex items-center">
+                  <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium flex items-center shadow-lg">
                     <Clock className="h-2 w-2 sm:h-3 sm:w-3 mr-1" />
                     {destination.duration}
                   </span>
-                  <span className="bg-yellow-500 text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium flex items-center">
+                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium flex items-center shadow-lg">
                     <Star className="h-2 w-2 sm:h-3 sm:w-3 mr-1" />
                     {destination.rating}
                   </span>
                 </div>
               </div>
               
-              <CardContent className="p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+              <CardContent className="p-4 sm:p-6 bg-gradient-to-br from-white to-pink-50/30">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-pink-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all duration-300" 
+                    style={{ fontFamily: "'Cinzel', serif" }}>
                   {destination.name}
                 </h3>
                 <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed">{destination.description}</p>
@@ -150,7 +164,7 @@ export default function DestinationHighlights() {
                 
                 <Button 
                   asChild
-                  className="w-full bg-primary hover:bg-blue-700 text-white group-hover:bg-secondary transition-colors"
+                  className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 >
                   <a href={`https://api.whatsapp.com/send?phone=919772021780&text=Hello%20I%20want%20to%20visit%20${encodeURIComponent(destination.name)}`}>
                     Plan Your Trip
