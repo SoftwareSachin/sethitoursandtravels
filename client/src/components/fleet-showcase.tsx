@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Users, Luggage, MapPin, Star } from "lucide-react";
+import { Users, Luggage, MapPin, Star, Crown, Award, Sparkles } from "lucide-react";
 import dzireImage from "@assets/image_1752328537540.png";
 import ertigaImage from "@assets/image_1752328561242.png";
 import innovaImage from "@assets/image_1752328589553.png";
@@ -56,150 +56,253 @@ export default function FleetShowcase() {
   ];
 
   return (
-    <section id="fleet" className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Travel Fleet</h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-            Discover India in comfort with our carefully selected vehicles. From intimate city tours to grand heritage journeys, 
-            each vehicle comes with professional drivers who know every hidden gem and historic tale along the way.
+    <section id="fleet" className="py-20 bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50 relative overflow-hidden">
+      {/* Traditional Indian motifs background */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-0 left-0 w-full h-full" style={{
+          backgroundImage: `
+            radial-gradient(circle at 15% 25%, #f97316 8px, transparent 8px),
+            radial-gradient(circle at 85% 75%, #dc2626 8px, transparent 8px),
+            radial-gradient(circle at 45% 55%, #eab308 6px, transparent 6px),
+            radial-gradient(circle at 75% 25%, #ec4899 6px, transparent 6px)
+          `,
+          backgroundSize: '180px 180px, 220px 220px, 140px 140px, 160px 160px'
+        }}></div>
+      </div>
+
+      {/* Royal decorative borders */}
+      <div className="absolute top-0 left-0 w-full h-6 bg-gradient-to-r from-orange-600 via-red-600 via-yellow-600 to-orange-600"></div>
+      <div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-r from-yellow-600 via-red-600 via-orange-600 to-yellow-600"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="text-center mb-16">
+          {/* Royal elephant silhouette decoration */}
+          <div className="flex justify-center mb-8">
+            <div className="relative">
+              <div className="w-24 h-24 bg-gradient-to-br from-orange-600 to-red-600 rounded-full flex items-center justify-center shadow-2xl border-4 border-yellow-400">
+                <Crown className="h-12 w-12 text-yellow-100" />
+              </div>
+              {/* Decorative gems around the crown */}
+              <div className="absolute -top-2 -right-2 w-6 h-6 bg-emerald-500 rounded-full border-2 border-white shadow-lg"></div>
+              <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-blue-500 rounded-full border-2 border-white shadow-lg"></div>
+              <div className="absolute -top-2 -left-2 w-6 h-6 bg-purple-500 rounded-full border-2 border-white shadow-lg"></div>
+              <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-pink-500 rounded-full border-2 border-white shadow-lg"></div>
+            </div>
+          </div>
+
+          {/* Royal badge with Hindi text */}
+          <div className="inline-flex items-center bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-full text-sm font-semibold mb-8 shadow-lg border-2 border-yellow-400">
+            <Sparkles className="h-4 w-4 mr-2 animate-pulse" />
+            <span>महाराज का वाहन संग्रह</span>
+            <Sparkles className="h-4 w-4 ml-2 animate-pulse" />
+          </div>
+
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-transparent bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text mb-8" style={{ fontFamily: "'Cinzel', serif" }}>
+            Our Royal Travel Fleet
+          </h2>
+          
+          <p className="text-xl sm:text-2xl text-gray-700 max-w-5xl mx-auto leading-relaxed font-medium mb-6" style={{ fontFamily: "'Crimson Text', serif" }}>
+            Discover the splendor of India in unparalleled comfort with our carefully curated royal vehicles. From intimate darshan of ancient temples to grand heritage palace tours, each chariot comes with professional drivers who are custodians of every hidden gem and historic tale along the sacred paths of Rajasthan.
           </p>
+          
+          <p className="text-lg text-orange-600 font-semibold mb-8" style={{ fontFamily: "'Crimson Text', serif" }}>
+            "आपकी यात्रा, हमारी परंपरा" - Your Journey, Our Tradition
+          </p>
+
+          {/* Decorative lotus elements */}
+          <div className="flex justify-center items-center space-x-6">
+            <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
+            <div className="w-4 h-4 bg-yellow-400 rounded-full border-2 border-orange-500 shadow-lg"></div>
+            <div className="w-6 h-6 bg-gradient-to-br from-orange-500 to-red-500 rounded-full border-2 border-yellow-400 shadow-lg"></div>
+            <div className="w-4 h-4 bg-yellow-400 rounded-full border-2 border-orange-500 shadow-lg"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full"></div>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {fleetVehicles.map((vehicle, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <Card key={index} className="group overflow-hidden hover:shadow-2xl transition-all duration-500 bg-white border-4 border-yellow-400/40 hover:border-yellow-400/70 rounded-2xl relative">
+              {/* Royal corner decorations */}
+              <div className="absolute top-0 left-0 w-8 h-8 bg-gradient-to-br from-orange-500 to-red-500 transform rotate-45 translate-x-[-50%] translate-y-[-50%] z-10 border-2 border-yellow-400"></div>
+              <div className="absolute top-0 right-0 w-8 h-8 bg-gradient-to-br from-red-500 to-orange-500 transform rotate-45 translate-x-[50%] translate-y-[-50%] z-10 border-2 border-yellow-400"></div>
+              
               <div className="relative">
                 <img 
                   src={vehicle.image} 
                   alt={vehicle.name}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <Badge className="absolute top-3 right-3 bg-secondary text-white">
-                  {vehicle.category}
-                </Badge>
-                <div className="absolute bottom-3 left-3 bg-white/90 rounded-lg px-2 py-1 flex items-center gap-1">
-                  <Star className="h-4 w-4 text-yellow-500 fill-current" />
-                  <span className="text-sm font-medium">{vehicle.rating}</span>
+                
+                {/* Royal gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                
+                {/* Category badge with royal styling */}
+                <div className="absolute top-4 right-4">
+                  <Badge className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-3 py-1 text-xs font-semibold uppercase tracking-wider shadow-lg border border-yellow-400">
+                    {vehicle.category}
+                  </Badge>
+                </div>
+                
+                {/* Royal rating with crown */}
+                <div className="absolute bottom-4 left-4 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full px-3 py-1 flex items-center gap-1 shadow-lg">
+                  <Crown className="h-3 w-3 text-gray-900" />
+                  <span className="text-xs font-bold text-gray-900">{vehicle.rating}</span>
+                </div>
+                
+                {/* Royal status badge */}
+                <div className="absolute top-4 left-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-2 py-1 rounded-full text-xs font-semibold shadow-lg border border-yellow-400">
+                  ROYAL
                 </div>
               </div>
               
-              <CardContent className="p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{vehicle.name}</h3>
+              <CardContent className="p-6 relative">
+                {/* Traditional border pattern */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500"></div>
                 
-                <div className="space-y-2 sm:space-y-3 mb-4">
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <Users className="h-4 w-4" />
-                    <span className="text-xs sm:text-sm">{vehicle.capacity}</span>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors duration-300" style={{ fontFamily: "'Cinzel', serif" }}>
+                  {vehicle.name}
+                </h3>
+                
+                <div className="space-y-3 mb-4">
+                  <div className="flex items-center gap-3 text-gray-700">
+                    <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center">
+                      <Users className="h-4 w-4 text-white" />
+                    </div>
+                    <span className="text-sm font-medium">{vehicle.capacity}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <Luggage className="h-4 w-4" />
-                    <span className="text-xs sm:text-sm">{vehicle.luggage}</span>
+                  <div className="flex items-center gap-3 text-gray-700">
+                    <div className="w-8 h-8 bg-gradient-to-br from-red-500 to-yellow-500 rounded-full flex items-center justify-center">
+                      <Luggage className="h-4 w-4 text-white" />
+                    </div>
+                    <span className="text-sm font-medium">{vehicle.luggage}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <MapPin className="h-4 w-4" />
-                    <span className="text-xs sm:text-sm">{vehicle.ideal}</span>
+                  <div className="flex items-center gap-3 text-gray-700">
+                    <div className="w-8 h-8 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center">
+                      <MapPin className="h-4 w-4 text-white" />
+                    </div>
+                    <span className="text-sm font-medium">{vehicle.ideal}</span>
                   </div>
                 </div>
 
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-1">
                     {vehicle.features.map((feature, idx) => (
-                      <Badge key={idx} variant="outline" className="text-xs">
+                      <Badge key={idx} variant="outline" className="text-xs bg-gradient-to-r from-orange-100 to-red-100 border-orange-300 text-orange-800">
                         {feature}
                       </Badge>
                     ))}
                   </div>
                 </div>
 
-                <div className="border-t pt-4">
-                  <div className="flex justify-between items-center mb-3">
-                    <span className="text-2xl font-bold text-secondary">₹{vehicle.pricePerKm}</span>
-                    <span className="text-sm text-gray-500">per km</span>
+                <div className="border-t-2 border-gradient-to-r from-orange-200 to-red-200 pt-4">
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="text-2xl font-bold text-transparent bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text">₹{vehicle.pricePerKm}</span>
+                    <span className="text-sm text-gray-500 font-medium">per km</span>
                   </div>
                   
                   <Button 
-                    className="w-full bg-secondary hover:bg-orange-600 text-white"
+                    className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105 border-2 border-yellow-400 hover:border-yellow-500"
                     asChild
                   >
                     <a href={`https://api.whatsapp.com/send?phone=919772021780&text=नमस्ते! मुझे ${vehicle.name} बुक करना है। कृपया रेट और उपलब्धता बताएं।`}>
-                      Book {vehicle.name}
+                      <Crown className="mr-2 h-4 w-4" />
+                      Book Royal {vehicle.category}
                     </a>
                   </Button>
                 </div>
               </CardContent>
+              
+              {/* Royal bottom border */}
+              <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500"></div>
             </Card>
           ))}
         </div>
 
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-primary to-secondary rounded-3xl p-10 shadow-2xl text-white relative overflow-hidden">
-            {/* Background Elements */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
+        <div className="text-center mt-20">
+          <div className="bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 rounded-3xl p-12 shadow-2xl text-white relative overflow-hidden border-4 border-yellow-400">
+            {/* Royal traditional patterns */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-0 left-0 w-full h-full" style={{
+                backgroundImage: `
+                  radial-gradient(circle at 20% 30%, #fbbf24 12px, transparent 12px),
+                  radial-gradient(circle at 80% 70%, #fbbf24 8px, transparent 8px),
+                  radial-gradient(circle at 50% 50%, #fbbf24 10px, transparent 10px)
+                `,
+                backgroundSize: '120px 120px, 150px 150px, 100px 100px'
+              }}></div>
+            </div>
+            
+            {/* Royal decorative corners */}
+            <div className="absolute top-0 left-0 w-16 h-16 bg-yellow-400 transform rotate-45 translate-x-[-50%] translate-y-[-50%] border-4 border-white"></div>
+            <div className="absolute top-0 right-0 w-16 h-16 bg-yellow-400 transform rotate-45 translate-x-[50%] translate-y-[-50%] border-4 border-white"></div>
+            <div className="absolute bottom-0 left-0 w-16 h-16 bg-yellow-400 transform rotate-45 translate-x-[-50%] translate-y-[50%] border-4 border-white"></div>
+            <div className="absolute bottom-0 right-0 w-16 h-16 bg-yellow-400 transform rotate-45 translate-x-[50%] translate-y-[50%] border-4 border-white"></div>
             
             <div className="relative z-10">
-              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full">
-                <Star className="h-4 w-4 text-white" />
-                <span className="text-white font-semibold text-sm uppercase tracking-wider">Premium Inclusions</span>
+              <div className="inline-flex items-center gap-2 mb-6 px-6 py-3 bg-yellow-400/20 backdrop-blur-sm rounded-full border-2 border-yellow-400">
+                <Crown className="h-5 w-5 text-yellow-400 animate-pulse" />
+                <span className="text-yellow-200 font-bold text-sm uppercase tracking-wider">राजसी समावेश</span>
+                <Crown className="h-5 w-5 text-yellow-400 animate-pulse" />
               </div>
               
-              <h3 className="text-3xl md:text-4xl font-bold mb-3">Every Journey Includes</h3>
-              <p className="text-blue-100 mb-10 max-w-2xl mx-auto text-lg">
-                Experience worry-free travel with our comprehensive service inclusions designed for your comfort and safety
+              <h3 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: "'Cinzel', serif" }}>
+                Every Royal Journey Includes
+              </h3>
+              <p className="text-yellow-100 mb-12 max-w-3xl mx-auto text-xl leading-relaxed" style={{ fontFamily: "'Crimson Text', serif" }}>
+                Experience worry-free travel with our comprehensive royal service inclusions designed for your utmost comfort, safety, and spiritual fulfillment
               </p>
               
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-10">
                 <div className="group">
-                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <Users className="h-8 w-8 text-white" />
+                  <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-2xl border-4 border-white">
+                    <Users className="h-9 w-9 text-gray-900" />
                   </div>
-                  <h4 className="font-bold text-lg mb-2">Expert Driver</h4>
-                  <p className="text-blue-100 text-sm leading-relaxed">Licensed & experienced drivers with local knowledge</p>
+                  <h4 className="font-bold text-xl mb-2 text-yellow-100" style={{ fontFamily: "'Cinzel', serif" }}>Royal Chauffeur</h4>
+                  <p className="text-yellow-200 text-sm leading-relaxed">Licensed & experienced drivers with heritage knowledge</p>
                 </div>
                 
                 <div className="group">
-                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <MapPin className="h-8 w-8 text-white" />
+                  <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-2xl border-4 border-white">
+                    <MapPin className="h-9 w-9 text-gray-900" />
                   </div>
-                  <h4 className="font-bold text-lg mb-2">GPS Tracking</h4>
-                  <p className="text-blue-100 text-sm leading-relaxed">Real-time navigation & route optimization</p>
+                  <h4 className="font-bold text-xl mb-2 text-yellow-100" style={{ fontFamily: "'Cinzel', serif" }}>Sacred Routes</h4>
+                  <p className="text-yellow-200 text-sm leading-relaxed">GPS tracking & spiritual route optimization</p>
                 </div>
                 
                 <div className="group">
-                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <Star className="h-8 w-8 text-white" />
+                  <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-2xl border-4 border-white">
+                    <Star className="h-9 w-9 text-gray-900" />
                   </div>
-                  <h4 className="font-bold text-lg mb-2">Full Insurance</h4>
-                  <p className="text-blue-100 text-sm leading-relaxed">Comprehensive coverage for complete peace of mind</p>
+                  <h4 className="font-bold text-xl mb-2 text-yellow-100" style={{ fontFamily: "'Cinzel', serif" }}>Royal Protection</h4>
+                  <p className="text-yellow-200 text-sm leading-relaxed">Comprehensive insurance for complete peace of mind</p>
                 </div>
                 
                 <div className="group">
-                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <Luggage className="h-8 w-8 text-white" />
+                  <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-2xl border-4 border-white">
+                    <Luggage className="h-9 w-9 text-gray-900" />
                   </div>
-                  <h4 className="font-bold text-lg mb-2">24/7 Support</h4>
-                  <p className="text-blue-100 text-sm leading-relaxed">Round-the-clock assistance & emergency help</p>
+                  <h4 className="font-bold text-xl mb-2 text-yellow-100" style={{ fontFamily: "'Cinzel', serif" }}>24/7 Seva</h4>
+                  <p className="text-yellow-200 text-sm leading-relaxed">Round-the-clock assistance & emergency support</p>
                 </div>
               </div>
               
-              <div className="mt-10 pt-8 border-t border-white/20">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                  <div>
-                    <div className="text-2xl font-bold text-white mb-1">AC</div>
-                    <div className="text-blue-100 text-sm">Climate Control</div>
+              <div className="mt-12 pt-8 border-t-2 border-yellow-400/50">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border-2 border-yellow-400/30">
+                    <div className="text-3xl font-bold text-yellow-400 mb-2">AC</div>
+                    <div className="text-yellow-200 text-sm font-medium">Royal Climate Control</div>
                   </div>
-                  <div>
-                    <div className="text-2xl font-bold text-white mb-1">Fuel</div>
-                    <div className="text-blue-100 text-sm">Included in Price</div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border-2 border-yellow-400/30">
+                    <div className="text-3xl font-bold text-yellow-400 mb-2">Fuel</div>
+                    <div className="text-yellow-200 text-sm font-medium">Included in Price</div>
                   </div>
-                  <div>
-                    <div className="text-2xl font-bold text-white mb-1">Tolls</div>
-                    <div className="text-blue-100 text-sm">No Extra Charges</div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border-2 border-yellow-400/30">
+                    <div className="text-3xl font-bold text-yellow-400 mb-2">Tolls</div>
+                    <div className="text-yellow-200 text-sm font-medium">No Extra Charges</div>
                   </div>
-                  <div>
-                    <div className="text-2xl font-bold text-white mb-1">Clean</div>
-                    <div className="text-blue-100 text-sm">Sanitized Daily</div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border-2 border-yellow-400/30">
+                    <div className="text-3xl font-bold text-yellow-400 mb-2">Pure</div>
+                    <div className="text-yellow-200 text-sm font-medium">Sanitized Daily</div>
                   </div>
                 </div>
               </div>
