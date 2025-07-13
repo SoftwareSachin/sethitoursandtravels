@@ -14,7 +14,7 @@ export default function LatestArticles() {
       likes: 89,
       readTime: "8 min read",
       excerpt: "Immerse yourself in the royal heritage of Rajasthan. From magnificent forts and palaces to vibrant culture and traditions, discover the complete essence of the Land of Kings with our comprehensive guide.",
-      image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/attached_assets/image_1752399677568.png",
       featured: true,
       trending: true,
       tags: ["Heritage", "Culture", "History", "Rajasthan"]
@@ -29,7 +29,7 @@ export default function LatestArticles() {
       likes: 67,
       readTime: "7 min read",
       excerpt: "Explore India's famous Golden Triangle covering Delhi, Agra, and Jaipur. Our detailed itinerary includes must-visit attractions, local experiences, and insider tips for the perfect journey.",
-      image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/attached_assets/image_1752399702306.png",
       featured: true,
       trending: false,
       tags: ["Golden Triangle", "Delhi", "Agra", "Jaipur"]
@@ -44,7 +44,7 @@ export default function LatestArticles() {
       likes: 45,
       readTime: "6 min read",
       excerpt: "Plan your Rajasthan trip with our comprehensive weather guide. Learn about the best months to visit, what to pack, and how to make the most of each season in the desert state.",
-      image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/attached_assets/image_1752399720430.png",
       featured: false,
       trending: true,
       tags: ["Weather", "Planning", "Tips"]
@@ -59,7 +59,7 @@ export default function LatestArticles() {
       likes: 112,
       readTime: "5 min read",
       excerpt: "Experience the magic of Thar Desert with our luxury desert safari packages. Camel rides, cultural performances, and starlit dinners await you in the golden city of Jaisalmer.",
-      image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/attached_assets/image_1752399738923.png",
       featured: true,
       trending: false,
       tags: ["Desert", "Adventure", "Jaisalmer"]
@@ -74,7 +74,7 @@ export default function LatestArticles() {
       likes: 78,
       readTime: "4 min read",
       excerpt: "Discover the romantic charm of Udaipur's Lake Palace. From boat rides on Lake Pichola to sunset views from City Palace, experience the Venice of the East in all its glory.",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/attached_assets/image_1752399758456.png",
       featured: false,
       trending: false,
       tags: ["Udaipur", "Romance", "Luxury"]
@@ -89,7 +89,7 @@ export default function LatestArticles() {
       likes: 34,
       readTime: "3 min read",
       excerpt: "Experience premium taxi services across Rajasthan with our fleet of well-maintained vehicles. From airport transfers to outstation trips, we ensure comfort and reliability.",
-      image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/attached_assets/image_1752399786989.png",
       featured: false,
       trending: false,
       tags: ["Taxi", "Service", "Rajasthan"]
