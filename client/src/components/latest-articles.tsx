@@ -300,7 +300,7 @@ export default function LatestArticles() {
                   className="bg-white text-orange-600 hover:bg-yellow-100 hover:text-red-600 px-8 py-4 text-lg font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 >
                   <a href="https://api.whatsapp.com/send?phone=919772021780&text=Hello%20I%20want%20to%20subscribe%20to%20travel%20updates%20and%20latest%20articles">
-                    📱 Subscribe for Updates
+                    Subscribe for Updates
                   </a>
                 </Button>
                 <Button 
@@ -309,7 +309,7 @@ export default function LatestArticles() {
                   className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-4 text-lg font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 >
                   <a href="https://api.whatsapp.com/send?phone=919772021780&text=Hello%20I%20want%20to%20explore%20more%20travel%20articles%20and%20destination%20guides">
-                    📚 Explore More Articles
+                    Explore More Articles
                   </a>
                 </Button>
               </div>
