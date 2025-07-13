@@ -22,7 +22,7 @@ import Testimonials from "@/components/testimonials";
 import LatestArticles from "@/components/latest-articles";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
-import WhatsAppButton from "@/components/whatsapp-button";
+import HomeFloatingButtons from "@/components/home-floating-buttons";
 
 export default function Home() {
   return (
@@ -50,7 +50,7 @@ export default function Home() {
       <LatestArticles />
       <ContactSection />
       <Footer />
-      <WhatsAppButton />
+      <HomeFloatingButtons />
     </div>
   );
 }
