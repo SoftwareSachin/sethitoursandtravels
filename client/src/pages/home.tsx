@@ -9,7 +9,7 @@ import ComprehensivePackages from "@/components/comprehensive-packages";
 import PricingPackages from "@/components/pricing-packages";
 import DestinationHighlights from "@/components/destination-highlights";
 import FeaturedDestinations from "@/components/featured-destinations";
-import DetailedAgraTour from "@/components/detailed-agra-tour";
+
 import ComprehensiveTaxiServices from "@/components/comprehensive-taxi-services";
 import ServiceDetails from "@/components/service-details";
 import VehicleFleet from "@/components/vehicle-fleet";
@@ -38,7 +38,6 @@ export default function Home() {
       <PricingPackages />
       <DestinationHighlights />
       <FeaturedDestinations />
-      <DetailedAgraTour />
       <ComprehensiveTaxiServices />
       <ServiceDetails />
       <VehicleFleet />
