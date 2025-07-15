@@ -101,7 +101,7 @@ export default function JaipurBikanerTaxi() {
       </div>
 
       {/* Hero Section */}
-      <div className="relative py-20 overflow-hidden">
+      <div className="relative py-20 overflow-hidden pt-24 sm:pt-28 lg:pt-32">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 

@@ -139,7 +139,7 @@ export default function JaipurCityTour() {
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-pink-50">
       {/* Hero Section */}
       <div 
-        className="relative min-h-screen bg-cover bg-center bg-no-repeat"
+        className="relative min-h-screen bg-cover bg-center bg-no-repeat pt-24 sm:pt-28 lg:pt-32"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${heroImage})`
         }}

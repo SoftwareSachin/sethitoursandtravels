@@ -58,7 +58,7 @@ export default function HeroSection() {
   }, [backgroundImages.length]);
 
   return (
-    <section id="home" className="hero-section relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-16 sm:pt-20">
+    <section id="home" className="hero-section relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-24 sm:pt-28 lg:pt-32">
       {/* Dynamic Background Images */}
       {backgroundImages.map((image, index) => (
         <div

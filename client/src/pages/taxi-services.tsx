@@ -61,7 +61,7 @@ export default function TaxiServices() {
       <Navigation />
       
       {/* Hero Section with Hawa Mahal Background */}
-      <div className="relative min-h-[80vh] flex items-center justify-center text-white overflow-hidden">
+      <div className="relative min-h-[80vh] flex items-center justify-center text-white overflow-hidden pt-24 sm:pt-28 lg:pt-32">
         <div 
           className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
           style={{ 

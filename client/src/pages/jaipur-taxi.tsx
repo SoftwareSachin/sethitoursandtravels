@@ -249,7 +249,7 @@ export default function JaipurTaxi() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-orange-600 via-pink-600 to-purple-800 text-white py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-orange-600 via-pink-600 to-purple-800 text-white py-24 overflow-hidden pt-24 sm:pt-28 lg:pt-32">
         {/* Sliding Background Images */}
         <div className="absolute inset-0">
           {backgroundImages.map((image, index) => (

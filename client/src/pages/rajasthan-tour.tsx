@@ -123,7 +123,7 @@ export default function RajasthanTour() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-pink-50">
       {/* Hero Section with Sliding Background */}
-      <div className="relative h-screen min-h-[600px] overflow-hidden">
+      <div className="relative h-screen min-h-[600px] overflow-hidden pt-24 sm:pt-28 lg:pt-32">
         {/* Background Image Slider */}
         <div className="absolute inset-0">
           {heroImages.map((image, index) => (
