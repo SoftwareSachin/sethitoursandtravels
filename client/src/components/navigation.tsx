@@ -38,14 +38,14 @@ export default function Navigation() {
       {/* Main Navigation */}
       <div className="bg-gradient-to-b from-yellow-50 to-orange-50 border-b-2 border-pink-600">
         <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-          <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
+          <div className="flex justify-between items-center h-14 sm:h-16 lg:h-14">
             {/* Left Navigation */}
-            <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
+            <div className="hidden lg:flex items-center space-x-2 xl:space-x-3 flex-shrink-0">
               {navItems.slice(0, 3).map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-sm whitespace-nowrap touch-target min-h-[44px] px-3 py-2 rounded-md"
+                  className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-xs xl:text-sm whitespace-nowrap touch-target min-h-[44px] px-2 xl:px-3 py-2 rounded-md"
                 >
                   {item.label}
                 </button>
@@ -53,35 +53,26 @@ export default function Navigation() {
             </div>
 
             {/* Central Logo - Desktop Only */}
-            <div className="hidden lg:flex justify-center items-center mx-6 xl:mx-8">
-              <div className="bg-white rounded-lg p-1 sm:p-2 shadow-lg border border-orange-200">
+            <div className="hidden lg:flex justify-center items-center mx-2 xl:mx-4 flex-shrink-0">
+              <div className="bg-white rounded-lg p-1 shadow-lg border border-orange-200">
                 <img 
                   src={companyLogo} 
                   alt="Sethi Tour & Travels - Premium Travel Services" 
-                  className="h-8 sm:h-10 md:h-12 w-auto"
+                  className="h-8 w-auto"
                 />
               </div>
             </div>
 
             {/* Right Navigation */}
-            <div className="hidden lg:flex items-center space-x-3 xl:space-x-4 justify-end">
+            <div className="hidden lg:flex items-center space-x-2 xl:space-x-3 justify-end flex-shrink-0">
               {navItems.slice(3).map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-sm whitespace-nowrap touch-target min-h-[44px] px-3 py-2 rounded-md"
+                  className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-xs xl:text-sm whitespace-nowrap touch-target min-h-[44px] px-2 xl:px-3 py-2 rounded-md"
                 >
                   {item.label}
                 </button>
-              ))}
-              {specialNavItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-sm whitespace-nowrap"
-                >
-                  {item.label}
-                </Link>
               ))}
             </div>
 
@@ -165,6 +156,23 @@ export default function Navigation() {
             </SheetContent>
               </Sheet>
             </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Second Navigation Row - Special Pages */}
+      <div className="hidden lg:block bg-gradient-to-r from-pink-600 to-orange-600 border-b border-pink-700">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+          <div className="flex justify-center items-center h-10 space-x-6 xl:space-x-8">
+            {specialNavItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-white hover:text-yellow-200 transition-colors duration-200 font-medium text-sm whitespace-nowrap touch-target min-h-[40px] px-3 py-2 rounded-md hover:bg-white/10"
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
