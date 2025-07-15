@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Phone, Search, User, MapPin, Home } from "lucide-react";
+import { Menu, Phone, Search, User, MapPin, Home, Car, Settings, Package, Mail } from "lucide-react";
 import { Link } from "wouter";
 import companyLogo from "@assets/{EA6D6F7F-DEEC-4D98-9B5B-CD04F5567A36}_1752336151486.png";
 
@@ -17,11 +17,11 @@ export default function Navigation() {
   };
 
   const navItems = [
-    { id: "home", label: "Home", href: "/" },
-    { id: "fleet", label: "Fleet" },
-    { id: "services", label: "Services" },
-    { id: "packages", label: "Tour Packages" },
-    { id: "contact", label: "Contact" },
+    { id: "home", label: "Home", href: "/", icon: Home },
+    { id: "fleet", label: "Fleet", icon: Car },
+    { id: "services", label: "Services", icon: Settings },
+    { id: "packages", label: "Tour Packages", icon: Package },
+    { id: "contact", label: "Contact", icon: Mail },
   ];
 
   const specialNavItems = [
@@ -47,14 +47,16 @@ export default function Navigation() {
               </Link>
               <button
                 onClick={() => scrollToSection("fleet")}
-                className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-xs xl:text-sm whitespace-nowrap touch-target min-h-[44px] px-2 xl:px-3 py-2 rounded-md"
+                className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-xs xl:text-sm whitespace-nowrap touch-target min-h-[44px] px-2 xl:px-3 py-2 rounded-md flex items-center"
               >
+                <Car className="w-4 h-4 mr-1" />
                 Fleet
               </button>
               <button
                 onClick={() => scrollToSection("services")}
-                className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-xs xl:text-sm whitespace-nowrap touch-target min-h-[44px] px-2 xl:px-3 py-2 rounded-md"
+                className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-xs xl:text-sm whitespace-nowrap touch-target min-h-[44px] px-2 xl:px-3 py-2 rounded-md flex items-center"
               >
+                <Settings className="w-4 h-4 mr-1" />
                 Services
               </button>
             </div>
@@ -76,14 +78,16 @@ export default function Navigation() {
             <div className="hidden lg:flex items-center space-x-2 xl:space-x-3 justify-end flex-shrink-0">
               <button
                 onClick={() => scrollToSection("packages")}
-                className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-xs xl:text-sm whitespace-nowrap touch-target min-h-[44px] px-2 xl:px-3 py-2 rounded-md"
+                className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-xs xl:text-sm whitespace-nowrap touch-target min-h-[44px] px-2 xl:px-3 py-2 rounded-md flex items-center"
               >
+                <Package className="w-4 h-4 mr-1" />
                 Tour Packages
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-xs xl:text-sm whitespace-nowrap touch-target min-h-[44px] px-2 xl:px-3 py-2 rounded-md"
+                className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-xs xl:text-sm whitespace-nowrap touch-target min-h-[44px] px-2 xl:px-3 py-2 rounded-md flex items-center"
               >
+                <Mail className="w-4 h-4 mr-1" />
                 Contact
               </button>
             </div>
@@ -155,8 +159,9 @@ export default function Navigation() {
                       <button
                         key={item.id}
                         onClick={() => scrollToSection(item.id)}
-                        className="text-left text-gray-700 hover:text-pink-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50 text-base font-medium"
+                        className="text-left text-gray-700 hover:text-pink-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50 text-base font-medium flex items-center"
                       >
+                        <item.icon className="w-4 h-4 mr-2" />
                         {item.label}
                       </button>
                     )
