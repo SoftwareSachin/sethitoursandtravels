@@ -8,7 +8,7 @@ export default function DestinationHighlights() {
       name: "Jaipur - The Pink City",
       duration: "1-2 Days",
       rating: "4.8",
-      image: "https://pixabay.com/get/g4ca2d92d039cd8ce2cdb3cec3e40668a48a85841a1980423f41ed651234386526f848e78dc031205834a014952f9b10bdf165c2311db3a5a85fd85cb394d59ed_1280.jpg",
+      image: "/attached_assets/steptodown.com493365_1752606412100.jpg",
       highlights: [
         "Hawa Mahal - Palace of Winds",
         "City Palace Complex",
@@ -22,7 +22,7 @@ export default function DestinationHighlights() {
       name: "Udaipur - City of Lakes",
       duration: "2-3 Days", 
       rating: "4.9",
-      image: "/attached_assets/image_1752391017047.png",
+      image: "/attached_assets/steptodown.com681563_1752606474297.jpg",
       highlights: [
         "City Palace overlooking Lake Pichola",
         "Jagdish Temple",
@@ -36,7 +36,7 @@ export default function DestinationHighlights() {
       name: "Jodhpur - The Blue City",
       duration: "1-2 Days",
       rating: "4.7",
-      image: "/attached_assets/image_1752391043467.png",
+      image: "/attached_assets/steptodown.com488820_1752606544987.jpg",
       highlights: [
         "Mehrangarh Fort",
         "Jaswant Thada",
@@ -50,7 +50,7 @@ export default function DestinationHighlights() {
       name: "Jaisalmer - The Golden City",
       duration: "2-3 Days",
       rating: "4.8",
-      image: "/attached_assets/image_1752391068010.png",
+      image: "/attached_assets/steptodown.com165350_1752606632111.jpg",
       highlights: [
         "Jaisalmer Fort (Living Fort)",
         "Patwon Ki Haveli",
@@ -64,7 +64,7 @@ export default function DestinationHighlights() {
       name: "Pushkar - Holy City",
       duration: "1 Day",
       rating: "4.6",
-      image: "/attached_assets/image_1752391084564.png",
+      image: "/attached_assets/steptodown.com859665_1752606684788.jpg",
       highlights: [
         "Brahma Temple",
         "Pushkar Lake",
@@ -78,7 +78,7 @@ export default function DestinationHighlights() {
       name: "Mount Abu - Hill Station",
       duration: "2 Days",
       rating: "4.5",
-      image: "/attached_assets/image_1752391115021.png",
+      image: "/attached_assets/steptodown.com130446_1752606745142.jpg",
       highlights: [
         "Dilwara Jain Temples",
         "Nakki Lake",
