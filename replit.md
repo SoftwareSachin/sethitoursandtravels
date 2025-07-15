@@ -185,6 +185,7 @@ The application follows a monorepo structure with clear separation between clien
   - Tempo Traveller: White Force Tempo Traveller tourist van (steptodown.com976756_1752608939422.jpg)
   - Force Urbania: White Force Urbania luxury van (steptodown.com356116_1752608979481.jpg)
   - Mahindra Scorpio: White Mahindra Scorpio SUV (steptodown.com214403_1752609064381.jpg)
+- **24×7 Customer Support Section Update**: Updated customer support image with professional woman working on laptop with 24/7 branding in vibrant colors (steptodown.com965822_1752609228490.jpg)
 
 ### Migration from Replit Agent to Standard Replit Complete & Quick Book Now Enhancement (January 2025)
 - **Quick Book Now Functionality**: Made all "Quick Book Now" buttons functional with WhatsApp redirection

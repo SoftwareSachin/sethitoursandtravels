@@ -79,7 +79,7 @@ export default function EnhancedCustomerSupport() {
           
           <div className="text-center">
             <img 
-              src="/attached_assets/image_1752400302716.png"
+              src="/attached_assets/steptodown.com965822_1752609228490.jpg"
               alt="24/7 Customer Support"
               className="rounded-xl shadow-lg mx-auto w-full max-w-md"
             />
