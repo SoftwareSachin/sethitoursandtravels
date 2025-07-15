@@ -8,23 +8,23 @@ export default function ComprehensivePackages() {
   
   const allPackages = [
     {
-      name: "Rajasthan Heritage Circuit",
+      name: "Rajasthan Royal Tour",
       duration: "8 Days / 7 Nights",
       destinations: ["Jaipur", "Jodhpur", "Udaipur", "Jaisalmer"],
       price: "₹28,999",
       originalPrice: "₹35,999",
       rating: "4.9",
-      image: "/attached_assets/steptodown.com829502_1752605835373.jpg",
+      image: "/attached_assets/steptodown.com529192_1752611935129.jpg",
       category: "Premium",
       highlights: [
-        "Desert Safari in Jaisalmer",
-        "Palace Hotel Stays",
-        "Cultural Folk Performances", 
-        "Heritage Walking Tours",
-        "Traditional Rajasthani Cuisine",
-        "Camel Cart Rides",
-        "Local Market Exploration",
-        "Professional Photography"
+        "Royal Palace Tours",
+        "Desert Safari Experience",
+        "Cultural Heritage Sites", 
+        "Traditional Folk Performances",
+        "Royal Cuisine Tasting",
+        "Luxury Hotel Stays",
+        "Rajasthani Handicrafts",
+        "Professional Guide Service"
       ],
       inclusions: [
         "7 Nights Hotel Accommodation",
@@ -36,13 +36,13 @@ export default function ComprehensivePackages() {
       ]
     },
     {
-      name: "Golden Triangle Deluxe",
+      name: "Golden Triangle Tour",
       duration: "5 Days / 4 Nights", 
       destinations: ["Delhi", "Agra", "Jaipur"],
       price: "₹22,999",
       originalPrice: "₹28,999",
       rating: "4.8",
-      image: "/attached_assets/steptodown.com848188_1752605945288.jpg",
+      image: "/attached_assets/steptodown.com335145_1752611872320.jpg",
       category: "Classic",
       highlights: [
         "Taj Mahal Sunrise Visit",
@@ -64,23 +64,23 @@ export default function ComprehensivePackages() {
       ]
     },
     {
-      name: "Punjab Spiritual Journey",
+      name: "Weekend Getaway",
       duration: "4 Days / 3 Nights",
-      destinations: ["Amritsar", "Chandigarh"],
+      destinations: ["Jaipur", "Udaipur"],
       price: "₹16,999",
       originalPrice: "₹21,999", 
       rating: "4.7",
-      image: "/attached_assets/steptodown.com566946_1752606002957.jpg",
-      category: "Spiritual",
+      image: "/attached_assets/steptodown.com315243_1752612080227.jpg",
+      category: "Weekend",
       highlights: [
-        "Golden Temple Early Morning Visit",
-        "Wagah Border Ceremony",
-        "Jallianwala Bagh Memorial",
-        "Langar Hall Experience",
-        "Rock Garden Chandigarh",
-        "Gurudwara Baba Atal Rai",
-        "Traditional Punjabi Cuisine",
-        "Spiritual & Cultural Immersion"
+        "Pink City Jaipur Exploration",
+        "City Palace & Hawa Mahal",
+        "Lake Pichola Boat Ride",
+        "Sunset at Lake Fateh Sagar",
+        "Local Market Shopping",
+        "Rajasthani Cultural Show",
+        "Heritage Hotel Stay",
+        "Traditional Cuisine Experience"
       ],
       inclusions: [
         "3 Nights Hotel Stay",
@@ -92,23 +92,23 @@ export default function ComprehensivePackages() {
       ]
     },
     {
-      name: "Uttarakhand Adventure",
+      name: "Luxury Rajasthan",
       duration: "6 Days / 5 Nights",
-      destinations: ["Dehradun", "Mussoorie", "Rishikesh"],
+      destinations: ["Jaipur", "Jodhpur", "Udaipur"],
       price: "₹24,999",
       originalPrice: "₹30,999",
       rating: "4.8",
-      image: "/attached_assets/steptodown.com936693_1752606047627.jpg",
-      category: "Adventure",
+      image: "/attached_assets/steptodown.com697217_1752612125900.jpg",
+      category: "Luxury",
       highlights: [
-        "Ganga Aarti at Har Ki Pauri",
-        "White Water Rafting",
-        "Yoga & Meditation Sessions",
-        "Kempty Falls Visit",
-        "Beatles Ashram Tour",
-        "Adventure Sports in Rishikesh",
-        "Mountain Trekking",
-        "Spiritual Retreat Experience"
+        "5-Star Palace Hotels",
+        "Private Heritage Tours",
+        "Luxury Desert Camp",
+        "Royal Dining Experiences",
+        "Premium Transportation",
+        "Personal Butler Service",
+        "Exclusive Cultural Shows",
+        "VIP Monument Access"
       ],
       inclusions: [
         "5 Nights Accommodation",
@@ -120,23 +120,23 @@ export default function ComprehensivePackages() {
       ]
     },
     {
-      name: "Himachal Hill Stations",
+      name: "Budget Rajasthan",
       duration: "7 Days / 6 Nights",
-      destinations: ["Shimla", "Manali", "Dharamshala"],
+      destinations: ["Jaipur", "Jodhpur", "Jaisalmer"],
       price: "₹26,999",
       originalPrice: "₹33,999",
       rating: "4.9",
-      image: "/attached_assets/steptodown.com240097_1752606075991.jpg",
-      category: "Hill Station",
+      image: "/attached_assets/steptodown.com346993_1752612175890.jpg",
+      category: "Budget",
       highlights: [
-        "Rohtang Pass Snow Experience",
-        "Solang Valley Adventure Sports",
-        "Mall Road Shopping",
-        "Hadimba Devi Temple",
-        "Toy Train Ride",
-        "Apple Orchards Visit",
-        "Tibetan Culture Experience",
-        "Mountain Photography"
+        "Essential Rajasthan Sights",
+        "Budget-Friendly Hotels",
+        "Shared Transportation",
+        "Group Tours & Activities",
+        "Local Food Experiences",
+        "Basic Desert Safari",
+        "City Walking Tours",
+        "Cultural Heritage Sites"
       ],
       inclusions: [
         "6 Nights Mountain Resorts",
@@ -148,23 +148,23 @@ export default function ComprehensivePackages() {
       ]
     },
     {
-      name: "Thailand International",
+      name: "Honeymoon Special",
       duration: "6 Days / 5 Nights",
-      destinations: ["Bangkok", "Pattaya"],
+      destinations: ["Udaipur", "Mount Abu"],
       price: "₹55,999",
       originalPrice: "₹69,999",
       rating: "4.8",
-      image: "/attached_assets/steptodown.com946577_1752606132959.jpg",
-      category: "International",
+      image: "/attached_assets/steptodown.com546240_1752612283716.jpg",
+      category: "Honeymoon",
       highlights: [
-        "Grand Palace & Wat Pho",
-        "Floating Market Experience",
-        "Coral Island Day Trip",
-        "Thai Cultural Shows",
-        "Traditional Thai Massage",
-        "Shopping at MBK & Chatuchak",
-        "Thai Cooking Classes",
-        "Elephant Sanctuary Visit"
+        "Romantic Lake Palace Views",
+        "Couple's Spa Treatments",
+        "Private Sunset Boat Rides",
+        "Candlelight Dinners",
+        "Luxury Suite Accommodations",
+        "Mount Abu Hill Station",
+        "Photography Sessions",
+        "Romantic Heritage Tours"
       ],
       inclusions: [
         "Round Trip Flights",
