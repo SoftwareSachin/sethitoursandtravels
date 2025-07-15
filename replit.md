@@ -178,6 +178,13 @@ The application follows a monorepo structure with clear separation between clien
   - Airport Transfer Services: Air India aircraft for professional airport transfers (steptodown.com446075_1752608480866.jpg)
 - **Visual Quality Enhancement**: All new images feature authentic Indian transportation scenarios with real vehicles and customers
 - **Professional Appearance**: Enhanced both service sections with high-quality, relevant imagery matching actual service offerings
+- **Premium Vehicle Fleet Section Update**: Updated all 6 vehicle images in "Our Premium Vehicle Fleet" section with authentic vehicles:
+  - Maruti Swift Dzire: White taxi with yellow taxi stripe (steptodown.com489030_1752608701148.jpg)
+  - Toyota Innova: Silver Toyota Innova premium vehicle (steptodown.com314161_1752608772365.jpg)
+  - Maruti Ertiga: White Maruti Ertiga MPV (steptodown.com546109_1752608849347.jpg)
+  - Tempo Traveller: White Force Tempo Traveller tourist van (steptodown.com976756_1752608939422.jpg)
+  - Force Urbania: White Force Urbania luxury van (steptodown.com356116_1752608979481.jpg)
+  - Mahindra Scorpio: White Mahindra Scorpio SUV (steptodown.com214403_1752609064381.jpg)
 
 ### Migration from Replit Agent to Standard Replit Complete & Quick Book Now Enhancement (January 2025)
 - **Quick Book Now Functionality**: Made all "Quick Book Now" buttons functional with WhatsApp redirection

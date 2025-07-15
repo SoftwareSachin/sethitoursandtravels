@@ -9,7 +9,7 @@ export default function VehicleFleet() {
       category: "Premium Sedan",
       capacity: "4+1",
       features: ["AC", "Music System", "GPS", "Premium Interiors"],
-      image: "/attached_assets/image_1752392441625.png",
+      image: "/attached_assets/steptodown.com489030_1752608701148.jpg",
       description: "Perfect for city tours and airport transfers. Comfortable sedan with modern amenities and premium styling.",
       price: "₹12/km",
       rating: 4.8
@@ -19,7 +19,7 @@ export default function VehicleFleet() {
       category: "Premium SUV",
       capacity: "7+1",
       features: ["AC", "Music System", "Extra Luggage", "Spacious Interiors"],
-      image: "/attached_assets/image_1752392458750.png",
+      image: "/attached_assets/steptodown.com314161_1752608772365.jpg",
       description: "Spacious SUV ideal for family trips and group travel. Premium comfort for longer journeys across Rajasthan.",
       price: "₹15/km",
       rating: 4.9
@@ -29,7 +29,7 @@ export default function VehicleFleet() {
       category: "Premium MPV",
       capacity: "6+1",
       features: ["AC", "Music System", "Comfortable Seating", "Modern Design"],
-      image: "/attached_assets/image_1752392472437.png",
+      image: "/attached_assets/steptodown.com546109_1752608849347.jpg",
       description: "Multi-purpose vehicle perfect for medium-sized groups and family outings with superior comfort.",
       price: "₹13/km",
       rating: 4.7
@@ -39,7 +39,7 @@ export default function VehicleFleet() {
       category: "Luxury Mini Bus",
       capacity: "12+1",
       features: ["AC", "Push Back Seats", "Music System", "Ample Luggage"],
-      image: "/attached_assets/image_1752392492935.png",
+      image: "/attached_assets/steptodown.com976756_1752608939422.jpg",
       description: "Perfect for group tours and corporate travel. Comfortable seating with ample luggage space for extended journeys.",
       price: "₹18/km",
       rating: 4.6
@@ -49,7 +49,7 @@ export default function VehicleFleet() {
       category: "Luxury Van",
       capacity: "9+1",
       features: ["AC", "Luxury Interiors", "Entertainment System", "Premium Comfort"],
-      image: "/attached_assets/image_1752392514968.png",
+      image: "/attached_assets/steptodown.com356116_1752608979481.jpg",
       description: "Premium luxury van for VIP travel and special occasions. Top-class comfort and amenities for discerning travelers.",
       price: "₹20/km",
       rating: 4.9
@@ -59,7 +59,7 @@ export default function VehicleFleet() {
       category: "Adventure SUV",
       capacity: "7+1",
       features: ["4WD", "AC", "High Ground Clearance", "Rugged Design"],
-      image: "/attached_assets/image_1752392533418.png",
+      image: "/attached_assets/steptodown.com214403_1752609064381.jpg",
       description: "Rugged SUV perfect for desert safaris and adventure trips. Excellent for rough terrain and off-road exploration.",
       price: "₹16/km",
       rating: 4.8
