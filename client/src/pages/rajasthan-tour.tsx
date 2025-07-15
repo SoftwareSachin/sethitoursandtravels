@@ -25,9 +25,10 @@ import {
 import { useToast } from '@/hooks/use-toast';
 import WhatsAppButton from '@/components/whatsapp-button';
 import Footer from '@/components/footer';
-import rajasthanImage1 from '@assets/image_1752337890653.png';
-import rajasthanImage2 from '@assets/image_1752337943946.png';
-import rajasthanImage3 from '@assets/image_1752337963821.png';
+import Navigation from '@/components/navigation';
+import rajasthanImage1 from '@assets/steptodown.com277288_1752616104431.jpg';
+import rajasthanImage2 from '@assets/steptodown.com541522_1752616161691.jpg';
+import rajasthanImage3 from '@assets/steptodown.com637503_1752616201447.jpg';
 import jaipurImage from '@assets/image_1752338428906.png';
 import udaipurImage from '@assets/image_1752338463592.png';
 import jodhpurImage from '@assets/image_1752338490127.png';
@@ -122,6 +123,7 @@ export default function RajasthanTour() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-pink-50">
+      <Navigation />
       {/* Hero Section with Sliding Background */}
       <div className="relative h-screen min-h-[600px] overflow-hidden pt-24 sm:pt-28 lg:pt-32">
         {/* Background Image Slider */}
