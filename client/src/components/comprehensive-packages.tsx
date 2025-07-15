@@ -8,23 +8,23 @@ export default function ComprehensivePackages() {
   
   const allPackages = [
     {
-      name: "Rajasthan Royal Tour",
+      name: "Rajasthan Heritage Circuit",
       duration: "8 Days / 7 Nights",
       destinations: ["Jaipur", "Jodhpur", "Udaipur", "Jaisalmer"],
       price: "₹28,999",
       originalPrice: "₹35,999",
       rating: "4.9",
-      image: "/attached_assets/steptodown.com529192_1752611935129.jpg",
+      image: "/attached_assets/steptodown.com829502_1752605835373.jpg",
       category: "Premium",
       highlights: [
-        "Royal Palace Tours",
-        "Desert Safari Experience",
-        "Cultural Heritage Sites", 
-        "Traditional Folk Performances",
-        "Royal Cuisine Tasting",
-        "Luxury Hotel Stays",
-        "Rajasthani Handicrafts",
-        "Professional Guide Service"
+        "Desert Safari in Jaisalmer",
+        "Palace Hotel Stays",
+        "Cultural Folk Performances", 
+        "Heritage Walking Tours",
+        "Traditional Rajasthani Cuisine",
+        "Camel Cart Rides",
+        "Local Market Exploration",
+        "Professional Photography"
       ],
       inclusions: [
         "7 Nights Hotel Accommodation",
