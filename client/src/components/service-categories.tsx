@@ -9,7 +9,7 @@ export default function ServiceCategories() {
       category: "Tour Package",
       subtitle: "राजस्थान की रानी यात्रा",
       description: "Explore the royal heritage of Rajasthan with our premium tour packages",
-      image: "/attached_assets/image_1752400675384.png",
+      image: "/attached_assets/steptodown.com851972_1752603732311.jpg",
       link: "#packages",
       color: "from-orange-600 to-red-600",
       accent: "orange"
