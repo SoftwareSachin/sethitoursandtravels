@@ -123,6 +123,7 @@ The application follows a monorepo structure with clear separation between clien
 - **Taj Mahal Same Day Tour**: Updated with stunning sunset view of Taj Mahal (steptodown.com107956_1752604190177.jpg)
 - **Jaisalmer Desert Safari Package**: Updated with authentic camel safari scene in Thar Desert (steptodown.com383347_1752604452116.jpg)
 - **Udaipur Lake City Romance Tour**: Updated with authentic City Palace scene with traditional Rajasthani attire (steptodown.com306448_1752604550466.jpg)
+- **Jaipur Pink City Exploration**: Updated with stunning Hawa Mahal view featuring tourist in pink attire (steptodown.com327488_1752605405592.jpg)
 - **Responsive Image Display**: Enhanced all images with proper mobile-first responsive design for optimal viewing across all devices
 
 ### Comprehensive Mobile-First Responsive Design Enhancement (Latest - January 2025)

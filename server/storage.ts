@@ -95,7 +95,7 @@ export class MemStorage implements IStorage {
       {
         name: "Jaipur Pink City Exploration",
         description: "Discover the Pink City's royal heritage! Amber Fort elephant ride, Hawa Mahal photography, City Palace museum, local bazaars for textiles, jewelry and handicrafts.",
-        image: "/attached_assets/image_1752355253209.png",
+        image: "/attached_assets/steptodown.com327488_1752605405592.jpg",
         destination: "Jaipur, Rajasthan",
         price: 9500,
         duration: "2 Days / 1 Night",
