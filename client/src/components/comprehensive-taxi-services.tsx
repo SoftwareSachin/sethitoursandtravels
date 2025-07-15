@@ -14,7 +14,7 @@ export default function ComprehensiveTaxiServices() {
       features: ["Hourly rentals available", "City tour packages", "Shopping assistance", "Restaurant recommendations"],
       vehicles: ["Swift Dzire", "Honda City", "Toyota Etios"],
       startingPrice: "₹12/km",
-      image: "/attached_assets/image_1752391737928.png"
+      image: "/attached_assets/steptodown.com545478_1752607526906.jpg"
     },
     {
       icon: <Route className="h-8 w-8 text-primary" />,
@@ -23,7 +23,7 @@ export default function ComprehensiveTaxiServices() {
       features: ["Long distance travel", "Multi-city tours", "Highway expertise", "Rest stop planning"],
       vehicles: ["Toyota Innova", "Mahindra Scorpio", "Force Urbania"],
       startingPrice: "₹10/km",
-      image: "/attached_assets/image_1752391755138.png"
+      image: "/attached_assets/steptodown.com171780_1752607701522.jpg"
     },
     {
       icon: <ArrowRight className="h-8 w-8 text-primary" />,
@@ -32,7 +32,7 @@ export default function ComprehensiveTaxiServices() {
       features: ["No return charges", "Fixed pricing", "Airport specialists", "Station pickups"],
       vehicles: ["Swift Dzire", "Toyota Innova", "Maruti Ertiga"],
       startingPrice: "₹8/km",
-      image: "/attached_assets/image_1752391773958.png"
+      image: "/attached_assets/steptodown.com541106_1752607770653.jpg"
     },
     {
       icon: <Briefcase className="h-8 w-8 text-primary" />,
@@ -41,7 +41,7 @@ export default function ComprehensiveTaxiServices() {
       features: ["Professional chauffeurs", "Business etiquette", "Punctuality guaranteed", "Corporate billing"],
       vehicles: ["Honda City", "Toyota Camry", "BMW 3 Series"],
       startingPrice: "₹15/km",
-      image: "/attached_assets/image_1752391799948.png"
+      image: "/attached_assets/steptodown.com394506_1752607818803.jpg"
     },
     {
       icon: <Plane className="h-8 w-8 text-primary" />,
@@ -50,7 +50,7 @@ export default function ComprehensiveTaxiServices() {
       features: ["Flight tracking", "Meet & greet", "Luggage assistance", "24/7 availability"],
       vehicles: ["Swift Dzire", "Toyota Innova", "Honda City"],
       startingPrice: "Fixed ₹800",
-      image: "/attached_assets/image_1752391817591.png"
+      image: "/attached_assets/steptodown.com977442_1752607860799.jpg"
     },
     {
       icon: <RotateCcw className="h-8 w-8 text-primary" />,
@@ -59,7 +59,7 @@ export default function ComprehensiveTaxiServices() {
       features: ["Round trip convenience", "Waiting time included", "Flexible timings", "Day trip packages"],
       vehicles: ["Toyota Innova", "Maruti Ertiga", "Mahindra Scorpio"],
       startingPrice: "₹2000/day",
-      image: "/attached_assets/image_1752391835138.png"
+      image: "/attached_assets/steptodown.com645137_1752607921230.jpg"
     },
     {
       icon: <Users className="h-8 w-8 text-primary" />,
@@ -68,7 +68,7 @@ export default function ComprehensiveTaxiServices() {
       features: ["Group transportation", "Push-back seats", "AC comfort", "Luggage space"],
       vehicles: ["12-Seater Tempo", "15-Seater Tempo", "20-Seater Tempo"],
       startingPrice: "₹18/km",
-      image: "/attached_assets/image_1752391852384.png"
+      image: "/attached_assets/steptodown.com690504_1752607992383.jpg"
     },
     {
       icon: <Bus className="h-8 w-8 text-primary" />,
@@ -77,7 +77,7 @@ export default function ComprehensiveTaxiServices() {
       features: ["Large group capacity", "Event transportation", "Wedding parties", "Educational tours"],
       vehicles: ["35-Seater Bus", "45-Seater Coach", "Luxury Bus"],
       startingPrice: "₹25/km",
-      image: "/attached_assets/image_1752391874449.png"
+      image: "/attached_assets/steptodown.com102051_1752608059594.jpg"
     },
     {
       icon: <Eye className="h-8 w-8 text-primary" />,
@@ -86,7 +86,7 @@ export default function ComprehensiveTaxiServices() {
       features: ["Local expertise", "Flexible itineraries", "Photography stops", "Cultural insights"],
       vehicles: ["Swift Dzire", "Toyota Innova", "Mahindra Scorpio"],
       startingPrice: "₹1500/day",
-      image: "/attached_assets/image_1752391891930.png"
+      image: "/attached_assets/steptodown.com323948_1752608119429.jpg"
     }
   ];
 
