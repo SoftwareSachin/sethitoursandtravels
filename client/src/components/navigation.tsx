@@ -20,9 +20,6 @@ export default function Navigation() {
     { id: "fleet", label: "Fleet" },
     { id: "services", label: "Services" },
     { id: "packages", label: "Tour Packages" },
-    { id: "destinations", label: "Destinations" },
-    { id: "gallery", label: "Gallery" },
-    { id: "testimonials", label: "Reviews" },
     { id: "contact", label: "Contact" },
   ];
 
@@ -41,7 +38,7 @@ export default function Navigation() {
           <div className="flex justify-between items-center h-14 sm:h-16 lg:h-14">
             {/* Left Navigation */}
             <div className="hidden lg:flex items-center space-x-2 xl:space-x-3 flex-shrink-0">
-              {navItems.slice(0, 3).map((item) => (
+              {navItems.slice(0, 2).map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
@@ -65,7 +62,7 @@ export default function Navigation() {
 
             {/* Right Navigation */}
             <div className="hidden lg:flex items-center space-x-2 xl:space-x-3 justify-end flex-shrink-0">
-              {navItems.slice(3).map((item) => (
+              {navItems.slice(2).map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
