@@ -113,7 +113,7 @@ export default function FeaturedDestinations() {
           <div className="order-1 lg:order-2 relative group">
             <div className="absolute -inset-4 bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
             <img 
-              src="/attached_assets/image_1752391017047.png"
+              src="/attached_assets/steptodown.com468917_1752606981479.jpg"
               alt="Udaipur City of Lakes Tour Package"
               className="relative rounded-2xl shadow-2xl w-full transform group-hover:scale-105 transition-transform duration-500"
             />
