@@ -19,7 +19,7 @@ export default function ServiceCategories() {
       category: "Taxi Service", 
       subtitle: "शाही वाहन सेवा",
       description: "Experience luxury travel with our premium cab services",
-      image: "/attached_assets/image_1752400700081.png",
+      image: "/attached_assets/steptodown.com203575_1752603311916.jpg",
       link: "#vehicles",
       color: "from-purple-600 to-pink-600",
       accent: "purple"
