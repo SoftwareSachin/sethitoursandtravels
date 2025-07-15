@@ -88,7 +88,7 @@ export default function JaipurTaxi() {
     {
       title: "Airport Transfers",
       description: "On-time pick-up and drop services to Jaipur Airport.",
-      icon: Navigation,
+      icon: Car,
       price: "₹500-800",
       features: ["24/7 service", "Flight tracking", "Meet & greet", "Luggage assistance"]
     },
