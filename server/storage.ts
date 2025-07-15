@@ -65,7 +65,7 @@ export class MemStorage implements IStorage {
       {
         name: "Taj Mahal Same Day Tour by Car",
         description: "Comfortable same-day Agra tour from Delhi. Visit the iconic Taj Mahal, Agra Fort, and Mehtab Bagh. Includes lunch and professional guide. Perfect for time-constrained travelers.",
-        image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "/attached_assets/steptodown.com107956_1752604190177.jpg",
         destination: "Agra from Delhi",
         price: 8500,
         duration: "1 Day (12 Hours)",
