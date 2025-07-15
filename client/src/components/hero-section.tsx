@@ -4,12 +4,12 @@ import { Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { useCommunication } from "./communication-utils";
 import rajasthanLogo from "@assets/orange-logo_1752335072563.png";
-import tigerSafariImage from "@assets/image_1752328934514.png";
-import hawaMahalImage from "@assets/steptodown.com683483_1752602846978.jpg";
-import jaisalmerImage from "@assets/image_1752328960163.png";
-import jodhpurPalaceImage from "@assets/image_1752328968915.png";
-import jaipurPalaceImage from "@assets/image_1752328975745.png";
-import jaipurFortImage from "@assets/image_1752328985310.png";
+import neemranaFortImage from "@assets/steptodown.com731037_1752610855716.jpg";
+import udaipurCityPalaceImage from "@assets/steptodown.com722270_1752610889983.jpg";
+import amberFortCorridorImage from "@assets/steptodown.com923143_1752610926660.jpg";
+import jalMahalImage from "@assets/steptodown.com898011_1752610967750.jpg";
+import hawaMahalImage from "@assets/steptodown.com462150_1752611002313.jpg";
+import udaipurPalaceViewImage from "@assets/steptodown.com216656_1752611053036.jpg";
 
 export default function HeroSection() {
   const { whatsapp, phone } = useCommunication();
@@ -18,34 +18,34 @@ export default function HeroSection() {
   
   const backgroundImages = [
     {
-      src: tigerSafariImage,
-      alt: "Ranthambore Tiger Safari - Wildlife Adventure Tours",
-      title: "Wildlife Safari Experience"
+      src: neemranaFortImage,
+      alt: "Neemrana Fort Palace - Heritage Hotel Architecture Rajasthan",
+      title: "Heritage Fort Palace Experience"
+    },
+    {
+      src: udaipurCityPalaceImage,
+      alt: "Udaipur City Palace - Lake Pichola Royal Architecture",
+      title: "Venice of the East - Udaipur"
+    },
+    {
+      src: amberFortCorridorImage,
+      alt: "Amber Fort Corridor - Traditional Rajasthani Architecture",
+      title: "Amber Fort Heritage Walkway"
+    },
+    {
+      src: jalMahalImage,
+      alt: "Jal Mahal Water Palace - Jaipur Royal Architecture",
+      title: "Floating Palace of Jaipur"
     },
     {
       src: hawaMahalImage,
-      alt: "Hawa Mahal Jaipur - Palace of Winds Architecture",
-      title: "Jaipur Pink City Heritage"
+      alt: "Hawa Mahal Jaipur - Palace of Winds Pink City",
+      title: "Iconic Pink City Architecture"
     },
     {
-      src: jaisalmerImage,
-      alt: "Jaisalmer Golden Architecture - Desert City Rajasthan",
-      title: "Jaisalmer Golden City"
-    },
-    {
-      src: jodhpurPalaceImage,
-      alt: "Jodhpur Palace Architecture - Royal Heritage",
-      title: "Jodhpur Royal Palace"
-    },
-    {
-      src: jaipurPalaceImage,
-      alt: "Jaipur City Palace - Rajput Architecture",
-      title: "Royal Jaipur Heritage"
-    },
-    {
-      src: jaipurFortImage,
-      alt: "Jaipur Fort Sunset View - Amber Fort Heritage",
-      title: "Majestic Rajasthan Forts"
+      src: udaipurPalaceViewImage,
+      alt: "Udaipur Palace Lake View - Romantic City Architecture",
+      title: "Udaipur Romantic Lake Palace"
     }
   ];
 
