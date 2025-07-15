@@ -13,7 +13,6 @@ import {
   CheckCircle,
   Calendar,
   CreditCard,
-  Navigation,
   Award,
   Mail,
   Globe
@@ -21,6 +20,7 @@ import {
 import { FaWhatsapp } from "react-icons/fa";
 import { useCommunication } from "../components/communication-utils";
 import Footer from "../components/footer";
+import Navigation from "../components/navigation";
 import JaipurTaxiFloatingButtons from "../components/jaipur-taxi-floating-buttons";
 import rajasthaniWelcomeImage from '@assets/image_1752342637765.png';
 import dzireImage from "@assets/steptodown.com267953_1752609994574.jpg";
@@ -34,11 +34,11 @@ export default function JaipurTaxi() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const backgroundImages = [
-    "/attached_assets/steptodown.com683483_1752602846978.jpg",
-    "/attached_assets/steptodown.com683483_1752602846978.jpg",
-    "/attached_assets/steptodown.com683483_1752602846978.jpg", // Hawa Mahal
-    "/attached_assets/steptodown.com683483_1752602846978.jpg", // Hawa Mahal
-    "/attached_assets/steptodown.com683483_1752602846978.jpg"  // Hawa Mahal
+    "/attached_assets/steptodown.com577031_1752617562634.jpg",
+    "/attached_assets/steptodown.com577031_1752617562634.jpg",
+    "/attached_assets/steptodown.com577031_1752617562634.jpg", // Amber Fort
+    "/attached_assets/steptodown.com577031_1752617562634.jpg", // Amber Fort
+    "/attached_assets/steptodown.com577031_1752617562634.jpg"  // Amber Fort
   ];
   
   useEffect(() => {
@@ -248,6 +248,7 @@ export default function JaipurTaxi() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Navigation />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-orange-600 via-pink-600 to-purple-800 text-white py-24 overflow-hidden pt-24 sm:pt-28 lg:pt-32">
         {/* Sliding Background Images */}
@@ -261,7 +262,7 @@ export default function JaipurTaxi() {
             >
               <img 
                 src={image} 
-                alt={`Hawa Mahal Jaipur Palace ${index + 1}`}
+                alt={`Amber Fort Jaipur Palace ${index + 1}`}
                 className="hero-bg-image"
                 loading="lazy"
               />
