@@ -186,6 +186,13 @@ The application follows a monorepo structure with clear separation between clien
   - Force Urbania: White Force Urbania luxury van (steptodown.com356116_1752608979481.jpg)
   - Mahindra Scorpio: White Mahindra Scorpio SUV (steptodown.com214403_1752609064381.jpg)
 - **24×7 Customer Support Section Update**: Updated customer support image with professional woman working on laptop with 24/7 branding in vibrant colors (steptodown.com965822_1752609228490.jpg)
+- **Latest Travel Articles Section Update**: Updated all 6 article images with authentic destination and travel content:
+  - Complete Guide to Rajasthan Heritage Tours: Stunning Jaisalmer fort view through traditional archway with lake (steptodown.com608599_1752609444647.jpg)
+  - Golden Triangle Tour - Complete Itinerary: Collage of Delhi, Agra Taj Mahal, and Jaipur monuments (steptodown.com284521_1752609502035.jpg)
+  - Best Time to Visit Rajasthan - Weather Guide: Magnificent Amber Fort showcasing Rajasthan's golden architecture (steptodown.com780855_1752609602940.jpg)
+  - Luxury Desert Safari in Jaisalmer: Authentic desert camp with traditional tent accommodation (steptodown.com396501_1752609668664.jpg)
+  - Udaipur Lake Palace - A Royal Experience: Beautiful Lake Palace complex with traditional Rajasthani architecture (steptodown.com766766_1752609734764.jpg)
+  - Taxi Service Excellence in Rajasthan: Professional taxi fleet showing multiple vehicles for service excellence (steptodown.com840584_1752609781715.jpg)
 
 ### Migration from Replit Agent to Standard Replit Complete & Quick Book Now Enhancement (January 2025)
 - **Quick Book Now Functionality**: Made all "Quick Book Now" buttons functional with WhatsApp redirection
