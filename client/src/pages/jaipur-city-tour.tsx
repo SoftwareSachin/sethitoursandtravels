@@ -25,6 +25,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { useToast } from '@/hooks/use-toast';
 import WhatsAppButton from '@/components/whatsapp-button';
 import Footer from '@/components/footer';
+import Navigation from '@/components/navigation';
 import { useCommunication } from '@/components/communication-utils';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 
@@ -32,7 +33,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import jaipurCityImage from '@assets/image_1752338074515.png';
 import hawamahalImage from '@assets/steptodown.com683483_1752602846978.jpg';
 import newHawamahalImage from '@assets/steptodown.com683483_1752602846978.jpg';
-import heroImage from '@assets/image_1752341547443.png';
+import heroImage from '@assets/steptodown.com917609_1752616667933.jpg';
 import cityPalaceImage from '@assets/image_1752341782147.png';
 import amberFortImage from '@assets/image_1752341727345.png';
 import jalMahalImage from '@assets/image_1752341827928.png';
@@ -137,6 +138,7 @@ export default function JaipurCityTour() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-pink-50">
+      <Navigation />
       {/* Hero Section */}
       <div 
         className="relative min-h-screen bg-cover bg-center bg-no-repeat pt-24 sm:pt-28 lg:pt-32"

@@ -375,6 +375,9 @@ The application follows a monorepo structure with clear separation between clien
   - Jodhpur Blue City: Authentic blue street scene with colorful decorations (steptodown.com704969_1752616410506.jpg)
   - Jaisalmer Golden City: Desert fort with traditional seating area (steptodown.com168855_1752616461960.jpg)
   - Pushkar & Ajmer: Sacred lake with white temple architecture (steptodown.com506856_1752616505890.jpg)
+- **Enhanced Jaipur City Tour Page**: Updated hero section and navigation
+  - New Hero Image: Amber Fort elephant scene showcasing royal heritage (steptodown.com917609_1752616667933.jpg)
+  - Navigation Header: Added consistent navigation experience across all pages
 - **Development Environment**: Workflow running successfully with hot module replacement and automatic restarts
 
 ### Updated Contact Information (Latest - January 2025)
