@@ -91,18 +91,18 @@ export default function DestinationHighlights() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-16">
+    <section className="py-8 xs:py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50">
+      <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 xs:mb-10 sm:mb-12 md:mb-16">
           <div className="relative">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-transparent bg-gradient-to-r from-pink-600 via-purple-600 to-pink-800 bg-clip-text mb-6 tracking-wide" 
+            <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-transparent bg-gradient-to-r from-pink-600 via-purple-600 to-pink-800 bg-clip-text mb-4 xs:mb-6 tracking-wide px-2" 
                 style={{ fontFamily: "'Cinzel', 'Playfair Display', serif" }}>
               Popular Rajasthan Destinations
             </h2>
             <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-500 to-pink-600 rounded-lg blur opacity-20 animate-pulse"></div>
           </div>
           <div className="relative">
-            <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto px-4 leading-relaxed font-medium" 
+            <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto px-2 xs:px-4 leading-relaxed font-medium" 
                style={{ fontFamily: "'Crimson Text', serif" }}>
               Discover the magnificent cities of Rajasthan, each with its unique character, history, and attractions. 
               From royal palaces to desert adventures, create memories that last a lifetime.
@@ -113,7 +113,7 @@ export default function DestinationHighlights() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 xs:gap-4 sm:gap-6 md:gap-8">
           {destinations.map((destination, index) => (
             <Card key={index} className="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group border-2 border-pink-100 hover:border-pink-300">
               <div className="relative overflow-hidden">

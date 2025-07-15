@@ -145,11 +145,11 @@ export default function ServicesOverview() {
             <Sparkles className="h-5 w-5 ml-2 animate-pulse" />
           </div>
 
-          <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold text-transparent bg-gradient-to-r from-orange-600 via-red-600 via-yellow-600 to-pink-600 bg-clip-text mb-10" style={{ fontFamily: "'Cinzel', serif" }}>
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-transparent bg-gradient-to-r from-orange-600 via-red-600 via-yellow-600 to-pink-600 bg-clip-text mb-6 xs:mb-8 sm:mb-10" style={{ fontFamily: "'Cinzel', serif" }}>
             Our Royal Travel Experiences
           </h2>
           
-          <p className="text-xl sm:text-2xl text-gray-700 max-w-5xl mx-auto leading-relaxed font-medium mb-8" style={{ fontFamily: "'Crimson Text', serif" }}>
+          <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 max-w-5xl mx-auto leading-relaxed font-medium mb-6 xs:mb-8 px-2 xs:px-4" style={{ fontFamily: "'Crimson Text', serif" }}>
             From the ancient palaces of Rajasthan to the golden deserts of Thar, from Kerala's serene backwaters to Punjab's vibrant fields, from Maharashtra's heritage forts to Tamil Nadu's sacred temples - embark on extraordinary journeys across India's most magnificent destinations. Experience the royal heritage, vibrant culture, and timeless beauty with our expertly crafted travel services.
           </p>
           
@@ -193,7 +193,7 @@ export default function ServicesOverview() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-6 sm:gap-8 md:gap-10 mb-12 xs:mb-16 sm:mb-20 md:mb-24">
+        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 xs:gap-4 sm:gap-6 md:gap-8 lg:gap-10 mb-8 xs:mb-12 sm:mb-16 md:mb-20">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             const stateColors = [

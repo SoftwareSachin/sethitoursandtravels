@@ -75,7 +75,7 @@ export default function FleetShowcase() {
       <div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-r from-yellow-600 via-red-600 via-orange-600 to-yellow-600"></div>
       
       <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-8 xs:mb-12 sm:mb-16">
+        <div className="text-center mb-6 xs:mb-8 sm:mb-12 md:mb-16">
           {/* Royal elephant silhouette decoration */}
           <div className="flex justify-center mb-8">
             <div className="relative">
@@ -90,11 +90,11 @@ export default function FleetShowcase() {
             </div>
           </div>
 
-          {/* Royal badge with Hindi text */}
-          <div className="inline-flex items-center bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-full text-sm font-semibold mb-8 shadow-lg border-2 border-yellow-400">
-            <Sparkles className="h-4 w-4 mr-2 animate-pulse" />
-            <span>महाराज का वाहन संग्रह</span>
-            <Sparkles className="h-4 w-4 ml-2 animate-pulse" />
+          {/* Royal badge with Hindi text - Mobile Responsive */}
+          <div className="inline-flex items-center bg-gradient-to-r from-orange-600 to-red-600 text-white px-3 xs:px-4 sm:px-6 md:px-8 py-2 xs:py-2.5 sm:py-3 rounded-full text-xs xs:text-sm font-semibold mb-6 xs:mb-8 shadow-lg border-2 border-yellow-400">
+            <Sparkles className="h-3 w-3 xs:h-4 xs:w-4 mr-1 xs:mr-2 animate-pulse" />
+            <span className="text-xs xs:text-sm">महाराज का वाहन संग्रह</span>
+            <Sparkles className="h-3 w-3 xs:h-4 xs:w-4 ml-1 xs:ml-2 animate-pulse" />
           </div>
 
           <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-transparent bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text mb-4 xs:mb-6 sm:mb-8" style={{ fontFamily: "'Cinzel', serif" }}>
@@ -119,7 +119,7 @@ export default function FleetShowcase() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 xs:gap-4 sm:gap-6 lg:gap-8">
           {fleetVehicles.map((vehicle, index) => (
             <Card key={index} className="group overflow-hidden hover:shadow-2xl transition-all duration-500 bg-white border-4 border-yellow-400/40 hover:border-yellow-400/70 rounded-2xl relative">
               {/* Royal corner decorations */}

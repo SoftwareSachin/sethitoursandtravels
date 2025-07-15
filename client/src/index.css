@@ -124,6 +124,164 @@
       min-height: 44px;
       min-width: 44px;
     }
+    
+    /* Mobile-friendly touch targets */
+    .touch-target {
+      min-height: 48px;
+      min-width: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Mobile-first responsive text utilities */
+    .text-responsive-xs { font-size: 0.75rem; }
+    .text-responsive-sm { font-size: 0.875rem; }
+    .text-responsive-base { font-size: 1rem; }
+    .text-responsive-lg { font-size: 1.125rem; }
+    .text-responsive-xl { font-size: 1.25rem; }
+    .text-responsive-2xl { font-size: 1.5rem; }
+    .text-responsive-3xl { font-size: 1.875rem; }
+    .text-responsive-4xl { font-size: 2.25rem; }
+    
+    /* Mobile-first spacing utilities */
+    .spacing-mobile-sm { padding: 0.5rem; }
+    .spacing-mobile-md { padding: 1rem; }
+    .spacing-mobile-lg { padding: 1.5rem; }
+    
+    /* Mobile-first grid utilities */
+    .grid-mobile-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .grid-mobile-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    
+    /* Enhanced mobile navigation */
+    @media (max-width: 768px) {
+      .mobile-nav-item {
+        font-size: 1.125rem;
+        padding: 0.75rem 1rem;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+      }
+    }
+    
+    /* Mobile-friendly cards */
+    .mobile-card {
+      margin: 0.5rem;
+      padding: 1rem;
+      border-radius: 0.75rem;
+    }
+    
+    /* Responsive images */
+    .responsive-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    
+    /* Mobile-friendly buttons */
+    .mobile-btn {
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+      min-height: 48px;
+      border-radius: 0.5rem;
+    }
+    
+    /* Touch-friendly floating buttons */
+    .floating-btn-mobile {
+      position: fixed;
+      min-width: 48px;
+      min-height: 48px;
+      touch-action: manipulation;
+    }
+    
+    /* Enhanced mobile grid layouts */
+    @media (max-width: 375px) {
+      .grid-mobile-responsive {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 0.75rem;
+      }
+    }
+    
+    @media (min-width: 376px) and (max-width: 640px) {
+      .grid-mobile-responsive {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+    }
+    
+    /* Mobile-first text scaling utilities */
+    .text-scale-mobile {
+      font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+    }
+    
+    .text-scale-mobile-lg {
+      font-size: clamp(1rem, 3vw, 1.5rem);
+    }
+    
+    .text-scale-mobile-xl {
+      font-size: clamp(1.25rem, 4vw, 2rem);
+    }
+    
+    /* Enhanced mobile card layouts */
+    @media (max-width: 640px) {
+      .mobile-card-enhanced {
+        margin: 0.5rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+    }
+    
+    /* Mobile-optimized components */
+    @media (max-width: 768px) {
+      .hero-mobile {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+      }
+      
+      .section-mobile {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+      
+      .gallery-mobile {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 1rem;
+      }
+      
+      .testimonials-mobile {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 1rem;
+      }
+    }
+    
+    /* Touch-friendly interactions */
+    .touch-friendly {
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+    
+    /* Mobile navigation improvements */
+    @media (max-width: 1024px) {
+      .nav-mobile {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        min-height: 48px;
+      }
+    }
+    
+    /* Floating button enhancements */
+    .floating-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+    }
   }
 
   /* Enhanced touch-friendly interactions */

@@ -66,16 +66,16 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-br from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+    <section className="py-8 xs:py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
+      <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 xs:mb-10 sm:mb-12 md:mb-16">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6">
             <Star className="h-8 w-8 text-primary" />
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 xs:mb-6 px-2">
             What Our Customers Say
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm xs:text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-2 xs:px-4">
             Don't just take our word for it. Here's what our satisfied customers have to say about their experiences with Sethi Tour & Travels.
           </p>
           <div className="flex items-center justify-center mt-8 space-x-8">
@@ -94,7 +94,7 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 xs:gap-4 sm:gap-6">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0 overflow-hidden">
               <CardContent className="p-0">

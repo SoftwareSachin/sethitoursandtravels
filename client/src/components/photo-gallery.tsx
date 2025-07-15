@@ -74,10 +74,10 @@ export default function PhotoGallery() {
             <Camera className="h-4 w-4 mr-2" />
             Authentic India Photography
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 xs:mb-4 px-2">
             Incredible India Photo Gallery
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto px-4 leading-relaxed">
+          <p className="text-sm xs:text-base sm:text-lg md:text-xl text-gray-600 max-w-4xl mx-auto px-2 xs:px-4 leading-relaxed">
             Experience the authentic beauty of India through our exclusive photography collection. From the spiritual ghats of Varanasi 
             to the majestic temples of South India, from Himalayan serenity to Rajasthani culture - witness the incredible diversity 
             that awaits you on our genuine India tours.
@@ -98,7 +98,7 @@ export default function PhotoGallery() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 xs:gap-4 sm:gap-6">
           {galleryImages.map((image, index) => (
             <Card key={index} className="group overflow-hidden bg-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="relative">

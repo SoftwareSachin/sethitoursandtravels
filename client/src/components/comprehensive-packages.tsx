@@ -219,11 +219,11 @@ export default function ComprehensivePackages() {
             Complete Tour Package Collection
           </div>
           
-          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-transparent bg-gradient-to-r from-orange-600 via-pink-600 via-red-600 to-rose-600 bg-clip-text mb-8 leading-tight drop-shadow-lg" style={{ fontFamily: "'Cinzel', serif" }}>
+          <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-transparent bg-gradient-to-r from-orange-600 via-pink-600 via-red-600 to-rose-600 bg-clip-text mb-6 xs:mb-8 leading-tight drop-shadow-lg px-2" style={{ fontFamily: "'Cinzel', serif" }}>
             Complete Tour Packages
           </h2>
           
-          <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-8" style={{ fontFamily: "'Crimson Text', serif" }}>
+          <p className="text-sm xs:text-base sm:text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-6 xs:mb-8 px-2 xs:px-4" style={{ fontFamily: "'Crimson Text', serif" }}>
             Choose from our carefully crafted tour packages designed to give you the best Rajasthan experience. All packages include accommodation, transportation, and guided tours.
           </p>
           
@@ -277,7 +277,7 @@ export default function ComprehensivePackages() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 xs:gap-4 sm:gap-6 lg:gap-8">
           {allPackages.map((pkg, index) => (
             <Card key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group transform hover:-translate-y-2 border-2 border-gradient-to-r from-orange-200 to-pink-200 hover:from-orange-300 hover:to-pink-300 relative">
               {/* Enhanced Traditional Indian corner decorations */}
