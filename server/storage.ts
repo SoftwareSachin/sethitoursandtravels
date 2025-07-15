@@ -55,7 +55,7 @@ export class MemStorage implements IStorage {
       {
         name: "Royal Rajasthan Heritage Tour",
         description: "Experience the Land of Kings! Explore magnificent palaces of Jaipur & Udaipur, golden dunes of Jaisalmer, and blue city Jodhpur. Includes camel safari and cultural performances.",
-        image: "/attached_assets/image_1752355178625.png",
+        image: "/attached_assets/steptodown.com648128_1752604073181.jpg",
         destination: "Rajasthan Circuit",
         price: 28000,
         duration: "10 Days / 9 Nights",
