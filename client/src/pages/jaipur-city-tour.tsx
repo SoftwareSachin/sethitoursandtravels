@@ -38,13 +38,13 @@ import amberFortImage from '@assets/steptodown.com208043_1752616840661.jpg';
 import jalMahalImage from '@assets/steptodown.com609558_1752617060867.jpg';
 import jantarMantarImage from '@assets/steptodown.com732208_1752617007114.jpg';
 import albertHallImage from '@assets/steptodown.com674527_1752617120687.jpg';
-import jaipurMarketImage from '@assets/image_1752342304077.png';
-import photoOpportunityImage from '@assets/image_1752342374722.png';
+import jaipurMarketImage from '@assets/steptodown.com189918_1752617316639.jpg';
+import photoOpportunityImage from '@assets/steptodown.com756295_1752617365178.jpg';
 import rajasthaniWelcomeImage from '@assets/image_1752342637765.png';
 import dzireImage from '@assets/steptodown.com267953_1752609994574.jpg';
 import ertigaImage from '@assets/steptodown.com288680_1752610052347.jpg';
 import innovaImage from '@assets/image_1752328589553.png';
-import birlaMandirImage from '@assets/image_1752343342879.png';
+import birlaMandirImage from '@assets/steptodown.com824357_1752617410251.jpg';
 
 export default function JaipurCityTour() {
   const { toast } = useToast();
