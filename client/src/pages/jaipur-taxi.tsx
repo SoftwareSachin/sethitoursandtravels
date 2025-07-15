@@ -34,11 +34,11 @@ export default function JaipurTaxi() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const backgroundImages = [
-    "/attached_assets/image_1752330488177.png",
-    "/attached_assets/image_1752330504538.png",
-    "/attached_assets/image_1752331548623.png", // Amber Fort at Night
-    "/attached_assets/image_1752331554106.png", // City Palace Jaipur
-    "/attached_assets/image_1752331571103.png"  // Albert Hall Museum
+    "/attached_assets/steptodown.com683483_1752602846978.jpg",
+    "/attached_assets/steptodown.com683483_1752602846978.jpg",
+    "/attached_assets/steptodown.com683483_1752602846978.jpg", // Hawa Mahal
+    "/attached_assets/steptodown.com683483_1752602846978.jpg", // Hawa Mahal
+    "/attached_assets/steptodown.com683483_1752602846978.jpg"  // Hawa Mahal
   ];
   
   useEffect(() => {
@@ -262,7 +262,8 @@ export default function JaipurTaxi() {
               <img 
                 src={image} 
                 alt={`Hawa Mahal Jaipur Palace ${index + 1}`}
-                className="w-full h-full object-cover"
+                className="hero-bg-image"
+                loading="lazy"
               />
             </div>
           ))}

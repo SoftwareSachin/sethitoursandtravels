@@ -30,8 +30,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 
 // Import city images
 import jaipurCityImage from '@assets/image_1752338074515.png';
-import hawamahalImage from '@assets/image_1752338428906.png';
-import newHawamahalImage from '@assets/image_1752341165448.png';
+import hawamahalImage from '@assets/steptodown.com683483_1752602846978.jpg';
+import newHawamahalImage from '@assets/steptodown.com683483_1752602846978.jpg';
 import heroImage from '@assets/image_1752341547443.png';
 import cityPalaceImage from '@assets/image_1752341782147.png';
 import amberFortImage from '@assets/image_1752341727345.png';

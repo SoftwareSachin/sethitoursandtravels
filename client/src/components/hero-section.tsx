@@ -5,7 +5,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { useCommunication } from "./communication-utils";
 import rajasthanLogo from "@assets/orange-logo_1752335072563.png";
 import tigerSafariImage from "@assets/image_1752328934514.png";
-import hawaMahalImage from "@assets/image_1752328950240.png";
+import hawaMahalImage from "@assets/steptodown.com683483_1752602846978.jpg";
 import jaisalmerImage from "@assets/image_1752328960163.png";
 import jodhpurPalaceImage from "@assets/image_1752328968915.png";
 import jaipurPalaceImage from "@assets/image_1752328975745.png";
@@ -58,18 +58,21 @@ export default function HeroSection() {
   }, [backgroundImages.length]);
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-16 sm:pt-20">
+    <section id="home" className="hero-section relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-16 sm:pt-20">
       {/* Dynamic Background Images */}
       {backgroundImages.map((image, index) => (
         <div
           key={index}
-          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+          className={`absolute inset-0 transition-opacity duration-1000 ${
             index === currentImageIndex ? 'opacity-100' : 'opacity-0'
           }`}
-          style={{
-            backgroundImage: `url(${image.src})`
-          }}
         >
+          <img 
+            src={image.src} 
+            alt={image.alt}
+            className="hero-bg-image"
+            loading="lazy"
+          />
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         </div>
       ))}
