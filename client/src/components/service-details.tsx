@@ -18,7 +18,7 @@ export default function ServiceDetails() {
       ],
       vehicles: ["Maruti Swift Dzire", "Toyota Etios", "Honda City", "Hyundai Xcent"],
       pricing: "Starting from ₹12/km",
-      image: "/attached_assets/image_1752396950527.png",
+      image: "/attached_assets/steptodown.com988844_1752608340200.jpg",
       rating: "4.8"
     },
     {
@@ -35,7 +35,7 @@ export default function ServiceDetails() {
       ],
       vehicles: ["Toyota Innova", "Mahindra Scorpio", "Maruti Ertiga", "Force Urbania"],
       pricing: "Starting from ₹10/km",
-      image: "/attached_assets/image_1752396973984.png",
+      image: "/attached_assets/steptodown.com688577_1752608422757.jpg",
       rating: "4.9"
     },
     {
@@ -52,7 +52,7 @@ export default function ServiceDetails() {
       ],
       vehicles: ["Maruti Swift Dzire", "Toyota Innova", "Honda City", "Mahindra Scorpio"],
       pricing: "Fixed rates starting ₹800",
-      image: "/attached_assets/image_1752397036190.png",
+      image: "/attached_assets/steptodown.com446075_1752608480866.jpg",
       rating: "4.9"
     }
   ];
