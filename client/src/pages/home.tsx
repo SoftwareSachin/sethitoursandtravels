@@ -6,7 +6,6 @@ import ServicesOverview from "@/components/services-overview";
 import ServiceCategories from "@/components/service-categories";
 import TourPackages from "@/components/tour-packages";
 import ComprehensivePackages from "@/components/comprehensive-packages";
-import PricingPackages from "@/components/pricing-packages";
 import DestinationHighlights from "@/components/destination-highlights";
 import FeaturedDestinations from "@/components/featured-destinations";
 
@@ -35,7 +34,6 @@ export default function Home() {
       <ServiceCategories />
       <TourPackages />
       <ComprehensivePackages />
-      <PricingPackages />
       <DestinationHighlights />
       <FeaturedDestinations />
       <ComprehensiveTaxiServices />
