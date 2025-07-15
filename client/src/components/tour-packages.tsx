@@ -92,7 +92,7 @@ export default function TourPackages() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3 xs:gap-4 sm:gap-6">
           {packages?.map((pkg, index) => (
             <Card key={pkg.id} className={`bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-2 border-2 border-orange-100 hover:border-orange-300 relative ${
               index === 0 ? 'ring-2 ring-orange-200' : ''

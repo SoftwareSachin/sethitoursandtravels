@@ -113,7 +113,7 @@ export default function ComprehensiveTaxiServices() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3 xs:gap-4 sm:gap-6 lg:gap-8">
           {taxiServices.map((service, index) => (
             <Card key={index} className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 group border-2 border-pink-200 hover:border-pink-400 overflow-hidden">
               <div className="relative h-40 sm:h-48 md:h-52 overflow-hidden">

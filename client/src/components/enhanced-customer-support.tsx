@@ -6,18 +6,18 @@ export default function EnhancedCustomerSupport() {
   const { whatsapp, phone } = useCommunication();
 
   return (
-    <section className="py-20 bg-blue-600">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="py-8 xs:py-10 sm:py-12 md:py-16 lg:py-20 bg-blue-600">
+      <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 xs:gap-8 sm:gap-10 md:gap-12 items-center">
           <div>
             <div className="text-white mb-6">
               <span className="text-orange-400 text-sm font-medium uppercase tracking-wide">Best Taxi Service and Tour Provider</span>
-              <h2 className="text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+              <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
                 24×7 Customer <span className="text-orange-400">Support</span> Available
               </h2>
             </div>
             
-            <p className="text-white text-lg mb-8 leading-relaxed">
+            <p className="text-white text-sm xs:text-base sm:text-lg mb-6 xs:mb-8 leading-relaxed">
               Sethi Tour and Travels provides 24/7 cab service, ready to offer rides daily for a hassle-free experience. 
               With just a call or tap, one of our reliable drivers will be at your doorstep within minutes, whether it's 
               early morning or midnight. Say goodbye to the hassle of searching for autos; our taxis are trackable, 
@@ -81,7 +81,7 @@ export default function EnhancedCustomerSupport() {
             <img 
               src="/attached_assets/steptodown.com965822_1752609228490.jpg"
               alt="24/7 Customer Support"
-              className="rounded-xl shadow-lg mx-auto w-full max-w-md"
+              className="rounded-xl shadow-lg mx-auto w-full max-w-sm xs:max-w-md mobile-responsive-image"
             />
           </div>
         </div>
