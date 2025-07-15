@@ -5,12 +5,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
-import heroImage from "@assets/image_1752346718122.png";
-import rajasthanImage from "@assets/image_1752347005342.png";
-import punjabImage from "@assets/image_1752347021738.png";
-import upImage from "@assets/image_1752347043356.png";
-import delhiImage from "@assets/image_1752347093543.png";
-import charDhamImage from "@assets/image_1752347107343.png";
+import heroImage from "@assets/steptodown.com577772_1752615613880.jpg";
+import rajasthanImage from "@assets/steptodown.com233837_1752615672478.jpg";
+import punjabImage from "@assets/steptodown.com552843_1752615737143.jpg";
+import upImage from "@assets/steptodown.com242041_1752615778704.jpg";
+import delhiImage from "@assets/steptodown.com376554_1752615823636.jpg";
+import charDhamImage from "@assets/steptodown.com401218_1752615881912.jpg";
 
 const taxiServices = [
   {
