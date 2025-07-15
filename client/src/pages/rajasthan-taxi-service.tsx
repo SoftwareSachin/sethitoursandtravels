@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
-import rajasthanImage from "@assets/image_1752345633694.png";
+import rajasthanImage from "@assets/steptodown.com544967_1752619388732.jpg";
 
 const rajasthanTaxiServices = [
   {
@@ -166,7 +166,7 @@ const rajasthanTaxiServices = [
 
 export default function RajasthanTaxiService() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-orange-50">
+    <div className="min-h-screen bg-orange-50">
       <Navigation />
       
       {/* Breadcrumb Navigation */}
@@ -183,8 +183,8 @@ export default function RajasthanTaxiService() {
         </div>
       </div>
 
-      {/* Hero Section with Background Image - No Overlay */}
-      <div className="relative min-h-[85vh] flex items-center justify-center text-white overflow-hidden pt-20">
+      {/* Hero Section with Traditional Rajasthani Theme */}
+      <div className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-20">
         <div 
           className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
           style={{ 
@@ -193,65 +193,71 @@ export default function RajasthanTaxiService() {
           }}
         />
         
+        {/* Traditional Pattern Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        
         <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
-          {/* Premium Badge */}
-          <div className="mb-6">
-            <Badge className="bg-orange-600/90 backdrop-blur-sm text-white border-orange-400 text-lg px-6 py-2">
-              Royal Rajasthan Tours
-            </Badge>
+          {/* Traditional Badge */}
+          <div className="mb-8">
+            <div className="inline-block bg-orange-600 text-white border-4 border-yellow-500 px-8 py-3 text-lg font-bold" style={{ fontFamily: "'Cinzel', serif" }}>
+              राजस्थान यात्रा सेवा - Royal Rajasthan Tours
+            </div>
           </div>
 
-          {/* Main Heading with Background */}
-          <div className="mb-10">
-            <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 mb-8">
-              <h1 className="text-6xl md:text-8xl font-extrabold mb-6 text-white leading-tight">
-                Rajasthan
-                <span className="block text-5xl md:text-7xl text-white">
+          {/* Main Heading with Traditional Design */}
+          <div className="mb-12">
+            <div className="bg-white bg-opacity-90 border-8 border-orange-600 p-10 shadow-2xl">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 text-orange-800 leading-tight" style={{ fontFamily: "'Cinzel', serif" }}>
+                राजस्थान
+                <span className="block text-4xl md:text-6xl text-red-700">
                   Taxi Services
                 </span>
               </h1>
-              <p className="text-xl md:text-3xl text-white/95 font-light">
-                Discover the Royal Heritage of the Land of Kings
+              <p className="text-xl md:text-2xl text-gray-800 font-semibold" style={{ fontFamily: "'Crimson Text', serif" }}>
+                Experience the Royal Heritage of the Land of Kings
               </p>
+              <div className="mt-4 w-32 h-1 bg-orange-600 mx-auto"></div>
             </div>
           </div>
 
-          {/* Enhanced Trust Indicators */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <div className="bg-gradient-to-r from-orange-500/95 to-pink-500/95 backdrop-blur-sm text-white px-8 py-4 rounded-full shadow-2xl border border-white/20">
+          {/* Traditional Trust Indicators */}
+          <div className="flex flex-wrap justify-center gap-6 mb-12">
+            <div className="bg-white text-orange-800 px-8 py-4 border-4 border-orange-600 shadow-lg">
               <div className="flex items-center gap-3">
-                <Star className="w-6 h-6 text-yellow-300" />
-                <span className="font-bold text-lg">4.9★ Rating</span>
+                <Star className="w-6 h-6 text-yellow-600" />
+                <span className="font-bold text-lg">4.9 Star Rating</span>
               </div>
             </div>
-            <div className="bg-gradient-to-r from-blue-500/95 to-purple-500/95 backdrop-blur-sm text-white px-8 py-4 rounded-full shadow-2xl border border-white/20">
+            <div className="bg-white text-red-800 px-8 py-4 border-4 border-red-600 shadow-lg">
               <div className="flex items-center gap-3">
-                <Users className="w-6 h-6" />
-                <span className="font-bold text-lg">8,000+ Rajasthan Tours</span>
+                <Users className="w-6 h-6 text-red-600" />
+                <span className="font-bold text-lg">8,000+ Heritage Tours</span>
               </div>
             </div>
-            <div className="bg-gradient-to-r from-green-500/95 to-emerald-500/95 backdrop-blur-sm text-white px-8 py-4 rounded-full shadow-2xl border border-white/20">
+            <div className="bg-white text-green-800 px-8 py-4 border-4 border-green-600 shadow-lg">
               <div className="flex items-center gap-3">
-                <Clock className="w-6 h-6" />
-                <span className="font-bold text-lg">24/7 Available</span>
+                <Clock className="w-6 h-6 text-green-600" />
+                <span className="font-bold text-lg">24/7 Royal Service</span>
               </div>
             </div>
           </div>
 
-          {/* Action Buttons */}
+          {/* Traditional Action Buttons */}
           <div className="flex flex-wrap justify-center gap-8">
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white px-12 py-5 text-2xl font-bold shadow-2xl border-2 border-orange-500 hover:border-orange-600 transition-all duration-300 rounded-full"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-12 py-5 text-xl font-bold shadow-lg border-4 border-yellow-500 hover:border-yellow-400 transition-all duration-300"
               onClick={() => window.open(`https://wa.me/917727021780?text=नमस्कार! मुझे राजस्थान टैक्सी सेवा की जानकारी चाहिए।`, '_blank')}
+              style={{ fontFamily: "'Cinzel', serif" }}
             >
               <Phone className="w-6 h-6 mr-3" />
               Book Rajasthan Tour
             </Button>
             <Button 
               size="lg" 
-              className="bg-white/95 backdrop-blur-sm text-gray-900 hover:bg-white border-3 border-white px-12 py-5 text-2xl font-bold shadow-2xl transition-all duration-300 rounded-full hover:scale-105"
+              className="bg-white text-orange-800 hover:bg-orange-50 border-4 border-orange-600 hover:border-orange-700 px-12 py-5 text-xl font-bold shadow-lg transition-all duration-300"
               onClick={() => window.open(`tel:+919772021780`, '_blank')}
+              style={{ fontFamily: "'Cinzel', serif" }}
             >
               <Car className="w-6 h-6 mr-3" />
               Call Now
@@ -260,55 +266,57 @@ export default function RajasthanTaxiService() {
         </div>
       </div>
 
-      {/* Enhanced Services Grid */}
-      <div className="bg-gradient-to-br from-gray-50 to-white py-20">
+      {/* Traditional Services Section */}
+      <div className="bg-orange-50 py-20 border-t-8 border-orange-600">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-pink-100 text-pink-800 border-pink-200">
-              Our Popular Routes
-            </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Explore Royal Rajasthan
+            <div className="inline-block mb-6 bg-red-600 text-white px-8 py-3 border-4 border-yellow-500 text-lg font-bold" style={{ fontFamily: "'Cinzel', serif" }}>
+              हमारे लोकप्रिय मार्ग - Our Popular Routes
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-orange-800 mb-6" style={{ fontFamily: "'Cinzel', serif" }}>
+              Royal Rajasthan Heritage Tours
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose from our extensive network of premium taxi services across the majestic state of Rajasthan. From desert safaris to palace tours, we cover every royal destination.
+            <p className="text-xl text-gray-800 max-w-3xl mx-auto" style={{ fontFamily: "'Crimson Text', serif" }}>
+              Experience authentic Rajasthani culture through our premium taxi services. From majestic desert safaris to royal palace tours, discover the true essence of the Land of Kings.
             </p>
+            <div className="mt-6 w-32 h-1 bg-red-600 mx-auto"></div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {rajasthanTaxiServices.map((service, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg hover:-translate-y-2 bg-white">
+              <Card key={index} className="group hover:shadow-xl transition-all duration-500 border-4 border-orange-300 shadow-lg hover:-translate-y-2 bg-white">
                 <CardHeader className="pb-4">
                   <div className="flex items-center justify-between mb-4">
-                    <div className="p-3 bg-gradient-to-br from-pink-500 to-orange-600 rounded-xl text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <div className="p-3 bg-orange-600 border-4 border-yellow-500 text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
                       <Car className="w-6 h-6" />
                     </div>
                     <div className="text-right">
-                      <div className="text-2xl font-bold text-pink-600">{service.price}</div>
-                      <Badge variant="secondary" className="bg-green-100 text-green-800 text-xs">
+                      <div className="text-2xl font-bold text-red-600" style={{ fontFamily: "'Cinzel', serif" }}>{service.price}</div>
+                      <div className="bg-green-600 text-white text-xs px-2 py-1 border-2 border-green-800 font-bold">
                         Available
-                      </Badge>
+                      </div>
                     </div>
                   </div>
-                  <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-pink-600 transition-colors duration-300 mb-2">
+                  <CardTitle className="text-xl font-bold text-orange-800 group-hover:text-red-600 transition-colors duration-300 mb-2" style={{ fontFamily: "'Cinzel', serif" }}>
                     {service.name}
                   </CardTitle>
-                  <CardDescription className="text-gray-600 text-base leading-relaxed">
+                  <CardDescription className="text-gray-700 text-base leading-relaxed" style={{ fontFamily: "'Crimson Text', serif" }}>
                     {service.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="pt-0">
                   <div className="space-y-3 mb-6">
                     {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-3 text-sm text-gray-700">
-                        <div className="w-2 h-2 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full"></div>
-                        <span className="font-medium">{feature}</span>
+                      <div key={idx} className="flex items-center gap-3 text-sm text-gray-800">
+                        <div className="w-3 h-3 bg-orange-600 border border-red-600"></div>
+                        <span className="font-medium" style={{ fontFamily: "'Crimson Text', serif" }}>{feature}</span>
                       </div>
                     ))}
                   </div>
                   <Button 
-                    className="w-full bg-gradient-to-r from-pink-500 to-orange-600 hover:from-pink-600 hover:to-orange-700 text-white font-semibold py-3 shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 border-4 border-yellow-500 hover:border-yellow-400 shadow-lg hover:shadow-xl transition-all duration-300"
                     onClick={() => window.open(`https://wa.me/917727021780?text=नमस्कार! मुझे ${service.name} की बुकिंग करनी है। कृपया दरें और उपलब्धता बताएं।`, '_blank')}
+                    style={{ fontFamily: "'Cinzel', serif" }}
                   >
                     <Phone className="w-4 h-4 mr-2" />
                     Book This Route
@@ -322,55 +330,56 @@ export default function RajasthanTaxiService() {
 
 
 
-      {/* Enhanced Contact Section */}
-      <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-20">
+      {/* Traditional Contact Section */}
+      <div className="bg-red-800 text-white py-20 border-t-8 border-yellow-500">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <Badge className="mb-6 bg-orange-600 text-white border-orange-400 text-lg px-6 py-2">
-              Get In Touch
-            </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <div className="inline-block mb-6 bg-orange-600 text-white px-8 py-3 border-4 border-yellow-500 text-lg font-bold" style={{ fontFamily: "'Cinzel', serif" }}>
+              संपर्क करें - Get In Touch
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ fontFamily: "'Cinzel', serif" }}>
               Ready to Explore Royal Rajasthan?
             </h2>
-            <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-              Contact our travel experts for instant booking, custom itineraries, and best rates across Rajasthan. Available 24/7 for your convenience.
+            <p className="text-xl mb-8 max-w-3xl mx-auto" style={{ fontFamily: "'Crimson Text', serif" }}>
+              Contact our experienced travel guides for authentic Rajasthani experiences, traditional heritage tours, and the best royal hospitality across the desert state.
             </p>
+            <div className="w-32 h-1 bg-yellow-500 mx-auto"></div>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <a 
               href="tel:+919772021780" 
-              className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 p-8 rounded-2xl transition-all duration-300 hover:transform hover:scale-105 shadow-2xl"
+              className="group bg-orange-600 hover:bg-orange-700 p-8 border-4 border-yellow-500 hover:border-yellow-400 transition-all duration-300 hover:transform hover:scale-105 shadow-2xl"
             >
               <div className="flex items-center gap-4">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                  <Phone className="w-8 h-8" />
+                <div className="w-16 h-16 bg-yellow-500 border-4 border-white flex items-center justify-center group-hover:bg-yellow-400 transition-colors">
+                  <Phone className="w-8 h-8 text-orange-800" />
                 </div>
                 <div className="text-left">
-                  <h3 className="text-xl font-bold mb-2">Call Now</h3>
-                  <p className="text-blue-100 text-lg">+91 97720 21780</p>
+                  <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Cinzel', serif" }}>Call Now</h3>
+                  <p className="text-white text-lg" style={{ fontFamily: "'Crimson Text', serif" }}>+91 97720 21780</p>
                 </div>
               </div>
             </a>
             
             <a 
               href="https://wa.me/917727021780" 
-              className="group bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 p-8 rounded-2xl transition-all duration-300 hover:transform hover:scale-105 shadow-2xl"
+              className="group bg-green-600 hover:bg-green-700 p-8 border-4 border-yellow-500 hover:border-yellow-400 transition-all duration-300 hover:transform hover:scale-105 shadow-2xl"
             >
               <div className="flex items-center gap-4">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                  <Phone className="w-8 h-8" />
+                <div className="w-16 h-16 bg-yellow-500 border-4 border-white flex items-center justify-center group-hover:bg-yellow-400 transition-colors">
+                  <Phone className="w-8 h-8 text-green-800" />
                 </div>
                 <div className="text-left">
-                  <h3 className="text-xl font-bold mb-2">WhatsApp</h3>
-                  <p className="text-green-100 text-lg">+91 77270 21780</p>
+                  <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Cinzel', serif" }}>WhatsApp</h3>
+                  <p className="text-white text-lg" style={{ fontFamily: "'Crimson Text', serif" }}>+91 77270 21780</p>
                 </div>
               </div>
             </a>
           </div>
           
           <div className="text-center mt-12">
-            <p className="text-gray-300 text-lg">
+            <p className="text-yellow-200 text-lg" style={{ fontFamily: "'Crimson Text', serif" }}>
               <MapPin className="w-5 h-5 inline mr-2" />
               S-147, 4S New Loha Mandi Road, Machada, Jaipur-302013
             </p>
