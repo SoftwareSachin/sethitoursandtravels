@@ -126,6 +126,14 @@ The application follows a monorepo structure with clear separation between clien
 - **Jaipur Pink City Exploration**: Updated with stunning Hawa Mahal view featuring tourist in pink attire (steptodown.com327488_1752605405592.jpg)
 - **Ranthambore Wildlife Safari**: Updated with authentic tiger safari scene showing tourists in safari vehicles (steptodown.com190872_1752605563395.jpg)
 - **Jodhpur Blue City Adventure**: Updated with authentic blue city architecture and traditional street life (steptodown.com550456_1752605642817.jpg)
+
+### Complete Tour Packages Section Image Updates (Latest - January 2025)
+- **Rajasthan Heritage Circuit**: Updated with comprehensive heritage monuments and cultural collage (steptodown.com829502_1752605835373.jpg)
+- **Golden Triangle Deluxe**: Updated with stunning Taj Mahal reflection and Delhi-Agra-Jaipur highlights (steptodown.com848188_1752605945288.jpg)
+- **Punjab Spiritual Journey**: Updated with Golden Temple reflection showcasing spiritual experience (steptodown.com566946_1752606002957.jpg)
+- **Uttarakhand Adventure**: Updated with authentic river rafting adventure scene (steptodown.com936693_1752606047627.jpg)
+- **Himachal Hill Stations**: Updated with mountain trekking and snow-covered landscape (steptodown.com240097_1752606075991.jpg)
+- **Thailand International**: Updated with golden Buddha temple and traditional Thai boat scene (steptodown.com946577_1752606132959.jpg)
 - **Responsive Image Display**: Enhanced all images with proper mobile-first responsive design for optimal viewing across all devices
 
 ### Comprehensive Mobile-First Responsive Design Enhancement (Latest - January 2025)

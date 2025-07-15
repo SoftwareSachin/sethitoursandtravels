@@ -14,7 +14,7 @@ export default function ComprehensivePackages() {
       price: "₹28,999",
       originalPrice: "₹35,999",
       rating: "4.9",
-      image: "/attached_assets/image_1752355776665.png",
+      image: "/attached_assets/steptodown.com829502_1752605835373.jpg",
       category: "Premium",
       highlights: [
         "Desert Safari in Jaisalmer",
@@ -42,7 +42,7 @@ export default function ComprehensivePackages() {
       price: "₹22,999",
       originalPrice: "₹28,999",
       rating: "4.8",
-      image: "/attached_assets/image_1752355900853.png",
+      image: "/attached_assets/steptodown.com848188_1752605945288.jpg",
       category: "Classic",
       highlights: [
         "Taj Mahal Sunrise Visit",
@@ -70,7 +70,7 @@ export default function ComprehensivePackages() {
       price: "₹16,999",
       originalPrice: "₹21,999", 
       rating: "4.7",
-      image: "/attached_assets/image_1752355931356.png",
+      image: "/attached_assets/steptodown.com566946_1752606002957.jpg",
       category: "Spiritual",
       highlights: [
         "Golden Temple Early Morning Visit",
@@ -98,7 +98,7 @@ export default function ComprehensivePackages() {
       price: "₹24,999",
       originalPrice: "₹30,999",
       rating: "4.8",
-      image: "/attached_assets/image_1752355954390.png",
+      image: "/attached_assets/steptodown.com936693_1752606047627.jpg",
       category: "Adventure",
       highlights: [
         "Ganga Aarti at Har Ki Pauri",
@@ -126,7 +126,7 @@ export default function ComprehensivePackages() {
       price: "₹26,999",
       originalPrice: "₹33,999",
       rating: "4.9",
-      image: "/attached_assets/image_1752355972172.png",
+      image: "/attached_assets/steptodown.com240097_1752606075991.jpg",
       category: "Hill Station",
       highlights: [
         "Rohtang Pass Snow Experience",
@@ -154,7 +154,7 @@ export default function ComprehensivePackages() {
       price: "₹55,999",
       originalPrice: "₹69,999",
       rating: "4.8",
-      image: "/attached_assets/image_1752356016796.png",
+      image: "/attached_assets/steptodown.com946577_1752606132959.jpg",
       category: "International",
       highlights: [
         "Grand Palace & Wat Pho",
