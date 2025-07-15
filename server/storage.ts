@@ -105,7 +105,7 @@ export class MemStorage implements IStorage {
       {
         name: "Ranthambore Wildlife Safari",
         description: "Tiger safari in India's famous national park! Morning and evening game drives, wildlife photography, ancient Ranthambore Fort. Best chance to spot Royal Bengal Tigers.",
-        image: "/attached_assets/image_1752355272251.png",
+        image: "/attached_assets/steptodown.com190872_1752605563395.jpg",
         destination: "Ranthambore, Rajasthan",
         price: 14000,
         duration: "3 Days / 2 Nights",
@@ -115,7 +115,7 @@ export class MemStorage implements IStorage {
       {
         name: "Jodhpur Blue City Adventure",
         description: "Explore the Blue City's majestic Mehrangarh Fort, Jaswant Thada memorial, vibrant blue houses, spice markets, and authentic Rajasthani cuisine experiences.",
-        image: "/attached_assets/image_1752355302261.png",
+        image: "/attached_assets/steptodown.com550456_1752605642817.jpg",
         destination: "Jodhpur, Rajasthan",
         price: 11000,
         duration: "3 Days / 2 Nights",

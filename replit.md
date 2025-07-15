@@ -124,6 +124,8 @@ The application follows a monorepo structure with clear separation between clien
 - **Jaisalmer Desert Safari Package**: Updated with authentic camel safari scene in Thar Desert (steptodown.com383347_1752604452116.jpg)
 - **Udaipur Lake City Romance Tour**: Updated with authentic City Palace scene with traditional Rajasthani attire (steptodown.com306448_1752604550466.jpg)
 - **Jaipur Pink City Exploration**: Updated with stunning Hawa Mahal view featuring tourist in pink attire (steptodown.com327488_1752605405592.jpg)
+- **Ranthambore Wildlife Safari**: Updated with authentic tiger safari scene showing tourists in safari vehicles (steptodown.com190872_1752605563395.jpg)
+- **Jodhpur Blue City Adventure**: Updated with authentic blue city architecture and traditional street life (steptodown.com550456_1752605642817.jpg)
 - **Responsive Image Display**: Enhanced all images with proper mobile-first responsive design for optimal viewing across all devices
 
 ### Comprehensive Mobile-First Responsive Design Enhancement (Latest - January 2025)
