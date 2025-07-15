@@ -85,7 +85,7 @@ export class MemStorage implements IStorage {
       {
         name: "Udaipur Lake City Romance Tour",
         description: "Experience the Venice of East! Boat rides on Lake Pichola, City Palace complex, Jag Mandir island, sunset at Sajjangarh Palace. Perfect for couples and photographers.",
-        image: "/attached_assets/image_1752355235261.png",
+        image: "/attached_assets/steptodown.com306448_1752604550466.jpg",
         destination: "Udaipur, Rajasthan",
         price: 15000,
         duration: "4 Days / 3 Nights",
