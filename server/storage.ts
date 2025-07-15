@@ -45,7 +45,7 @@ export class MemStorage implements IStorage {
       {
         name: "Golden Triangle Tour - Delhi • Agra • Jaipur",
         description: "Classic India tour covering UNESCO World Heritage sites: Red Fort, Taj Mahal, Amber Fort, and Hawa Mahal. Perfect introduction to India's rich Mughal and Rajput heritage.",
-        image: "/attached_assets/image_1752355162127.png",
+        image: "/attached_assets/steptodown.com135691_1752603870982.jpg",
         destination: "Delhi-Agra-Jaipur",
         price: 18000,
         duration: "6 Days / 5 Nights",
