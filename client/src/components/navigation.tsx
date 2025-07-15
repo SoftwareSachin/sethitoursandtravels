@@ -17,6 +17,7 @@ export default function Navigation() {
   };
 
   const navItems = [
+    { id: "home", label: "Home", href: "/" },
     { id: "fleet", label: "Fleet" },
     { id: "services", label: "Services" },
     { id: "packages", label: "Tour Packages" },
@@ -38,6 +39,12 @@ export default function Navigation() {
           <div className="flex justify-between items-center h-14 sm:h-16 lg:h-14">
             {/* Left Navigation */}
             <div className="hidden lg:flex items-center space-x-2 xl:space-x-3 flex-shrink-0">
+              <Link href="/">
+                <button className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-xs xl:text-sm whitespace-nowrap touch-target min-h-[44px] px-2 xl:px-3 py-2 rounded-md flex items-center">
+                  <Home className="w-4 h-4 mr-1" />
+                  Home
+                </button>
+              </Link>
               <button
                 onClick={() => scrollToSection("fleet")}
                 className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-xs xl:text-sm whitespace-nowrap touch-target min-h-[44px] px-2 xl:px-3 py-2 rounded-md"
@@ -54,13 +61,15 @@ export default function Navigation() {
 
             {/* Central Logo - Desktop Only */}
             <div className="hidden lg:flex justify-center items-center mx-2 xl:mx-4 flex-shrink-0">
-              <div className="bg-white rounded-lg p-1 shadow-lg border border-orange-200">
-                <img 
-                  src={companyLogo} 
-                  alt="Sethi Tour & Travels - Premium Travel Services" 
-                  className="h-8 w-auto"
-                />
-              </div>
+              <Link href="/">
+                <div className="bg-white rounded-lg p-1 shadow-lg border border-orange-200 cursor-pointer hover:shadow-xl transition-shadow">
+                  <img 
+                    src={companyLogo} 
+                    alt="Sethi Tour & Travels - Premium Travel Services" 
+                    className="h-8 w-auto"
+                  />
+                </div>
+              </Link>
             </div>
 
             {/* Right Navigation */}
@@ -81,19 +90,21 @@ export default function Navigation() {
 
             {/* Mobile Logo and Title - Enhanced Mobile Responsiveness */}
             <div className="lg:hidden flex items-center min-w-0 flex-1">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg overflow-hidden mr-2 sm:mr-3 bg-white shadow-lg border-2 border-orange-200 p-0.5 sm:p-1 flex-shrink-0">
-                <img 
-                  src={companyLogo} 
-                  alt="Sethi Tour & Travels" 
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div className="min-w-0 flex-1">
-                <h1 className="text-sm sm:text-base md:text-lg font-bold text-transparent bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text truncate leading-tight" style={{ fontFamily: "'Cinzel', serif", letterSpacing: '0.5px' }}>
-                  Sethi Tour & Travels
-                </h1>
-                <p className="text-xs sm:text-sm text-gray-600 truncate leading-tight">India Tours</p>
-              </div>
+              <Link href="/" className="flex items-center min-w-0 flex-1">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg overflow-hidden mr-2 sm:mr-3 bg-white shadow-lg border-2 border-orange-200 p-0.5 sm:p-1 flex-shrink-0">
+                  <img 
+                    src={companyLogo} 
+                    alt="Sethi Tour & Travels" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <h1 className="text-sm sm:text-base md:text-lg font-bold text-transparent bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text truncate leading-tight" style={{ fontFamily: "'Cinzel', serif", letterSpacing: '0.5px' }}>
+                    Sethi Tour & Travels
+                  </h1>
+                  <p className="text-xs sm:text-sm text-gray-600 truncate leading-tight">India Tours</p>
+                </div>
+              </Link>
             </div>
 
 
@@ -130,13 +141,25 @@ export default function Navigation() {
                 </div>
                 <div className="flex flex-col space-y-4">
                   {navItems.map((item) => (
-                    <button
-                      key={item.id}
-                      onClick={() => scrollToSection(item.id)}
-                      className="text-left text-gray-700 hover:text-pink-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50 text-base font-medium"
-                    >
-                      {item.label}
-                    </button>
+                    item.href ? (
+                      <Link
+                        key={item.id}
+                        href={item.href}
+                        className="text-left text-gray-700 hover:text-pink-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50 text-base font-medium flex items-center"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <Home className="w-4 h-4 mr-2" />
+                        {item.label}
+                      </Link>
+                    ) : (
+                      <button
+                        key={item.id}
+                        onClick={() => scrollToSection(item.id)}
+                        className="text-left text-gray-700 hover:text-pink-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50 text-base font-medium"
+                      >
+                        {item.label}
+                      </button>
+                    )
                   ))}
                   {specialNavItems.map((item) => (
                     <Link
