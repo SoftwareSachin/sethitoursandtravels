@@ -159,8 +159,8 @@ The application follows a monorepo structure with clear separation between clien
 - **Complete Royal Transformation**: Redesigned "Our Premium Services" section with authentic Rajasthani royal styling and Indian cultural elements
 - **Authentic Images Integration**: Replaced service images with user-uploaded authentic Rajasthani tourism images:
   - Rajasthan Tours: Stunning collage of palaces, desert landscapes, and architectural heritage
-  - Premium Cabs: Luxury vehicle at authentic Rajasthani palace courtyard
-  - Local Sightseeing: Beautiful collection of Jaipur's iconic landmarks and architecture
+  - Premium Cabs: Mercedes SUV luxury vehicle (steptodown.com203575_1752603311916.jpg)
+  - Local Sightseeing: Authentic elephant ride at Amber Fort with traditional Rajasthani culture (steptodown.com986609_1752603510335.jpg)
 - **Royal Design Elements**: Added crown decorations, royal badges, traditional patterns, and gradient borders
 - **Hindi/Rajasthani Integration**: Added authentic Hindi subtitles for each service ("राजस्थान की रानी यात्रा", "शाही वाहन सेवा", "स्थानीय दर्शनीय स्थल")
 - **Premium Visual Effects**: Enhanced cards with royal corner decorations, 5-star ratings, gradient overlays, and hover animations

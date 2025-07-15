@@ -29,7 +29,7 @@ export default function ServiceCategories() {
       category: "City Tour",
       subtitle: "स्थानीय दर्शनीय स्थल",
       description: "Discover hidden gems and iconic landmarks of Jaipur",
-      image: "/attached_assets/image_1752400722337.png",
+      image: "/attached_assets/steptodown.com986609_1752603510335.jpg",
       link: "#packages",
       color: "from-blue-600 to-indigo-600",
       accent: "blue"
