@@ -29,11 +29,11 @@ import Navigation from '@/components/navigation';
 import rajasthanImage1 from '@assets/steptodown.com277288_1752616104431.jpg';
 import rajasthanImage2 from '@assets/steptodown.com541522_1752616161691.jpg';
 import rajasthanImage3 from '@assets/steptodown.com637503_1752616201447.jpg';
-import jaipurImage from '@assets/image_1752338428906.png';
-import udaipurImage from '@assets/image_1752338463592.png';
-import jodhpurImage from '@assets/image_1752338490127.png';
-import jaisalmerImage from '@assets/image_1752338516875.png';
-import pushkarImage from '@assets/image_1752338545455.png';
+import jaipurImage from '@assets/steptodown.com429851_1752616326642.jpg';
+import udaipurImage from '@assets/steptodown.com228771_1752616367653.jpg';
+import jodhpurImage from '@assets/steptodown.com704969_1752616410506.jpg';
+import jaisalmerImage from '@assets/steptodown.com168855_1752616461960.jpg';
+import pushkarImage from '@assets/steptodown.com506856_1752616505890.jpg';
 
 export default function RajasthanTour() {
   const [formData, setFormData] = useState({
