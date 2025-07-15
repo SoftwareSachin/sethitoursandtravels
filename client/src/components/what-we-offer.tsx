@@ -236,11 +236,17 @@ export default function WhatWeOffer() {
               <Button 
                 asChild
                 size="lg"
-                className="bg-white text-orange-700 hover:bg-orange-50 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                style={{ fontFamily: "'Cinzel', serif" }}
+                className="bg-white text-orange-700 hover:bg-orange-50 font-bold px-4 sm:px-6 md:px-8 py-4 sm:py-5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 min-h-[56px] w-full sm:w-auto mobile-btn-responsive"
+                style={{ fontFamily: "'Cinzel', serif", touchAction: 'manipulation' }}
               >
-                <a href="https://api.whatsapp.com/send?phone=919772021780&text=Hello%20I%20want%20to%20know%20about%20your%20authentic%20Indian%20services">
-                  अपना अनुभव बुक करें | Book Your Experience
+                <a 
+                  href="https://api.whatsapp.com/send?phone=919772021780&text=Hello%20I%20want%20to%20know%20about%20your%20authentic%20Indian%20services"
+                  className="flex flex-col sm:flex-row items-center justify-center text-center leading-tight"
+                >
+                  <span className="text-sm sm:text-base md:text-lg font-semibold">
+                    <span className="block sm:inline">अपना अनुभव बुक करें</span>
+                    <span className="block sm:inline sm:ml-2">Book Your Experience</span>
+                  </span>
                 </a>
               </Button>
             </div>

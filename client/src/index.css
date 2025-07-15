@@ -72,6 +72,27 @@
     body {
       font-size: 16px; /* Prevent zoom on iOS */
     }
+    
+    /* Prevent text wrapping issues on mobile buttons */
+    .mobile-btn-responsive {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+    
+    /* Mobile-specific button improvements */
+    .mobile-btn-responsive span {
+      display: block;
+      line-height: 1.2;
+      font-size: 14px;
+    }
+    
+    .mobile-btn-responsive .flex {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+    }
   }
   
   /* Hawa Mahal image optimization for all devices */
@@ -252,6 +273,49 @@
       .testimonials-mobile {
         grid-template-columns: repeat(1, minmax(0, 1fr));
         gap: 1rem;
+      }
+    }
+    
+    /* Mobile-responsive button utilities */
+    @layer utilities {
+      .mobile-btn-responsive {
+        min-height: 56px;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0.75rem 1rem;
+        word-break: break-word;
+        hyphens: auto;
+      }
+      
+      @media (max-width: 640px) {
+        .mobile-btn-responsive {
+          padding: 1rem 0.75rem;
+          font-size: 0.875rem;
+          line-height: 1.25;
+          min-height: 60px;
+        }
+        
+        .mobile-btn-responsive span {
+          max-width: 100%;
+          word-wrap: break-word;
+          hyphens: auto;
+        }
+      }
+      
+      /* Touch-friendly elements */
+      .touch-target {
+        min-height: 48px;
+        min-width: 48px;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+      }
+      
+      .text-balance {
+        text-wrap: balance;
       }
     }
     
