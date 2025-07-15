@@ -121,6 +121,7 @@ The application follows a monorepo structure with clear separation between clien
 - **Golden Triangle Tour**: Updated with comprehensive collage showing Delhi, Agra, and Jaipur highlights (steptodown.com135691_1752603870982.jpg)
 - **Royal Rajasthan Heritage Tour**: Updated with golden fort and purple mountains showcasing royal heritage (steptodown.com648128_1752604073181.jpg)
 - **Taj Mahal Same Day Tour**: Updated with stunning sunset view of Taj Mahal (steptodown.com107956_1752604190177.jpg)
+- **Jaisalmer Desert Safari Package**: Updated with authentic camel safari scene in Thar Desert (steptodown.com383347_1752604452116.jpg)
 - **Responsive Image Display**: Enhanced all images with proper mobile-first responsive design for optimal viewing across all devices
 
 ### Comprehensive Mobile-First Responsive Design Enhancement (Latest - January 2025)

@@ -75,7 +75,7 @@ export class MemStorage implements IStorage {
       {
         name: "Jaisalmer Desert Safari Package",
         description: "Authentic desert experience in the Thar Desert! Camel safari, sand dunes, traditional Rajasthani dinner, folk music & dance under starlit sky. Stay in luxury desert camps.",
-        image: "/attached_assets/image_1752355204306.png",
+        image: "/attached_assets/steptodown.com383347_1752604452116.jpg",
         destination: "Jaisalmer, Rajasthan",
         price: 12000,
         duration: "3 Days / 2 Nights",
