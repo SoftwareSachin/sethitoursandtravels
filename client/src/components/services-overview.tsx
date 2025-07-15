@@ -157,27 +157,27 @@ export default function ServicesOverview() {
             "वसुधैव कुटुम्बकम् - The World is One Family"
           </p>
 
-          {/* Traditional state symbols */}
-          <div className="flex justify-center items-center space-x-4 mb-8">
-            <div className="flex items-center space-x-2">
-              <div className="w-4 h-4 bg-orange-500 rounded-full shadow-md"></div>
-              <span className="text-sm text-gray-600 font-medium">Rajasthan</span>
+          {/* Traditional state symbols - Mobile Enhanced */}
+          <div className="flex flex-wrap justify-center items-center gap-2 xs:gap-3 sm:gap-4 mb-6 xs:mb-8 px-2 xs:px-4">
+            <div className="flex items-center gap-1 xs:gap-2 bg-white/10 backdrop-blur-sm rounded-full px-2 xs:px-3 py-1 xs:py-1.5">
+              <div className="w-3 h-3 xs:w-4 xs:h-4 bg-orange-500 rounded-full shadow-md"></div>
+              <span className="text-xs xs:text-sm text-gray-600 font-medium">Rajasthan</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-4 h-4 bg-green-500 rounded-full shadow-md"></div>
-              <span className="text-sm text-gray-600 font-medium">Kerala</span>
+            <div className="flex items-center gap-1 xs:gap-2 bg-white/10 backdrop-blur-sm rounded-full px-2 xs:px-3 py-1 xs:py-1.5">
+              <div className="w-3 h-3 xs:w-4 xs:h-4 bg-green-500 rounded-full shadow-md"></div>
+              <span className="text-xs xs:text-sm text-gray-600 font-medium">Kerala</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-4 h-4 bg-blue-500 rounded-full shadow-md"></div>
-              <span className="text-sm text-gray-600 font-medium">Maharashtra</span>
+            <div className="flex items-center gap-1 xs:gap-2 bg-white/10 backdrop-blur-sm rounded-full px-2 xs:px-3 py-1 xs:py-1.5">
+              <div className="w-3 h-3 xs:w-4 xs:h-4 bg-blue-500 rounded-full shadow-md"></div>
+              <span className="text-xs xs:text-sm text-gray-600 font-medium">Maharashtra</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-4 h-4 bg-purple-500 rounded-full shadow-md"></div>
-              <span className="text-sm text-gray-600 font-medium">Punjab</span>
+            <div className="flex items-center gap-1 xs:gap-2 bg-white/10 backdrop-blur-sm rounded-full px-2 xs:px-3 py-1 xs:py-1.5">
+              <div className="w-3 h-3 xs:w-4 xs:h-4 bg-purple-500 rounded-full shadow-md"></div>
+              <span className="text-xs xs:text-sm text-gray-600 font-medium">Punjab</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-4 h-4 bg-yellow-500 rounded-full shadow-md"></div>
-              <span className="text-sm text-gray-600 font-medium">Gujarat</span>
+            <div className="flex items-center gap-1 xs:gap-2 bg-white/10 backdrop-blur-sm rounded-full px-2 xs:px-3 py-1 xs:py-1.5">
+              <div className="w-3 h-3 xs:w-4 xs:h-4 bg-yellow-500 rounded-full shadow-md"></div>
+              <span className="text-xs xs:text-sm text-gray-600 font-medium">Gujarat</span>
             </div>
           </div>
 
@@ -283,7 +283,7 @@ export default function ServicesOverview() {
           })}
         </div>
 
-        <div className="bg-gradient-to-r from-orange-600 via-red-600 via-yellow-600 to-pink-600 rounded-3xl p-12 shadow-2xl text-white relative overflow-hidden border-4 border-yellow-400">
+        <div className="bg-gradient-to-r from-orange-600 via-red-600 via-yellow-600 to-pink-600 rounded-2xl xs:rounded-3xl p-4 xs:p-6 sm:p-8 md:p-12 shadow-2xl text-white relative overflow-hidden border-2 xs:border-4 border-yellow-400">
           {/* Royal traditional patterns */}
           <div className="absolute inset-0 opacity-8">
             <div className="absolute top-0 left-0 w-full h-full" style={{
@@ -310,14 +310,14 @@ export default function ServicesOverview() {
               <Crown className="h-6 w-6 text-yellow-400 animate-pulse" />
             </div>
             
-            <h3 className="text-4xl md:text-5xl font-bold text-center mb-4" style={{ fontFamily: "'Cinzel', serif" }}>
+            <h3 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-center mb-3 xs:mb-4 px-2 xs:px-4" style={{ fontFamily: "'Cinzel', serif" }}>
               Why Choose <span className="text-yellow-400">Sethi Tour & Travels</span>?
             </h3>
-            <p className="text-center text-yellow-100 mb-12 max-w-3xl mx-auto text-xl leading-relaxed" style={{ fontFamily: "'Crimson Text', serif" }}>
+            <p className="text-center text-yellow-100 mb-6 xs:mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto text-sm xs:text-base sm:text-lg md:text-xl leading-relaxed px-2 xs:px-4" style={{ fontFamily: "'Crimson Text', serif" }}>
               Experience the difference with our premium travel services that blend traditional Indian hospitality with modern luxury
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 xs:gap-6 sm:gap-8 md:gap-10">
               {whyChooseUs.map((item, index) => {
                 const IconComponent = item.icon;
                 const stateAccents = [
@@ -329,28 +329,29 @@ export default function ServicesOverview() {
                 
                 return (
                   <div key={index} className="text-center group">
-                    <div className={`w-24 h-24 bg-gradient-to-r ${accentColor} rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-2xl border-4 border-white`}>
-                      <IconComponent className="h-12 w-12 text-white" />
+                    <div className={`w-16 h-16 xs:w-20 xs:h-20 sm:w-24 sm:h-24 bg-gradient-to-r ${accentColor} rounded-full flex items-center justify-center mx-auto mb-3 xs:mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-2xl border-2 xs:border-4 border-white`}>
+                      <IconComponent className="h-6 w-6 xs:h-8 xs:w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-white" />
                     </div>
-                    <h4 className="text-2xl font-bold mb-4 text-yellow-100" style={{ fontFamily: "'Cinzel', serif" }}>
+                    <h4 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold mb-2 xs:mb-3 sm:mb-4 text-yellow-100 px-1 xs:px-2" style={{ fontFamily: "'Cinzel', serif" }}>
                       {item.title}
                     </h4>
-                    <p className="text-yellow-200 leading-relaxed text-sm">{item.description}</p>
+                    <p className="text-yellow-200 leading-relaxed text-xs xs:text-sm px-1 xs:px-2">{item.description}</p>
                   </div>
                 );
               })}
             </div>
           </div>
 
-          <div className="text-center mt-12 pt-8 border-t-2 border-yellow-400/50">
+          <div className="text-center mt-6 xs:mt-8 sm:mt-10 md:mt-12 pt-4 xs:pt-6 sm:pt-8 border-t-2 border-yellow-400/50 px-2 xs:px-4">
             <Button 
               size="lg"
-              className="bg-gradient-to-r from-yellow-400 to-orange-400 hover:from-yellow-500 hover:to-orange-500 text-gray-900 px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-white"
+              className="bg-gradient-to-r from-yellow-400 to-orange-400 hover:from-yellow-500 hover:to-orange-500 text-gray-900 px-4 xs:px-6 sm:px-8 md:px-10 py-3 xs:py-3.5 sm:py-4 rounded-full font-bold text-sm xs:text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-white w-full xs:w-auto min-h-[48px]"
               asChild
             >
               <a href="https://api.whatsapp.com/send?phone=919772021780&text=नमस्ते! मुझे आपकी सभी सर्विसेज के बारे में जानकारी चाहिए।">
-                <Award className="mr-3 h-6 w-6" />
-                Get Complete Royal Service Details
+                <Award className="mr-1 xs:mr-2 sm:mr-3 h-4 w-4 xs:h-5 xs:w-5 sm:h-6 sm:w-6" />
+                <span className="hidden sm:inline">Get Complete Royal Service Details</span>
+                <span className="sm:hidden">Royal Service Details</span>
               </a>
             </Button>
           </div>
