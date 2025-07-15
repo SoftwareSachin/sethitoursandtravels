@@ -2,8 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Users, Luggage, MapPin, Star, Crown, Award, Sparkles } from "lucide-react";
-import dzireImage from "@assets/image_1752328537540.png";
-import ertigaImage from "@assets/image_1752328561242.png";
+import dzireImage from "@assets/steptodown.com267953_1752609994574.jpg";
+import ertigaImage from "@assets/steptodown.com288680_1752610052347.jpg";
 import innovaImage from "@assets/image_1752328589553.png";
 import tempoImage from "@assets/image_1752328614332.png";
 

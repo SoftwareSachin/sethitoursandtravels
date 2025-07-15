@@ -7,8 +7,8 @@ import Footer from "@/components/footer";
 import heroImage from "@assets/image_1752344666560.png";
 import nagaurFortImage from "@assets/image_1752344804650.png";
 import karniMataImage from "@assets/image_1752344824068.png";
-import dzireImage from "@assets/image_1752328537540.png";
-import ertigaImage from "@assets/image_1752328561242.png";
+import dzireImage from "@assets/steptodown.com267953_1752609994574.jpg";
+import ertigaImage from "@assets/steptodown.com288680_1752610052347.jpg";
 import innovaImage from "@assets/image_1752328589553.png";
 
 const fleetVehicles = [

@@ -41,8 +41,8 @@ import albertHallImage from '@assets/image_1752341852851.png';
 import jaipurMarketImage from '@assets/image_1752342304077.png';
 import photoOpportunityImage from '@assets/image_1752342374722.png';
 import rajasthaniWelcomeImage from '@assets/image_1752342637765.png';
-import dzireImage from '@assets/image_1752328537540.png';
-import ertigaImage from '@assets/image_1752328561242.png';
+import dzireImage from '@assets/steptodown.com267953_1752609994574.jpg';
+import ertigaImage from '@assets/steptodown.com288680_1752610052347.jpg';
 import innovaImage from '@assets/image_1752328589553.png';
 import birlaMandirImage from '@assets/image_1752343342879.png';
 

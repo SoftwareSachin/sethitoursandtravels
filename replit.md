@@ -194,6 +194,13 @@ The application follows a monorepo structure with clear separation between clien
   - Udaipur Lake Palace - A Royal Experience: Beautiful Lake Palace complex with traditional Rajasthani architecture (steptodown.com766766_1752609734764.jpg)
   - Taxi Service Excellence in Rajasthan: Professional taxi fleet showing multiple vehicles for service excellence (steptodown.com840584_1752609781715.jpg)
 
+### Royal Fleet Showcase Vehicle Updates (Latest - January 15, 2025)
+- **Maruti Suzuki Dzire Update**: Updated Dzire image across all components with authentic white taxi featuring yellow stripe branding (steptodown.com267953_1752609994574.jpg)
+- **Maruti Suzuki Ertiga Update**: Updated Ertiga image across all components with authentic white MPV on Indian street (steptodown.com288680_1752610052347.jpg)
+- **Cross-Component Consistency**: Updated images in Fleet Showcase component, Jaipur Taxi page, Jaipur City Tour page, and Jaipur-Bikaner Taxi page
+- **Authentic Vehicle Imagery**: Both vehicles now display authentic Indian license plates and real-world taxi service branding
+- **Professional Fleet Appearance**: Enhanced fleet showcase with genuine taxi service vehicles representing actual fleet offerings
+
 ### Migration from Replit Agent to Standard Replit Complete & Quick Book Now Enhancement (January 2025)
 - **Quick Book Now Functionality**: Made all "Quick Book Now" buttons functional with WhatsApp redirection
 - **Jaipur City Tour Enhancement**: Updated "Book Your Tour Now" button to redirect to WhatsApp with proper Rajasthani messaging
