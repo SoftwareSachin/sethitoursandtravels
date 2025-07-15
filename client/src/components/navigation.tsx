@@ -38,15 +38,18 @@ export default function Navigation() {
           <div className="flex justify-between items-center h-14 sm:h-16 lg:h-14">
             {/* Left Navigation */}
             <div className="hidden lg:flex items-center space-x-2 xl:space-x-3 flex-shrink-0">
-              {navItems.slice(0, 2).map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-xs xl:text-sm whitespace-nowrap touch-target min-h-[44px] px-2 xl:px-3 py-2 rounded-md"
-                >
-                  {item.label}
-                </button>
-              ))}
+              <button
+                onClick={() => scrollToSection("fleet")}
+                className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-xs xl:text-sm whitespace-nowrap touch-target min-h-[44px] px-2 xl:px-3 py-2 rounded-md"
+              >
+                Fleet
+              </button>
+              <button
+                onClick={() => scrollToSection("services")}
+                className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-xs xl:text-sm whitespace-nowrap touch-target min-h-[44px] px-2 xl:px-3 py-2 rounded-md"
+              >
+                Services
+              </button>
             </div>
 
             {/* Central Logo - Desktop Only */}
@@ -62,15 +65,18 @@ export default function Navigation() {
 
             {/* Right Navigation */}
             <div className="hidden lg:flex items-center space-x-2 xl:space-x-3 justify-end flex-shrink-0">
-              {navItems.slice(2).map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-xs xl:text-sm whitespace-nowrap touch-target min-h-[44px] px-2 xl:px-3 py-2 rounded-md"
-                >
-                  {item.label}
-                </button>
-              ))}
+              <button
+                onClick={() => scrollToSection("packages")}
+                className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-xs xl:text-sm whitespace-nowrap touch-target min-h-[44px] px-2 xl:px-3 py-2 rounded-md"
+              >
+                Tour Packages
+              </button>
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-xs xl:text-sm whitespace-nowrap touch-target min-h-[44px] px-2 xl:px-3 py-2 rounded-md"
+              >
+                Contact
+              </button>
             </div>
 
             {/* Mobile Logo and Title - Enhanced Mobile Responsiveness */}
