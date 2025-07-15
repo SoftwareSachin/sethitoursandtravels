@@ -249,15 +249,25 @@ export default function JaipurTaxi() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navigation />
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-orange-600 via-pink-600 to-purple-800 text-white py-24 overflow-hidden pt-24 sm:pt-28 lg:pt-32">
+      {/* Hero Section - Traditional Indian Theme */}
+      <section className="relative bg-orange-100 border-t-4 border-orange-600 text-gray-800 py-24 overflow-hidden pt-24 sm:pt-28 lg:pt-32">
+        {/* Traditional Indian Border Pattern */}
+        <div className="absolute inset-0 bg-orange-50">
+          <div className="absolute top-0 left-0 w-full h-2 bg-orange-600"></div>
+          <div className="absolute bottom-0 left-0 w-full h-2 bg-orange-600"></div>
+          <div className="absolute top-4 left-4 w-8 h-8 border-4 border-orange-600 rounded-full"></div>
+          <div className="absolute top-4 right-4 w-8 h-8 border-4 border-orange-600 rounded-full"></div>
+          <div className="absolute bottom-4 left-4 w-8 h-8 border-4 border-orange-600 rounded-full"></div>
+          <div className="absolute bottom-4 right-4 w-8 h-8 border-4 border-orange-600 rounded-full"></div>
+        </div>
+        
         {/* Sliding Background Images */}
         <div className="absolute inset-0">
           {backgroundImages.map((image, index) => (
             <div
               key={index}
               className={`absolute inset-0 transition-opacity duration-1000 ${
-                index === currentImageIndex ? 'opacity-60' : 'opacity-0'
+                index === currentImageIndex ? 'opacity-30' : 'opacity-0'
               }`}
             >
               <img 
@@ -268,135 +278,134 @@ export default function JaipurTaxi() {
               />
             </div>
           ))}
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-600/15 via-pink-600/15 to-purple-800/20"></div>
-        </div>
-        
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-2000"></div>
-          <div className="absolute bottom-20 left-20 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-4000"></div>
+          <div className="absolute inset-0 bg-orange-50/80"></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            {/* Badge */}
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
-              <Star className="h-4 w-4 text-yellow-400 mr-2" />
-              <span className="text-sm font-medium">Rajasthan's #1 Rated Taxi Service</span>
+            {/* Traditional Badge */}
+            <div className="inline-flex items-center bg-orange-600 text-white border-4 border-orange-700 px-6 py-3 mb-6 shadow-lg">
+              <Star className="h-4 w-4 text-yellow-300 mr-2" />
+              <span className="text-sm font-bold">राजस्थान की नंबर 1 टैक्सी सेवा</span>
             </div>
             
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-300 bg-clip-text text-transparent animate-gradient px-4">
-              Jaipur Taxi Service
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 text-orange-800 px-4" style={{ fontFamily: "'Cinzel', serif" }}>
+              जयपुर टैक्सी सेवा
             </h1>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 text-orange-700 px-4">
+              Jaipur Taxi Service
+            </h2>
+            
             <div className="mb-6 flex justify-center">
               <img 
                 src={rajasthaniWelcomeImage} 
                 alt="Rajasthani Welcome" 
-                className="w-48 h-auto md:w-56 object-contain drop-shadow-lg animate-slide-in"
+                className="w-48 h-auto md:w-56 object-contain drop-shadow-lg border-4 border-orange-600 rounded-lg bg-white p-2"
                 style={{ 
                   imageRendering: 'auto',
                   filter: 'contrast(1.1) brightness(1.05) saturate(1.1)'
                 }}
               />
             </div>
-            <p className="text-lg sm:text-xl md:text-2xl mb-10 max-w-4xl mx-auto leading-relaxed px-4">
-              Experience royal comfort with our premium taxi services in Jaipur. 
-              From Amber Fort to City Palace, explore the Pink City's heritage with 
-              <span className="text-yellow-300 font-semibold"> 24/7 availability</span> and 
-              <span className="text-yellow-300 font-semibold"> transparent pricing</span>.
+            
+            <p className="text-lg sm:text-xl md:text-2xl mb-10 max-w-4xl mx-auto leading-relaxed px-4 text-gray-700">
+              गुलाबी शहर जयपुर की शाही विरासत का अनुभव करें। आमेर किला से सिटी पैलेस तक,
+              <span className="text-orange-700 font-bold"> 24/7 उपलब्धता</span> और 
+              <span className="text-orange-700 font-bold"> पारदर्शी मूल्य निर्धारण</span> के साथ।
             </p>
             
-            {/* Stats */}
+            {/* Stats - Traditional Style */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-10 max-w-3xl mx-auto px-4">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 text-center">
-                <div className="text-xl sm:text-2xl font-bold text-yellow-300">5000+</div>
-                <div className="text-xs sm:text-sm">Happy Customers</div>
+              <div className="bg-white border-4 border-orange-600 p-3 sm:p-4 text-center shadow-lg">
+                <div className="text-xl sm:text-2xl font-bold text-orange-700">5000+</div>
+                <div className="text-xs sm:text-sm text-gray-600">खुश ग्राहक</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 text-center">
-                <div className="text-xl sm:text-2xl font-bold text-yellow-300">24/7</div>
-                <div className="text-xs sm:text-sm">Service Available</div>
+              <div className="bg-white border-4 border-orange-600 p-3 sm:p-4 text-center shadow-lg">
+                <div className="text-xl sm:text-2xl font-bold text-orange-700">24/7</div>
+                <div className="text-xs sm:text-sm text-gray-600">सेवा उपलब्ध</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 text-center">
-                <div className="text-xl sm:text-2xl font-bold text-yellow-300">20+</div>
-                <div className="text-xs sm:text-sm">Destinations</div>
+              <div className="bg-white border-4 border-orange-600 p-3 sm:p-4 text-center shadow-lg">
+                <div className="text-xl sm:text-2xl font-bold text-orange-700">20+</div>
+                <div className="text-xs sm:text-sm text-gray-600">गंतव्य</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 text-center">
-                <div className="text-xl sm:text-2xl font-bold text-yellow-300">5★</div>
-                <div className="text-xs sm:text-sm">Customer Rating</div>
+              <div className="bg-white border-4 border-orange-600 p-3 sm:p-4 text-center shadow-lg">
+                <div className="text-xl sm:text-2xl font-bold text-orange-700">5★</div>
+                <div className="text-xs sm:text-sm text-gray-600">रेटिंग</div>
               </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 sm:px-8 md:px-10 py-4 sm:py-5 text-sm sm:text-base md:text-lg font-semibold shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse-glow w-full sm:w-auto"
+                className="bg-green-600 hover:bg-green-700 text-white px-6 sm:px-8 md:px-10 py-4 sm:py-5 text-sm sm:text-base md:text-lg font-bold shadow-lg border-4 border-green-700 hover:border-green-800 w-full sm:w-auto"
                 onClick={() => whatsapp("नमस्कार! मुझे जयपुर टैक्सी सर्विस चाहिए।")}
               >
                 <FaWhatsapp className="mr-2 sm:mr-3 h-5 w-5 sm:h-6 sm:w-6" />
-                <span className="hidden sm:inline">Book Instantly on WhatsApp</span>
-                <span className="sm:hidden">WhatsApp Book</span>
+                <span className="hidden sm:inline">तुरंत बुक करें व्हाट्सएप पर</span>
+                <span className="sm:hidden">व्हाट्सएप</span>
               </Button>
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-6 sm:px-8 md:px-10 py-4 sm:py-5 text-sm sm:text-base md:text-lg font-semibold shadow-2xl transform hover:scale-105 transition-all duration-300 border-0 w-full sm:w-auto"
+                className="bg-orange-600 hover:bg-orange-700 text-white px-6 sm:px-8 md:px-10 py-4 sm:py-5 text-sm sm:text-base md:text-lg font-bold shadow-lg border-4 border-orange-700 hover:border-orange-800 w-full sm:w-auto"
                 onClick={() => phone()}
               >
                 <Phone className="mr-2 sm:mr-3 h-5 w-5 sm:h-6 sm:w-6" />
-                <span className="hidden sm:inline">Call: +91 97720 21780</span>
-                <span className="sm:hidden">Call Now</span>
+                <span className="hidden sm:inline">कॉल करें: +91 97720 21780</span>
+                <span className="sm:hidden">कॉल करें</span>
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Quick Contact Bar */}
-      <section className="bg-gradient-to-r from-orange-500 to-red-500 text-white py-4 sm:py-6 shadow-lg">
+      {/* Quick Contact Bar - Traditional Style */}
+      <section className="bg-orange-600 text-white py-4 sm:py-6 shadow-lg border-b-4 border-orange-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 md:gap-6">
-            <div className="flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 sm:py-3 w-full sm:w-auto justify-center">
+            <div className="flex items-center gap-2 sm:gap-3 bg-white/20 border-2 border-white/30 px-4 sm:px-6 py-2 sm:py-3 w-full sm:w-auto justify-center">
               <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-300" />
-              <span className="font-semibold text-sm sm:text-base">+91 97720 21780</span>
+              <span className="font-bold text-sm sm:text-base">+91 97720 21780</span>
             </div>
-            <div className="flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 sm:py-3 w-full sm:w-auto justify-center">
+            <div className="flex items-center gap-2 sm:gap-3 bg-white/20 border-2 border-white/30 px-4 sm:px-6 py-2 sm:py-3 w-full sm:w-auto justify-center">
               <FaWhatsapp className="h-4 w-4 sm:h-5 sm:w-5 text-green-300" />
-              <span className="font-semibold text-sm sm:text-base">WhatsApp: 77270 21780</span>
+              <span className="font-bold text-sm sm:text-base">WhatsApp: 77270 21780</span>
             </div>
-            <div className="flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 sm:py-3 w-full sm:w-auto justify-center">
+            <div className="flex items-center gap-2 sm:gap-3 bg-white/20 border-2 border-white/30 px-4 sm:px-6 py-2 sm:py-3 w-full sm:w-auto justify-center">
               <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-blue-300" />
-              <span className="font-semibold text-sm sm:text-base hidden md:inline">sethitourstravels8888@gmail.com</span>
-              <span className="font-semibold text-sm sm:text-base md:hidden">Email Us</span>
+              <span className="font-bold text-sm sm:text-base hidden md:inline">sethitourstravels8888@gmail.com</span>
+              <span className="font-bold text-sm sm:text-base md:hidden">Email Us</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      {/* Why Choose Us - Traditional Indian Style */}
+      <section className="py-20 bg-orange-50 border-t-4 border-orange-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-gradient-to-r from-orange-500 to-pink-500 text-white rounded-full px-6 py-2 mb-6">
+            <div className="inline-flex items-center bg-orange-600 text-white border-4 border-orange-700 px-6 py-3 mb-6 shadow-lg">
               <Award className="h-4 w-4 mr-2" />
-              <span className="text-sm font-medium">Premium Service Excellence</span>
+              <span className="text-sm font-bold">प्रीमियम सेवा उत्कृष्टता</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent px-4 text-center">
-              Why Choose Sethi Tour & Travels
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-orange-800 mb-6 px-4 text-center" style={{ fontFamily: "'Cinzel', serif" }}>
+              क्यों चुनें सेठी टूर एंड ट्रेवल्स
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
-              Experience the best taxi service in Jaipur with our professional approach, 
-              customer-first mindset, and commitment to excellence in every journey.
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-orange-700 mb-4 px-4 text-center">
+              Why Choose Sethi Tour & Travels
+            </h3>
+            <p className="text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed px-4">
+              हमारी पेशेवर सेवा, ग्राहक-केंद्रित दृष्टिकोण और हर यात्रा में उत्कृष्टता के प्रति प्रतिबद्धता के साथ जयपुर में सर्वोत्तम टैक्सी सेवा का अनुभव करें।
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0 shadow-lg group">
+              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 bg-white border-4 border-orange-600 shadow-lg">
                 <CardContent className="p-4 sm:p-6 md:p-8">
-                  <div className="bg-gradient-to-br from-orange-500 to-pink-500 rounded-full w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-4 sm:mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="bg-orange-600 border-4 border-orange-700 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-4 sm:mb-6 flex items-center justify-center shadow-lg">
                     <feature.icon className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-gray-900">{feature.title}</h3>
-                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{feature.description}</p>
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-orange-800">{feature.title}</h3>
+                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -404,20 +413,34 @@ export default function JaipurTaxi() {
         </div>
       </section>
 
-      {/* Our Services */}
-      <section className="py-16 bg-white">
+      {/* Our Services - Traditional Indian Style */}
+      <section className="py-16 bg-white border-t-4 border-orange-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
-            <p className="text-xl text-gray-600">Comprehensive taxi solutions for all your travel needs</p>
+            <h2 className="text-3xl font-bold text-orange-800 mb-4" style={{ fontFamily: "'Cinzel', serif" }}>हमारी सेवाएं</h2>
+            <h3 className="text-2xl font-semibold text-orange-700 mb-4">Our Services</h3>
+            <p className="text-xl text-gray-700">आपकी सभी यात्रा आवश्यकताओं के लिए व्यापक टैक्सी समाधान</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="hover:shadow-xl transition-shadow border-4 border-orange-600 bg-orange-50">
                 <CardContent className="p-6">
-                  <service.icon className="h-10 w-10 text-secondary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                  <p className="text-gray-600">{service.description}</p>
+                  <div className="bg-orange-600 border-4 border-orange-700 w-12 h-12 flex items-center justify-center mb-4 shadow-lg">
+                    <service.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-orange-800">{service.title}</h3>
+                  <p className="text-gray-700 mb-4">{service.description}</p>
+                  <div className="bg-orange-600 text-white px-4 py-2 font-bold text-center border-2 border-orange-700 shadow-lg">
+                    {service.price}
+                  </div>
+                  <div className="mt-4 space-y-2">
+                    {service.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center text-gray-700">
+                        <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
+                        <span className="text-sm">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -425,22 +448,23 @@ export default function JaipurTaxi() {
         </div>
       </section>
 
-      {/* One-Way Taxi Rates */}
-      <section className="py-16 bg-gray-50">
+      {/* One-Way Taxi Rates - Traditional Indian Style */}
+      <section className="py-16 bg-orange-50 border-t-4 border-orange-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">One-Way Taxi Rates</h2>
-            <p className="text-xl text-gray-600">Transparent pricing for popular destinations from Jaipur</p>
+            <h2 className="text-3xl font-bold text-orange-800 mb-4" style={{ fontFamily: "'Cinzel', serif" }}>एक तरफा टैक्सी दरें</h2>
+            <h3 className="text-2xl font-semibold text-orange-700 mb-4">One-Way Taxi Rates</h3>
+            <p className="text-xl text-gray-700">जयपुर से लोकप्रिय गंतव्यों के लिए पारदर्शी मूल्य निर्धारण</p>
           </div>
           
-          {/* Vehicle Type Selector */}
+          {/* Vehicle Type Selector - Traditional Style */}
           <div className="flex justify-center mb-12">
-            <div className="bg-white rounded-2xl p-2 shadow-2xl border border-gray-100">
+            <div className="bg-white border-4 border-orange-600 p-2 shadow-lg">
               <button
-                className={`px-8 py-4 rounded-xl transition-all duration-300 font-semibold ${
+                className={`px-8 py-4 transition-all duration-300 font-bold border-2 ${
                   selectedVehicle === "sedan" 
-                    ? "bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-lg transform scale-105" 
-                    : "text-gray-600 hover:bg-gray-50"
+                    ? "bg-orange-600 text-white border-orange-700 shadow-lg" 
+                    : "text-gray-700 hover:bg-gray-50 border-transparent"
                 }`}
                 onClick={() => setSelectedVehicle("sedan")}
               >
@@ -448,10 +472,10 @@ export default function JaipurTaxi() {
                 Sedan (2-4 passengers)
               </button>
               <button
-                className={`px-8 py-4 rounded-xl transition-all duration-300 font-semibold ${
+                className={`px-8 py-4 transition-all duration-300 font-bold border-2 ${
                   selectedVehicle === "suv" 
-                    ? "bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-lg transform scale-105" 
-                    : "text-gray-600 hover:bg-gray-50"
+                    ? "bg-orange-600 text-white border-orange-700 shadow-lg" 
+                    : "text-gray-700 hover:bg-gray-50 border-transparent"
                 }`}
                 onClick={() => setSelectedVehicle("suv")}
               >
@@ -459,10 +483,10 @@ export default function JaipurTaxi() {
                 SUV (4-6 passengers)
               </button>
               <button
-                className={`px-8 py-4 rounded-xl transition-all duration-300 font-semibold ${
+                className={`px-8 py-4 transition-all duration-300 font-bold border-2 ${
                   selectedVehicle === "innova" 
-                    ? "bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-lg transform scale-105" 
-                    : "text-gray-600 hover:bg-gray-50"
+                    ? "bg-orange-600 text-white border-orange-700 shadow-lg" 
+                    : "text-gray-700 hover:bg-gray-50 border-transparent"
                 }`}
                 onClick={() => setSelectedVehicle("innova")}
               >
@@ -474,26 +498,26 @@ export default function JaipurTaxi() {
 
           {/* Popular Routes */}
           <div className="mb-12">
-            <h3 className="text-2xl font-bold text-center mb-8">Popular Routes</h3>
+            <h3 className="text-2xl font-bold text-center mb-8 text-orange-800">लोकप्रिय मार्ग - Popular Routes</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {oneWayRates.map((rate, index) => (
-                <Card key={index} className="hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-0 shadow-lg group overflow-hidden">
-                  <div className="bg-gradient-to-r from-orange-500 to-pink-500 h-1"></div>
+                <Card key={index} className="hover:shadow-xl transition-all duration-300 bg-white border-4 border-orange-600 shadow-lg">
+                  <div className="bg-orange-600 h-2"></div>
                   <CardContent className="p-6">
                     <div className="flex justify-between items-center mb-4">
-                      <h4 className="font-bold text-lg text-gray-900">{rate.route}</h4>
-                      <Badge className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0">One-Way</Badge>
+                      <h4 className="font-bold text-lg text-orange-800">{rate.route}</h4>
+                      <Badge className="bg-green-600 text-white border-2 border-green-700">One-Way</Badge>
                     </div>
-                    <div className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent mb-6">
+                    <div className="text-3xl font-bold text-orange-700 mb-6">
                       ₹{selectedVehicle === "sedan" ? rate.sedan : 
                          selectedVehicle === "suv" ? rate.suv : rate.innova}
                     </div>
                     <Button 
-                      className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold py-3 shadow-lg transform group-hover:scale-105 transition-all duration-300"
+                      className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 shadow-lg border-2 border-green-700"
                       onClick={() => whatsapp(`नमस्ते! मुझे ${rate.route} के लिए टैक्सी चाहिए।`)}
                     >
                       <FaWhatsapp className="mr-2 h-5 w-5" />
-                      Book Instantly
+                      तुरंत बुक करें
                     </Button>
                   </CardContent>
                 </Card>
@@ -503,25 +527,25 @@ export default function JaipurTaxi() {
 
           {/* Additional Routes */}
           <div>
-            <h3 className="text-2xl font-bold text-center mb-8">Additional Routes</h3>
+            <h3 className="text-2xl font-bold text-center mb-8 text-orange-800">अतिरिक्त मार्ग - Additional Routes</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {additionalRates.map((rate, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
+                <Card key={index} className="hover:shadow-lg transition-shadow border-4 border-orange-600 bg-orange-50">
                   <CardContent className="p-6">
                     <div className="flex justify-between items-center mb-4">
-                      <h4 className="font-semibold text-lg">{rate.route}</h4>
-                      <Badge variant="secondary">One-Way</Badge>
+                      <h4 className="font-bold text-lg text-orange-800">{rate.route}</h4>
+                      <Badge className="bg-orange-600 text-white border-2 border-orange-700">One-Way</Badge>
                     </div>
-                    <div className="text-2xl font-bold text-secondary mb-4">
+                    <div className="text-2xl font-bold text-orange-700 mb-4">
                       ₹{selectedVehicle === "sedan" ? rate.sedan : 
                          selectedVehicle === "suv" ? rate.suv : rate.innova}
                     </div>
                     <Button 
-                      className="w-full bg-green-600 hover:bg-green-700"
+                      className="w-full bg-green-600 hover:bg-green-700 text-white font-bold border-2 border-green-700"
                       onClick={() => whatsapp(`नमस्ते! मुझे ${rate.route} के लिए टैक्सी चाहिए।`)}
                     >
                       <FaWhatsapp className="mr-2 h-4 w-4" />
-                      Book Now
+                      अब बुक करें
                     </Button>
                   </CardContent>
                 </Card>
@@ -533,33 +557,40 @@ export default function JaipurTaxi() {
 
 
 
-      {/* Inclusions */}
-      <section className="py-16 bg-gray-50">
+      {/* Inclusions - Traditional Indian Style */}
+      <section className="py-16 bg-white border-t-4 border-orange-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">What's Included</h2>
-            <p className="text-xl text-gray-600">All rates include the following services</p>
+            <h2 className="text-3xl font-bold text-orange-800 mb-4" style={{ fontFamily: "'Cinzel', serif" }}>क्या शामिल है</h2>
+            <h3 className="text-2xl font-semibold text-orange-700 mb-4">What's Included</h3>
+            <p className="text-xl text-gray-700">सभी दरों में निम्नलिखित सेवाएं शामिल हैं</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center">
+            <Card className="text-center border-4 border-orange-600 bg-orange-50">
               <CardContent className="p-6">
-                <CheckCircle className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Fuel Charges</h3>
-                <p className="text-gray-600">All rates include fuel charges for the journey</p>
+                <div className="bg-orange-600 border-4 border-orange-700 w-16 h-16 mx-auto mb-4 flex items-center justify-center shadow-lg">
+                  <CheckCircle className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-orange-800">Fuel Charges</h3>
+                <p className="text-gray-700">सभी दरों में यात्रा के लिए ईंधन शुल्क शामिल है</p>
               </CardContent>
             </Card>
-            <Card className="text-center">
+            <Card className="text-center border-4 border-orange-600 bg-orange-50">
               <CardContent className="p-6">
-                <CheckCircle className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Driver Charges</h3>
-                <p className="text-gray-600">Professional and courteous drivers included</p>
+                <div className="bg-orange-600 border-4 border-orange-700 w-16 h-16 mx-auto mb-4 flex items-center justify-center shadow-lg">
+                  <CheckCircle className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-orange-800">Driver Charges</h3>
+                <p className="text-gray-700">पेशेवर और विनम्र ड्राइवर शामिल</p>
               </CardContent>
             </Card>
-            <Card className="text-center">
+            <Card className="text-center border-4 border-orange-600 bg-orange-50">
               <CardContent className="p-6">
-                <CheckCircle className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Tolls & Taxes</h3>
-                <p className="text-gray-600">All applicable tolls and taxes included</p>
+                <div className="bg-orange-600 border-4 border-orange-700 w-16 h-16 mx-auto mb-4 flex items-center justify-center shadow-lg">
+                  <CheckCircle className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-orange-800">Tolls & Taxes</h3>
+                <p className="text-gray-700">सभी लागू टोल और कर शामिल</p>
               </CardContent>
             </Card>
           </div>
