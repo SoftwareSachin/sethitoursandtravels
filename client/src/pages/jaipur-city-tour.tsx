@@ -31,14 +31,13 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 
 // Import city images
 import jaipurCityImage from '@assets/image_1752338074515.png';
-import hawamahalImage from '@assets/steptodown.com683483_1752602846978.jpg';
-import newHawamahalImage from '@assets/steptodown.com683483_1752602846978.jpg';
+import hawamahalImage from '@assets/steptodown.com453852_1752616893437.jpg';
 import heroImage from '@assets/steptodown.com917609_1752616667933.jpg';
-import cityPalaceImage from '@assets/image_1752341782147.png';
-import amberFortImage from '@assets/image_1752341727345.png';
-import jalMahalImage from '@assets/image_1752341827928.png';
-import jantarMantarImage from '@assets/image_1752341803586.png';
-import albertHallImage from '@assets/image_1752341852851.png';
+import cityPalaceImage from '@assets/steptodown.com914321_1752616946393.jpg';
+import amberFortImage from '@assets/steptodown.com208043_1752616840661.jpg';
+import jalMahalImage from '@assets/steptodown.com609558_1752617060867.jpg';
+import jantarMantarImage from '@assets/steptodown.com732208_1752617007114.jpg';
+import albertHallImage from '@assets/steptodown.com674527_1752617120687.jpg';
 import jaipurMarketImage from '@assets/image_1752342304077.png';
 import photoOpportunityImage from '@assets/image_1752342374722.png';
 import rajasthaniWelcomeImage from '@assets/image_1752342637765.png';

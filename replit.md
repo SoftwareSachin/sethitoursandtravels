@@ -378,6 +378,13 @@ The application follows a monorepo structure with clear separation between clien
 - **Enhanced Jaipur City Tour Page**: Updated hero section and navigation
   - New Hero Image: Amber Fort elephant scene showcasing royal heritage (steptodown.com917609_1752616667933.jpg)
   - Navigation Header: Added consistent navigation experience across all pages
+  - **Royal Heritage Section Image Update**: Updated all 6 major attraction images with authentic user-provided content:
+    - Amber Fort: Beautiful courtyard with tourists and traditional architecture (steptodown.com208043_1752616840661.jpg)
+    - Hawa Mahal: Stunning street view showcasing iconic pink facade (steptodown.com453852_1752616893437.jpg)
+    - City Palace: Ornate interior view through traditional archway (steptodown.com914321_1752616946393.jpg)
+    - Jantar Mantar: Astronomical instruments with visitors exploring the site (steptodown.com732208_1752617007114.jpg)
+    - Jal Mahal: Beautiful water palace view from the lake (steptodown.com609558_1752617060867.jpg)
+    - Albert Hall Museum: Majestic Indo-Saracenic architecture facade (steptodown.com674527_1752617120687.jpg)
 - **Development Environment**: Workflow running successfully with hot module replacement and automatic restarts
 
 ### Updated Contact Information (Latest - January 2025)
