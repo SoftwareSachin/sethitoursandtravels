@@ -29,7 +29,7 @@ export default function ServicesOverview() {
       description: "Comfortable one-way travel to your destination with professional drivers",
       features: ["Airport Transfers", "Intercity Travel", "Local Sightseeing", "Business Travel"],
       startingPrice: "₹8/km",
-      image: dzireTaxiImage,
+      image: "/attached_assets/steptodown.com521500_1752610333642.jpg",
       whatsappText: "हाय! मुझे वन-वे टैक्सी चाहिए। कृपया रेट बताएं।"
     },
     {
@@ -38,7 +38,7 @@ export default function ServicesOverview() {
       description: "Complete round-trip packages with waiting time and return journey included",
       features: ["Multi-day Tours", "Wedding Functions", "Corporate Events", "Family Trips"],
       startingPrice: "₹12/km",
-      image: dzireTaxiImage,
+      image: "/attached_assets/steptodown.com146599_1752610406505.jpg",
       whatsappText: "नमस्ते! मुझे राउंड ट्रिप टैक्सी बुक करनी है।"
     },
     {
@@ -47,7 +47,7 @@ export default function ServicesOverview() {
       description: "Comprehensive tour packages covering India's most beautiful destinations",
       features: ["Golden Triangle", "Desert Safari", "Wildlife Tours", "Pilgrimage Tours"],
       startingPrice: "₹15,000",
-      image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      image: "/attached_assets/steptodown.com537953_1752610490492.jpg",
       whatsappText: "राम राम सा! मुझे राजस्थान टूर पैकेज चाहिए।"
     },
     {
@@ -56,7 +56,7 @@ export default function ServicesOverview() {
       description: "Complete stay packages with accommodation and transport included",
       features: ["Heritage Hotels", "Luxury Resorts", "Budget Stays", "Group Bookings"],
       startingPrice: "₹3,500/night",
-      image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      image: "/attached_assets/steptodown.com339408_1752610568470.jpg",
       whatsappText: "नमस्ते! मुझे होटल के साथ टूर पैकेज चाहिए।"
     },
     {
@@ -65,7 +65,7 @@ export default function ServicesOverview() {
       description: "Special tours designed for photography enthusiasts and professionals",
       features: ["Sunrise/Sunset Tours", "Heritage Photography", "Wildlife Photography", "Cultural Events"],
       startingPrice: "₹8,500",
-      image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      image: "/attached_assets/steptodown.com483413_1752610629859.jpg",
       whatsappText: "हैलो! मुझे फोटोग्राफी टूर बुक करना है।"
     },
     {
@@ -74,7 +74,7 @@ export default function ServicesOverview() {
       description: "Personalized tours designed according to your preferences and budget",
       features: ["Flexible Itinerary", "Choice of Hotels", "Custom Activities", "Group Discounts"],
       startingPrice: "On Request",
-      image: indiaLandmarksImage,
+      image: "/attached_assets/steptodown.com949221_1752610677290.jpg",
       whatsappText: "नमस्कार! मुझे कस्टम टूर पैकेज बनवाना है।"
     }
   ];

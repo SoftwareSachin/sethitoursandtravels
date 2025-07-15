@@ -201,6 +201,15 @@ The application follows a monorepo structure with clear separation between clien
 - **Authentic Vehicle Imagery**: Both vehicles now display authentic Indian license plates and real-world taxi service branding
 - **Professional Fleet Appearance**: Enhanced fleet showcase with genuine taxi service vehicles representing actual fleet offerings
 
+### Royal Travel Experiences Service Images Update (Latest - January 15, 2025)
+- **One-Way Taxi**: Updated with authentic white Maruti sedan in rural landscape showing intercity travel capability (steptodown.com521500_1752610333642.jpg)
+- **Round-Trip Taxi**: Updated with taxi loaded with luggage demonstrating travel readiness and multi-day tour capability (steptodown.com146599_1752610406505.jpg)
+- **All India / Rajasthan Tours**: Updated with stunning Charminar Gate architecture showcasing India's heritage tour destinations (steptodown.com537953_1752610490492.jpg)
+- **Hotel & Resort Packages**: Updated with luxury resort swimming pool scene showcasing premium accommodation experiences (steptodown.com339408_1752610568470.jpg)
+- **Photography Tours**: Updated with female photographer capturing scenic mountain landscape at golden hour (steptodown.com483413_1752610629859.jpg)
+- **Custom Tour Packages**: Updated with vibrant Indian cultural festival scene showing traditional dance and colorful decorations (steptodown.com949221_1752610677290.jpg)
+- **Complete Service Portfolio**: All 6 Royal Travel Experiences now feature authentic images representing actual service offerings and Indian tourism experiences
+
 ### Migration from Replit Agent to Standard Replit Complete & Quick Book Now Enhancement (January 2025)
 - **Quick Book Now Functionality**: Made all "Quick Book Now" buttons functional with WhatsApp redirection
 - **Jaipur City Tour Enhancement**: Updated "Book Your Tour Now" button to redirect to WhatsApp with proper Rajasthani messaging
