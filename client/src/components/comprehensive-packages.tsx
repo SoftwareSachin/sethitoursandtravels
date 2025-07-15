@@ -374,12 +374,13 @@ export default function ComprehensivePackages() {
                 
                 <Button 
                   onClick={() => whatsapp(`Hello, I'm interested in the ${pkg.name} package. Could you provide more details about pricing and availability?`)}
-                  className="w-full bg-gradient-to-r from-orange-500 via-pink-500 to-red-500 hover:from-orange-600 hover:via-pink-600 hover:to-red-600 text-white font-medium py-3 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border-2 border-pink-300 relative overflow-hidden"
+                  className="w-full bg-gradient-to-r from-orange-500 via-pink-500 to-red-500 hover:from-orange-600 hover:via-pink-600 hover:to-red-600 text-white font-medium py-3 sm:py-4 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border-2 border-pink-300 relative overflow-hidden min-h-[56px] mobile-btn-responsive"
+                  style={{ touchAction: 'manipulation' }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 via-pink-400/20 to-orange-400/20 animate-pulse"></div>
                   <div className="relative flex items-center justify-center">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    BOOK NOW
+                    <Calendar className="h-4 w-4 mr-2 flex-shrink-0" />
+                    <span className="text-sm sm:text-base font-semibold">BOOK NOW</span>
                   </div>
                 </Button>
               </CardContent>
@@ -429,17 +430,19 @@ export default function ComprehensivePackages() {
                 <Button 
                   onClick={() => whatsapp("Hello, I want a custom tour package designed for my specific requirements and preferences")}
                   size="lg"
-                  className="bg-white text-purple-600 hover:bg-purple-50 font-medium transform hover:scale-105 transition-all duration-300"
+                  className="bg-white text-purple-600 hover:bg-purple-50 font-medium transform hover:scale-105 transition-all duration-300 min-h-[56px] mobile-btn-responsive"
+                  style={{ touchAction: 'manipulation' }}
                 >
-                  Design Custom Package
+                  <span className="text-sm sm:text-base font-semibold">Design Custom Package</span>
                 </Button>
                 <Button 
                   onClick={() => whatsapp("Hello, I want to speak with a travel expert about tour packages")}
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-purple-600 font-medium transform hover:scale-105 transition-all duration-300 bg-transparent"
+                  className="border-white text-white hover:bg-white hover:text-purple-600 font-medium transform hover:scale-105 transition-all duration-300 bg-transparent min-h-[56px] mobile-btn-responsive"
+                  style={{ touchAction: 'manipulation' }}
                 >
-                  Speak to Travel Expert
+                  <span className="text-sm sm:text-base font-semibold">Speak to Travel Expert</span>
                 </Button>
               </div>
             </div>

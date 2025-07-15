@@ -381,11 +381,14 @@ export default function ContactSection() {
                     const whatsappUrl = `https://wa.me/917727021780?text=${encodeURIComponent(message)}`;
                     window.open(whatsappUrl, '_blank');
                   }}
-                  className="w-full h-14 bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg rounded-xl focus:outline-none focus:ring-4 focus:ring-orange-300 transition-all shadow-xl hover:shadow-2xl border-2 border-orange-800 hover:scale-105 flex items-center justify-center"
-                  style={{ fontFamily: "'Cinzel', serif" }}
+                  className="w-full min-h-[56px] sm:min-h-[60px] bg-orange-600 hover:bg-orange-700 text-white font-bold text-base sm:text-lg rounded-xl focus:outline-none focus:ring-4 focus:ring-orange-300 transition-all shadow-xl hover:shadow-2xl border-2 border-orange-800 hover:scale-105 flex items-center justify-center px-4 py-3 sm:py-4 mobile-btn-responsive"
+                  style={{ fontFamily: "'Cinzel', serif", touchAction: 'manipulation' }}
                 >
-                  <FaWhatsapp className="mr-3 h-6 w-6 flex-shrink-0" />
-                  <span>Send Message via WhatsApp | व्हाट्सऐप से संदेश भेजें</span>
+                  <FaWhatsapp className="mr-2 sm:mr-3 h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" />
+                  <span className="text-center leading-tight">
+                    <span className="block sm:inline">Send Message via WhatsApp</span>
+                    <span className="block sm:inline sm:ml-2">| व्हाट्सऐप से संदेश भेजें</span>
+                  </span>
                 </button>
               </div>
               

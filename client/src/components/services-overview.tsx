@@ -266,12 +266,16 @@ export default function ServicesOverview() {
                   </div>
 
                   <Button 
-                    className={`w-full bg-gradient-to-r ${stateColor} hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border-2 border-yellow-400 hover:border-yellow-500`}
+                    className={`w-full bg-gradient-to-r ${stateColor} hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 sm:py-5 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border-2 border-yellow-400 hover:border-yellow-500 min-h-[56px] mobile-btn-responsive`}
                     asChild
                   >
-                    <a href={`https://api.whatsapp.com/send?phone=919772021780&text=${encodeURIComponent(service.whatsappText)}`}>
-                      <Crown className="mr-2 h-5 w-5" />
-                      Book Royal Experience
+                    <a 
+                      href={`https://api.whatsapp.com/send?phone=919772021780&text=${encodeURIComponent(service.whatsappText)}`}
+                      className="flex items-center justify-center text-center"
+                      style={{ touchAction: 'manipulation' }}
+                    >
+                      <Crown className="mr-2 h-5 w-5 flex-shrink-0" />
+                      <span className="text-sm sm:text-base font-semibold">Book Royal Experience</span>
                     </a>
                   </Button>
                 </CardContent>

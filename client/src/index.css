@@ -284,54 +284,53 @@
       touch-action: manipulation;
     }
     
-    /* WhatsApp message bar styling */
-    .whatsapp-msg-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(135deg, #25D366 0%, #075E54 100%);
-      color: white;
+    /* Enhanced mobile button styling */
+    .mobile-btn-responsive {
+      min-height: 48px;
+      min-width: 120px;
       padding: 12px 16px;
-      z-index: 50;
-      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 8px;
+      touch-action: manipulation;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      font-size: 14px;
-      min-height: 56px;
-      touch-action: manipulation;
+      justify-content: center;
+      transition: all 0.2s ease;
     }
     
-    .whatsapp-msg-bar button {
-      background: rgba(255, 255, 255, 0.2);
-      border: none;
-      color: white;
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      min-height: 40px;
-      min-width: 80px;
-      touch-action: manipulation;
+    .mobile-btn-responsive:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
     
-    .whatsapp-msg-bar button:hover {
-      background: rgba(255, 255, 255, 0.3);
-    }
-    
-    /* Mobile-responsive WhatsApp bar */
+    /* Ultra-responsive button styling */
     @media (max-width: 640px) {
-      .whatsapp-msg-bar {
-        padding: 10px 12px;
-        font-size: 13px;
+      .mobile-btn-responsive {
+        min-height: 52px;
+        min-width: 140px;
+        padding: 14px 20px;
+        font-size: 16px;
+        border-radius: 12px;
+        width: 100%;
       }
-      
-      .whatsapp-msg-bar button {
-        padding: 6px 12px;
-        font-size: 12px;
-        min-height: 36px;
-        min-width: 70px;
+    }
+    
+    /* Touch-friendly form elements */
+    .mobile-form-element {
+      min-height: 48px;
+      font-size: 16px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      touch-action: manipulation;
+    }
+    
+    @media (max-width: 640px) {
+      .mobile-form-element {
+        min-height: 52px;
+        font-size: 16px;
+        padding: 14px 16px;
+        border-radius: 12px;
       }
     }
   }
