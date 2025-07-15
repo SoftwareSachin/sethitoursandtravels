@@ -163,24 +163,22 @@ export default function HeroSection() {
         </div>
         
         {/* Action Buttons - Enhanced Mobile Responsiveness */}
-        <div className="flex flex-col xs:flex-row gap-2 xs:gap-3 sm:gap-4 justify-center items-center mb-4 xs:mb-6 sm:mb-8 px-2 xs:px-4">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8 px-4">
           <Button 
             onClick={() => whatsapp("मैं टूर बुक करना चाहता हूं। कृपया AC कार का रेट और पैकेज डिटेल्स दें।", 'rajasthani')}
             size="lg"
-            className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 xs:px-6 sm:px-8 py-3 xs:py-3 sm:py-4 text-sm xs:text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 w-full xs:w-auto min-h-[48px]"
+            className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 w-full sm:w-auto min-h-[56px] touch-target"
           >
-            <FaWhatsapp className="mr-1 xs:mr-2 h-4 w-4 xs:h-4 xs:w-4 sm:h-5 sm:w-5" />
-            <span className="hidden xs:inline">Book on WhatsApp</span>
-            <span className="xs:hidden">WhatsApp</span>
+            <FaWhatsapp className="mr-2 h-5 w-5 sm:h-5 sm:w-5" />
+            <span className="font-semibold">Book on WhatsApp</span>
           </Button>
           <Button 
             onClick={() => phone()}
             size="lg"
-            className="bg-secondary hover:bg-orange-600 text-white px-4 xs:px-6 sm:px-8 py-3 xs:py-3 sm:py-4 text-sm xs:text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 w-full xs:w-auto min-h-[48px]"
+            className="bg-secondary hover:bg-orange-600 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 w-full sm:w-auto min-h-[56px] touch-target"
           >
-            <Phone className="mr-1 xs:mr-2 h-4 w-4 xs:h-4 xs:w-4 sm:h-5 sm:w-5" />
-            <span className="hidden xs:inline">Call Now</span>
-            <span className="xs:hidden">Call</span>
+            <Phone className="mr-2 h-5 w-5 sm:h-5 sm:w-5" />
+            <span className="font-semibold">Call Now</span>
           </Button>
         </div>
         

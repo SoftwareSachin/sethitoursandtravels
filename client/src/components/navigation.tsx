@@ -45,7 +45,7 @@ export default function Navigation() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-sm whitespace-nowrap"
+                  className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-sm whitespace-nowrap touch-target min-h-[44px] px-3 py-2 rounded-md"
                 >
                   {item.label}
                 </button>
@@ -69,7 +69,7 @@ export default function Navigation() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-sm whitespace-nowrap"
+                  className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-sm whitespace-nowrap touch-target min-h-[44px] px-3 py-2 rounded-md"
                 >
                   {item.label}
                 </button>

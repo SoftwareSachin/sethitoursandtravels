@@ -22,6 +22,7 @@ import LatestArticles from "@/components/latest-articles";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
 import HomeFloatingButtons from "@/components/home-floating-buttons";
+import WhatsAppMessageBar from "@/components/whatsapp-message-bar";
 
 export default function Home() {
   return (
@@ -49,6 +50,7 @@ export default function Home() {
       <ContactSection />
       <Footer />
       <HomeFloatingButtons />
+      <WhatsAppMessageBar />
     </div>
   );
 }
