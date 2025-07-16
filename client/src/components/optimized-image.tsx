@@ -1,5 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
 
+// Service Worker Registration for prefetching
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(() => {
+    // Service worker registration failed, continue without it
+  });
+}
+
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -13,7 +20,7 @@ export function OptimizedImage({
   src, 
   alt, 
   className = '', 
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0yMCAyN0MyMy4zMTM3IDI3IDI2IDI0LjMxMzcgMjYgMjFDMjYgMTcuNjg2MyAyMy4zMTM3IDE1IDIwIDE1QzE2LjY4NjMgMTUgMTQgMTcuNjg2MyAxNCAyMUMxNCAyNC4zMTM3IDE2LjY4NjMgMjcgMjAgMjdaIiBmaWxsPSIjQ0REMkQ5Ii8+CjxwYXRoIGQ9Ik0yMCAxOUMyMS4xMDQ2IDE5IDIyIDIwLjg5NTQgMjIgMjBDMjIgMjEuMTA0NiAyMS4xMDQ2IDIyIDIwIDIyQzE4Ljg5NTQgMjIgMTggMjEuMTA0NiAxOCAyMEMxOCAxOC44OTU0IDE4Ljg5NTQgMTkgMjAgMTlaIiBmaWxsPSIjOUNBM0FGIi8+Cjwvc3ZnPgo=',
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0yMCAyN0MyMy4zMTM3IDI3IDI2IDI0LjMxMzcgMjYgMjFDMjYgMTcuNjg2MyAyMy4zMTM3IDE1IDIwIDE1QzE2LjY4NjMgMTUgMTQgMTcuNjg2MyAxNCAyMUMxNCAyNC4zMTM3IDE2LjY4NjMgMjcgMjAgMjdaIiBmaWxsPSIjQ0REMkQ5Ci8+CjxwYXRoIGQ9Ik0yMCAxOUMyMS4xMDQ2IDE5IDIyIDIwLjg5NTQgMjIgMjBDMjIgMjEuMTA0NiAyMS4xMDQ2IDIyIDIwIDIyQzE4Ljg5NTQgMjIgMTggMjEuMTA0NiAxOCAyMEMxOCAxOC44OTU0IDE4Ljg5NTQgMTkgMjAgMTlaIiBmaWxsPSIjOUNBM0FGIi8+Cjwvc3ZnPgo=',
   lazy = true 
 }: OptimizedImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -74,6 +81,8 @@ export function OptimizedImage({
           onLoad={handleLoad}
           onError={handleError}
           loading={lazy ? "lazy" : "eager"}
+          decoding="async"
+          fetchpriority={lazy ? "auto" : "high"}
           className={`transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           } w-full h-full object-cover`}

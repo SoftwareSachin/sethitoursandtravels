@@ -3,6 +3,7 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { useCriticalImagePrefetch, useImagePrefetch } from "@/hooks/use-image-prefetch";
 import NotFound from "@/components/NotFound";
 import NavigationLoader from "@/components/NavigationLoader";
 import Home from "@/pages/home";
@@ -39,6 +40,11 @@ function Router() {
 }
 
 function App() {
+  // Prefetch critical images immediately for instant loading
+  useCriticalImagePrefetch();
+  // Prefetch high priority images after initial load
+  useImagePrefetch('high');
+  
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>

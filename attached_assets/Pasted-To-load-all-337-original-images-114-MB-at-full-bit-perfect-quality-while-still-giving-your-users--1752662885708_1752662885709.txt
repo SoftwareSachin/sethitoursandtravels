@@ -1,0 +1,96 @@
+To load all 337 original images (114 MB) at full, bit‑perfect quality—while still giving your users a snappy experience—you’ll need to **avoid any lossy compression** and instead rely on:
+
+1. **Lossless asset optimization**
+2. **On‑demand delivery (lazy‑loading + viewport virtualization)**
+3. **A true CDN + HTTP/2 or HTTP/3 multiplexing**
+4. **Browser caching & service‑worker prefetching**
+
+Below is a step‑by‑step plan.
+
+---
+
+## 1. Lossless Image Optimization
+
+Even without dropping a single pixel, you can often squeeze a few percent off your files:
+
+* **JPEG** → use [`jpegtran`](https://github.com/mozilla/mozjpeg#usage) or [`jpegoptim --all-progressive --strip-all`](https://github.com/tjko/jpegoptim)
+
+  ```bash
+  # install jpegoptim / jpegtran
+  jpegoptim --all-progressive --strip-all path/to/images/*.jpg
+  ```
+* **PNG** → use [`zopflipng --lossy_transparent --iterations=15`](https://github.com/google/zopfli#zopflipng) or [`pngcrush -rem alla -brute`](https://github.com/kornelski/pngcrush)
+
+  ```bash
+  zopflipng --lossy_transparent --iterations=15 in.png out.png
+  ```
+
+These tools perform **only lossless transformations**—zero quality change—yet can often shave off 5–15 % in size.
+
+---
+
+## 2. Serve Originals On‑Demand with Lazy‑Loading + Viewport Virtualization
+
+Rather than hammering every image on page‐load:
+
+1. **Lazy‑load** every `<img>` with the native attribute:
+
+   ```html
+   <img
+     src="/images/foo.jpg"
+     loading="lazy"
+     decoding="async"
+     alt="…">
+   ```
+2. **Virtualize off‑screen galleries** so your JS only attaches DOM `<img>` elements for what’s actually in view.
+
+   * In React/Vue/Vanilla, use an Intersection Observer to mount/unmount images as the user scrolls.
+   * Libraries: [react-window](https://github.com/bvaughn/react-window), [virtual-scroll](https://github.com/valdrinkoshi/virtual-scroll), or your own tiny script.
+
+This way, every one of your 337 files remains on your server (and can be requested at full quality)—but **only the ones the user scrolls to** actually download.
+
+---
+
+## 3. Leverage a CDN with HTTP/2(‑3) Multiplexing
+
+Netlify already fronts your site with a global CDN, but make sure:
+
+* **HTTP/2 or HTTP/3** is enabled (it is by default on Netlify): browsers will multiplex dozens of image requests over a single connection.
+* **Cache headers** are set aggressively. In your `netlify.toml`:
+
+  ```toml
+  [[headers]]
+    for = "/images/*"
+    [headers.values]
+      Cache-Control = "public, max-age=31536000, immutable"
+  ```
+
+  → browsers will keep your bit‑perfect images cached for a full year.
+
+---
+
+## 4. (Advanced) Service Worker–Driven Prefetching
+
+If you know which images a user is likely to see next (e.g. in a lightbox), you can:
+
+1. Register a service worker (`sw.js`) that precaches only the first n images.
+2. On the client, as soon as the user hovers or scrolls, call `swController.postMessage()` to fetch the next batch.
+
+This gives an “instant” lightbox—again, **no lossy compression**, just smart pre‑download.
+
+---
+
+### Putting It All Together
+
+1. **Run lossless optimizers** in CI (e.g. GitHub Action, Netlify build plugin) so that checked‑in images are already as small as they can be without any quality change.
+2. **Use native `loading="lazy"`** + a tiny Intersection Observer in your gallery to mount `<img>` tags on‑demand.
+3. **Trust Netlify’s CDN** (HTTP/2+ caching) to deliver full‑res files quickly.
+4. Optionally, **layer in a service worker** to prefetch exactly the “next” images a user will view.
+
+With this approach:
+
+* **No single image** loses a pixel or is down‑sampled.
+* **All 337 files** remain available in full quality.
+* **Initial load** only pulls what you need—so your *perceived* load time plummets.
+
+You end up with a gallery that feels instantaneous to scroll, yet still delivers every original, pristine image exactly as you uploaded it.
