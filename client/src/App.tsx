@@ -4,6 +4,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/components/NotFound";
+import NavigationLoader from "@/components/NavigationLoader";
 import Home from "@/pages/home";
 import JaipurTaxi from "@/pages/jaipur-taxi";
 import JaipurCityTour from "@/pages/jaipur-city-tour";
@@ -42,6 +43,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
+        <NavigationLoader />
         <Router />
       </TooltipProvider>
     </QueryClientProvider>

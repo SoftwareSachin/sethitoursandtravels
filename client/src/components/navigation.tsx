@@ -2,11 +2,14 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Phone, Search, User, MapPin, Home, Car, Settings, Package, Mail, Mountain, Plane } from "lucide-react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
+import LoadingSpinner from "./LoadingSpinner";
 import companyLogo from "@assets/{EA6D6F7F-DEEC-4D98-9B5B-CD04F5567A36}_1752336151486.png";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [loadingLink, setLoadingLink] = useState<string | null>(null);
+  const [, setLocation] = useLocation();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -14,6 +17,19 @@ export default function Navigation() {
       element.scrollIntoView({ behavior: 'smooth' });
       setIsOpen(false);
     }
+  };
+
+  const handleNavigation = (href: string, label: string) => {
+    setLoadingLink(href);
+    setIsOpen(false);
+    
+    // Show loading for a brief moment
+    setTimeout(() => {
+      setLocation(href);
+      setTimeout(() => {
+        setLoadingLink(null);
+      }, 500);
+    }, 200);
   };
 
   const navItems = [
@@ -39,12 +55,17 @@ export default function Navigation() {
           <div className="flex justify-between items-center h-14 sm:h-16 lg:h-14">
             {/* Left Navigation */}
             <div className="hidden lg:flex items-center space-x-2 xl:space-x-3 flex-shrink-0">
-              <Link href="/">
-                <button className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-xs xl:text-sm whitespace-nowrap touch-target min-h-[44px] px-2 xl:px-3 py-2 rounded-md flex items-center">
-                  <Home className="w-4 h-4 mr-1" />
-                  Home
-                </button>
-              </Link>
+              <button
+                onClick={() => handleNavigation("/", "Home")}
+                className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-xs xl:text-sm whitespace-nowrap touch-target min-h-[44px] px-2 xl:px-3 py-2 rounded-md flex items-center"
+                disabled={loadingLink === "/"}
+              >
+                <Home className="w-4 h-4 mr-1" />
+                Home
+                {loadingLink === "/" && (
+                  <LoadingSpinner variant="default" size="sm" />
+                )}
+              </button>
               <button
                 onClick={() => scrollToSection("fleet")}
                 className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium text-xs xl:text-sm whitespace-nowrap touch-target min-h-[44px] px-2 xl:px-3 py-2 rounded-md flex items-center"
@@ -63,15 +84,17 @@ export default function Navigation() {
 
             {/* Central Logo - Desktop Only */}
             <div className="hidden lg:flex justify-center items-center mx-2 xl:mx-4 flex-shrink-0">
-              <Link href="/">
-                <div className="bg-white rounded-lg p-1 shadow-lg border border-orange-200 cursor-pointer hover:shadow-xl transition-shadow">
-                  <img 
-                    src={companyLogo} 
-                    alt="Sethi Tour & Travels - Premium Travel Services" 
-                    className="h-8 w-auto"
-                  />
-                </div>
-              </Link>
+              <button
+                onClick={() => handleNavigation("/", "Home")}
+                className="bg-white rounded-lg p-1 shadow-lg border border-orange-200 cursor-pointer hover:shadow-xl transition-shadow"
+                disabled={loadingLink === "/"}
+              >
+                <img 
+                  src={companyLogo} 
+                  alt="Sethi Tour & Travels - Premium Travel Services" 
+                  className="h-8 w-auto"
+                />
+              </button>
             </div>
 
             {/* Right Navigation */}
@@ -94,7 +117,11 @@ export default function Navigation() {
 
             {/* Mobile Logo and Title - Enhanced Mobile Responsiveness */}
             <div className="lg:hidden flex items-center min-w-0 flex-1">
-              <Link href="/" className="flex items-center min-w-0 flex-1">
+              <button 
+                onClick={() => handleNavigation("/", "Home")}
+                className="flex items-center min-w-0 flex-1"
+                disabled={loadingLink === "/"}
+              >
                 <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg overflow-hidden mr-2 sm:mr-3 bg-white shadow-lg border-2 border-orange-200 p-0.5 sm:p-1 flex-shrink-0">
                   <img 
                     src={companyLogo} 
@@ -108,7 +135,7 @@ export default function Navigation() {
                   </h1>
                   <p className="text-xs sm:text-sm text-gray-600 truncate leading-tight">India Tours</p>
                 </div>
-              </Link>
+              </button>
             </div>
 
 
@@ -147,15 +174,18 @@ export default function Navigation() {
                   {navItems.map((item) => {
                     const IconComponent = item.icon;
                     return item.href ? (
-                      <Link
+                      <button
                         key={item.id}
-                        href={item.href}
+                        onClick={() => handleNavigation(item.href, item.label)}
                         className="text-left text-gray-700 hover:text-pink-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50 text-base font-medium flex items-center w-full"
-                        onClick={() => setIsOpen(false)}
+                        disabled={loadingLink === item.href}
                       >
                         <IconComponent className="w-5 h-5 mr-3 flex-shrink-0" />
                         <span className="flex-1">{item.label}</span>
-                      </Link>
+                        {loadingLink === item.href && (
+                          <LoadingSpinner variant="default" size="sm" />
+                        )}
+                      </button>
                     ) : (
                       <button
                         key={item.id}
@@ -173,15 +203,18 @@ export default function Navigation() {
                   {specialNavItems.map((item) => {
                     const IconComponent = item.icon;
                     return (
-                      <Link
+                      <button
                         key={item.href}
-                        href={item.href}
+                        onClick={() => handleNavigation(item.href, item.label)}
                         className="text-left text-gray-700 hover:text-pink-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50 text-base font-medium flex items-center w-full"
-                        onClick={() => setIsOpen(false)}
+                        disabled={loadingLink === item.href}
                       >
                         <IconComponent className="w-5 h-5 mr-3 flex-shrink-0" />
                         <span className="flex-1">{item.label}</span>
-                      </Link>
+                        {loadingLink === item.href && (
+                          <LoadingSpinner variant="default" size="sm" />
+                        )}
+                      </button>
                     );
                   })}
                 </div>
@@ -204,13 +237,17 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
           <div className="flex justify-center items-center h-10 space-x-6 xl:space-x-8">
             {specialNavItems.map((item) => (
-              <Link
+              <button
                 key={item.href}
-                href={item.href}
-                className="text-white hover:text-yellow-200 transition-colors duration-200 font-medium text-sm whitespace-nowrap touch-target min-h-[40px] px-3 py-2 rounded-md hover:bg-white/10"
+                onClick={() => handleNavigation(item.href, item.label)}
+                className="text-white hover:text-yellow-200 transition-colors duration-200 font-medium text-sm whitespace-nowrap touch-target min-h-[40px] px-3 py-2 rounded-md hover:bg-white/10 flex items-center"
+                disabled={loadingLink === item.href}
               >
                 {item.label}
-              </Link>
+                {loadingLink === item.href && (
+                  <LoadingSpinner variant="default" size="sm" />
+                )}
+              </button>
             ))}
           </div>
         </div>
