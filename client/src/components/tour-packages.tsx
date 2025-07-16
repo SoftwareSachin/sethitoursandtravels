@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { LoadingSpinner } from "@/components/ui/loading-spinner";
+import LoadingSpinner from "@/components/LoadingSpinner";
 import { useCommunication, CommunicationUtils } from "./communication-utils";
 import { MapPin, Clock, Star, Users, Calendar, Award, TrendingUp, Heart } from "lucide-react";
 import type { TourPackage } from "@shared/schema";
@@ -24,7 +24,11 @@ export default function TourPackages() {
             </p>
           </div>
           <div className="flex justify-center items-center py-20">
-            <LoadingSpinner variant="text" text="Loading Tour Packages..." />
+            <LoadingSpinner 
+              variant="mandala" 
+              size="xl" 
+              message="टूर पैकेज लोड हो रहे हैं..." 
+            />
           </div>
         </div>
       </section>
