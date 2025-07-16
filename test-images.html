@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Netlify Image Paths</title>
+</head>
+<body>
+    <h1>Testing Image Paths for Netlify Deployment</h1>
+    
+    <h2>Test 1: Attached Assets Path</h2>
+    <img src="/attached_assets/steptodown.com829502_1752605835373.jpg" alt="Heritage Circuit" style="width: 300px;" />
+    
+    <h2>Test 2: Direct Assets Path</h2>
+    <img src="attached_assets/steptodown.com829502_1752605835373.jpg" alt="Heritage Circuit Direct" style="width: 300px;" />
+    
+    <h2>WhatsApp Test</h2>
+    <a href="https://wa.me/917727021780?text=Test%20message" target="_blank">Test WhatsApp</a>
+    
+    <h2>Phone Test</h2>
+    <a href="tel:+919772021780">Test Phone Call</a>
+    
+    <script>
+        console.log('Testing image load status...');
+        
+        document.querySelectorAll('img').forEach((img, index) => {
+            img.onload = () => console.log(`Image ${index + 1} loaded successfully: ${img.src}`);
+            img.onerror = () => console.error(`Image ${index + 1} failed to load: ${img.src}`);
+        });
+    </script>
+</body>
+</html>
