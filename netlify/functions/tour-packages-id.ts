@@ -45,7 +45,7 @@ export const handler: Handler = async (event, context) => {
       body: JSON.stringify({ error: 'Method not allowed' }),
     };
   } catch (error) {
-    console.error('Error in tour-packages-[id] function:', error);
+    console.error('Error in tour-packages-id function:', error);
     return {
       statusCode: 500,
       headers,
