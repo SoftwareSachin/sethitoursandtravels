@@ -49,6 +49,8 @@ export default function HeroSection() {
     }
   ];
 
+
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % backgroundImages.length);

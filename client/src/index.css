@@ -93,6 +93,69 @@
   animation: lotus-bloom 4s ease-in-out infinite;
 }
 
+/* Performance optimizations */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Optimize image rendering */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: optimizeSpeed;
+  image-rendering: optimize-quality;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hardware acceleration for better performance */
+.hardware-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Optimize animations */
+.animate-spin,
+.animate-pulse,
+.animate-bounce {
+  will-change: transform;
+}
+
+/* Reduce layout thrashing */
+.layout-stable {
+  contain: layout style paint;
+}
+
 :root {
   --background: hsl(50, 25%, 94%);
   --foreground: hsl(20, 14.3%, 4.1%);
